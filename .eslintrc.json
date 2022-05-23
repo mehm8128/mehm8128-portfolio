@@ -1,3 +1,26 @@
 {
-  "extends": "next/core-web-vitals"
+	"extends": [
+		"next",
+		"next/core-web-vitals",
+		"plugin:import/recommended",
+		"plugin:import/warnings",
+		"eslint:recommended",
+		"prettier",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended"
+	],
+	"plugins": ["unused-imports"],
+	"settings": { "import/core-modules": ["windi.css"] },
+	"rules": {
+		"import/order": [
+			"warn",
+			{
+				"alphabetize": {
+					"order": "asc"
+				}
+			}
+		],
+		"react/react-in-jsx-scope": "off",
+		"unused-imports/no-unused-imports": "warn"
+	}
 }
