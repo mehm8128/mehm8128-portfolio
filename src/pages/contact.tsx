@@ -1,10 +1,10 @@
-import { send } from '@emailjs/browser'
-import type { NextPage } from "next"
 import { useState } from 'react'
 
+import { send } from '@emailjs/browser'
 
 import { Header } from '../components/Header'
 
+import type { NextPage } from "next"
 const Contact: NextPage = () => {
 	const [name, setName] = useState("")
 	const [mail, setMail] = useState("")
@@ -44,7 +44,7 @@ const Contact: NextPage = () => {
 		<>
 			<Header />
 			<main>
-				<div className="flex justify-center py-12">
+				<div className="flex justify-center py-8">
 					<h2 className="text-3xl flex items-center">お問い合わせ</h2>
 				</div>
 				<div className="w-1/2 container mx-auto px-12">

@@ -10,7 +10,7 @@ const Home: NextPage = () => {
 		<>
 			<Header />
 			<main>
-				<div className="flex justify-center py-12">
+				<div className="flex justify-center py-8">
 					<h2 className="text-3xl flex items-center gap-2">
 						<Image
 							src="/assets/mehm8128_circle.png"
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 					<br />
 					CTF：これから活動予定。
 				</p>
-				<ul className="text-xl flex justify-center gap-12 pt-12">
+				<ul className="text-2xl flex justify-center gap-12 pt-12">
 					<LiWithArrow>
 						<Link href="https://twitter.com/mehm08128">
 							<a className="underline">Twitter</a>
