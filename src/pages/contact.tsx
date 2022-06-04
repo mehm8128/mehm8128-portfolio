@@ -1,14 +1,11 @@
-import { sendForm } from '@emailjs/browser'
+import { send } from '@emailjs/browser'
 import type { NextPage } from "next"
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 
 
 import { Header } from '../components/Header'
 
-
 const Contact: NextPage = () => {
-	const formRef = useRef<HTMLFormElement>(null)
-
 	const [name, setName] = useState("")
 	const [mail, setMail] = useState("")
 	const [message, setMessage] = useState("")
@@ -21,8 +18,7 @@ const Contact: NextPage = () => {
 		if (
 			serviceId === undefined ||
 			templateId === undefined ||
-			publicKey === undefined ||
-			formRef.current === null
+			publicKey === undefined
 		) {
 			alert("エラー発生")
 			return
@@ -31,7 +27,13 @@ const Contact: NextPage = () => {
 			alert("名前と本文は必須です")
 			return
 		}
-		sendForm(serviceId, templateId, formRef.current, publicKey).then(() => {
+		const templateParams = {
+			toName: "mehm8128",
+			name: name,
+			mail: mail,
+			message: message,
+		}
+		send(serviceId, templateId, templateParams, publicKey).then(() => {
 			setName("")
 			setMail("")
 			setMessage("")
@@ -49,11 +51,7 @@ const Contact: NextPage = () => {
 					<p className="pb-8">
 						何かありましたらご連絡ください。名前と本文のみ必須ですが、メールアドレスが記入されていない場合返信できません。
 					</p>
-					<form
-						ref={formRef}
-						onSubmit={(e) => handleSubmit(e)}
-						className="flex flex-col gap-4"
-					>
+					<form onSubmit={handleSubmit} className="flex flex-col gap-4">
 						<input
 							type="text"
 							value={name}
@@ -71,7 +69,7 @@ const Contact: NextPage = () => {
 						<textarea
 							value={message}
 							placeholder="本文"
-							className="border border-gray-300 min-h-32 pl-2"
+							className="border border-gray-300 min-h-32 pl-2 pt-2"
 							onChange={(e) => setMessage(e.target.value)}
 						/>
 						<button type="submit" className="border border-gray-300 h-12">
