@@ -3,7 +3,7 @@ import type { NextPage } from "next"
 const Background: NextPage = () => {
 	return (
 		<>
-			<div className="flex justify-center py-12">
+			<div className="flex justify-center py-8">
 				<h2 className="text-3xl flex items-center">経歴</h2>
 			</div>
 			<div className="leading-loose container mx-auto w-1/2">
