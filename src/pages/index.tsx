@@ -1,7 +1,9 @@
 import type { NextPage } from "next"
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Header } from '../components/Header'
+import { LiWithArrow } from '../components/LiWithArrow'
 
 const Home: NextPage = () => {
 	return (
@@ -34,6 +36,28 @@ const Home: NextPage = () => {
 					<br />
 					CTF：これから活動予定。
 				</p>
+				<ul className="text-xl flex justify-center gap-12 pt-12">
+					<LiWithArrow>
+						<Link href="https://twitter.com/mehm08128">
+							<a className="underline">Twitter</a>
+						</Link>
+					</LiWithArrow>
+					<LiWithArrow>
+						<Link href="https://github.com/mehm8128">
+							<a className="underline">Github</a>
+						</Link>
+					</LiWithArrow>
+					<LiWithArrow>
+						<Link href="https://atcoder.jp/users/mehm8128">
+							<a className="underline">AtCoder</a>
+						</Link>
+					</LiWithArrow>
+					<LiWithArrow>
+						<Link href="https://trap.jp/author/mehm8128/">
+							<a className="underline">traPブログ</a>
+						</Link>
+					</LiWithArrow>
+				</ul>
 			</main>
 		</>
 	)

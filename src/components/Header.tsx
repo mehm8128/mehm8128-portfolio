@@ -5,12 +5,11 @@ interface Link {
 	text: string
 }
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
 	const links: Link[] = [
 		{ href: "/", text: "ホーム" },
 		{ href: "/background", text: "経歴" },
 		{ href: "/works", text: "制作物" },
-		{ href: "/links", text: "リンク" },
 		{ href: "/contact", text: "お問い合わせ" },
 	]
 	return (
@@ -28,5 +27,3 @@ const Header: React.FC = () => {
 		</header>
 	)
 }
-
-export { Header }
