@@ -1,10 +1,9 @@
-import { useState } from 'react'
-
-import { send } from '@emailjs/browser'
-
-import { Header } from '../components/Header'
-
+import { send } from "@emailjs/browser"
 import type { NextPage } from "next"
+import { useState } from "react"
+
+import { Header } from "../components/Header"
+
 const Contact: NextPage = () => {
 	const [name, setName] = useState("")
 	const [mail, setMail] = useState("")
