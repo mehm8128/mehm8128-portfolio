@@ -2,7 +2,7 @@ import type { NextPage } from "next"
 
 import { Header } from '../components/Header'
 
-const Home: NextPage = () => {
+const Background: NextPage = () => {
 	return (
 		<>
 			<Header />
@@ -33,4 +33,4 @@ const Home: NextPage = () => {
 	)
 }
 
-export default Home
+export default Background

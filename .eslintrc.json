@@ -9,7 +9,7 @@
 		"plugin:@typescript-eslint/recommended",
 		"plugin:react/recommended"
 	],
-	"plugins": ["unused-imports"],
+	"plugins": ["unused-imports", "import"],
 	"settings": { "import/core-modules": ["windi.css"] },
 	"rules": {
 		"import/order": [
