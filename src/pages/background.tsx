@@ -6,7 +6,7 @@ const Background: NextPage = () => {
 			<div className="flex justify-center py-12">
 				<h2 className="text-3xl flex items-center">経歴</h2>
 			</div>
-			<p className="leading-loose container mx-auto w-1/2">
+			<div className="leading-loose container mx-auto w-1/2">
 				<h3 className="text-lg font-bold">2021年</h3>
 				4月 東京工業大学工学院に入学。
 				<br />
@@ -23,7 +23,7 @@ const Background: NextPage = () => {
 				3月 サイバーエージェントのWeb Speed Hackathon for Studentsに参加。
 				<br />
 				3～5月 prdでフロントエンドエンジニアとしてインターンに参加。
-			</p>
+			</div>
 		</>
 	)
 }
