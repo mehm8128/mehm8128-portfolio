@@ -9,7 +9,7 @@ const Home: NextPage = () => {
 			<Header />
 			<main>
 				<div className="flex justify-center py-12">
-					<h2 className="text-xl flex items-center gap-2">
+					<h2 className="text-3xl flex items-center gap-2">
 						<Image
 							src="/assets/mehm8128_circle.png"
 							alt=""
