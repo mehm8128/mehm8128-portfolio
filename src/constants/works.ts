@@ -1,4 +1,4 @@
-interface Work {
+export interface WorkType {
 	title: string
 	productLink: string
 	githubLink: string
@@ -6,7 +6,8 @@ interface Work {
 	longDescription: string
 	imagePath: string
 }
-export const works: Work[] = [
+
+export const works: WorkType[] = [
 	{
 		title: "Palamo",
 		productLink: "https://frontend-opal-delta-19.vercel.app",
