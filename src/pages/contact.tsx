@@ -2,8 +2,6 @@ import { send } from "@emailjs/browser"
 import type { NextPage } from "next"
 import { useState } from "react"
 
-import { Header } from "../components/Header"
-
 const Contact: NextPage = () => {
 	const [name, setName] = useState("")
 	const [mail, setMail] = useState("")
@@ -41,42 +39,39 @@ const Contact: NextPage = () => {
 	}
 	return (
 		<>
-			<Header />
-			<main>
-				<div className="flex justify-center py-8">
-					<h2 className="text-3xl flex items-center">お問い合わせ</h2>
-				</div>
-				<div className="w-1/2 container mx-auto px-12">
-					<p className="pb-8">
-						何かありましたらご連絡ください。名前と本文のみ必須ですが、メールアドレスが記入されていない場合返信できません。
-					</p>
-					<form onSubmit={handleSubmit} className="flex flex-col gap-4">
-						<input
-							type="text"
-							value={name}
-							placeholder="名前"
-							className="border border-gray-300 h-12 pl-2"
-							onChange={(e) => setName(e.target.value)}
-						/>
-						<input
-							type="email"
-							value={mail}
-							placeholder="メールアドレス"
-							className="border border-gray-300 h-12 pl-2"
-							onChange={(e) => setMail(e.target.value)}
-						/>
-						<textarea
-							value={message}
-							placeholder="本文"
-							className="border border-gray-300 min-h-32 pl-2 pt-2"
-							onChange={(e) => setMessage(e.target.value)}
-						/>
-						<button type="submit" className="border border-gray-300 h-12">
-							送信
-						</button>
-					</form>
-				</div>
-			</main>
+			<div className="flex justify-center py-8">
+				<h2 className="text-3xl flex items-center">お問い合わせ</h2>
+			</div>
+			<div className="w-1/2 container mx-auto px-12">
+				<p className="pb-8">
+					何かありましたらご連絡ください。名前と本文のみ必須ですが、メールアドレスが記入されていない場合返信できません。
+				</p>
+				<form onSubmit={handleSubmit} className="flex flex-col gap-4">
+					<input
+						type="text"
+						value={name}
+						placeholder="名前"
+						className="border border-gray-300 h-12 pl-2"
+						onChange={(e) => setName(e.target.value)}
+					/>
+					<input
+						type="email"
+						value={mail}
+						placeholder="メールアドレス"
+						className="border border-gray-300 h-12 pl-2"
+						onChange={(e) => setMail(e.target.value)}
+					/>
+					<textarea
+						value={message}
+						placeholder="本文"
+						className="border border-gray-300 min-h-32 pl-2 pt-2"
+						onChange={(e) => setMessage(e.target.value)}
+					/>
+					<button type="submit" className="border border-gray-300 h-12">
+						送信
+					</button>
+				</form>
+			</div>
 		</>
 	)
 }

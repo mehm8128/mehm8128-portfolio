@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/image"
 
 interface Props {
 	title: string
@@ -14,7 +14,7 @@ export const Work: React.FC<Props> = ({ title, description, imagePath }) => {
 				width="320px"
 				height="160px"
 				alt=""
-				className=" object-fit"
+				className="object-cover"
 			/>
 			<h3 className="text-xl">{title}</h3>
 			<p dangerouslySetInnerHTML={{ __html: description }} className="h-20" />
