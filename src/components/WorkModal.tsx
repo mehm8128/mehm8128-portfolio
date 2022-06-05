@@ -33,7 +33,7 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 					)}
 				</div>
 				<section className="p-4">
-					<h3 className="text-2xl">{title}</h3>
+					<h3 className="text-2xl pb-2">{title}</h3>
 					<p>
 						Githubリンク：<a href={githubLink}>{githubLink}</a>
 					</p>
@@ -47,10 +47,10 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 						dangerouslySetInnerHTML={{ __html: longDescription }}
 					/>
 				</section>
-				<div className="text-center">
+				<div className="text-center absolute bottom-4 mx-auto inset-x-0">
 					<button
 						onClick={() => setCurrentWork(undefined)}
-						className="py-2 px-12 rounded-md bg-cyan-200"
+						className="py-2 px-12 rounded-md border-2 hover:border-cyan-200"
 					>
 						閉じる
 					</button>

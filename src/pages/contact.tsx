@@ -51,23 +51,26 @@ const Contact: NextPage = () => {
 						type="text"
 						value={name}
 						placeholder="名前"
-						className="border border-gray-300 h-12 pl-2"
+						className="border border-gray-300 h-12 pl-2 focus:outline-cyan-300"
 						onChange={(e) => setName(e.target.value)}
 					/>
 					<input
 						type="email"
 						value={mail}
 						placeholder="メールアドレス"
-						className="border border-gray-300 h-12 pl-2"
+						className="border border-gray-300 h-12 pl-2 focus:outline-cyan-300"
 						onChange={(e) => setMail(e.target.value)}
 					/>
 					<textarea
 						value={message}
 						placeholder="本文"
-						className="border border-gray-300 min-h-32 pl-2 pt-2"
+						className="border border-gray-300 min-h-32 pl-2 pt-2 focus:outline-cyan-300"
 						onChange={(e) => setMessage(e.target.value)}
 					/>
-					<button type="submit" className="border border-gray-300 h-12">
+					<button
+						type="submit"
+						className="border-2 border-gray-300 h-12 hover:border-cyan-300"
+					>
 						送信
 					</button>
 				</form>

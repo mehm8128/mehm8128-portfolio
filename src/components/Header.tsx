@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 interface Link {
 	href: string
@@ -6,6 +7,7 @@ interface Link {
 }
 
 export const Header: React.FC = () => {
+	const router = useRouter()
 	const links: Link[] = [
 		{ href: "/", text: "ホーム" },
 		{ href: "/background", text: "経歴" },
@@ -23,7 +25,11 @@ export const Header: React.FC = () => {
 				<nav className="text-xl flex gap-8">
 					{links.map((link) => (
 						<Link href={link.href} key={link.href}>
-							<a className="hover:bg-cyan-400 py-2 px-4 rounded-xl">
+							<a
+								className={`hover:bg-cyan-400 py-2 px-4 rounded-xl ${
+									router.pathname === link.href ? "bg-cyan-400" : ""
+								}`}
+							>
 								{link.text}
 							</a>
 						</Link>
