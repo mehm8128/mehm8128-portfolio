@@ -15,8 +15,8 @@ export const Work: React.FC<Props> = ({ work, setCurrentWork }) => {
 			{imagePath ? (
 				<Image
 					src={imagePath}
-					width="320px"
-					height="160px"
+					width={320}
+					height={160}
 					alt=""
 					className="object-cover"
 				/>

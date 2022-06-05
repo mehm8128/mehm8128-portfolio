@@ -23,8 +23,8 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 					{imagePath ? (
 						<Image
 							src={imagePath}
-							width="900px"
-							height="440px"
+							width={900}
+							height={440}
 							alt=""
 							className="object-cover "
 						/>

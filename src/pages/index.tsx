@@ -1,16 +1,21 @@
-import type { NextPage } from "next"
+import type { GetStaticProps, NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
 import { LiWithArrow } from "../components/LiWithArrow"
+import { links } from "../constants/links"
 
-const Home: NextPage = () => {
-	const links = [
-		{ href: "https://twitter.com/mehm08128", text: "Twitter" },
-		{ href: "https://github.com/mehm8128", text: "Github" },
-		{ href: "https://atcoder.jp/users/mehm8128", text: "AtCoder" },
-		{ href: "https://trap.jp/author/mehm8128", text: "traPブログ" },
-	]
+interface Props {
+	updatedDate: string
+}
+
+const Home: NextPage<Props> = ({ updatedDate }) => {
+	const formattedDate = (stringDate: string) => {
+		const date = new Date(stringDate)
+		return `${date.getFullYear()}年${
+			date.getMonth() + 1
+		}月${date.getDate()}日${date.getHours()}時${date.getMinutes()}分`
+	}
 	return (
 		<>
 			<section className="flex justify-center py-8">
@@ -18,8 +23,8 @@ const Home: NextPage = () => {
 					<Image
 						src="/assets/mehm8128_circle.png"
 						alt=""
-						width="60"
-						height="60"
+						width={60}
+						height={60}
 					/>
 					mehm8128
 				</h2>
@@ -49,8 +54,15 @@ const Home: NextPage = () => {
 					</LiWithArrow>
 				))}
 			</ul>
+			<p className="text-right mt-2 mr-2">
+				最終更新日時：{formattedDate(updatedDate)}
+			</p>
 		</>
 	)
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+	return { props: { updatedDate: String(new Date()) } }
 }
 
 export default Home
