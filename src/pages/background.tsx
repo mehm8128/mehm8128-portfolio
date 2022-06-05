@@ -6,7 +6,7 @@ const Background: NextPage = () => {
 			<div className="flex justify-center py-8">
 				<h2 className="text-3xl flex items-center">経歴</h2>
 			</div>
-			<div className="leading-loose container mx-auto w-1/2">
+			<div className="leading-loose mx-auto w-1/2">
 				<section className="pb-4">
 					<h3 className="text-lg font-bold">2021年</h3>
 					<ul>

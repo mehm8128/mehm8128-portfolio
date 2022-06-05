@@ -29,7 +29,7 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 					mehm8128
 				</h2>
 			</section>
-			<div className="w-1/2 mx-auto  leading-loose">
+			<div className="w-1/2 mx-auto leading-relaxed">
 				<p>ここはmehm8128（読み方：めふも）のポートフォリオサイトです。</p>
 				<ul>
 					<li>
@@ -45,7 +45,7 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 					<li>CTF：これから活動予定。</li>
 				</ul>
 			</div>
-			<ul className="text-2xl flex justify-center gap-12 pt-12">
+			<ul className="text-2xl flex justify-center gap-12 mt-12">
 				{links.map((link) => (
 					<LiWithArrow key={link.href}>
 						<Link href={link.href}>
@@ -54,7 +54,7 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 					</LiWithArrow>
 				))}
 			</ul>
-			<p className="text-right mt-2 mr-2">
+			<p className="text-right mt-4 mr-2">
 				最終更新日時：{formattedDate(updatedDate)}
 			</p>
 		</>

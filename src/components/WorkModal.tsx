@@ -12,19 +12,19 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 
 	return (
 		<div
-			className="fixed bg-gray-300/50 h-full w-full top-0 left-0 z-2"
+			className="fixed bg-gray-300/50 h-full w-full top-0 left-0 z-3"
 			onClick={() => setCurrentWork(undefined)}
 		>
 			<div
-				className="w-5/7 h-6/7 bg-white shadow-lg mx-auto my-auto absolute inset-0"
+				className="w-5/7 h-6/7 p-4 bg-white shadow-lg mx-auto my-auto absolute inset-0 overflow-y-scroll"
 				onClick={(e) => e.stopPropagation()}
 			>
-				<div className="w-225 h-110 mx-auto py-4">
+				<div className="h-3/5 text-center">
 					{imagePath ? (
 						<Image
 							src={imagePath}
-							width={900}
-							height={440}
+							width={860}
+							height={400}
 							alt=""
 							className="object-cover "
 						/>
@@ -32,8 +32,8 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 						<p className="flex justify-center items-center h-full">画像なし</p>
 					)}
 				</div>
-				<section className="p-4">
-					<h3 className="text-2xl pb-2">{title}</h3>
+				<section className="min-h-54 py-4">
+					<h3 className="text-2xl mb-2">{title}</h3>
 					<p>
 						Githubリンク：<a href={githubLink}>{githubLink}</a>
 					</p>
@@ -43,14 +43,14 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 						</p>
 					) : null}
 					<p
-						className="py-2"
+						className="my-2"
 						dangerouslySetInnerHTML={{ __html: longDescription }}
 					/>
 				</section>
-				<div className="text-center absolute bottom-4 mx-auto inset-x-0">
+				<div className="text-center">
 					<button
 						onClick={() => setCurrentWork(undefined)}
-						className="py-2 px-12 rounded-md border-2 hover:border-cyan-200"
+						className="py-2 px-12 rounded-md border-2 hover:border-cyan-300"
 					>
 						閉じる
 					</button>

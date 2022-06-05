@@ -6,7 +6,7 @@ export const Header: React.FC = () => {
 	const router = useRouter()
 
 	return (
-		<header className="fixed w-full">
+		<header className="fixed w-full z-2">
 			<div className="flex justify-between items-center px-4 bg-cyan-300 h-16 shadow-lg">
 				<h1 className="text-3xl">
 					<Link href="/">
