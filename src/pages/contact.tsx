@@ -42,7 +42,7 @@ const Contact: NextPage = () => {
 			<div className="flex justify-center py-8">
 				<h2 className="text-3xl flex items-center">お問い合わせ</h2>
 			</div>
-			<div className="w-1/2 mx-auto">
+			<div className="md:w-1/2 w-4/5 mx-auto">
 				<p className="pb-8">
 					何かありましたらご連絡ください。名前と本文のみ必須ですが、メールアドレスが記入されていない場合返信できません。
 				</p>

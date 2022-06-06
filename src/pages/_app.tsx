@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<title>mehm8128-portfolio</title>
 			</Head>
 			<Header />
-			<main className="pt-16">
+			<main className="md:pt-16 pt-26">
 				<Component {...pageProps} />
 			</main>
 		</>

@@ -62,7 +62,7 @@ export const works: WorkType[] = [
 		githubLinks: ["https://github.com/mehm8128/traq-mehm8128-bot"],
 		description: "traP内SNSのtraQで使用しているtraQBot。",
 		longDescription:
-			"Node.jsを使ってtraQBotを作った(traQとはtraP内SNS)。ライブラリは<a href='https://github.com/sapphi-red/hubot-traq'>hubot-traq</a>を使った。デプロイはtraP内サービスのshowcaseを使っている。",
+			"Node.jsを使ってtraQBotを作った(traQとはtraP内SNS)。ライブラリはhubot-traqを使った。デプロイはtraP内サービスのshowcaseを使っている。",
 		imagePath: "/assets/traQBot.png",
 	},
 ]

@@ -16,10 +16,10 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 			onClick={() => setCurrentWork(undefined)}
 		>
 			<div
-				className="w-5/7 h-6/7 p-4 bg-white shadow-lg mx-auto my-auto absolute inset-0 overflow-y-scroll"
+				className="md:w-5/7 h-6/7 w-6/7 p-4 bg-white shadow-lg mx-auto my-auto absolute inset-0 overflow-y-scroll"
 				onClick={(e) => e.stopPropagation()}
 			>
-				<div className="h-3/5 text-center">
+				<div className="md:h-3/5 h-2/5 text-center">
 					{imagePath ? (
 						<Image
 							src={imagePath}

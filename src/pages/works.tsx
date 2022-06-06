@@ -13,8 +13,8 @@ const Works: NextPage = () => {
 			<div className="flex justify-center py-8">
 				<h2 className="text-3xl flex items-center">制作物</h2>
 			</div>
-			<div className="mx-2 mb-20">
-				<ul className="flex gap-4 flex-wrap">
+			<div className="mb-20 mx-2">
+				<ul className="flex gap-4 flex-wrap justify-center md:justify-between">
 					{works.map((work) => (
 						<li key={work.title}>
 							<Work work={work} setCurrentWork={setCurrentWork} />
