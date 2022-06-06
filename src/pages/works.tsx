@@ -17,13 +17,13 @@ const Works: NextPage = () => {
 				<ul className="flex flex-wrap gap-4 justify-center md:justify-between">
 					{works.map((work) => (
 						<li key={work.title}>
-							<Work work={work} setCurrentWork={setCurrentWork} />
+							<Work setCurrentWork={setCurrentWork} work={work} />
 						</li>
 					))}
 				</ul>
 			</div>
 			{currentWork !== undefined ? (
-				<WorkModal work={currentWork} setCurrentWork={setCurrentWork} />
+				<WorkModal setCurrentWork={setCurrentWork} work={currentWork} />
 			) : null}
 		</>
 	)

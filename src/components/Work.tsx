@@ -14,11 +14,11 @@ export const Work: React.FC<Props> = ({ work, setCurrentWork }) => {
 		<div className="border border-cyan-200 h-80 p-4 w-80">
 			{imagePath ? (
 				<Image
-					src={imagePath}
-					width={320}
-					height={160}
 					alt=""
 					className="object-cover"
+					height={160}
+					src={imagePath}
+					width={320}
 				/>
 			) : (
 				<div className="border flex h-37 items-center justify-center">
@@ -26,7 +26,7 @@ export const Work: React.FC<Props> = ({ work, setCurrentWork }) => {
 				</div>
 			)}
 			<h3 className="text-xl py-2">{title}</h3>
-			<p dangerouslySetInnerHTML={{ __html: description }} className="h-16" />
+			<p className="h-16" dangerouslySetInnerHTML={{ __html: description }} />
 			<button
 				className="border-2 h-8 w-full hover:border-cyan-300"
 				onClick={() => setCurrentWork(work)}

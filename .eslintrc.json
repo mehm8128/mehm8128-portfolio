@@ -9,8 +9,13 @@
 		"plugin:@typescript-eslint/recommended",
 		"plugin:react/recommended"
 	],
-	"plugins": ["unused-imports", "import"],
+	"plugins": ["unused-imports", "import", "react"],
 	"settings": { "import/core-modules": ["windi.css"] },
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
 	"rules": {
 		"import/order": [
 			"warn",
@@ -22,6 +27,19 @@
 		],
 		"react/react-in-jsx-scope": "off",
 		"react/prop-types": "off",
-		"unused-imports/no-unused-imports": "warn"
+		"unused-imports/no-unused-imports": "warn",
+		"react/jsx-sort-props": [
+			"warn",
+			{
+				"callbacksLast": true,
+				"shorthandFirst": true,
+				"shorthandLast": false,
+				"multiline": "ignore",
+				"ignoreCase": false,
+				"noSortAlphabetically": false,
+				"reservedFirst": false,
+				"locale": "auto"
+			}
+		]
 	}
 }

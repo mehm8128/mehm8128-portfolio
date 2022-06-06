@@ -22,11 +22,11 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 				<div className="h-2/5 text-center md:h-3/5">
 					{imagePath ? (
 						<Image
-							src={imagePath}
-							width={860}
-							height={400}
 							alt=""
 							className="object-cover "
+							height={400}
+							src={imagePath}
+							width={860}
 						/>
 					) : (
 						<p className="flex h-full justify-center items-center">画像なし</p>
@@ -39,8 +39,8 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 						<p key={githubLink}>
 							Githubリンク{githubLinks.length > 1 ? index + 1 : null}：
 							<a
-								href={githubLink}
 								className="text-cyan-500 hover:text-cyan-600"
+								href={githubLink}
 							>
 								{githubLink}
 							</a>
@@ -51,8 +51,8 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 						<p>
 							作品リンク：
 							<a
-								href={productLink}
 								className="text-cyan-500 hover:text-cyan-600"
+								href={productLink}
 							>
 								{productLink}
 							</a>
@@ -62,8 +62,8 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 				</section>
 				<div className="text-center">
 					<button
-						onClick={() => setCurrentWork(undefined)}
 						className="rounded-md border-2 py-2 px-12 hover:border-cyan-300"
+						onClick={() => setCurrentWork(undefined)}
 					>
 						閉じる
 					</button>

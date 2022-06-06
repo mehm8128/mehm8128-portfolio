@@ -21,10 +21,10 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 			<section className="flex py-8 justify-center">
 				<h2 className="flex text-3xl gap-2 items-center">
 					<Image
-						src="/assets/mehm8128_circle.png"
 						alt=""
-						width={60}
 						height={60}
+						src="/assets/mehm8128_circle.png"
+						width={60}
 					/>
 					mehm8128
 				</h2>

@@ -46,30 +46,30 @@ const Contact: NextPage = () => {
 				<p className="pb-8">
 					何かありましたらご連絡ください。名前と本文のみ必須ですが、メールアドレスが記入されていない場合返信できません。
 				</p>
-				<form onSubmit={handleSubmit} className="flex flex-col gap-4">
+				<form className="flex flex-col gap-4" onSubmit={handleSubmit}>
 					<input
+						className="border border-gray-300 h-12 pl-2 focus:outline-cyan-300"
+						placeholder="名前"
 						type="text"
 						value={name}
-						placeholder="名前"
-						className="border border-gray-300 h-12 pl-2 focus:outline-cyan-300"
 						onChange={(e) => setName(e.target.value)}
 					/>
 					<input
+						className="border border-gray-300 h-12 pl-2 focus:outline-cyan-300"
+						placeholder="メールアドレス"
 						type="email"
 						value={mail}
-						placeholder="メールアドレス"
-						className="border border-gray-300 h-12 pl-2 focus:outline-cyan-300"
 						onChange={(e) => setMail(e.target.value)}
 					/>
 					<textarea
-						value={message}
-						placeholder="本文"
 						className="border border-gray-300 min-h-32 pt-2 pl-2 focus:outline-cyan-300"
+						placeholder="本文"
+						value={message}
 						onChange={(e) => setMessage(e.target.value)}
 					/>
 					<button
-						type="submit"
 						className="border-2 border-gray-300 h-12 hover:border-cyan-300"
+						type="submit"
 					>
 						送信
 					</button>
