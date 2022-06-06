@@ -6,13 +6,13 @@ export const Header: React.FC = () => {
 	const router = useRouter()
 
 	return (
-		<header className="fixed w-full z-2 md:flex justify-between items-center px-4 py-2 bg-cyan-300 md:h-16 h-26 shadow-lg">
+		<header className="bg-cyan-300 h-26 shadow-lg w-full py-2 px-4 z-2 fixed justify-between items-center md:flex md:h-16">
 			<h1 className="text-3xl">
 				<Link href="/">
 					<a>mehm8128</a>
 				</Link>
 			</h1>
-			<nav className="md:text-xl flex md:gap-8 gap-4 mt-2 md:mt-0">
+			<nav className="flex mt-2 gap-4 md:mt-0 md:text-xl md:gap-8">
 				{navs.map((nav) => (
 					<Link href={nav.href} key={nav.href}>
 						<a

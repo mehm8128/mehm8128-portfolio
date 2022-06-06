@@ -12,14 +12,14 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 
 	return (
 		<div
-			className="fixed bg-gray-300/50 h-full w-full top-0 left-0 z-3"
+			className="h-full bg-gray-300/50 w-full top-0 left-0 z-3 fixed"
 			onClick={() => setCurrentWork(undefined)}
 		>
 			<div
-				className="md:w-5/7 h-6/7 w-6/7 p-4 bg-white shadow-lg mx-auto my-auto absolute inset-0 overflow-y-scroll"
+				className="bg-white my-auto mx-auto h-6/7 shadow-lg p-4 inset-0 w-6/7 absolute overflow-y-scroll md:w-5/7"
 				onClick={(e) => e.stopPropagation()}
 			>
-				<div className="md:h-3/5 h-2/5 text-center">
+				<div className="h-2/5 text-center md:h-3/5">
 					{imagePath ? (
 						<Image
 							src={imagePath}
@@ -29,11 +29,11 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 							className="object-cover "
 						/>
 					) : (
-						<p className="flex justify-center items-center h-full">画像なし</p>
+						<p className="flex h-full justify-center items-center">画像なし</p>
 					)}
 				</div>
 				<section className="min-h-54 py-4">
-					<h3 className="text-2xl mb-2">{title}</h3>
+					<h3 className="mb-2 text-2xl">{title}</h3>
 
 					{githubLinks.map((githubLink, index) => (
 						<p key={githubLink}>
@@ -63,7 +63,7 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 				<div className="text-center">
 					<button
 						onClick={() => setCurrentWork(undefined)}
-						className="py-2 px-12 rounded-md border-2 hover:border-cyan-300"
+						className="rounded-md border-2 py-2 px-12 hover:border-cyan-300"
 					>
 						閉じる
 					</button>

@@ -39,10 +39,10 @@ const Contact: NextPage = () => {
 	}
 	return (
 		<>
-			<div className="flex justify-center py-8">
-				<h2 className="text-3xl flex items-center">お問い合わせ</h2>
+			<div className="flex py-8 justify-center">
+				<h2 className="flex text-3xl items-center">お問い合わせ</h2>
 			</div>
-			<div className="md:w-1/2 w-4/5 mx-auto">
+			<div className="mx-auto w-4/5 md:w-1/2">
 				<p className="pb-8">
 					何かありましたらご連絡ください。名前と本文のみ必須ですが、メールアドレスが記入されていない場合返信できません。
 				</p>
@@ -64,7 +64,7 @@ const Contact: NextPage = () => {
 					<textarea
 						value={message}
 						placeholder="本文"
-						className="border border-gray-300 min-h-32 pl-2 pt-2 focus:outline-cyan-300"
+						className="border border-gray-300 min-h-32 pt-2 pl-2 focus:outline-cyan-300"
 						onChange={(e) => setMessage(e.target.value)}
 					/>
 					<button

@@ -18,8 +18,8 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 	}
 	return (
 		<>
-			<section className="flex justify-center py-8">
-				<h2 className="text-3xl flex items-center gap-2">
+			<section className="flex py-8 justify-center">
+				<h2 className="flex text-3xl gap-2 items-center">
 					<Image
 						src="/assets/mehm8128_circle.png"
 						alt=""
@@ -29,7 +29,7 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 					mehm8128
 				</h2>
 			</section>
-			<div className="md:w-1/2 w-4/5 mx-auto leading-relaxed">
+			<div className="mx-auto leading-relaxed w-4/5 md:w-1/2">
 				<p>ここはmehm8128（読み方：めふも）のポートフォリオサイトです。</p>
 				<ul>
 					<li>
@@ -45,7 +45,7 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 					<li>CTF：これから活動予定。</li>
 				</ul>
 			</div>
-			<ul className="text-2xl flex justify-center gap-12 mt-12 flex-wrap">
+			<ul className="flex flex-wrap mt-12 text-2xl gap-12 justify-center">
 				{links.map((link) => (
 					<LiWithArrow key={link.href}>
 						<Link href={link.href}>
@@ -54,7 +54,7 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 					</LiWithArrow>
 				))}
 			</ul>
-			<p className="text-right mt-4 mr-2">
+			<p className="mt-4 text-right mr-2">
 				最終更新日時：{formattedDate(updatedDate)}
 			</p>
 		</>

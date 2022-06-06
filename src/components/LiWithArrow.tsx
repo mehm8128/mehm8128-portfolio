@@ -1,4 +1,4 @@
-import styles from './LiWithArrow.module.css'
+import styles from "./LiWithArrow.module.css"
 
 interface Props {
 	children: React.ReactNode

@@ -10,11 +10,11 @@ const Works: NextPage = () => {
 	const [currentWork, setCurrentWork] = useState<WorkType>()
 	return (
 		<>
-			<div className="flex justify-center py-8">
-				<h2 className="text-3xl flex items-center">制作物</h2>
+			<div className="flex py-8 justify-center">
+				<h2 className="flex text-3xl items-center">制作物</h2>
 			</div>
-			<div className="mb-20 mx-2">
-				<ul className="flex gap-4 flex-wrap justify-center md:justify-between">
+			<div className="mx-2 mb-20">
+				<ul className="flex flex-wrap gap-4 justify-center md:justify-between">
 					{works.map((work) => (
 						<li key={work.title}>
 							<Work work={work} setCurrentWork={setCurrentWork} />
