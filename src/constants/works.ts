@@ -18,6 +18,16 @@ export const works: WorkType[] = [
 		imagePath: "/assets/palamo.png",
 	},
 	{
+		title: "I love TikZ",
+		productLink: "https://hackathon-22spring-13.github.io/client/",
+		githubLinks: ["hhttps://github.com/hackathon-22spring-13/client"],
+		description:
+			"traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。",
+		longDescription:
+			"traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。チームラボ賞をいただいた。クライアントはNext.js+TypeScript+Windi CSS+Recoil+Fabric.js、サーバーはPython+Flask+SVG2TikZを使っている。自分はクライアントのほぼ全てを担当した。Github Actionsを使ってcommit時に自動でGithub Pagesにデプロイできるようにしてある。",
+		imagePath: "/assets/IloveTikZ.png",
+	},
+	{
 		title: "Jomon",
 		productLink: "",
 		githubLinks: ["https://github.com/traPtitech/Jomon-UI"],

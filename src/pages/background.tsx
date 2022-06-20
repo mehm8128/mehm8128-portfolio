@@ -32,6 +32,11 @@ const Background: NextPage = () => {
 						<li>
 							3～5月 prdでフロントエンドエンジニアとしてインターンに参加。
 						</li>
+						<li>
+							6月
+							traPの部内ハッカソン（チームラボ協賛）で描いた絵をTikZ形式に変換するツール「I
+							love TikZ」制作のフロントエンドを担当。
+						</li>
 					</ul>
 				</section>
 			</div>
