@@ -5,9 +5,9 @@
 		"plugin:import/recommended",
 		"plugin:import/warnings",
 		"eslint:recommended",
-		"prettier",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:react/recommended"
+		"plugin:react/recommended",
+		"prettier"
 	],
 	"plugins": ["unused-imports", "import", "react"],
 	"settings": { "import/core-modules": ["windi.css"] },

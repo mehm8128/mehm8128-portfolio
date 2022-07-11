@@ -1,20 +1,20 @@
-import type { NextPage } from "next"
-import { useState } from "react"
+import type { NextPage } from 'next';
+import { useState } from 'react';
 
-import { Work } from "../components/Work"
-import { WorkModal } from "../components/WorkModal"
-import { works } from "../constants/works"
-import type { WorkType } from "../constants/works"
+import { Work } from '../components/Work';
+import { WorkModal } from '../components/WorkModal';
+import { works } from '../constants/works';
+import type { WorkType } from '../constants/works';
 
 const Works: NextPage = () => {
-	const [currentWork, setCurrentWork] = useState<WorkType>()
+	const [currentWork, setCurrentWork] = useState<WorkType>();
 	return (
 		<>
-			<div className="flex py-8 justify-center">
-				<h2 className="flex text-3xl items-center">制作物</h2>
+			<div className='flex justify-center py-8'>
+				<h2 className='flex items-center text-3xl'>制作物</h2>
 			</div>
-			<div className="mx-2 mb-20">
-				<ul className="flex flex-wrap gap-4 justify-center md:justify-start">
+			<div className='mx-2 mb-20'>
+				<ul className='flex flex-wrap justify-center gap-4 md:justify-start'>
 					{works.map((work) => (
 						<li key={work.title}>
 							<Work setCurrentWork={setCurrentWork} work={work} />
@@ -26,7 +26,7 @@ const Works: NextPage = () => {
 				<WorkModal setCurrentWork={setCurrentWork} work={currentWork} />
 			) : null}
 		</>
-	)
-}
+	);
+};
 
-export default Works
+export default Works;

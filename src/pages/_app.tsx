@@ -1,9 +1,9 @@
-import "../styles/globals.css"
-import "windi.css"
+import '../styles/globals.css';
+import 'windi.css';
 
-import type { AppProps } from "next/app"
-import Head from "next/head"
-import { Header } from "../components/Header"
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import { Header } from '../components/Header';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -12,11 +12,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<title>mehm8128-portfolio</title>
 			</Head>
 			<Header />
-			<main className="pt-26 md:pt-16">
+			<main className='pt-26 md:pt-16'>
 				<Component {...pageProps} />
 			</main>
 		</>
-	)
+	);
 }
 
-export default MyApp
+export default MyApp;
