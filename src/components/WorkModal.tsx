@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
-	const { title, imagePath, longDescription, githubLinks, productLink } = work;
+	const { title, imagePath, longDescription, links, productLink } = work;
 
 	return (
 		<div
@@ -28,24 +28,22 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 				</div>
 				<section className='min-h-54 py-4'>
 					<h3 className='mb-2 text-2xl'>{title}</h3>
-
-					{githubLinks.map((githubLink, index) => (
-						<p key={githubLink}>
-							Githubリンク{githubLinks.length > 1 ? index + 1 : null}：
-							<a className='text-cyan-500 hover:text-cyan-600' href={githubLink}>
-								{githubLink}
-							</a>
-						</p>
-					))}
-
+					<h4>作品リンク</h4>
 					{productLink !== '' ? (
 						<p>
-							作品リンク：
 							<a className='text-cyan-500 hover:text-cyan-600' href={productLink}>
 								{productLink}
 							</a>
 						</p>
 					) : null}
+					<h4> その他リンク</h4>
+					{links.map((link) => (
+						<p key={link.url}>
+							<a className='text-cyan-500 hover:text-cyan-600' href={link.url} key={link.url}>
+								{link.name}
+							</a>
+						</p>
+					))}
 					<p className='my-2'>{longDescription}</p>
 				</section>
 				<div className='text-center'>
