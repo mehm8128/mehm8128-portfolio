@@ -35,15 +35,21 @@ export const WorkModal: React.FC<Props> = ({ work, setCurrentWork }) => {
 								{productLink}
 							</a>
 						</p>
-					) : null}
+					) : (
+						<p>なし</p>
+					)}
 					<h4> その他リンク</h4>
-					{links.map((link) => (
-						<p key={link.url}>
-							<a className='text-cyan-500 hover:text-cyan-600' href={link.url} key={link.url}>
-								{link.name}
-							</a>
-						</p>
-					))}
+					{links.length > 0 ? (
+						links.map((link) => (
+							<p key={link.url}>
+								<a className='text-cyan-500 hover:text-cyan-600' href={link.url} key={link.url}>
+									{link.name}
+								</a>
+							</p>
+						))
+					) : (
+						<p>なし</p>
+					)}
 					<p className='my-2'>{longDescription}</p>
 				</section>
 				<div className='text-center'>
