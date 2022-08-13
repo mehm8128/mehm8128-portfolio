@@ -34,7 +34,7 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 					<li>
 						Web：フロントエンドはReact、Vue.js、Next.js、TypeScriptなど、バックエンドはGolangを主に使っています。
 					</li>
-					<li>競プロ：主にPython。C++は勉強中。</li>
+					<li>競プロ：茶色コーダー。使用言語はPython。</li>
 					<li>CTF：これから活動予定。</li>
 				</ul>
 			</div>

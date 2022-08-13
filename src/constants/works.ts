@@ -19,7 +19,7 @@ export const works: WorkType[] = [
 		links: [{ name: 'Github', url: 'https://github.com/mehm8128/frontend' }],
 		description: 'traPの2021冬ハッカソンで作った場所法援助アプリ。',
 		longDescription:
-			'traPの2021冬ハッカソンで作った場所法援助アプリ。クライアントを担当した。クライアントはReact+TypeScript、サーバーはgolangで作られている。自分が担当したのは宮殿一覧、テンプレート一覧やクイズ機能、通信周りなど。',
+			'traPの2021冬ハッカソンで作った場所法援助アプリ。クライアントを担当した。クライアントはReact+TypeScript、サーバーはgolangで作られている。\n自分が担当したのは宮殿一覧、テンプレート一覧やクイズ機能、通信周りなど。',
 		imagePath: '/assets/palamo.png',
 	},
 	{
@@ -31,7 +31,7 @@ export const works: WorkType[] = [
 		],
 		description: 'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。',
 		longDescription:
-			'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。チームラボ賞をいただいた。クライアントはNext.js+TypeScript+Windi CSS+Recoil+Fabric.js、サーバーはPython+Flask+SVG2TikZを使っている。自分はクライアントのほぼ全てを担当した。Github Actionsを使ってcommit時に自動でGithub Pagesにデプロイできるようにしてある。',
+			'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。チームラボ賞をいただいた。\nクライアントはNext.js+TypeScript+Windi CSS+Recoil+Fabric.js、サーバーはPython+Flask+SVG2TikZを使っている。自分はクライアントを担当した。Github Actionsを使ってcommit時に自動でGithub Pagesにデプロイできるようにしてある。',
 		imagePath: '/assets/IloveTikZ.png',
 	},
 	{
@@ -58,7 +58,7 @@ export const works: WorkType[] = [
 		],
 		description: '勉強時間を記録できるサービス。',
 		longDescription:
-			'勉強時間記録を他の人と共有できるサービス。受験期に使っていたアプリを参考にして作った。Next.jsで作っていて、UIフレームワークに初めてChakra-UIを使ってみた。単語暗記機能を制作中。セッション機能を導入予定。',
+			'勉強時間記録を他の人と共有できるサービス。受験期に使っていたアプリを参考にして作った。Next.jsで作っていて、UIフレームワークにChakra-UIを使った。単語暗記機能もある。',
 		imagePath: '/assets/study.png',
 	},
 	{
@@ -71,21 +71,12 @@ export const works: WorkType[] = [
 		imagePath: '/assets/portfolio.png',
 	},
 	{
-		title: 'TwitterBot',
-		productLink: '',
-		links: [{ name: 'Github', url: 'https://github.com/mehm8128/TwitterBot' }],
-		description: 'TwitterAPIを利用して自分のアカウントをBot化。',
-		longDescription:
-			'Node.jsでTwitterAPIを使い、TwitterBotを作った。ライブラリはnode-twitter-api-v2を使った。現在は自動返信機能と日付が変わるタイミングでの時報のみ。デプロイはherokuを使っている。',
-		imagePath: '',
-	},
-	{
 		title: 'traQBot',
 		productLink: '',
 		links: [{ name: 'Github', url: 'https://github.com/mehm8128/traq-mehm8128-bot' }],
 		description: 'traP内SNSのtraQで使用しているtraQBot。',
 		longDescription:
-			'Node.jsを使ってtraQBotを作った(traQとはtraP内SNS)。ライブラリはhubot-traqを使った。デプロイはtraP内サービスのshowcaseを使っている。',
+			'Node.jsを使ってtraQBotを作った(traQとはtraP内SNS)。ライブラリはhubot-traqを使った。デプロイはtraP内サービスのshowcaseを使っている。機能はGithubのReadme参照。',
 		imagePath: '/assets/traQBot.png',
 	},
 ];
