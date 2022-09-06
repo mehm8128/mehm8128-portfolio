@@ -40,7 +40,7 @@ export const works: WorkType[] = [
 		links: [{ name: 'Github', url: 'https://github.com/traPtitech/Jomon-UI' }],
 		description: 'traPの会計支援サービス。',
 		longDescription:
-			'traPの会計支援サービス。Vue.jsで作られていて、状態管理にpinia、CSSにWindi CSSが使われている。まだ開発中。',
+			'traPの会計支援サービス。Vue.jsで作られていて、状態管理にPinia、CSSにWindi CSSが使われている。まだ開発中。',
 		imagePath: '',
 	},
 	{
@@ -58,7 +58,7 @@ export const works: WorkType[] = [
 		],
 		description: '勉強時間を記録できるサービス。',
 		longDescription:
-			'勉強時間記録を他の人と共有できるサービス。受験期に使っていたアプリを参考にして作った。Next.jsで作っていて、UIフレームワークにChakra-UIを使った。単語暗記機能もある。',
+			'勉強時間記録と目標を他の人と共有できるサービス。受験期に使っていたアプリを参考にして作った。Next.jsで作っていて、UIフレームワークにWindi CSS+Ant designを使った。単語暗記機能もある。',
 		imagePath: '/assets/study.png',
 	},
 	{
