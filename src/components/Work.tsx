@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import { SetStateAction } from 'react';
 import type { WorkType } from '../constants/works';
 
 interface Props {
 	work: WorkType;
-	setCurrentWork: React.Dispatch<SetStateAction<WorkType | undefined>>;
+	setCurrentWork: (work: WorkType) => void;
 }
 
 export const Work: React.FC<Props> = ({ work, setCurrentWork }) => {
