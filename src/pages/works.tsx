@@ -26,7 +26,6 @@ const Works: NextPage = () => {
 			<div className='flex justify-center py-8'>
 				<h2 className='flex items-center text-3xl'>制作物</h2>
 			</div>
-			{currentWork?.title.toString() ?? 'aaa'}
 			<div className='mx-2 mb-20'>
 				<ul className='flex flex-wrap justify-center gap-4 md:justify-start'>
 					{works.map((work) => (
