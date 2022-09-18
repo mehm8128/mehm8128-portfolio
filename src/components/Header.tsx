@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
 				{navs.map((nav) => (
 					<Link href={nav.href} key={nav.href}>
 						<a
-							className={`rounded-xl py-2 px-4 hover:bg-cyan-400 ${
+							className={`rounded-xl py-2 px-2 hover:bg-cyan-400 md:px-4 ${
 								router.pathname === nav.href ? 'bg-cyan-400' : ''
 							}`}
 						>
