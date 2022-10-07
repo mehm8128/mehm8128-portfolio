@@ -33,6 +33,7 @@ const Background: NextPage = () => {
 							TikZ」制作のフロントエンドを担当。
 						</li>
 						<li>7月 ISUCON12に参加。</li>
+						<li>9月 digicon-hackathonに参加。</li>
 					</ul>
 				</section>
 			</div>

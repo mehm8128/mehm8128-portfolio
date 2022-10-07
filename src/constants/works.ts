@@ -79,4 +79,13 @@ export const works: WorkType[] = [
 			'Node.jsを使ってtraQBotを作った(traQとはtraP内SNS)。ライブラリはhubot-traqを使った。デプロイはtraP内サービスのshowcaseを使っている。機能はGithubのReadme参照。',
 		imagePath: '/assets/traQBot.png',
 	},
+	{
+		title: 'comiQ',
+		productLink: '',
+		links: [{ name: 'Github', url: 'https://github.com/hackathon-22-digicon-team4/comiQ-UI' }],
+		description: 'digicon-hackathonで作った漫画閲覧サイトの新機能デモアプリ。',
+		longDescription:
+			'digicon-hackathonで作った漫画閲覧サイトの新機能デモアプリ。Vue.jsで作った。漫画にスタンプを押して他のユーザーと共有する機能と、押したスタンプから過去に読んだシーンを振り返る機能がある(画像はデモで使用した漫画の著作権の関係で漫画画像が映っていないものになっています)。',
+		imagePath: '/assets/coimQ.png',
+	},
 ];
