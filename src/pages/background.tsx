@@ -34,6 +34,7 @@ const Background: NextPage = () => {
 						</li>
 						<li>7月 ISUCON12に参加。</li>
 						<li>9月 digicon-hackathonに参加。</li>
+						<li>11月～ ナンバーナインでフロントエンドエンジニアとしてインターンに参加。</li>
 					</ul>
 				</section>
 			</div>

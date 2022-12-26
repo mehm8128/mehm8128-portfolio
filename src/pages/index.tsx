@@ -12,10 +12,15 @@ interface Props {
 const Home: NextPage<Props> = ({ updatedDate }) => {
 	const formattedDate = (stringDate: string) => {
 		const date = new Date(stringDate);
-		return `${date.getFullYear()}年${
-			date.getMonth() + 1
-		}月${date.getDate()}日${date.getHours()}時${date.getMinutes()}分`;
+		return `${date.getFullYear()}年${(date.getMonth() + 1).toString().padStart(2, '0')}月${date
+			.getDate()
+			.toString()
+			.padStart(2, '0')}日${date.getHours().toString().padStart(2, '0')}時${date
+			.getMinutes()
+			.toString()
+			.padStart(2, '0')}分`;
 	};
+
 	return (
 		<>
 			<section className='flex justify-center py-8'>
@@ -27,15 +32,11 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 			<div className='mx-auto w-4/5 leading-relaxed md:w-1/2'>
 				<p>ここはmehm8128（読み方：めふも）のポートフォリオサイトです。</p>
 				<ul>
-					<li>
-						所属：東京工業大学工学院情報通信系、東京工業大学デジタル創作同好会traP（SysAd班、アルゴリズム班、CTF班）
-					</li>
-					<li>やってること：Web（主にフロントエンド）、競プロ（Atcoder）、CTF</li>
+					<li>所属：東京工業大学工学院情報通信系、東京工業大学デジタル創作同好会traP</li>
+					<li>やってること：Web（主にフロントエンド）</li>
 					<li>
 						Web：フロントエンドはReact、Vue.js、Next.js、TypeScriptなど、バックエンドはGolangを主に使っています。
 					</li>
-					<li>競プロ：茶色コーダー。使用言語はPython。</li>
-					<li>CTF：これから活動予定。</li>
 				</ul>
 			</div>
 			<ul className='mt-12 flex flex-wrap justify-center gap-12 text-2xl'>

@@ -14,7 +14,7 @@ export const Work: React.FC<Props> = ({ work, setCurrentWork }) => {
 			{imagePath ? (
 				<Image alt='' className='object-cover' height={160} src={imagePath} width={320} />
 			) : (
-				<div className='h-37 flex items-center justify-center border'>画像なし</div>
+				<div className='flex h-36 items-center justify-center border'>画像なし</div>
 			)}
 			<h3 className='py-2 text-xl'>{title}</h3>
 			<p className='h-16' dangerouslySetInnerHTML={{ __html: description }} />
