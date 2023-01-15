@@ -9,7 +9,7 @@ const Background: NextPage = () => {
 			</div>
 			<div className='mx-auto w-4/5 leading-loose md:w-1/2'>
 				<section className='pb-4'>
-					<h3 className='mb-2 text-xl font-bold'>traPでの活動</h3>
+					<h3 className='mb-2 text-2xl font-bold'>traPでの活動</h3>
 					<ul className='list-disc'>
 						<li>
 							<StyledAnchor href='https://github.com/traPtitech/traQ_S-UI'>
@@ -78,14 +78,14 @@ const Background: NextPage = () => {
 					</ul>
 				</section>
 				<section className='pb-4'>
-					<h3 className='mb-2 text-xl font-bold'>イベント・大会</h3>
+					<h3 className='mb-2 text-2xl font-bold'>イベント・大会</h3>
 					<ul className='list-disc'>
 						<li>Web Speed Hackathon 2022 for Students 参加</li>
 						<li>ISUCON12 参加</li>
 					</ul>
 				</section>
 				<section className='pb-4'>
-					<h3 className='mb-2 text-xl font-bold'>インターンシップ</h3>
+					<h3 className='mb-2 text-2xl font-bold'>インターンシップ</h3>
 					<ul className='list-disc'>
 						<li>
 							<p>2022年3～5月 株式会社prdでフロントエンドエンジニアインターンに参加</p>

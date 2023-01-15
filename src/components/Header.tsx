@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
 					<a>mehm8128</a>
 				</Link>
 			</h1>
-			<nav className='mt-2 flex gap-4 md:mt-0 md:gap-8 md:text-xl'>
+			<nav className='mt-2 mr-4 flex gap-4 md:mt-0 md:gap-8 md:text-xl'>
 				{navs.map((nav) => (
 					<Link href={nav.href} key={nav.href}>
 						<a
