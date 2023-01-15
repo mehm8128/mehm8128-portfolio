@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { LiWithArrow } from '../components/LiWithArrow'
-import { links } from '../constants/links'
+import { links } from '../consts/links'
 import { formatDate } from '../utils/date'
 
 interface Props {

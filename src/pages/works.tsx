@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { ModalWrapper } from '../components/ModalWrapper'
 import { Work } from '../components/Work'
 import { WorkModal } from '../components/WorkModal'
-import { works } from '../constants/works'
-import type { WorkType } from '../constants/works'
+import { works } from '../consts/works'
+import type { WorkType } from '../consts/works'
 import { useModal } from '../hooks/useModal'
 
 const Works: NextPage = () => {

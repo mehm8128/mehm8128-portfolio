@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { navs } from '../constants/navs'
+import { navs } from '../consts/navs'
 
 export const Header: React.FC = () => {
 	const router = useRouter()

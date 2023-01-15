@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import type { WorkType } from '../constants/works'
+import type { WorkType } from '../consts/works'
 
 interface Props {
 	work: WorkType
