@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<title>mehm8128-portfolio</title>
 			</Head>
 			<Header />
-			<main className='pt-26 h-screen overflow-y-scroll text-xl md:pt-16'>
+			<main className='pt-26 h-screen overflow-y-scroll md:pt-16 md:text-xl'>
 				<Component {...pageProps} />
 			</main>
 		</>
