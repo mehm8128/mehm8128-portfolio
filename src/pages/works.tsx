@@ -24,10 +24,10 @@ const Works: NextPage = () => {
 	return (
 		<>
 			<div className='flex justify-center py-8'>
-				<h2 className='flex items-center text-3xl'>制作物</h2>
+				<h2 className='text-3xl'>制作物</h2>
 			</div>
-			<div className='mx-2 mb-20'>
-				<ul className='flex flex-wrap justify-center gap-4 md:justify-start'>
+			<div className='px-12 pb-20'>
+				<ul className='grid grid-cols-4 gap-12'>
 					{works.map((work) => (
 						<li key={work.title}>
 							<Work setCurrentWork={handleSetCurrentWork} work={work} />

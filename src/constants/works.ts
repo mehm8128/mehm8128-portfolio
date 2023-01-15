@@ -1,4 +1,4 @@
-export interface Link {
+interface Link {
 	name: string
 	url: string
 }
@@ -14,15 +14,6 @@ export interface WorkType {
 
 export const works: WorkType[] = [
 	{
-		title: 'Palamo',
-		productLink: 'https://frontend-opal-delta-19.vercel.app',
-		links: [{ name: 'Github', url: 'https://github.com/mehm8128/frontend' }],
-		description: 'traPの2021冬ハッカソンで作った場所法援助アプリ。',
-		longDescription:
-			'traPの2021冬ハッカソンで作った場所法援助アプリ。クライアントを担当した。クライアントはReact+TypeScript、サーバーはgolangで作られている。\n自分が担当したのは宮殿一覧、テンプレート一覧やクイズ機能、通信周りなど。',
-		imagePath: '/assets/palamo.png',
-	},
-	{
 		title: 'I love TikZ',
 		productLink: 'https://hackathon-22spring-13.github.io/client/',
 		links: [
@@ -31,17 +22,8 @@ export const works: WorkType[] = [
 		],
 		description: 'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。',
 		longDescription:
-			'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。チームラボ賞をいただいた。\nクライアントはNext.js+TypeScript+Windi CSS+Recoil+Fabric.js、サーバーはPython+Flask+SVG2TikZを使っている。自分はクライアントを担当した。Github Actionsを使ってcommit時に自動でGithub Pagesにデプロイできるようにしてある。',
+			'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。チームラボ賞をいただいた。\nクライアントはNext.js+TypeScript+Windi CSS+Recoil+Fabric.js、サーバーはPython+Flask+SVG2TikZを使っている。自分はクライアントを1人で担当した。',
 		imagePath: '/assets/IloveTikZ.png',
-	},
-	{
-		title: 'Jomon',
-		productLink: '',
-		links: [{ name: 'Github', url: 'https://github.com/traPtitech/Jomon-UI' }],
-		description: 'traPの会計支援サービス。',
-		longDescription:
-			'traPの会計支援サービス。Vue.jsで作られていて、状態管理にPinia、CSSにWindi CSSが使われている。まだ開発中。',
-		imagePath: '',
 	},
 	{
 		title: '勉強時間管理アプリ',
@@ -62,13 +44,13 @@ export const works: WorkType[] = [
 		imagePath: '/assets/study.png',
 	},
 	{
-		title: 'ポートフォリオ',
-		productLink: 'https://mehm8128-portfolio.vercel.app/',
-		links: [{ name: 'Github', url: 'https://github.com/mehm8128/mehm8128-portfolio' }],
-		description: 'このポートフォリオ。',
+		title: 'Palamo',
+		productLink: 'https://frontend-opal-delta-19.vercel.app',
+		links: [{ name: 'Github', url: 'https://github.com/mehm8128/frontend' }],
+		description: 'traPの2021冬ハッカソンで作った場所法援助アプリ。',
 		longDescription:
-			'前に使っていたものをデザインや使う技術を変えて作り直した。Next.jsで作り、UIフレームワークにWindi CSSを使っている。',
-		imagePath: '/assets/portfolio.png',
+			'traPの2021冬ハッカソンで作った場所法援助アプリ。クライアントを担当した。クライアントはReact+TypeScript、サーバーはGoで作られている。\n自分が担当したのは宮殿一覧、テンプレート一覧やクイズ機能、通信周りなど。',
+		imagePath: '/assets/palamo.png',
 	},
 	{
 		title: 'traQBot',
@@ -76,16 +58,7 @@ export const works: WorkType[] = [
 		links: [{ name: 'Github', url: 'https://github.com/mehm8128/traq-mehm8128-bot' }],
 		description: 'traP内SNSのtraQで使用しているtraQBot。',
 		longDescription:
-			'Node.jsを使ってtraQBotを作った(traQとはtraP内SNS)。ライブラリはhubot-traqを使った。デプロイはtraP内サービスのshowcaseを使っている。機能はGithubのReadme参照。',
+			'Node.jsを使ってtraQBotを作った。ライブラリはhubot-traqを使った。デプロイはtraP内サービスのshowcaseを使っている。機能はGithubのReadme参照。',
 		imagePath: '/assets/traQBot.png',
-	},
-	{
-		title: 'comiQ',
-		productLink: '',
-		links: [{ name: 'Github', url: 'https://github.com/hackathon-22-digicon-team4/comiQ-UI' }],
-		description: 'digicon-hackathonで作った漫画閲覧サイトの新機能デモアプリ。',
-		longDescription:
-			'digicon-hackathonで作った漫画閲覧サイトの新機能デモアプリ。Vue.jsで作った。漫画にスタンプを押して他のユーザーと共有する機能と、押したスタンプから過去に読んだシーンを振り返る機能がある(画像はデモで使用した漫画の著作権の関係で漫画画像が映っていないものになっています)。',
-		imagePath: '/assets/comiQ.png',
 	},
 ]
