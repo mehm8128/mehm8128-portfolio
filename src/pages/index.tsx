@@ -4,23 +4,13 @@ import Link from 'next/link'
 
 import { LiWithArrow } from '../components/LiWithArrow'
 import { links } from '../constants/links'
+import { formatDate } from '../utils/date'
 
 interface Props {
 	updatedDate: string
 }
 
 const Home: NextPage<Props> = ({ updatedDate }) => {
-	const formattedDate = (stringDate: string) => {
-		const date = new Date(stringDate)
-		return `${date.getFullYear()}年${(date.getMonth() + 1).toString().padStart(2, '0')}月${date
-			.getDate()
-			.toString()
-			.padStart(2, '0')}日${date.getHours().toString().padStart(2, '0')}時${date
-			.getMinutes()
-			.toString()
-			.padStart(2, '0')}分`
-	}
-
 	return (
 		<>
 			<section className='flex justify-center py-8'>
@@ -48,7 +38,7 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 					</LiWithArrow>
 				))}
 			</ul>
-			<p className='mt-4 mr-2 text-right'>最終更新日時：{formattedDate(updatedDate)}</p>
+			<p className='mt-4 mr-2 text-right'>最終更新日時：{formatDate(updatedDate)}</p>
 		</>
 	)
 }
