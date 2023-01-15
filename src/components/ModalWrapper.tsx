@@ -1,6 +1,6 @@
 interface Props {
-	onClose: () => void;
-	children: React.ReactNode;
+	onClose: () => void
+	children: React.ReactNode
 }
 
 export const ModalWrapper: React.FC<Props> = ({ children, onClose }) => {
@@ -13,5 +13,5 @@ export const ModalWrapper: React.FC<Props> = ({ children, onClose }) => {
 				{children}
 			</div>
 		</div>
-	);
-};
+	)
+}

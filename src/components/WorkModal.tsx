@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import type { WorkType } from '../constants/works';
+import Image from 'next/image'
+import type { WorkType } from '../constants/works'
 
 interface Props {
-	work: WorkType;
-	onClose: () => void;
+	work: WorkType
+	onClose: () => void
 }
 
 export const WorkModal: React.FC<Props> = ({ work, onClose }) => {
-	const { title, imagePath, longDescription, links, productLink } = work;
+	const { title, imagePath, longDescription, links, productLink } = work
 
 	return (
 		<>
@@ -50,5 +50,5 @@ export const WorkModal: React.FC<Props> = ({ work, onClose }) => {
 				</button>
 			</div>
 		</>
-	);
-};
+	)
+}

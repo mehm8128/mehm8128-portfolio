@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 
 const Background: NextPage = () => {
 	return (
@@ -39,7 +39,7 @@ const Background: NextPage = () => {
 				</section>
 			</div>
 		</>
-	);
-};
+	)
+}
 
-export default Background;
+export default Background

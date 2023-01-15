@@ -1,24 +1,24 @@
-import type { NextPage } from 'next';
-import { useState } from 'react';
+import type { NextPage } from 'next'
+import { useState } from 'react'
 
-import { ModalWrapper } from '../components/ModalWrapper';
-import { Work } from '../components/Work';
-import { WorkModal } from '../components/WorkModal';
-import { works } from '../constants/works';
-import type { WorkType } from '../constants/works';
-import { useModal } from '../hooks/useModal';
+import { ModalWrapper } from '../components/ModalWrapper'
+import { Work } from '../components/Work'
+import { WorkModal } from '../components/WorkModal'
+import { works } from '../constants/works'
+import type { WorkType } from '../constants/works'
+import { useModal } from '../hooks/useModal'
 
 const Works: NextPage = () => {
-	const [currentWork, setCurrentWork] = useState<WorkType>();
-	const { isModalOpen, openModal, closeModal } = useModal();
+	const [currentWork, setCurrentWork] = useState<WorkType>()
+	const { isModalOpen, openModal, closeModal } = useModal()
 
 	function handleSetCurrentWork(currentWork: WorkType) {
-		setCurrentWork(currentWork);
-		openModal();
+		setCurrentWork(currentWork)
+		openModal()
 	}
 	function handleCloseModal() {
-		closeModal();
-		setCurrentWork(undefined);
+		setCurrentWork(undefined)
+		closeModal()
 	}
 
 	return (
@@ -41,7 +41,7 @@ const Works: NextPage = () => {
 				</ModalWrapper>
 			) : null}
 		</>
-	);
-};
+	)
+}
 
-export default Works;
+export default Works

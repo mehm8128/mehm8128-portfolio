@@ -1,15 +1,15 @@
 export interface Link {
-	name: string;
-	url: string;
+	name: string
+	url: string
 }
 
 export interface WorkType {
-	title: string;
-	productLink: string;
-	links: Link[];
-	description: string;
-	longDescription: string;
-	imagePath: string;
+	title: string
+	productLink: string
+	links: Link[]
+	description: string
+	longDescription: string
+	imagePath: string
 }
 
 export const works: WorkType[] = [
@@ -88,4 +88,4 @@ export const works: WorkType[] = [
 			'digicon-hackathonで作った漫画閲覧サイトの新機能デモアプリ。Vue.jsで作った。漫画にスタンプを押して他のユーザーと共有する機能と、押したスタンプから過去に読んだシーンを振り返る機能がある(画像はデモで使用した漫画の著作権の関係で漫画画像が映っていないものになっています)。',
 		imagePath: '/assets/comiQ.png',
 	},
-];
+]

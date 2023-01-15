@@ -1,25 +1,25 @@
-import type { GetStaticProps, NextPage } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
+import type { GetStaticProps, NextPage } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { LiWithArrow } from '../components/LiWithArrow';
-import { links } from '../constants/links';
+import { LiWithArrow } from '../components/LiWithArrow'
+import { links } from '../constants/links'
 
 interface Props {
-	updatedDate: string;
+	updatedDate: string
 }
 
 const Home: NextPage<Props> = ({ updatedDate }) => {
 	const formattedDate = (stringDate: string) => {
-		const date = new Date(stringDate);
+		const date = new Date(stringDate)
 		return `${date.getFullYear()}年${(date.getMonth() + 1).toString().padStart(2, '0')}月${date
 			.getDate()
 			.toString()
 			.padStart(2, '0')}日${date.getHours().toString().padStart(2, '0')}時${date
 			.getMinutes()
 			.toString()
-			.padStart(2, '0')}分`;
-	};
+			.padStart(2, '0')}分`
+	}
 
 	return (
 		<>
@@ -50,11 +50,11 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 			</ul>
 			<p className='mt-4 mr-2 text-right'>最終更新日時：{formattedDate(updatedDate)}</p>
 		</>
-	);
-};
+	)
+}
 
 export const getStaticProps: GetStaticProps = async () => {
-	return { props: { updatedDate: String(new Date()) } };
-};
+	return { props: { updatedDate: Date() } }
+}
 
-export default Home;
+export default Home

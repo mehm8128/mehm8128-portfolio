@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { navs } from '../constants/navs';
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { navs } from '../constants/navs'
 
 export const Header: React.FC = () => {
-	const router = useRouter();
+	const router = useRouter()
 
 	return (
 		<header className='h-26 z-2 fixed w-full items-center justify-between bg-cyan-300 py-2 px-4 shadow-lg md:flex md:h-16'>
@@ -26,5 +26,5 @@ export const Header: React.FC = () => {
 				))}
 			</nav>
 		</header>
-	);
-};
+	)
+}
