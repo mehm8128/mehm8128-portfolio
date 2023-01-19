@@ -30,8 +30,8 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 			<ul className='mt-12 flex flex-wrap justify-center gap-12 text-2xl'>
 				{links.map((link) => (
 					<LiWithArrow key={link.href}>
-						<Link href={link.href}>
-							<a className='underline'>{link.text}</a>
+						<Link className='underline' href={link.href}>
+							{link.text}
 						</Link>
 					</LiWithArrow>
 				))}
