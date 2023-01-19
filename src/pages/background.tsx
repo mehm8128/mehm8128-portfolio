@@ -1,4 +1,5 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
+import { StyledAnchor } from '../components/StyledAnchor'
 
 const Background: NextPage = () => {
 	return (
@@ -8,38 +9,101 @@ const Background: NextPage = () => {
 			</div>
 			<div className='mx-auto w-4/5 leading-loose md:w-1/2'>
 				<section className='pb-4'>
-					<h3 className='text-lg font-bold'>2021年</h3>
-					<ul>
-						<li>4月 東京工業大学工学院に入学。</li>
-						<li>5月 東京工業大学デジタル創作同好会traPに入部。</li>
+					<h3 className='mb-2 text-2xl font-bold'>traPでの活動</h3>
+					<ul className='list-disc'>
 						<li>
-							6月
-							traPの部内ハッカソンで部内で制作された音楽をまとめて一覧化するWebアプリ「Qloud」制作のフロントエンドを担当。
+							<StyledAnchor href='https://github.com/traPtitech/traQ_S-UI'>
+								サークル内SNS traQ
+							</StyledAnchor>
+							のフロントエンドの開発に参加
 						</li>
-						<li>10月 AtCoderで茶色になる。</li>
 						<li>
-							12月
-							traPの部内ハッカソン（ピクシブ協賛）で場所法援助Webアプリ「Palamo」制作のフロントエンドを担当。
+							<StyledAnchor href='https://github.com/traPtitech/Jomon-UI'>
+								サークル内会計支援システム Jomon
+							</StyledAnchor>
+							のフロントエンドの開発に参加
+						</li>
+						<li>
+							<StyledAnchor href='https://github.com/traPtitech/traPortfolio-Dashboard'>
+								外部向けポートフォリオ作成アプリ traPortfolio
+							</StyledAnchor>
+							のフロントエンドの開発に参加
+						</li>
+						<li>
+							<StyledAnchor href='https://github.com/traPtitech/Emoine_R-UI'>
+								サークル内動画閲覧アプリ emoine
+							</StyledAnchor>
+							のフロントエンドの開発に参加
+						</li>
+						<li>
+							<StyledAnchor href='https://github.com/traPtitech/gitea'>
+								サークルで使用しているOSS Gitea
+							</StyledAnchor>
+							の定期的なアップデートの担当
+						</li>
+						<li>
+							<p>ブログ記事の執筆</p>
+							<ul className='list-disc'>
+								<li className='ml-8'>
+									<StyledAnchor href='https://trap.jp/post/1486/'>
+										ReactでToDoリストを作る(新歓ブログ)
+									</StyledAnchor>
+								</li>
+								<li className='ml-8'>
+									<StyledAnchor href='https://trap.jp/post/1646/'>草を生やす</StyledAnchor>
+								</li>
+								<li className='ml-8'>
+									<StyledAnchor href='https://trap.jp/post/1652/'>
+										Giteaをアップデートした話
+									</StyledAnchor>
+								</li>
+								<li className='ml-8'>
+									<StyledAnchor href='https://trap.jp/post/1722/'>
+										traPの講習会とブログリレーの運営について
+									</StyledAnchor>
+								</li>
+							</ul>
+						</li>
+						<li>
+							役員として中高生のためのプログラミング教室の運営に参加
+							<ul className='list-disc'>
+								<li className='ml-8'>
+									<StyledAnchor href='https://www.titech.ac.jp/news/2022/064915'>
+										デジタル創作同好会traPが「中高生のためのプログラミング教室（2022年夏）」を開催 |
+										東工大ニュース
+									</StyledAnchor>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</section>
 				<section className='pb-4'>
-					<h3 className='text-lg font-bold'>2022年</h3>
-					<ul>
-						<li>3月 サイバーエージェントのWeb Speed Hackathon for Studentsに参加。</li>
-						<li>3～5月 prdでフロントエンドエンジニアとしてインターンに参加。</li>
+					<h3 className='mb-2 text-2xl font-bold'>イベント・大会</h3>
+					<ul className='list-disc'>
+						<li>Web Speed Hackathon 2022 for Students 参加</li>
+						<li>ISUCON12 参加</li>
+					</ul>
+				</section>
+				<section className='pb-4'>
+					<h3 className='mb-2 text-2xl font-bold'>インターンシップ</h3>
+					<ul className='list-disc'>
 						<li>
-							6月 traPの部内ハッカソン（チームラボ協賛）で描いた絵をTikZ形式に変換するツール「I love
-							TikZ」制作のフロントエンドを担当。
+							<p>2022年3～5月 株式会社prdでフロントエンドエンジニアインターンに参加</p>
+							<ul className='ml-8 list-disc'>
+								<li>家庭教師マッチングサイト スマートレーダーのLPのNext.js移行を行った</li>
+							</ul>
 						</li>
-						<li>7月 ISUCON12に参加。</li>
-						<li>9月 digicon-hackathonに参加。</li>
-						<li>11月～ ナンバーナインでフロントエンドエンジニアとしてインターンに参加。</li>
+						<li>
+							<p>2022年11月～ 株式会社ナンバーナインでフロントエンドエンジニアインターンに参加</p>
+							<ul className='ml-8 list-disc'>
+								<li>漫画家が使用するWebアプリの新UIの実装をNext.jsで行った</li>
+							</ul>
+						</li>
 					</ul>
 				</section>
 			</div>
 		</>
-	);
-};
+	)
+}
 
-export default Background;
+export default Background

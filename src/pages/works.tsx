@@ -1,33 +1,33 @@
-import type { NextPage } from 'next';
-import { useState } from 'react';
+import type { NextPage } from 'next'
+import { useState } from 'react'
 
-import { ModalWrapper } from '../components/ModalWrapper';
-import { Work } from '../components/Work';
-import { WorkModal } from '../components/WorkModal';
-import { works } from '../constants/works';
-import type { WorkType } from '../constants/works';
-import { useModal } from '../hooks/useModal';
+import { ModalWrapper } from '../components/ModalWrapper'
+import { Work } from '../components/Work'
+import { WorkModal } from '../components/WorkModal'
+import { works } from '../consts/works'
+import type { WorkType } from '../consts/works'
+import { useModal } from '../hooks/useModal'
 
 const Works: NextPage = () => {
-	const [currentWork, setCurrentWork] = useState<WorkType>();
-	const { isModalOpen, openModal, closeModal } = useModal();
+	const [currentWork, setCurrentWork] = useState<WorkType>()
+	const { isModalOpen, openModal, closeModal } = useModal()
 
 	function handleSetCurrentWork(currentWork: WorkType) {
-		setCurrentWork(currentWork);
-		openModal();
+		setCurrentWork(currentWork)
+		openModal()
 	}
 	function handleCloseModal() {
-		closeModal();
-		setCurrentWork(undefined);
+		setCurrentWork(undefined)
+		closeModal()
 	}
 
 	return (
 		<>
 			<div className='flex justify-center py-8'>
-				<h2 className='flex items-center text-3xl'>制作物</h2>
+				<h2 className='text-3xl'>制作物</h2>
 			</div>
-			<div className='mx-2 mb-20'>
-				<ul className='flex flex-wrap justify-center gap-4 md:justify-start'>
+			<div className='px-12 pb-20'>
+				<ul className='grid gap-12 md:grid-cols-4'>
 					{works.map((work) => (
 						<li key={work.title}>
 							<Work setCurrentWork={handleSetCurrentWork} work={work} />
@@ -41,7 +41,7 @@ const Works: NextPage = () => {
 				</ModalWrapper>
 			) : null}
 		</>
-	);
-};
+	)
+}
 
-export default Works;
+export default Works

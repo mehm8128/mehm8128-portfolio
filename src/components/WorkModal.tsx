@@ -1,24 +1,24 @@
-import Image from 'next/image';
-import type { WorkType } from '../constants/works';
+import Image from 'next/image'
+import type { WorkType } from '../consts/works'
 
 interface Props {
-	work: WorkType;
-	onClose: () => void;
+	work: WorkType
+	onClose: () => void
 }
 
 export const WorkModal: React.FC<Props> = ({ work, onClose }) => {
-	const { title, imagePath, longDescription, links, productLink } = work;
+	const { title, imagePath, longDescription, links, productLink } = work
 
 	return (
 		<>
-			<div className='h-2/5 text-center md:h-3/5'>
+			<div className='text-center'>
 				{imagePath ? (
 					<Image alt='' className='object-cover ' height={400} src={imagePath} width={860} />
 				) : (
 					<p className='flex h-full items-center justify-center'>画像なし</p>
 				)}
 			</div>
-			<section className='min-h-54 py-4'>
+			<section className='py-4'>
 				<h3 className='mb-2 text-2xl'>{title}</h3>
 				<h4 className='text-lg'>作品リンク</h4>
 				{productLink !== '' ? (
@@ -50,5 +50,5 @@ export const WorkModal: React.FC<Props> = ({ work, onClose }) => {
 				</button>
 			</div>
 		</>
-	);
-};
+	)
+}
