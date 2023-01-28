@@ -22,7 +22,7 @@ export const works: WorkType[] = [
 		],
 		description: 'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。',
 		longDescription:
-			'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。チームラボ賞をいただいた。\nクライアントはNext.js+TypeScript+Windi CSS+Recoil+Fabric.js、サーバーはPython+Flask+SVG2TikZを使っている。自分はクライアントを1人で担当した。',
+			'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。チームラボ賞をいただいた。\nクライアントはNext.js+Fabric.js、サーバーはPython+SVG2TikZを使っている。自分はクライアントを1人で担当した。',
 		imagePath: '/assets/IloveTikZ.png',
 	},
 	{
@@ -49,7 +49,7 @@ export const works: WorkType[] = [
 		links: [{ name: 'Github', url: 'https://github.com/mehm8128/frontend' }],
 		description: 'traPの2021冬ハッカソンで作った場所法援助アプリ。',
 		longDescription:
-			'traPの2021冬ハッカソンで作った場所法援助アプリ。クライアントを担当した。クライアントはReact+TypeScript、サーバーはGoで作られている。\n自分が担当したのは宮殿一覧、テンプレート一覧やクイズ機能、通信周りなど。',
+			'traPの2021冬ハッカソンで作った場所法援助アプリ。クライアントを担当した。クライアントはReact、サーバーはGoで作られている。\n自分が担当したのは宮殿一覧、テンプレート一覧やクイズ機能、通信周りなど。',
 		imagePath: '/assets/palamo.png',
 	},
 	{
