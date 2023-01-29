@@ -39,7 +39,7 @@ const Background: NextPage = () => {
 							<StyledAnchor href='https://github.com/traPtitech/gitea'>
 								サークルで使用しているOSS Gitea
 							</StyledAnchor>
-							の定期的なアップデートの担当
+							の定期的なアップデートを担当
 						</li>
 						<li>
 							<p>ブログ記事の執筆</p>
