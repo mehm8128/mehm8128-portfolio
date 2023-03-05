@@ -14,6 +14,18 @@ export interface WorkType {
 
 export const works: WorkType[] = [
 	{
+		title: 'tuitui',
+		productLink: '準備中',
+		links: [
+			{ name: 'Github', url: '準備中' },
+			{ name: 'traPブログ記事', url: '準備中' },
+		],
+		description: 'みやぎハッカソンで制作した、直感観光地検索サービス。',
+		longDescription:
+			'みやぎハッカソンで制作した、直感観光地検索サービス。現在位置に近い観光地の画像を一覧で表示し、タップしたら詳細情報を見ることができるようになっている。また、地図で基準となる位置を選択したり、ジャンルを選択したりして検索することも可能。マイナンバーカードと連携して、クーポンの利用や統計情報を管理者に送信して地域の活性化に役立てることができる。',
+		imagePath: '/assets/IloveTikZ.png',
+	},
+	{
 		title: 'I love TikZ',
 		productLink: 'https://hackathon-22spring-13.github.io/client/',
 		links: [
@@ -60,5 +72,23 @@ export const works: WorkType[] = [
 		longDescription:
 			'Node.jsを使ってtraQBotを作った。ライブラリはhubot-traqを使った。デプロイはtraP内サービスのshowcaseを使っている。機能はGithubのReadme参照。',
 		imagePath: '/assets/traQBot.png',
+	},
+	{
+		title: '自作Git',
+		productLink: '',
+		links: [{ name: 'Github', url: 'https://github.com/mehm8128/git' }],
+		description: '自作Git。いくつかの簡単な機能を実装した。',
+		longDescription:
+			'自作Git。様々な記事を参考にして、いくつかの簡単な機能をGoで実装した。現在実装されているのはなんたらかんたら。',
+		imagePath: '',
+	},
+	{
+		title: 'eslint-plugin-no-relative-path',
+		productLink: 'https://www.npmjs.com/package/eslint-plugin-no-relative-path',
+		links: [{ name: 'Github', url: 'https://github.com/mehm8128/eslint-plugin-no-relative-path' }],
+		description: 'ESLintのプラグインを自作した。importに相対パスを使用するのを禁止する。',
+		longDescription:
+			'ESLintのプラグインを自作した。importに相対パスを使用するのを禁止する。JavaScriptで書いている。',
+		imagePath: '',
 	},
 ]

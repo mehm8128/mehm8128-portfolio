@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import { ListItem } from '../components/ListItem'
 import { StyledAnchor } from '../components/StyledAnchor'
 
@@ -108,6 +109,16 @@ const Background: NextPage = () => {
 					<ul className='list-disc'>
 						<ListItem>Web Speed Hackathon 2022 for Students 参加</ListItem>
 						<ListItem>ISUCON12 参加</ListItem>
+						<ListItem>
+							<a href='https://2023.hackathon.miyagi.jp/'>みやぎハッカソン</a> 参加
+							<ul className='list-disc'>
+								<ListItem isNested>
+									{/**todo:クエリパラメータでモーダルを開いた状態で表示できるようにする */}
+									<Link href='/works'>直感観光地検索サービス「tuitui」</Link>を制作
+								</ListItem>
+							</ul>
+						</ListItem>
+						<ListItem>Web Speed Hackathon 2023 参加</ListItem>
 					</ul>
 				</section>
 				<section className='pb-4'>
