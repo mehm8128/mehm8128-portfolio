@@ -27,7 +27,7 @@ const Works: NextPage = () => {
 				<h2 className='text-3xl'>制作物</h2>
 			</div>
 			<div className='px-12 pb-20'>
-				<ul className='grid gap-12 md:grid-cols-4'>
+				<ul className='flex flex-wrap gap-12'>
 					{works.map((work) => (
 						<li key={work.title}>
 							<Work setCurrentWork={handleSetCurrentWork} work={work} />

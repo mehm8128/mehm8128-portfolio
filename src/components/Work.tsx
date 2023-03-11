@@ -10,7 +10,7 @@ export const Work: React.FC<Props> = ({ work, setCurrentWork }) => {
 	const { title, imagePath, description } = work
 
 	return (
-		<div className='h-80 border border-cyan-200 p-4 md:h-96'>
+		<div className='w-88 h-80 border border-cyan-200 p-4 md:h-96'>
 			{imagePath ? (
 				<Image alt='' className='object-cover' height={160} src={imagePath} width={320} />
 			) : (
