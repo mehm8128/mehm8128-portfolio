@@ -15,31 +15,56 @@ const Background: NextPage = () => {
 							<StyledAnchor href='https://github.com/traPtitech/traQ_S-UI'>
 								サークル内SNS traQ
 							</StyledAnchor>
-							のフロントエンドの開発に参加
+							<span className='ml-1'>のフロントエンドの開発</span>
+							<ul className='list-disc'>
+								<li className='ml-8'>
+									部員約400人が使うサービスの機能追加・バグ修正・依存関係のアップデートなどを担当
+								</li>
+							</ul>
 						</li>
 						<li>
 							<StyledAnchor href='https://github.com/traPtitech/Jomon-UI'>
 								サークル内会計支援システム Jomon
 							</StyledAnchor>
-							のフロントエンドの開発に参加
+							<span className='ml-1'>のフロントエンドの開発</span>
+							<ul className='list-disc'>
+								<li className='ml-8'>
+									部費利用申請や交通費申請の依頼・承認・議論等を行うことができるサービスのv2の開発に参加
+								</li>
+							</ul>
 						</li>
 						<li>
 							<StyledAnchor href='https://github.com/traPtitech/traPortfolio-Dashboard'>
 								外部向けポートフォリオ作成アプリ traPortfolio
 							</StyledAnchor>
-							のフロントエンドの開発に参加
+							<span className='ml-1'>のフロントエンドの開発</span>
+							<ul className='list-disc'>
+								<li className='ml-8'>
+									外部に向けて部員がtraPでの活動を紹介できるようなポートフォリオの作成サービスの、主に管理画面の開発に参加
+								</li>
+							</ul>
 						</li>
 						<li>
 							<StyledAnchor href='https://github.com/traPtitech/Emoine_R-UI'>
 								サークル内動画閲覧アプリ emoine
 							</StyledAnchor>
-							のフロントエンドの開発に参加
+							<span className='ml-1'>のフロントエンドの開発</span>
+							<ul className='list-disc'>
+								<li className='ml-8'>
+									メンバー集会やLT会で用いられる、コメントを流したりスタンプを押すことができるサービスのv2の開発に参加
+								</li>
+							</ul>
 						</li>
 						<li>
 							<StyledAnchor href='https://github.com/traPtitech/gitea'>
 								サークルで使用しているOSS Gitea
 							</StyledAnchor>
-							の定期的なアップデートを担当
+							<span className='ml-1'>の定期的なアップデートを担当</span>
+							<ul className='list-disc'>
+								<li className='ml-8'>
+									リリースノートを読んでfork元リポジトリの変更を取り込んでアップデートをし、部内へのアップデート内容のアナウンス等を行った
+								</li>
+							</ul>
 						</li>
 						<li>
 							<p>ブログ記事の執筆</p>
@@ -97,6 +122,10 @@ const Background: NextPage = () => {
 							<p>2022年11月～ 株式会社ナンバーナインでフロントエンドエンジニアインターンに参加</p>
 							<ul className='ml-8 list-disc'>
 								<li>漫画家が使用するWebアプリの新UIの実装をNext.jsで行った</li>
+								<li>
+									ダッシュボードや作品登録画面等の実装や、それに関連してAWS
+									S3との通信やgRPCを用いたServer Streaming等についても勉強して実装した
+								</li>
 							</ul>
 						</li>
 					</ul>
