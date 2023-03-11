@@ -23,7 +23,7 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 				<p>ここはmehm8128（読み方：めふも）のポートフォリオサイトです。</p>
 				<ul>
 					<li>所属：東京工業大学工学院情報通信系、東京工業大学デジタル創作同好会traP</li>
-					<li>フロントエンド：React、Vue.js、Next.js、TypeScriptなど</li>
+					<li>フロントエンド：Next.js、React、Vue.js、TypeScriptなど</li>
 					<li>バックエンド：Go</li>
 				</ul>
 			</div>
