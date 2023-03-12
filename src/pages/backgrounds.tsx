@@ -111,7 +111,8 @@ const Background: NextPage = () => {
 						<ListItem>Web Speed Hackathon 2022 for Students 参加</ListItem>
 						<ListItem>ISUCON12 参加</ListItem>
 						<ListItem>
-							<a href='https://2023.hackathon.miyagi.jp/'>みやぎハッカソン</a> 参加
+							<StyledAnchor href='https://2023.hackathon.miyagi.jp/'>みやぎハッカソン</StyledAnchor>{' '}
+							参加
 							<Ul>
 								<ListItem isNested>
 									{/**todo:クエリパラメータでモーダルを開いた状態で表示できるようにする */}
