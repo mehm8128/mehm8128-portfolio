@@ -15,7 +15,7 @@ export const WorkModal: React.FC<Props> = ({ work, onClose }) => {
 				{imagePath ? (
 					<Image alt='' className='object-contain' height={400} src={imagePath} width={860} />
 				) : (
-					<p className='flex h-full items-center justify-center'>画像なし</p>
+					<p className='h-100 w-215 flex items-center justify-center'>画像なし</p>
 				)}
 			</div>
 			<section className='py-4'>

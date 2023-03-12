@@ -4,6 +4,6 @@ interface Props {
 	children: React.ReactNode
 }
 
-export const Ul: React.FC<Props> = ({ isNested, children }) => {
+export const Ul: React.FC<Props> = ({ isNested, space, children }) => {
 	return <ul className={`list-disc space-y-${space} ${isNested && 'ml-8'}`}>{children}</ul>
 }
