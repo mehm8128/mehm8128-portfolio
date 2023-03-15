@@ -4,6 +4,7 @@ interface Link {
 }
 
 export interface WorkType {
+	id: string
 	title: string
 	productLink: string
 	links: Link[]
@@ -14,8 +15,9 @@ export interface WorkType {
 
 export const works: WorkType[] = [
 	{
+		id: 'tuitui',
 		title: 'tuitui',
-		productLink: '',
+		productLink: 'http://frontend.zundatabe2committee.trap.show/',
 		links: [
 			//	{ name: 'traPブログ記事', url: '' }
 		],
@@ -25,6 +27,7 @@ export const works: WorkType[] = [
 		imagePath: '/assets/tuitui.jpg',
 	},
 	{
+		id: 'tikz',
 		title: 'I love TikZ',
 		productLink: 'https://hackathon-22spring-13.github.io/client/',
 		links: [
@@ -37,6 +40,7 @@ export const works: WorkType[] = [
 		imagePath: '/assets/IloveTikZ.png',
 	},
 	{
+		id: 'study',
 		title: '勉強時間管理アプリ',
 		productLink: 'https://mehm8128-study-client.vercel.app/',
 		links: [
@@ -55,6 +59,7 @@ export const works: WorkType[] = [
 		imagePath: '/assets/study.png',
 	},
 	{
+		id: 'palamo',
 		title: 'Palamo',
 		productLink: 'https://frontend-opal-delta-19.vercel.app',
 		links: [
@@ -67,6 +72,7 @@ export const works: WorkType[] = [
 		imagePath: '/assets/palamo.png',
 	},
 	{
+		id: 'traqbot',
 		title: 'traQBot',
 		productLink: '',
 		links: [
@@ -79,6 +85,7 @@ export const works: WorkType[] = [
 		imagePath: '/assets/traQBot.png',
 	},
 	// {
+	// 	id: 'git',
 	// 	title: '自作Git',
 	// 	productLink: '',
 	// 	links: [
@@ -91,6 +98,7 @@ export const works: WorkType[] = [
 	// 	imagePath: '',
 	// },
 	{
+		id: 'eslint',
 		title: 'eslint-plugin-no-relative-path',
 		productLink: 'https://www.npmjs.com/package/eslint-plugin-no-relative-path',
 		links: [

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
 import { ListItem } from '../components/ListItem'
+import { NextLink } from '../components/NextLink'
 import { StyledAnchor } from '../components/StyledAnchor'
 import { Ul } from '../components/Ul'
 
@@ -115,8 +115,8 @@ const Background: NextPage = () => {
 							参加
 							<Ul>
 								<ListItem isNested>
-									{/**todo:クエリパラメータでモーダルを開いた状態で表示できるようにする */}
-									<Link href='/works'>直感観光地検索サービス「tuitui」</Link>を制作
+									<NextLink href='/works?work=tuitui'>直感観光地検索サービス「tuitui」</NextLink>
+									を制作
 								</ListItem>
 							</Ul>
 						</ListItem>

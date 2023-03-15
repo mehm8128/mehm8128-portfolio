@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
-import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 
 import { ModalWrapper } from '../components/ModalWrapper'
 import { Work } from '../components/Work'
@@ -11,6 +12,7 @@ import { useModal } from '../hooks/useModal'
 const Works: NextPage = () => {
 	const [currentWork, setCurrentWork] = useState<WorkType>()
 	const { isModalOpen, openModal, closeModal } = useModal()
+	const router = useRouter()
 
 	function handleSetCurrentWork(currentWork: WorkType) {
 		setCurrentWork(currentWork)
@@ -20,6 +22,15 @@ const Works: NextPage = () => {
 		setCurrentWork(undefined)
 		closeModal()
 	}
+
+	useEffect(() => {
+		if (router.query.work) {
+			const work = works.find((work) => work.id === router.query.work)
+			if (work) {
+				handleSetCurrentWork(work)
+			}
+		}
+	}, [router.query.work])
 
 	return (
 		<>
