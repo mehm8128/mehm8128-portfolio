@@ -137,10 +137,10 @@ const Background: NextPage = () => {
 						<ListItem>
 							<p>2022年11月～ 株式会社ナンバーナインでフロントエンドエンジニアインターンに参加</p>
 							<Ul isNested>
-								<ListItem>漫画家が使用するWebアプリの新UIの実装をNext.jsで行った</ListItem>
+								<ListItem>漫画家さんが使用するWebアプリの新UIの実装をNext.jsで行った</ListItem>
 								<ListItem>
-									ダッシュボードや作品登録画面等の実装や、それに関連してAWS
-									S3との通信やgRPCを用いたServer Streaming等についても勉強して実装した
+									ダッシュボードや作品登録画面等の実装をし、それに伴ってAWS
+									S3との通信やStreaming通信についても軽く勉強した
 								</ListItem>
 							</Ul>
 						</ListItem>
