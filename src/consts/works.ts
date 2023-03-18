@@ -104,7 +104,7 @@ export const works: WorkType[] = [
 		links: [
 			{ name: 'Github', url: 'https://github.com/mehm8128/eslint-plugin-no-relative-path' },
 			{ name: 'npm', url: 'https://www.npmjs.com/package/eslint-plugin-no-relative-path' },
-			//	{ name: 'ブログ記事', url: '' },
+			{ name: 'traPブログ記事', url: 'https://trap.jp/post/1777/' },
 		],
 		description: 'ESLintのプラグインを自作した。importに相対パスを使用するのを禁止する。',
 		longDescription:
