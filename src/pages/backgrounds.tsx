@@ -101,6 +101,12 @@ const Background: NextPage = () => {
 							役員として中高生のためのプログラミング教室の運営に参加
 							<Ul>
 								<ListItem isNested>
+									<StyledAnchor href='https://www.titech.ac.jp/news/2022/063977'>
+										デジタル創作同好会traPが「中高生のためのプログラミング教室（2022年春）」を開催 |
+										東工大ニュース
+									</StyledAnchor>
+								</ListItem>
+								<ListItem isNested>
 									<StyledAnchor href='https://www.titech.ac.jp/news/2022/064915'>
 										デジタル創作同好会traPが「中高生のためのプログラミング教室（2022年夏）」を開催 |
 										東工大ニュース
@@ -126,6 +132,12 @@ const Background: NextPage = () => {
 							</Ul>
 						</ListItem>
 						<ListItem>Web Speed Hackathon 2023 参加</ListItem>
+						<ListItem>
+							<StyledAnchor href='https://inside.pixiv.blog/2023/03/28/130000'>
+								pixivスピードアップチャレンジ
+							</StyledAnchor>{' '}
+							参加
+						</ListItem>
 					</Ul>
 				</section>
 				<section className='pb-4'>
