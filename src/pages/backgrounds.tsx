@@ -95,6 +95,9 @@ const Background: NextPage = () => {
 										traPの講習会とブログリレーの運営について
 									</StyledAnchor>
 								</ListItem>
+								<ListItem isNested>
+									<StyledAnchor href='https://trap.jp/post/1776/'>春休みに色々した話</StyledAnchor>
+								</ListItem>
 							</Ul>
 						</ListItem>
 						<ListItem>
@@ -129,6 +132,12 @@ const Background: NextPage = () => {
 									<NextLink href='/works?work=tuitui'>直感観光地検索サービス「tuitui」</NextLink>
 									を制作
 								</ListItem>
+								<ListItem isNested>
+									参加記事：
+									<StyledAnchor href='https://trap.jp/post/1808/'>
+										みやぎハッカソン2023に参加しました(ずんだ食べ食べ委員会)
+									</StyledAnchor>
+								</ListItem>
 							</Ul>
 						</ListItem>
 						<ListItem>Web Speed Hackathon 2023 参加</ListItem>
@@ -155,10 +164,7 @@ const Background: NextPage = () => {
 							<p>2022年11月～ 株式会社ナンバーナインでフロントエンドエンジニアインターンに参加</p>
 							<Ul isNested>
 								<ListItem>漫画家さんが使用するWebアプリの新UIの実装をNext.jsで行った</ListItem>
-								<ListItem>
-									ダッシュボードや作品登録画面等の実装をし、それに伴ってAWS
-									S3との通信やStreaming通信についても軽く勉強した
-								</ListItem>
+								<ListItem>ダッシュボードや作品登録画面等の実装をした</ListItem>
 							</Ul>
 						</ListItem>
 					</Ul>

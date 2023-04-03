@@ -18,9 +18,7 @@ export const works: WorkType[] = [
 		id: 'tuitui',
 		title: 'tuitui',
 		productLink: 'http://frontend.zundatabe2committee.trap.show/',
-		links: [
-			//	{ name: 'traPブログ記事', url: '' }
-		],
+		links: [{ name: 'traPブログ記事', url: 'https://trap.jp/post/1808/' }],
 		description: 'みやぎハッカソンで制作した、直感観光地検索サービス。',
 		longDescription:
 			'みやぎハッカソンで制作した、直感観光地検索サービス。\n現在位置に近い観光地の画像を一覧で表示し、タップしたら詳細情報を見ることができるようになっている。また、地図で基準となる位置を選択したり、ジャンルを選択したりして検索することも可能。\nマイナンバーカードと連携して、クーポンの利用や統計情報を管理者に送信して地域の活性化に役立てることができる。',
