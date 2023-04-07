@@ -29,7 +29,7 @@ export const works: WorkType[] = [
 		title: 'I love TikZ',
 		productLink: 'https://hackathon-22spring-13.github.io/client/',
 		links: [
-			{ name: 'Github', url: 'https://github.com/hackathon-22spring-13/client' },
+			{ name: 'GitHub', url: 'https://github.com/hackathon-22spring-13/client' },
 			{ name: 'traPブログ記事', url: 'https://trap.jp/post/1623/' },
 		],
 		description: 'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。',
@@ -43,11 +43,11 @@ export const works: WorkType[] = [
 		productLink: 'https://mehm8128-study-client.vercel.app/',
 		links: [
 			{
-				name: 'Github(フロントエンド)',
+				name: 'GitHub(フロントエンド)',
 				url: 'https://github.com/mehm8128/mehm8128_study_client',
 			},
 			{
-				name: 'Github(バックエンド)',
+				name: 'GitHub(バックエンド)',
 				url: 'https://github.com/mehm8128/mehm8128-study-server',
 			},
 		],
@@ -61,7 +61,7 @@ export const works: WorkType[] = [
 		title: 'Palamo',
 		productLink: 'https://frontend-opal-delta-19.vercel.app',
 		links: [
-			{ name: 'Github', url: 'https://github.com/mehm8128/frontend' },
+			{ name: 'GitHub', url: 'https://github.com/mehm8128/frontend' },
 			{ name: 'traPブログ記事', url: 'https://trap.jp/post/1456/' },
 		],
 		description: 'traPの2021冬ハッカソンで作った場所法援助アプリ。',
@@ -74,7 +74,7 @@ export const works: WorkType[] = [
 		title: 'traQBot',
 		productLink: '',
 		links: [
-			{ name: 'Github', url: 'https://github.com/mehm8128/traq-mehm8128-bot' },
+			{ name: 'GitHub', url: 'https://github.com/mehm8128/traq-mehm8128-bot' },
 			{ name: 'traPブログ記事', url: 'https://trap.jp/post/1646/' },
 		],
 		description: 'traP内SNSのtraQで使用しているtraQBot。',
@@ -87,7 +87,7 @@ export const works: WorkType[] = [
 	// 	title: '自作Git',
 	// 	productLink: '',
 	// 	links: [
-	// 		{ name: 'Github', url: 'https://github.com/mehm8128/git' },
+	// 		{ name: 'GitHub', url: 'https://github.com/mehm8128/git' },
 	// 		//	{ name: 'ブログ記事', url: '' },
 	// 	],
 	// 	description: '自作Git。いくつかの簡単な機能を実装した。',
@@ -100,7 +100,7 @@ export const works: WorkType[] = [
 		title: 'eslint-plugin-no-relative-path',
 		productLink: 'https://www.npmjs.com/package/eslint-plugin-no-relative-path',
 		links: [
-			{ name: 'Github', url: 'https://github.com/mehm8128/eslint-plugin-no-relative-path' },
+			{ name: 'GitHub', url: 'https://github.com/mehm8128/eslint-plugin-no-relative-path' },
 			{ name: 'npm', url: 'https://www.npmjs.com/package/eslint-plugin-no-relative-path' },
 			{ name: 'traPブログ記事', url: 'https://trap.jp/post/1777/' },
 		],
