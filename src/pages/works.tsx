@@ -35,9 +35,9 @@ const Works: NextPage = () => {
 	return (
 		<>
 			<div className='flex justify-center py-8'>
-				<h2 className='text-3xl'>制作物</h2>
+				<h2 className='flex items-center text-3xl'>制作物</h2>
 			</div>
-			<div className='px-12 pb-20'>
+			<div className='px-4 pb-20 md:px-12'>
 				<ul className='flex flex-wrap gap-12'>
 					{works.map((work) => (
 						<li key={work.title}>
