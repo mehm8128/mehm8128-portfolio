@@ -82,19 +82,19 @@ export const works: WorkType[] = [
 			'Node.jsを使ってtraQBotを作った。ライブラリはhubot-traqを使った。主な機能としてはブログリレーのリマインダーやtraQでの投稿数に応じてGitHubの草のような表示をしてくれるものなどがある。',
 		imagePath: '/assets/traQBot.png',
 	},
-	// {
-	// 	id: 'git',
-	// 	title: '自作Git',
-	// 	productLink: '',
-	// 	links: [
-	// 		{ name: 'GitHub', url: 'https://github.com/mehm8128/git' },
-	// 		//	{ name: 'ブログ記事', url: '' },
-	// 	],
-	// 	description: '自作Git。いくつかの簡単な機能を実装した。',
-	// 	longDescription:
-	// 		'自作Git。様々な記事を参考にして、いくつかの簡単な機能をGoで実装した。詳細はブログ記事参照。',
-	// 	imagePath: '',
-	// },
+	{
+		id: 'git',
+		title: '自作Git',
+		productLink: '',
+		links: [
+			{ name: 'GitHub', url: 'https://github.com/mehm8128/git' },
+			{ name: 'ブログ記事', url: 'https://trap.jp/post/1775/' },
+		],
+		description: '自作Git。いくつかの簡単な機能を実装した。',
+		longDescription:
+			'自作Git。様々な記事を参考にして、いくつかの簡単な機能をGoで実装した。詳細はブログ記事参照。',
+		imagePath: '',
+	},
 	{
 		id: 'eslint',
 		title: 'eslint-plugin-no-relative-path',
