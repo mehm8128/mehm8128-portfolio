@@ -49,7 +49,7 @@ const Background: NextPage = () => {
 						</ListItem>
 						<ListItem>
 							<StyledAnchor href='https://github.com/traPtitech/Emoine_R-UI'>
-								サークル内動画閲覧アプリ emoine
+								サークル内動画閲覧アプリ Emoine
 							</StyledAnchor>
 							<span className='ml-1'>のフロントエンドの開発</span>
 							<Ul>
@@ -98,6 +98,11 @@ const Background: NextPage = () => {
 								<ListItem isNested>
 									<StyledAnchor href='https://trap.jp/post/1776/'>春休みに色々した話</StyledAnchor>
 								</ListItem>
+								<ListItem isNested>
+									<StyledAnchor href='https://trap.jp/post/1848/'>
+										type challengesやってみた
+									</StyledAnchor>
+								</ListItem>
 							</Ul>
 						</ListItem>
 						<ListItem>
@@ -122,8 +127,16 @@ const Background: NextPage = () => {
 				<section className='pb-4'>
 					<h3 className='mb-2 text-2xl font-bold'>イベント・大会</h3>
 					<Ul>
-						<ListItem>Web Speed Hackathon 2022 for Students 参加</ListItem>
-						<ListItem>ISUCON12 参加</ListItem>
+						<ListItem>
+							<StyledAnchor href='https://github.com/CyberAgentHack/web-speed-hackathon-2022/blob/main/docs/internal/README.md'>
+								Web Speed Hackathon 2022 for Students
+							</StyledAnchor>{' '}
+							参加
+						</ListItem>
+						<ListItem>
+							<StyledAnchor href='https://isucon.net/archives/56571716.html'>ISUCON12</StyledAnchor>{' '}
+							参加
+						</ListItem>
 						<ListItem>
 							<StyledAnchor href='https://2023.hackathon.miyagi.jp/'>みやぎハッカソン</StyledAnchor>{' '}
 							参加
@@ -140,12 +153,28 @@ const Background: NextPage = () => {
 								</ListItem>
 							</Ul>
 						</ListItem>
-						<ListItem>Web Speed Hackathon 2023 参加</ListItem>
+						<ListItem>
+							<StyledAnchor href='https://github.com/CyberAgentHack/web-speed-hackathon-2023'>
+								Web Speed Hackathon 2023
+							</StyledAnchor>{' '}
+							参加
+						</ListItem>
 						<ListItem>
 							<StyledAnchor href='https://inside.pixiv.blog/2023/03/28/130000'>
 								pixivスピードアップチャレンジ
 							</StyledAnchor>{' '}
 							参加
+						</ListItem>
+						<ListItem>
+							ディップ株式会社主催 AWSハンズオン 参加
+							<Ul>
+								<ListItem isNested>
+									参加記事：
+									<StyledAnchor href='https://trap.jp/post/1850/'>
+										ディップさんのAWSハンズオンに参加してきました
+									</StyledAnchor>
+								</ListItem>
+							</Ul>
 						</ListItem>
 					</Ul>
 				</section>
