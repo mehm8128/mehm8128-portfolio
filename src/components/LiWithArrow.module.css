@@ -1,10 +1,10 @@
 .arrow::before {
-	@apply border-t-3 border-r-3 block h-4 w-4 border-cyan-300;
+	@apply border-t-3 border-r-3 block h-4 w-4 border-sky-300;
 	content: '';
 	transform: rotate(-135deg);
 }
 .arrow::after {
-	@apply border-t-3 border-r-3 block h-4 w-4 border-cyan-300;
+	@apply border-t-3 border-r-3 block h-4 w-4 border-sky-300;
 	content: '';
 	transform: rotate(45deg);
 }

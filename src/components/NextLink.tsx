@@ -7,7 +7,7 @@ interface Props {
 
 export const NextLink: React.FC<Props> = ({ href, children }) => {
 	return (
-		<Link className='text-cyan-500 underline hover:text-cyan-700' href={href}>
+		<Link className='text-sky-500 underline hover:text-sky-700' href={href}>
 			{children}
 		</Link>
 	)

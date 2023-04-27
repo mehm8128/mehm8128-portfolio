@@ -5,7 +5,7 @@ interface Props {
 
 export const StyledAnchor: React.FC<Props> = ({ href, children }) => {
 	return (
-		<a className='text-cyan-500 underline hover:text-cyan-700' href={href}>
+		<a className='text-sky-500 underline hover:text-sky-700' href={href}>
 			{children}
 		</a>
 	)

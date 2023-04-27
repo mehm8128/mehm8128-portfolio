@@ -23,7 +23,7 @@ export const WorkModal: React.FC<Props> = ({ work, onClose }) => {
 				<h4 className='text-lg'>作品リンク</h4>
 				{productLink !== '' ? (
 					<p>
-						<a className='text-cyan-500 hover:text-cyan-600' href={productLink}>
+						<a className='text-sky-500 hover:text-sky-600' href={productLink}>
 							{productLink}
 						</a>
 					</p>
@@ -34,7 +34,7 @@ export const WorkModal: React.FC<Props> = ({ work, onClose }) => {
 				{links.length > 0 ? (
 					links.map((link) => (
 						<p key={link.url}>
-							<a className='text-cyan-500 hover:text-cyan-600' href={link.url} key={link.url}>
+							<a className='text-sky-500 hover:text-sky-600' href={link.url} key={link.url}>
 								{link.name}
 							</a>
 						</p>
@@ -45,7 +45,7 @@ export const WorkModal: React.FC<Props> = ({ work, onClose }) => {
 				<p className='my-2 whitespace-pre-wrap'>{longDescription}</p>
 			</section>
 			<div className='text-center'>
-				<button className='rounded-md border-2 py-2 px-12 hover:border-cyan-300' onClick={onClose}>
+				<button className='rounded-md border-2 py-2 px-12 hover:border-sky-300' onClick={onClose}>
 					閉じる
 				</button>
 			</div>
