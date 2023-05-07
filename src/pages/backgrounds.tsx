@@ -70,6 +70,12 @@ const Background: NextPage = () => {
 							</Ul>
 						</ListItem>
 						<ListItem>
+							<StyledAnchor href='https://trap.jp/post/1862/'>
+								CPCTF2023のスコアサーバー
+							</StyledAnchor>
+							<span className='ml-1'>昨年度使用したものからのUI変更に参加</span>
+						</ListItem>
+						<ListItem>
 							<p>ブログ記事の執筆</p>
 							<Ul space={1}>
 								<ListItem isNested>
