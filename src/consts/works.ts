@@ -17,7 +17,7 @@ export const works: WorkType[] = [
 	{
 		id: 'tuitui',
 		title: 'tuitui',
-		productLink: 'http://frontend.zundatabe2committee.trap.show/',
+		productLink: '',
 		links: [{ name: 'traPブログ記事', url: 'https://trap.jp/post/1808/' }],
 		description: 'みやぎハッカソンで制作した、直感観光地検索サービス。',
 		longDescription:
