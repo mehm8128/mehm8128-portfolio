@@ -73,7 +73,7 @@ const Background: NextPage = () => {
 							<StyledAnchor href='https://trap.jp/post/1862/'>
 								CPCTF2023のスコアサーバー
 							</StyledAnchor>
-							<span className='ml-1'>昨年度使用したものからのUI変更に参加</span>
+							<span className='ml-1'>の昨年度使用したものからのUI変更に参加</span>
 						</ListItem>
 						<ListItem>
 							<p>ブログ記事の執筆</p>
@@ -200,6 +200,11 @@ const Background: NextPage = () => {
 							<Ul isNested>
 								<ListItem>漫画家さんが使用するWebアプリの新UIの実装をNext.jsで行った</ListItem>
 								<ListItem>ダッシュボードや作品登録画面等の実装をした</ListItem>
+								<ListItem>
+									<StyledAnchor href='https://twitter.com/yudai112535/status/1655919698398289933?s=20'>
+										リリースツイート
+									</StyledAnchor>
+								</ListItem>
 							</Ul>
 						</ListItem>
 					</Ul>
