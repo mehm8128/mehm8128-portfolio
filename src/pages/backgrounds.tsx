@@ -76,7 +76,19 @@ const Background: NextPage = () => {
 							<span className='ml-1'>の昨年度使用したものからのUI変更に参加</span>
 						</ListItem>
 						<ListItem>
-							<p>ブログ記事の執筆</p>
+							講習会の運営・TA
+							<Ul>
+								<ListItem isNested>Webエンジニアになろう講習会、Git講習会など</ListItem>
+								<ListItem isNested>
+									ブログ記事：
+									<StyledAnchor href='https://trap.jp/post/1722/'>
+										traPの講習会とブログリレーの運営について
+									</StyledAnchor>
+								</ListItem>
+							</Ul>
+						</ListItem>
+						<ListItem>
+							ブログ記事の執筆
 							<Ul space={1}>
 								<ListItem isNested>
 									<StyledAnchor href='https://trap.jp/post/1486/'>
@@ -94,11 +106,6 @@ const Background: NextPage = () => {
 								<ListItem isNested>
 									<StyledAnchor href='https://trap.jp/post/1777/'>
 										ESLintプラグイン作ってみた
-									</StyledAnchor>
-								</ListItem>
-								<ListItem isNested>
-									<StyledAnchor href='https://trap.jp/post/1722/'>
-										traPの講習会とブログリレーの運営について
 									</StyledAnchor>
 								</ListItem>
 								<ListItem isNested>
