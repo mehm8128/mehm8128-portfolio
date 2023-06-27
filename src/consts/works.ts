@@ -63,6 +63,55 @@ export const works: WorkType[] = [
 		imagePath: '/assets/study.png',
 	},
 	{
+		id: 'traquest',
+		title: 'traQuest',
+		productLink: '',
+		links: [
+			{ name: 'GitHub(フロントエンド)', url: 'https://github.com/mehm8128/traQuest-UI' },
+			{ name: 'GitHub(バックエンド)', url: 'https://github.com/mehm8128/traQuest-server' },
+		],
+		description: '新入生にtraQの使い方に慣れてもらいやすくするために作ったクエスト形式のアプリ。',
+		longDescription:
+			'新入生に部内サービスtraQの使い方に慣れてもらいやすくするために作ったクエスト形式のアプリ(部員認証が必要なため、URLは掲載していません)。クエストの作成申請を出し、adminがapproveしたら一覧に反映される。ポイント数のランキングもある。\nNext.jsのapp routerを使ってみた。',
+		imagePath: '/assets/traquest.png',
+	},
+	{
+		id: 'thanqyou',
+		title: 'ThanQ-you',
+		productLink: '',
+		links: [{ name: 'GitHub', url: 'https://github.com/mehm8128/thanQ-you' }],
+		description: '部員同士が感謝を伝えるためのアプリ。',
+		longDescription:
+			'部員同士が感謝を伝えるためのアプリ。メッセージとともにコーヒーを送れる(部員認証が必要なため、URLは掲載していません)。感謝されたら部内SNSのDMにBOTから通知がくるようになっている。\nNext.jsのapi routesを使ってサーバーも実装してみた。',
+		imagePath: '/assets/thanqyou.png',
+	},
+	{
+		id: 'progreesstree',
+		title: '進捗が木になる～',
+		productLink: '',
+		links: [
+			{ name: 'GitHub', url: 'https://github.com/traP-jp/h23s_20_frontend' },
+			{ name: 'traPブログ記事', url: 'https://trap.jp/post/1915/' },
+		],
+		description: '進捗に応じて木が成長するアプリ。',
+		longDescription:
+			'traPの2023春ハッカソンで作った、進捗に応じて木が成長するアプリ(サーバーが完成していないのでURLは掲載していません)。GitHubのcontributionやAtCoderのAC、サークル内SNSの進捗報告チャンネルでの報告などで自動で木が成長する。\nフロントエンドを担当し、デザインを考えるのと、ReactPixiを用いて木を描画する部分を主に担当した。',
+		imagePath: '/assets/progresstree.png',
+	},
+	{
+		id: 'questions',
+		title: 'Questions',
+		productLink: 'https://questions-ui-silk.vercel.app/',
+		links: [
+			{ name: 'GitHub', url: 'https://github.com/mehm8128/questions-UI' },
+			{ name: 'traPブログ記事', url: 'https://trap.jp/post/1842/' },
+		],
+		description: 'traP向け専用質問箱サービス。',
+		longDescription:
+			'traP向け専用質問箱サービス。新歓の時期に質問箱を使って質問を募集しているが、不便な点がいくつかあったので作った。質問がきたときに部内SNSに通知がくるようになっていて、回答には回答者の名前も一緒に表示されるようになっている。\nフロントエンドを担当し、Next.jsで作った。デザインは考えるのがあまり得意でないので、TailwindCSSを採用してChatGPTにclassNameの部分を埋めてもらうように指示して作ってもらった。',
+		imagePath: '/assets/questions.png',
+	},
+	{
 		id: 'palamo',
 		title: 'Palamo',
 		productLink: 'https://frontend-opal-delta-19.vercel.app',

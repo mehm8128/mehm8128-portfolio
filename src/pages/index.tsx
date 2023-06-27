@@ -22,8 +22,10 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 			<div className='mx-auto w-4/5 leading-relaxed md:w-1/2'>
 				<p>ここはmehm8128（読み方：めふも）のポートフォリオサイトです。</p>
 				<ul>
-					<li>所属：東京工業大学工学院情報通信系、東京工業大学デジタル創作同好会traP</li>
-					<li>フロントエンド：Next.js、React、Vue.js、TypeScriptなど</li>
+					<li>
+						所属：東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
+					</li>
+					<li>フロントエンド：Next.js、React、Vue.js、TypeScript、Storybookなど</li>
 					<li>バックエンド：Go</li>
 				</ul>
 			</div>
@@ -36,7 +38,7 @@ const Home: NextPage<Props> = ({ updatedDate }) => {
 					</LiWithArrow>
 				))}
 			</ul>
-			<p className='mt-4 mr-2 text-right'>最終更新日時：{formatDate(updatedDate)}</p>
+			<p className='mr-2 mt-4 text-right'>最終更新日時：{formatDate(updatedDate)}</p>
 		</>
 	)
 }

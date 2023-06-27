@@ -116,6 +116,11 @@ const Background: NextPage = () => {
 										type challengesやってみた
 									</StyledAnchor>
 								</ListItem>
+								<ListItem isNested>
+									<StyledAnchor href='https://trap.jp/post/1775/'>
+										Gitを作ってみようとした話
+									</StyledAnchor>
+								</ListItem>
 							</Ul>
 						</ListItem>
 						<ListItem>
@@ -209,7 +214,7 @@ const Background: NextPage = () => {
 								<ListItem>ダッシュボードや作品登録画面等の実装をした</ListItem>
 								<ListItem>
 									<StyledAnchor href='https://twitter.com/yudai112535/status/1655919698398289933?s=20'>
-										リリースツイート
+										リリースについてのツイート
 									</StyledAnchor>
 								</ListItem>
 							</Ul>
