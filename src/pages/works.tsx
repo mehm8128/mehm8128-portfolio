@@ -1,26 +1,28 @@
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-import { ModalWrapper } from '../components/ModalWrapper'
+import ModalWrapper from '../components/ModalWrapper'
 import { Work } from '../components/Work'
 import { WorkModal } from '../components/WorkModal'
 import { works } from '../consts/works'
 import type { WorkType } from '../consts/works'
-import { useModal } from '../hooks/useModal'
 
 const Works: NextPage = () => {
 	const [currentWork, setCurrentWork] = useState<WorkType>()
-	const { isModalOpen, openModal, closeModal } = useModal()
+	const dialogRef = useRef<HTMLDialogElement>(null)
+
 	const router = useRouter()
 
 	function handleSetCurrentWork(currentWork: WorkType) {
 		setCurrentWork(currentWork)
-		openModal()
+		if (!dialogRef.current) return
+		dialogRef.current.showModal()
 	}
 	function handleCloseModal() {
 		setCurrentWork(undefined)
-		closeModal()
+		if (!dialogRef.current) return
+		dialogRef.current.close()
 	}
 
 	useEffect(() => {
@@ -33,7 +35,7 @@ const Works: NextPage = () => {
 	}, [router.query.work])
 
 	return (
-		<>
+		<div>
 			<div className='flex justify-center py-8'>
 				<h2 className='flex items-center text-3xl'>制作物</h2>
 			</div>
@@ -46,12 +48,10 @@ const Works: NextPage = () => {
 					))}
 				</ul>
 			</div>
-			{isModalOpen && currentWork !== undefined ? (
-				<ModalWrapper onClose={handleCloseModal}>
-					<WorkModal work={currentWork} onClose={handleCloseModal} />
-				</ModalWrapper>
-			) : null}
-		</>
+			<ModalWrapper ref={dialogRef} onClose={handleCloseModal}>
+				{currentWork && <WorkModal work={currentWork} onClose={handleCloseModal} />}
+			</ModalWrapper>
+		</div>
 	)
 }
 

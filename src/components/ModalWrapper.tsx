@@ -1,17 +1,21 @@
-interface Props {
-	onClose: () => void
-	children: React.ReactNode
-}
+import React, { forwardRef } from 'react'
 
-export const ModalWrapper: React.FC<Props> = ({ children, onClose }) => {
+const ModalWrapper = forwardRef<
+	HTMLDialogElement,
+	{
+		onClose: () => void
+		children: React.ReactNode
+	}
+>(({ children, onClose }, ref) => {
 	return (
-		<div className='z-3 fixed top-0 left-0 h-full w-full bg-gray-300/50' onClick={onClose}>
-			<div
-				className='h-6/7 w-6/7 md:w-4/7 absolute inset-0 my-auto mx-auto overflow-y-scroll bg-white px-12 pt-12 pb-4 shadow-lg'
-				onClick={(e) => e.stopPropagation()}
-			>
-				{children}
-			</div>
-		</div>
+		<dialog
+			className='h-6/7 w-6/7 md:w-4/7 absolute inset-0 mx-auto my-auto overflow-y-scroll bg-white px-12 pb-4 pt-12 shadow-lg'
+			ref={ref}
+			onClick={onClose}
+		>
+			<div onClick={(e) => e.stopPropagation()}>{children}</div>
+		</dialog>
 	)
-}
+})
+ModalWrapper.displayName = 'ModalWrapper'
+export default ModalWrapper
