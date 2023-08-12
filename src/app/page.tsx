@@ -9,7 +9,9 @@ import { links } from '@/consts/links'
 import { formatDate } from '@/lib/date'
 
 const fetchDeployDate = async () => {
-	const res = await fetch('http://localhost:3000/api/deploy_datetime')
+	const res = await fetch(
+		'https://mehm8128-portfolio.vercel.app/api/deploy_datetime',
+	)
 	if (!res.ok) throw new Error('Failed to fetch deploy date')
 	const data = (await res.json()) as DeployDateTimeResponse
 	return data.deployDateTime
