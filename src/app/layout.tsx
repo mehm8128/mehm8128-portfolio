@@ -1,5 +1,4 @@
 import './globals.css'
-import 'windi.css'
 
 import { Box } from '@kuma-ui/core'
 import { KumaRegistry } from '@kuma-ui/next-plugin/registry'
