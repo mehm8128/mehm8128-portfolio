@@ -1,3 +1,4 @@
+import "the-new-css-reset/css/reset.css";
 import './globals.css'
 
 import { Box } from '@kuma-ui/core'

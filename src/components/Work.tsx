@@ -18,6 +18,8 @@ export default function Work({ work, setCurrentWork }: Props) {
 					alt=''
 					style={{
 						objectFit: 'contain',
+						height: 160,
+						width: 320,
 					}}
 					height={160}
 					src={imagePath}
