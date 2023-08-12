@@ -17,8 +17,8 @@ const fetchDeployDate = async () => {
 	return data.deployDateTime
 }
 
-export default async function Home() {
-	const deployDateTime = await fetchDeployDate()
+export default function Home() {
+	const deployDateTime = 'await fetchDeployDate()'
 
 	return (
 		<>
