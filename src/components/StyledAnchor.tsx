@@ -3,7 +3,7 @@ interface Props {
 	children: React.ReactNode
 }
 
-export const StyledAnchor: React.FC<Props> = ({ href, children }) => {
+export default function StyledAnchor({ href, children }: Props) {
 	return (
 		<a className='text-sky-500 underline hover:text-sky-700' href={href}>
 			{children}

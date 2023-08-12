@@ -1,3 +1,7 @@
+/* eslint jsx-a11y/click-events-have-key-events: 0 */
+/* eslint jsx-a11y/no-static-element-interactions: 0 */
+/* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
+
 import React, { forwardRef } from 'react'
 
 const ModalWrapper = forwardRef<
@@ -13,7 +17,7 @@ const ModalWrapper = forwardRef<
 			ref={ref}
 			onClick={onClose}
 		>
-			<div onClick={(e) => e.stopPropagation()}>{children}</div>
+			<div onClick={e => e.stopPropagation()}>{children}</div>
 		</dialog>
 	)
 })

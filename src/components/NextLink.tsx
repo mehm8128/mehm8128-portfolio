@@ -5,7 +5,7 @@ interface Props {
 	children: React.ReactNode
 }
 
-export const NextLink: React.FC<Props> = ({ href, children }) => {
+export default function NextLink({ href, children }: Props) {
 	return (
 		<Link className='text-sky-500 underline hover:text-sky-700' href={href}>
 			{children}

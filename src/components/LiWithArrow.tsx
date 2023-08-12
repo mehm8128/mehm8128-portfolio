@@ -4,6 +4,6 @@ interface Props {
 	children: React.ReactNode
 }
 
-export const LiWithArrow: React.FC<Props> = ({ children }) => {
+export default function LiWithArrow({ children }: Props) {
 	return <li className={styles.arrow}>{children}</li>
 }
