@@ -5,7 +5,8 @@
 	"singleQuote": true,
 	"jsxSingleQuote": true,
 	"bracketSpacing": true,
-	"arrowParens": "always",
+	"arrowParens": "avoid",
 	"printWidth": 80,
-	"semi": false
+	"semi": false,
+	"bracketSameLine": false
 }

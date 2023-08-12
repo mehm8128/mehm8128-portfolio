@@ -4,7 +4,7 @@ export interface DeployDateTimeResponse {
 	deployDateTime: string
 }
 
-export async function GET(): Promise<NextResponse<DeployDateTimeResponse>> {
+export function GET(): NextResponse<DeployDateTimeResponse> {
 	const deployDateTime = new Date().toISOString()
 	return NextResponse.json({ deployDateTime })
 }

@@ -5,7 +5,9 @@ import { useEffect, useRef, useState } from 'react'
 import ModalWrapper from '@/components/ModalWrapper'
 import Work from '@/components/Work'
 import WorkModal from '@/components/WorkModal'
+
 import { works } from '@/consts/works'
+
 import type { WorkType } from '@/consts/works'
 
 export default function Works({

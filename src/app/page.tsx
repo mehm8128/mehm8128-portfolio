@@ -2,14 +2,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { DeployDateTimeResponse } from '@/app/api/deploy_datetime/route'
+
 import LiWithArrow from '@/components/LiWithArrow'
+
 import { links } from '@/consts/links'
 import { formatDate } from '@/utils/date'
 
 const fetchDeployDate = async () => {
 	const res = await fetch('http://localhost:3000/api/deploy_datetime')
 	if (!res.ok) throw new Error('Failed to fetch deploy date')
-	const data: DeployDateTimeResponse = await res.json()
+	const data = (await res.json()) as DeployDateTimeResponse
 	return data.deployDateTime
 }
 
@@ -42,7 +44,7 @@ export default async function Home() {
 				</ul>
 			</div>
 			<ul className='mt-12 flex flex-wrap justify-center gap-12 text-2xl'>
-				{links.map((link) => (
+				{links.map(link => (
 					<LiWithArrow key={link.href}>
 						<Link className='underline' href={link.href}>
 							{link.text}

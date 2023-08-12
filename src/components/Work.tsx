@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 import type { WorkType } from '../consts/works'
 
 interface Props {
