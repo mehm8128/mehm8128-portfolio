@@ -2,6 +2,7 @@
 /* eslint jsx-a11y/no-static-element-interactions: 0 */
 /* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
 
+import { css } from '@kuma-ui/core'
 import React, { forwardRef } from 'react'
 
 const ModalWrapper = forwardRef<
@@ -13,7 +14,16 @@ const ModalWrapper = forwardRef<
 >(({ children, onClose }, ref) => {
 	return (
 		<dialog
-			className='h-6/7 w-6/7 md:w-4/7 absolute inset-0 mx-auto my-auto overflow-y-scroll bg-white px-12 pb-4 pt-12 shadow-lg'
+			className={css`
+				height: 85%;
+				width: 57%;
+				position: absolute;
+				inset: 0;
+				margin: auto;
+				padding: 48px 48px 16px;
+				box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+				overflow-y: scroll;
+			`}
 			ref={ref}
 			onClick={onClose}
 		>

@@ -1,5 +1,6 @@
 'use client'
 
+import { Heading, Box, Flex } from '@kuma-ui/core'
 import { useEffect, useRef, useState } from 'react'
 
 import ModalWrapper from '@/components/ModalWrapper'
@@ -38,18 +39,25 @@ export default function Works({
 
 	return (
 		<div>
-			<div className='flex justify-center py-8'>
-				<h2 className='flex items-center text-3xl'>制作物</h2>
-			</div>
-			<div className='px-4 pb-20 md:px-12'>
-				<ul className='flex flex-wrap gap-12'>
+			<Heading
+				as='h2'
+				display='flex'
+				justifyContent='center'
+				py={32}
+				alignItems='center'
+				fontSize='1.875rem'
+			>
+				制作物
+			</Heading>
+			<Box px={[32, 48]} pb={80}>
+				<Flex as='ul' flexWrap='wrap' gap={48}>
 					{works.map(work => (
 						<li key={work.title}>
 							<Work setCurrentWork={handleSetCurrentWork} work={work} />
 						</li>
 					))}
-				</ul>
-			</div>
+				</Flex>
+			</Box>
 			<ModalWrapper ref={dialogRef} onClose={handleCloseModal}>
 				{currentWork && (
 					<WorkModal work={currentWork} onClose={handleCloseModal} />

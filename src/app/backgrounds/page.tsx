@@ -1,3 +1,5 @@
+import { Heading, Box } from '@kuma-ui/core'
+
 import ListItem from '@/components/ListItem'
 import NextLink from '@/components/NextLink'
 import StyledAnchor from '@/components/StyledAnchor'
@@ -6,18 +8,29 @@ import UList from '@/components/UList'
 export default function Background() {
 	return (
 		<>
-			<div className='flex justify-center py-8'>
-				<h2 className='flex items-center text-3xl'>経歴</h2>
-			</div>
-			<div className='mx-auto w-4/5 leading-loose md:w-1/2'>
-				<section className='pb-4'>
-					<h3 className='mb-2 text-2xl font-bold'>traPでの活動</h3>
+			<Heading
+				justifyContent='center'
+				py={32}
+				as='h2'
+				display='flex'
+				alignItems='center'
+				fontSize=' 1.875rem'
+			>
+				経歴
+			</Heading>
+			<Box mx='auto' width={['80%', '50%']} lineHeight={2}>
+				<Box as='section' pb={16}>
+					<Heading as='h3' mb={8} fontSize='1.5rem' fontWeight='bold'>
+						traPでの活動
+					</Heading>
 					<UList>
 						<ListItem>
 							<StyledAnchor href='https://github.com/traPtitech/traQ_S-UI'>
 								サークル内SNS traQ
 							</StyledAnchor>
-							<span className='ml-1'>のフロントエンドの開発</span>
+							<Box as='span' ml={4}>
+								のフロントエンドの開発
+							</Box>
 							<UList>
 								<ListItem isNested>
 									部員約400人が使うサービスの機能追加・バグ修正・依存関係のアップデートなどを担当
@@ -28,7 +41,9 @@ export default function Background() {
 							<StyledAnchor href='https://github.com/traPtitech/Jomon-UI'>
 								サークル内会計支援システム Jomon
 							</StyledAnchor>
-							<span className='ml-1'>のフロントエンドの開発</span>
+							<Box as='span' ml={4}>
+								のフロントエンドの開発
+							</Box>
 							<UList>
 								<ListItem isNested>
 									部費利用申請や交通費申請の依頼・承認・議論等を行うことができるサービスのv2の開発に参加
@@ -39,7 +54,9 @@ export default function Background() {
 							<StyledAnchor href='https://github.com/traPtitech/traPortfolio-Dashboard'>
 								外部向けポートフォリオ作成アプリ traPortfolio
 							</StyledAnchor>
-							<span className='ml-1'>のフロントエンドの開発</span>
+							<Box as='span' ml={4}>
+								のフロントエンドの開発
+							</Box>
 							<UList>
 								<ListItem isNested>
 									外部に向けて部員がtraPでの活動を紹介できるようなポートフォリオの作成サービスの、主に管理画面の開発に参加
@@ -50,7 +67,9 @@ export default function Background() {
 							<StyledAnchor href='https://github.com/traPtitech/Emoine_R-UI'>
 								サークル内動画閲覧アプリ Emoine
 							</StyledAnchor>
-							<span className='ml-1'>のフロントエンドの開発</span>
+							<Box as='span' ml={4}>
+								のフロントエンドの開発
+							</Box>
 							<UList>
 								<ListItem isNested>
 									メンバー集会やLT会で用いられる、コメントを流したりスタンプを押すことができるサービスのv2の開発に参加
@@ -61,7 +80,9 @@ export default function Background() {
 							<StyledAnchor href='https://github.com/traPtitech/gitea'>
 								サークルで使用しているOSS Gitea
 							</StyledAnchor>
-							<span className='ml-1'>の定期的なアップデートを担当</span>
+							<Box as='span' ml={4}>
+								の定期的なアップデートを担当
+							</Box>
 							<UList>
 								<ListItem isNested>
 									リリースノートを読んでfork元リポジトリの変更を取り込んでアップデートをし、部内へのアップデート内容のアナウンス等を行った
@@ -72,9 +93,9 @@ export default function Background() {
 							<StyledAnchor href='https://trap.jp/post/1862/'>
 								CPCTF2023のスコアサーバー
 							</StyledAnchor>
-							<span className='ml-1'>
+							<Box as='span' ml={4}>
 								の昨年度使用したものからのUI変更に参加
-							</span>
+							</Box>
 						</ListItem>
 						<ListItem>
 							講習会の運営・TA
@@ -148,9 +169,11 @@ export default function Background() {
 							</UList>
 						</ListItem>
 					</UList>
-				</section>
-				<section className='pb-4'>
-					<h3 className='mb-2 text-2xl font-bold'>イベント・大会</h3>
+				</Box>
+				<Box as='section' pb={16}>
+					<Heading as='h3' mb={8} fontSize='1.5rem' fontWeight='bold'>
+						イベント・大会
+					</Heading>
 					<UList>
 						<ListItem>
 							<StyledAnchor href='https://github.com/CyberAgentHack/web-speed-hackathon-2022/blob/main/docs/internal/README.md'>
@@ -208,9 +231,11 @@ export default function Background() {
 							</UList>
 						</ListItem>
 					</UList>
-				</section>
-				<section className='pb-4'>
-					<h3 className='mb-2 text-2xl font-bold'>インターンシップ</h3>
+				</Box>
+				<Box as='section' pb={16}>
+					<Heading as='h3' mb={8} fontSize='1.5rem' fontWeight='bold'>
+						インターンシップ
+					</Heading>
 					<UList>
 						<ListItem>
 							<p>
@@ -242,8 +267,8 @@ export default function Background() {
 							</UList>
 						</ListItem>
 					</UList>
-				</section>
-			</div>
+				</Box>
+			</Box>
 		</>
 	)
 }

@@ -1,3 +1,5 @@
+import { Link } from '@kuma-ui/core'
+
 interface Props {
 	href: string
 	children: React.ReactNode
@@ -5,8 +7,14 @@ interface Props {
 
 export default function StyledAnchor({ href, children }: Props) {
 	return (
-		<a className='text-sky-500 underline hover:text-sky-700' href={href}>
+		<Link
+			color='#0ea5e9'
+			textDecorationLine='underline'
+			_hover={{ color: '#0369a1' }}
+			target='_blank'
+			href={href}
+		>
 			{children}
-		</a>
+		</Link>
 	)
 }

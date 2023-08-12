@@ -66,7 +66,7 @@
 				"shorthandLast": false,
 				"multiline": "ignore",
 				"ignoreCase": false,
-				"noSortAlphabetically": false,
+				"noSortAlphabetically": true,
 				"reservedFirst": false,
 				"locale": "auto"
 			}

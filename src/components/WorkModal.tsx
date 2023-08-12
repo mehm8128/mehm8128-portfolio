@@ -1,4 +1,7 @@
+import { Box, Button, Heading, Text } from '@kuma-ui/core'
 import Image from 'next/image'
+
+import StyledAnchor from '@/components/StyledAnchor'
 
 import type { WorkType } from '../consts/works'
 
@@ -12,59 +15,73 @@ export default function WorkModal({ work, onClose }: Props) {
 
 	return (
 		<>
-			<div className='text-center'>
+			<Box textAlign='center'>
 				{imagePath ? (
 					<Image
 						alt=''
-						className='object-contain'
+						style={{
+							objectFit: 'contain',
+						}}
 						height={400}
 						src={imagePath}
 						width={860}
 					/>
 				) : (
-					<p className='h-100 w-215 flex items-center justify-center'>
+					<Text
+						height={400}
+						width={860}
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+					>
 						画像なし
-					</p>
+					</Text>
 				)}
-			</div>
-			<section className='py-4'>
-				<h3 className='mb-2 text-2xl'>{title}</h3>
-				<h4 className='text-lg'>作品リンク</h4>
+			</Box>
+			<Box as='section' py={16}>
+				<Heading as='h3' mb={8} fontSize='1.5rem'>
+					{title}
+				</Heading>
+				<Heading as='h4' fontSize='1.125rem'>
+					作品リンク
+				</Heading>
 				{productLink !== '' ? (
 					<p>
-						<a className='text-sky-500 hover:text-sky-600' href={productLink}>
-							{productLink}
-						</a>
+						<StyledAnchor href={productLink}>{productLink}</StyledAnchor>
 					</p>
 				) : (
 					<p>なし</p>
 				)}
-				<h4 className='text-lg'>その他リンク</h4>
+				<Heading as='h4' fontSize='1.125rem'>
+					その他リンク
+				</Heading>
 				{links.length > 0 ? (
 					links.map(link => (
 						<p key={link.url}>
-							<a
-								className='text-sky-500 hover:text-sky-600'
-								href={link.url}
-								key={link.url}
-							>
+							<StyledAnchor href={link.url} key={link.url}>
 								{link.name}
-							</a>
+							</StyledAnchor>
 						</p>
 					))
 				) : (
 					<p>なし</p>
 				)}
-				<p className='my-2 whitespace-pre-wrap'>{longDescription}</p>
-			</section>
-			<div className='text-center'>
-				<button
-					className='rounded-md border-2 px-12 py-2 hover:border-sky-300'
+				<Text my={8} whiteSpace='pre-wrap'>
+					{longDescription}
+				</Text>
+			</Box>
+			<Box textAlign='center'>
+				<Button
+					border='solid 2px #e5e7eb'
+					px={48}
+					py={8}
+					_hover={{ borderColor: '#7dd3fc' }}
+					borderRadius='0.375rem'
 					onClick={onClose}
 				>
 					閉じる
-				</button>
-			</div>
+				</Button>
+			</Box>
 		</>
 	)
 }
