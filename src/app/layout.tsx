@@ -9,7 +9,11 @@ export const metadata: Metadata = {
 	title: 'mehm8128-portfolio',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+	children,
+}: {
+	children: React.ReactNode
+}) {
 	return (
 		<html lang='ja'>
 			<body>

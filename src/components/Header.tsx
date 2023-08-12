@@ -14,7 +14,7 @@ export default function Header() {
 				<Link href='/'>mehm8128</Link>
 			</h1>
 			<nav className='mr-4 mt-2 flex gap-4 md:mt-0 md:gap-8 md:text-xl'>
-				{navs.map((nav) => (
+				{navs.map(nav => (
 					<Link
 						className={`rounded-xl px-2 py-2 hover:bg-sky-400 md:px-4 ${
 							pathname === nav.href ? 'bg-sky-400' : ''

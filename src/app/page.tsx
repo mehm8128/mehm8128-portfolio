@@ -6,7 +6,7 @@ import { DeployDateTimeResponse } from '@/app/api/deploy_datetime/route'
 import LiWithArrow from '@/components/LiWithArrow'
 
 import { links } from '@/consts/links'
-import { formatDate } from '@/utils/date'
+import { formatDate } from '@/lib/date'
 
 const fetchDeployDate = async () => {
 	const res = await fetch('http://localhost:3000/api/deploy_datetime')

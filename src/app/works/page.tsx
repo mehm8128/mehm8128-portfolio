@@ -31,7 +31,7 @@ export default function Works({
 
 	useEffect(() => {
 		if (!workId) return
-		const work = works.find((work) => work.id === workId)
+		const work = works.find(work => work.id === workId)
 		if (!work) return
 		handleSetCurrentWork(work)
 	}, [workId])
@@ -43,7 +43,7 @@ export default function Works({
 			</div>
 			<div className='px-4 pb-20 md:px-12'>
 				<ul className='flex flex-wrap gap-12'>
-					{works.map((work) => (
+					{works.map(work => (
 						<li key={work.title}>
 							<Work setCurrentWork={handleSetCurrentWork} work={work} />
 						</li>

@@ -5,5 +5,9 @@ interface Props {
 }
 
 export default function UList({ isNested, space, children }: Props) {
-	return <ul className={`list-disc space-y-${space} ${isNested && 'ml-8'}`}>{children}</ul>
+	return (
+		<ul className={`list-disc space-y-${space} ${isNested && 'ml-8'}`}>
+			{children}
+		</ul>
+	)
 }

@@ -35,10 +35,14 @@ export const works: WorkType[] = [
 		title: 'I love TikZ',
 		productLink: 'https://hackathon-22spring-13.github.io/client/',
 		links: [
-			{ name: 'GitHub', url: 'https://github.com/hackathon-22spring-13/client' },
+			{
+				name: 'GitHub',
+				url: 'https://github.com/hackathon-22spring-13/client',
+			},
 			{ name: 'traPブログ記事', url: 'https://trap.jp/post/1623/' },
 		],
-		description: 'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。',
+		description:
+			'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。',
 		longDescription:
 			'traPの2022春ハッカソンで作った、描いた絵をTikZ形式のテキストに変換できるツール。チームラボ賞をいただいた。\nクライアントはNext.js+Fabric.js、サーバーはPython+SVG2TikZを使っている。自分はクライアントを1人で担当した。',
 		imagePath: '/assets/IloveTikZ.png',
@@ -67,10 +71,17 @@ export const works: WorkType[] = [
 		title: 'traQuest',
 		productLink: '',
 		links: [
-			{ name: 'GitHub(フロントエンド)', url: 'https://github.com/mehm8128/traQuest-UI' },
-			{ name: 'GitHub(バックエンド)', url: 'https://github.com/mehm8128/traQuest-server' },
+			{
+				name: 'GitHub(フロントエンド)',
+				url: 'https://github.com/mehm8128/traQuest-UI',
+			},
+			{
+				name: 'GitHub(バックエンド)',
+				url: 'https://github.com/mehm8128/traQuest-server',
+			},
 		],
-		description: '新入生にtraQの使い方に慣れてもらいやすくするために作ったクエスト形式のアプリ。',
+		description:
+			'新入生にtraQの使い方に慣れてもらいやすくするために作ったクエスト形式のアプリ。',
 		longDescription:
 			'新入生に部内サービスtraQの使い方に慣れてもらいやすくするために作ったクエスト形式のアプリ(部員認証が必要なため、URLは掲載していません)。クエストの作成申請を出し、adminがapproveしたら一覧に反映される。ポイント数のランキングもある。\nNext.jsのapp routerを使ってみた。',
 		imagePath: '/assets/traquest.png',
@@ -155,11 +166,18 @@ export const works: WorkType[] = [
 		title: 'eslint-plugin-no-relative-path',
 		productLink: 'https://www.npmjs.com/package/eslint-plugin-no-relative-path',
 		links: [
-			{ name: 'GitHub', url: 'https://github.com/mehm8128/eslint-plugin-no-relative-path' },
-			{ name: 'npm', url: 'https://www.npmjs.com/package/eslint-plugin-no-relative-path' },
+			{
+				name: 'GitHub',
+				url: 'https://github.com/mehm8128/eslint-plugin-no-relative-path',
+			},
+			{
+				name: 'npm',
+				url: 'https://www.npmjs.com/package/eslint-plugin-no-relative-path',
+			},
 			{ name: 'traPブログ記事', url: 'https://trap.jp/post/1777/' },
 		],
-		description: 'ESLintのプラグインを自作した。importに相対パスを使用するのを禁止する。',
+		description:
+			'ESLintのプラグインを自作した。importに相対パスを使用するのを禁止する。',
 		longDescription:
 			'ESLintのプラグインを自作した。importに相対パスを使用するのを禁止する。JavaScriptで書いている。',
 		imagePath: '',
