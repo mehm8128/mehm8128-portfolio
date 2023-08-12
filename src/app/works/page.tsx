@@ -1,18 +1,20 @@
-import type { NextPage } from 'next'
-import { useRouter } from 'next/router'
+'use client'
+
 import { useEffect, useRef, useState } from 'react'
 
-import ModalWrapper from '../components/ModalWrapper'
-import { Work } from '../components/Work'
-import { WorkModal } from '../components/WorkModal'
-import { works } from '../consts/works'
-import type { WorkType } from '../consts/works'
+import ModalWrapper from '@/components/ModalWrapper'
+import Work from '@/components/Work'
+import WorkModal from '@/components/WorkModal'
+import { works } from '@/consts/works'
+import type { WorkType } from '@/consts/works'
 
-const Works: NextPage = () => {
-	const [currentWork, setCurrentWork] = useState<WorkType>()
+export default function Works({
+	searchParams: { workId },
+}: {
+	searchParams: { workId: string }
+}) {
+	const [currentWork, setCurrentWork] = useState<WorkType | undefined>()
 	const dialogRef = useRef<HTMLDialogElement>(null)
-
-	const router = useRouter()
 
 	function handleSetCurrentWork(currentWork: WorkType) {
 		setCurrentWork(currentWork)
@@ -26,13 +28,11 @@ const Works: NextPage = () => {
 	}
 
 	useEffect(() => {
-		if (router.query.work) {
-			const work = works.find((work) => work.id === router.query.work)
-			if (work) {
-				handleSetCurrentWork(work)
-			}
-		}
-	}, [router.query.work])
+		if (!workId) return
+		const work = works.find((work) => work.id === workId)
+		if (!work) return
+		handleSetCurrentWork(work)
+	}, [workId])
 
 	return (
 		<div>
@@ -49,10 +49,10 @@ const Works: NextPage = () => {
 				</ul>
 			</div>
 			<ModalWrapper ref={dialogRef} onClose={handleCloseModal}>
-				{currentWork && <WorkModal work={currentWork} onClose={handleCloseModal} />}
+				{currentWork && (
+					<WorkModal work={currentWork} onClose={handleCloseModal} />
+				)}
 			</ModalWrapper>
 		</div>
 	)
 }
-
-export default Works

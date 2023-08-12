@@ -6,7 +6,7 @@ interface Props {
 	setCurrentWork: (work: WorkType) => void
 }
 
-export const Work: React.FC<Props> = ({ work, setCurrentWork }) => {
+export default function Work({ work, setCurrentWork }: Props) {
 	const { title, imagePath, description } = work
 
 	return (

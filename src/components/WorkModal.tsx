@@ -6,7 +6,7 @@ interface Props {
 	onClose: () => void
 }
 
-export const WorkModal: React.FC<Props> = ({ work, onClose }) => {
+export default function WorkModal({ work, onClose }: Props) {
 	const { title, imagePath, longDescription, links, productLink } = work
 
 	return (
@@ -45,7 +45,7 @@ export const WorkModal: React.FC<Props> = ({ work, onClose }) => {
 				<p className='my-2 whitespace-pre-wrap'>{longDescription}</p>
 			</section>
 			<div className='text-center'>
-				<button className='rounded-md border-2 py-2 px-12 hover:border-sky-300' onClick={onClose}>
+				<button className='rounded-md border-2 px-12 py-2 hover:border-sky-300' onClick={onClose}>
 					閉じる
 				</button>
 			</div>
