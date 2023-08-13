@@ -3,9 +3,9 @@
 import { Heading, Box, Flex } from '@kuma-ui/core'
 import { useEffect, useRef, useState } from 'react'
 
-import ModalWrapper from '@/components/ModalWrapper'
+import Modal from '@/components/Modal'
 import Work from '@/components/Work'
-import WorkModal from '@/components/WorkModal'
+import WorkModalContent from '@/components/WorkModalContent'
 
 import { works } from '@/consts/works'
 
@@ -58,11 +58,11 @@ export default function Works({
 					))}
 				</Flex>
 			</Box>
-			<ModalWrapper ref={dialogRef} onClose={handleCloseModal}>
+			<Modal ref={dialogRef} onClose={handleCloseModal}>
 				{currentWork && (
-					<WorkModal work={currentWork} onClose={handleCloseModal} />
+					<WorkModalContent work={currentWork} onClose={handleCloseModal} />
 				)}
-			</ModalWrapper>
+			</Modal>
 		</div>
 	)
 }

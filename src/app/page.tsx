@@ -1,9 +1,10 @@
-import { Flex, Heading, Box, Text } from '@kuma-ui/core'
+import { Flex, Heading, Box } from '@kuma-ui/core'
 import Image from 'next/image'
 
 import { DeployDateTimeResponse } from '@/app/api/deploy_datetime/route'
 
 import StyledAnchor from '@/components/StyledAnchor'
+import Tag from '@/components/Tag'
 
 import { links } from '@/consts/links'
 import { formatDate } from '@/lib/date'
@@ -39,16 +40,22 @@ export default async function Home() {
 				/>
 				mehm8128
 			</Heading>
-			<Box mx='auto' width={['80%', '50%']} lineHeight={1.625}>
+			<Box mx='auto' width={['80%', '60%']} lineHeight={1.625}>
 				<p>ここはmehm8128（読み方：めふも）のポートフォリオサイトです。</p>
 				<ul>
 					<li>
-						所属：東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
+						<Tag tagName='所属'>
+							東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
+						</Tag>
 					</li>
 					<li>
-						フロントエンド：Next.js、React、Vue.js、TypeScript、Storybookなど
+						<Tag tagName='フロントエンド'>
+							Next.js、React、Vue.js、TypeScript、Storybookなど
+						</Tag>
 					</li>
-					<li>バックエンド：Go</li>
+					<li>
+						<Tag tagName='バックエンド'>Go</Tag>
+					</li>
 				</ul>
 			</Box>
 			<Flex
@@ -64,9 +71,11 @@ export default async function Home() {
 					</StyledAnchor>
 				))}
 			</Flex>
-			<Text mr={8} mt={16} textAlign='end'>
-				最終更新日時：{formatDate(new Date(deployDateTime))}
-			</Text>
+			<Flex mr={8} mt={16} justifyContent='end'>
+				<Tag tagName='最終更新日時'>
+					<p>{formatDate(new Date(deployDateTime))}</p>
+				</Tag>
+			</Flex>
 		</>
 	)
 }

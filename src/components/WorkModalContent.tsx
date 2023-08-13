@@ -1,11 +1,12 @@
-import { Box, Button, Heading, Text } from '@kuma-ui/core'
+import { Box, Button, Heading, Text, css } from '@kuma-ui/core'
 import Image from 'next/image'
 
 import StyledAnchor from '@/components/StyledAnchor'
+import Tag from '@/components/Tag'
 
 import type { WorkType } from '../consts/works'
 
-export default function WorkModal({
+export default function WorkModalContent({
 	work,
 	onClose,
 }: {
@@ -43,30 +44,46 @@ export default function WorkModal({
 				<Heading as='h3' mb={8} fontSize='1.5rem'>
 					{title}
 				</Heading>
-				<Heading as='h4' fontSize='1.125rem'>
-					作品リンク
-				</Heading>
-				{productLink !== '' ? (
-					<p>
-						<StyledAnchor href={productLink}>{productLink}</StyledAnchor>
-					</p>
-				) : (
-					<p>なし</p>
-				)}
-				<Heading as='h4' fontSize='1.125rem'>
-					その他リンク
-				</Heading>
-				{links.length > 0 ? (
-					links.map(link => (
-						<p key={link.url}>
-							<StyledAnchor href={link.url} key={link.url}>
-								{link.name}
-							</StyledAnchor>
+				<Tag
+					tagName={
+						<Heading as='h4' fontSize='1.125rem'>
+							作品リンク
+						</Heading>
+					}
+					className={css`
+						margin-bottom: 0.5rem;
+					`}
+				>
+					{productLink !== '' ? (
+						<p>
+							<StyledAnchor href={productLink}>{productLink}</StyledAnchor>
 						</p>
-					))
-				) : (
-					<p>なし</p>
-				)}
+					) : (
+						<p>なし</p>
+					)}
+				</Tag>
+				<Tag
+					direction='column'
+					tagName={
+						<Heading as='h4' fontSize='1.125rem'>
+							その他リンク
+						</Heading>
+					}
+				>
+					<Box>
+						{links.length > 0 ? (
+							links.map(link => (
+								<p key={link.url}>
+									<StyledAnchor href={link.url} key={link.url}>
+										{link.name}
+									</StyledAnchor>
+								</p>
+							))
+						) : (
+							<p>なし</p>
+						)}
+					</Box>
+				</Tag>
 				<Text my={8} whiteSpace='pre-wrap'>
 					{longDescription}
 				</Text>

@@ -2,10 +2,10 @@
 /* eslint jsx-a11y/no-static-element-interactions: 0 */
 /* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
 
-import { css ,Box} from '@kuma-ui/core'
+import { css, Box } from '@kuma-ui/core'
 import React, { forwardRef } from 'react'
 
-const ModalWrapper = forwardRef<
+const Modal = forwardRef<
 	HTMLDialogElement,
 	{
 		onClose: () => void
@@ -31,14 +31,11 @@ const ModalWrapper = forwardRef<
 			ref={ref}
 			onClick={onClose}
 		>
-			<Box
-				px={48} pt={48} pb={16}
-				onClick={e => e.stopPropagation()}
-			>
+			<Box px={48} pt={48} pb={16} onClick={e => e.stopPropagation()}>
 				{children}
 			</Box>
 		</dialog>
 	)
 })
-ModalWrapper.displayName = 'ModalWrapper'
-export default ModalWrapper
+Modal.displayName = 'Modal'
+export default Modal

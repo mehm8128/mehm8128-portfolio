@@ -1,8 +1,9 @@
-import { Heading, Box } from '@kuma-ui/core'
+import { Heading, Box, css } from '@kuma-ui/core'
 
 import ListItem from '@/components/ListItem'
 import NextLink from '@/components/NextLink'
 import StyledAnchor from '@/components/StyledAnchor'
+import Tag from '@/components/Tag'
 import UList from '@/components/UList'
 
 export default function Background() {
@@ -19,10 +20,18 @@ export default function Background() {
 				経歴
 			</Heading>
 			<Box mx='auto' width={['80%', '50%']} lineHeight={2}>
-				<Box as='section' pb={16}>
-					<Heading as='h3' mb={8} fontSize='1.5rem' fontWeight='bold'>
-						traPでの活動
-					</Heading>
+				<Tag
+					as='section'
+					className={css`
+						margin-bottom: 1rem;
+					`}
+					color='primary'
+					tagName={
+						<Heading as='h3' fontSize='1.5rem' fontWeight='bold'>
+							traPでの活動
+						</Heading>
+					}
+				>
 					<UList>
 						<ListItem>
 							<StyledAnchor href='https://github.com/traPtitech/traQ_S-UI'>
@@ -169,11 +178,19 @@ export default function Background() {
 							</UList>
 						</ListItem>
 					</UList>
-				</Box>
-				<Box as='section' pb={16}>
-					<Heading as='h3' mb={8} fontSize='1.5rem' fontWeight='bold'>
-						イベント・大会
-					</Heading>
+				</Tag>
+				<Tag
+					as='section'
+					className={css`
+						margin-bottom: 1rem;
+					`}
+					color='primary'
+					tagName={
+						<Heading as='h3' fontSize='1.5rem' fontWeight='bold'>
+							イベント・大会
+						</Heading>
+					}
+				>
 					<UList>
 						<ListItem>
 							<StyledAnchor href='https://github.com/CyberAgentHack/web-speed-hackathon-2022/blob/main/docs/internal/README.md'>
@@ -231,11 +248,19 @@ export default function Background() {
 							</UList>
 						</ListItem>
 					</UList>
-				</Box>
-				<Box as='section' pb={16}>
-					<Heading as='h3' mb={8} fontSize='1.5rem' fontWeight='bold'>
-						インターンシップ
-					</Heading>
+				</Tag>
+				<Tag
+					as='section'
+					className={css`
+						margin-bottom: 1rem;
+					`}
+					color='primary'
+					tagName={
+						<Heading as='h3' fontSize='1.5rem' fontWeight='bold'>
+							インターンシップ
+						</Heading>
+					}
+				>
 					<UList>
 						<ListItem>
 							<p>
@@ -267,7 +292,7 @@ export default function Background() {
 							</UList>
 						</ListItem>
 					</UList>
-				</Box>
+				</Tag>
 			</Box>
 		</>
 	)
