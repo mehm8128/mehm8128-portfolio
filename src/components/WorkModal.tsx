@@ -5,12 +5,13 @@ import StyledAnchor from '@/components/StyledAnchor'
 
 import type { WorkType } from '../consts/works'
 
-interface Props {
+export default function WorkModal({
+	work,
+	onClose,
+}: {
 	work: WorkType
 	onClose: () => void
-}
-
-export default function WorkModal({ work, onClose }: Props) {
+}) {
 	const { title, imagePath, longDescription, links, productLink } = work
 
 	return (

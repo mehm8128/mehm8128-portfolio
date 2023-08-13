@@ -1,11 +1,12 @@
 import { Link } from '@kuma-ui/core'
 
-interface Props {
+export default function StyledAnchor({
+	href,
+	children,
+}: {
 	href: string
 	children: React.ReactNode
-}
-
-export default function StyledAnchor({ href, children }: Props) {
+}) {
 	return (
 		<Link
 			color='#0ea5e9'

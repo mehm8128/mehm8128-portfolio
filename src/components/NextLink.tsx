@@ -1,12 +1,13 @@
-import {Link as KumaLink} from '@kuma-ui/core'
+import { Link as KumaLink } from '@kuma-ui/core'
 import Link from 'next/link'
 
-interface Props {
+export default function NextLink({
+	href,
+	children,
+}: {
 	href: string
 	children: React.ReactNode
-}
-
-export default function NextLink({ href, children }: Props) {
+}) {
 	return (
 		<Link legacyBehavior href={href}>
 			<KumaLink

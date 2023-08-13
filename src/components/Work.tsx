@@ -3,12 +3,13 @@ import Image from 'next/image'
 
 import type { WorkType } from '../consts/works'
 
-interface Props {
+export default function Work({
+	work,
+	setCurrentWork,
+}: {
 	work: WorkType
 	setCurrentWork: (work: WorkType) => void
-}
-
-export default function Work({ work, setCurrentWork }: Props) {
+}) {
 	const { title, imagePath, description } = work
 
 	return (

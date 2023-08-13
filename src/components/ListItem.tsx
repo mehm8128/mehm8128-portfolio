@@ -1,11 +1,12 @@
 import { Box, css } from '@kuma-ui/core'
 
-interface Props {
+export default function ListItem({
+	isNested,
+	children,
+}: {
 	isNested?: boolean
 	children: React.ReactNode
-}
-
-export default function ListItem({ isNested, children }: Props) {
+}) {
 	return (
 		<Box
 			as='li'

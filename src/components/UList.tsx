@@ -1,13 +1,15 @@
 import { Box, css } from '@kuma-ui/core'
 
-interface Props {
+//TODO: use space
+export default function UList({
+	isNested,
+	space,
+	children,
+}: {
 	isNested?: boolean
 	space?: number
 	children: React.ReactNode
-}
-
-//todo: use space
-export default function UList({ isNested, space, children }: Props) {
+}) {
 	return (
 		<Box
 			as='ul'
