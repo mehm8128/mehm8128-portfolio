@@ -1,4 +1,4 @@
-import "the-new-css-reset/css/reset.css";
+import 'the-new-css-reset/css/reset.css'
 import './globals.css'
 
 import { Box } from '@kuma-ui/core'
@@ -23,7 +23,7 @@ export default function RootLayout({
 					<Header />
 					<Box
 						as='main'
-						bgColor='#fafafa'
+						bgColor='#f3f3f2'
 						fontSize={['', '1.25rem']}
 						height='100vh'
 						overflow='visible scroll'

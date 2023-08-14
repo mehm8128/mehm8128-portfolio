@@ -21,6 +21,7 @@ const Modal = forwardRef<
 				position: absolute;
 				inset: 0;
 				outline: none;
+				background-color: #f3f3f2;
 				margin: auto;
 				box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 				overflow-y: scroll;

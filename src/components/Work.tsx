@@ -13,7 +13,13 @@ export default function Work({
 	const { title, imagePath, description } = work
 
 	return (
-		<Box width={352} height={['auto', 384]} border='solid 1px #bae6fd' p={16}>
+		<Box
+			width={352}
+			height={['auto', 384]}
+			border='solid 3px #bae6fd'
+			borderRadius={12}
+			p={16}
+		>
 			{imagePath ? (
 				<Image
 					alt=''
@@ -44,9 +50,9 @@ export default function Work({
 			<Button
 				height={40}
 				width='100%'
-				border='solid 2px #e5e7eb'
+				border='solid 2px #b8c0d2'
 				_hover={{
-					border: 'solid 2px #0ea5e9',
+					border: 'solid 2px #7dd3fc',
 				}}
 				mt={8}
 				py={4}

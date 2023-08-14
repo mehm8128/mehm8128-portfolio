@@ -82,7 +82,7 @@ export default function WorkModalContent({
 			</Box>
 			<Box textAlign='center'>
 				<Button
-					border='solid 2px #e5e7eb'
+					border='solid 2px #b8c0d2'
 					px={48}
 					py={8}
 					_hover={{ borderColor: '#7dd3fc' }}
