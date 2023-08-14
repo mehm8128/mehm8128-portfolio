@@ -13,6 +13,7 @@ export default function Event() {
 			className={css`
 				margin-bottom: 1rem;
 			`}
+			direction='column'
 			color='primary'
 			tagName={
 				<Heading as='h3' fontSize='1.5rem' fontWeight='bold'>

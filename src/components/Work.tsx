@@ -13,7 +13,7 @@ export default function Work({
 	const { title, imagePath, description } = work
 
 	return (
-		<Box width={352} height={[352, 384]} border='solid 1px #bae6fd' p={16}>
+		<Box width={352} height={['auto', 384]} border='solid 1px #bae6fd' p={16}>
 			{imagePath ? (
 				<Image
 					alt=''
@@ -40,7 +40,7 @@ export default function Work({
 			<Heading as='h3' py={8} fontSize='1.25rem' fontWeight='bold'>
 				{title}
 			</Heading>
-			<Text height={[64, 96]}>{description}</Text>
+			<Text height={['auto', 96]}>{description}</Text>
 			<Button
 				height={40}
 				width='100%'
@@ -48,6 +48,7 @@ export default function Work({
 				_hover={{
 					border: 'solid 2px #0ea5e9',
 				}}
+				mt={8}
 				py={4}
 				onClick={() => setCurrentWork(work)}
 			>

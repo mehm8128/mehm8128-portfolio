@@ -30,6 +30,11 @@ export default function Tag({
 					? css`
 							flex-direction: row;
 							align-items: center;
+
+							@media (max-width: md) {
+								align-items: flex-start;
+								flex-direction: column;
+							}
 					  `
 					: css`
 							flex-direction: column;
@@ -39,7 +44,17 @@ export default function Tag({
 			)}
 		>
 			<TagElement data-color={color}>{tagName}</TagElement>
-			{children}
+			<Box
+				className={
+					direction === 'column'
+						? css`
+								margin-left: 1.25rem;
+						  `
+						: ''
+				}
+			>
+				{children}
+			</Box>
 			<TagElement data-color={color}>
 				<Box as='span' mr={2}>
 					/
@@ -53,24 +68,24 @@ export default function Tag({
 const TagElement = styled('div')`
 	display: flex;
 	align-items: center;
-	color: #cecece;
+	color: #bdb82d;
 
 	&::before {
 		content: '';
 		display: block;
-		border-top: solid 3px #cecece;
-		border-right: solid 3px #cecece;
-		height: 16px;
-		width: 16px;
+		border-top: solid 2px #bdb82d;
+		border-right: solid 2px #bdb82d;
+		height: 12px;
+		width: 12px;
 		transform: rotate(-135deg);
 	}
 	&::after {
 		content: '';
 		display: block;
-		border-top: solid 3px #cecece;
-		border-right: solid 3px #cecece;
-		height: 16px;
-		width: 16px;
+		border-top: solid 2px #bdb82d;
+		border-right: solid 2px #bdb82d;
+		height: 12px;
+		width: 12px;
 		transform: rotate(45deg);
 	}
 

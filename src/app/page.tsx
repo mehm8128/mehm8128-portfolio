@@ -71,7 +71,7 @@ export default async function Home() {
 					</StyledAnchor>
 				))}
 			</Flex>
-			<Flex mr={8} mt={16} justifyContent='end'>
+			<Flex mr={8} mt={16} justifyContent={['start', 'end']}>
 				<Tag tagName='最終更新日時'>
 					<p>{formatDate(new Date(deployDateTime))}</p>
 				</Tag>

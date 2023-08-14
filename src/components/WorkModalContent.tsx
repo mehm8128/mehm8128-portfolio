@@ -45,11 +45,7 @@ export default function WorkModalContent({
 					{title}
 				</Heading>
 				<Tag
-					tagName={
-						<Heading as='h4' fontSize='1.125rem'>
-							作品リンク
-						</Heading>
-					}
+					tagName={<Heading as='h4'>作品リンク</Heading>}
 					className={css`
 						margin-bottom: 0.5rem;
 					`}
@@ -64,11 +60,7 @@ export default function WorkModalContent({
 				</Tag>
 				<Tag
 					direction='column'
-					tagName={
-						<Heading as='h4' fontSize='1.125rem'>
-							その他リンク
-						</Heading>
-					}
+					tagName={<Heading as='h4'>その他リンク</Heading>}
 				>
 					<Box>
 						{links.length > 0 ? (
