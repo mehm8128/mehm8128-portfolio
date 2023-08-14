@@ -50,9 +50,9 @@ export default function Work({
 			<Button
 				height={40}
 				width='100%'
-				border='solid 2px #b8c0d2'
+				border='solid 1.5px #b8c0d2'
 				_hover={{
-					border: 'solid 2px #7dd3fc',
+					borderColor: '#7dd3fc',
 				}}
 				mt={8}
 				py={4}
