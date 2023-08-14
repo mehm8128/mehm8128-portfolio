@@ -23,7 +23,7 @@ export default function RootLayout({
 					<Header />
 					<Box
 						as='main'
-						bgColor='#f3f3f2'
+						bgColor='#f4f4f4'
 						fontSize={['', '1.25rem']}
 						height='100vh'
 						overflow='visible scroll'

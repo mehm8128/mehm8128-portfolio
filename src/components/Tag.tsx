@@ -68,13 +68,13 @@ export default function Tag({
 const TagElement = styled('div')`
 	display: flex;
 	align-items: center;
-	color: #066b1f;
+	color: #097e03;
 
 	&::before {
 		content: '';
 		display: block;
-		border-top: solid 2px #066b1f;
-		border-right: solid 2px #066b1f;
+		border-top: solid 2px #097e03;
+		border-right: solid 2px #097e03;
 		height: 12px;
 		width: 12px;
 		transform: rotate(-135deg);
@@ -82,8 +82,8 @@ const TagElement = styled('div')`
 	&::after {
 		content: '';
 		display: block;
-		border-top: solid 2px #066b1f;
-		border-right: solid 2px #066b1f;
+		border-top: solid 2px #097e03;
+		border-right: solid 2px #097e03;
 		height: 12px;
 		width: 12px;
 		transform: rotate(45deg);
