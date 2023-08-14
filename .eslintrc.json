@@ -11,7 +11,6 @@
 		"project": true,
 		"tsconfigRootDir": "."
 	},
-	"settings": { "import/core-modules": ["windi.css"] },
 	"plugins": ["unused-imports", "@typescript-eslint"],
 	"root": true,
 	"ignorePatterns": ["**/*.js"],
@@ -66,7 +65,7 @@
 				"shorthandLast": false,
 				"multiline": "ignore",
 				"ignoreCase": false,
-				"noSortAlphabetically": false,
+				"noSortAlphabetically": true,
 				"reservedFirst": false,
 				"locale": "auto"
 			}

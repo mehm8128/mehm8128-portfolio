@@ -1,9 +1,10 @@
+import { Flex, Heading, Box } from '@kuma-ui/core'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { DeployDateTimeResponse } from '@/app/api/deploy_datetime/route'
 
-import LiWithArrow from '@/components/LiWithArrow'
+import StyledAnchor from '@/components/StyledAnchor'
+import Tag from '@/components/Tag'
 
 import { links } from '@/consts/links'
 import { formatDate } from '@/lib/date'
@@ -22,41 +23,59 @@ export default async function Home() {
 
 	return (
 		<>
-			<section className='flex justify-center py-8'>
-				<h2 className='flex items-center gap-2 text-3xl'>
-					<Image
-						alt=''
-						height={60}
-						src='/assets/mehm8128_circle.png'
-						width={60}
-					/>
-					mehm8128
-				</h2>
-			</section>
-			<div className='mx-auto w-4/5 leading-relaxed md:w-1/2'>
+			<Heading
+				alignItems='center'
+				as='h2'
+				display='flex'
+				fontSize='1.875rem'
+				gap={8}
+				justifyContent='center'
+				py={32}
+			>
+				<Image
+					alt=''
+					height={60}
+					width={60}
+					src='/assets/mehm8128_circle.png'
+				/>
+				mehm8128
+			</Heading>
+			<Box mx='auto' width={['80%', '60%']} lineHeight={1.625}>
 				<p>ここはmehm8128（読み方：めふも）のポートフォリオサイトです。</p>
 				<ul>
 					<li>
-						所属：東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
+						<Tag tagName='所属'>
+							東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
+						</Tag>
 					</li>
 					<li>
-						フロントエンド：Next.js、React、Vue.js、TypeScript、Storybookなど
+						<Tag tagName='フロントエンド'>
+							Next.js、React、Vue.js、TypeScript、Storybookなど
+						</Tag>
 					</li>
-					<li>バックエンド：Go</li>
+					<li>
+						<Tag tagName='バックエンド'>Go</Tag>
+					</li>
 				</ul>
-			</div>
-			<ul className='mt-12 flex flex-wrap justify-center gap-12 text-2xl'>
+			</Box>
+			<Flex
+				mt={48}
+				flexWrap='wrap'
+				justifyContent='center'
+				gap={48}
+				fontSize='1.5rem'
+			>
 				{links.map(link => (
-					<LiWithArrow key={link.href}>
-						<Link className='underline' href={link.href}>
-							{link.text}
-						</Link>
-					</LiWithArrow>
+					<StyledAnchor key={link.href} href={link.href}>
+						{link.text}
+					</StyledAnchor>
 				))}
-			</ul>
-			<p className='mr-2 mt-4 text-right'>
-				最終更新日時：{formatDate(new Date(deployDateTime))}
-			</p>
+			</Flex>
+			<Flex mr={8} mt={16} justifyContent={['start', 'end']}>
+				<Tag tagName='最終更新日時'>
+					<p>{formatDate(new Date(deployDateTime))}</p>
+				</Tag>
+			</Flex>
 		</>
 	)
 }

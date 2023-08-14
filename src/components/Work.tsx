@@ -1,38 +1,65 @@
+import { Box, Flex, Button, Text, Heading } from '@kuma-ui/core'
 import Image from 'next/image'
 
 import type { WorkType } from '../consts/works'
 
-interface Props {
+export default function Work({
+	work,
+	setCurrentWork,
+}: {
 	work: WorkType
 	setCurrentWork: (work: WorkType) => void
-}
-
-export default function Work({ work, setCurrentWork }: Props) {
+}) {
 	const { title, imagePath, description } = work
 
 	return (
-		<div className='w-88 h-88 border border-sky-200 p-4 md:h-96'>
+		<Box
+			width={352}
+			height={['auto', 384]}
+			border='solid 3px #bae6fd'
+			borderRadius={12}
+			p={16}
+		>
 			{imagePath ? (
 				<Image
 					alt=''
-					className='object-contain'
+					style={{
+						objectFit: 'contain',
+						height: 160,
+						width: 320,
+					}}
 					height={160}
 					src={imagePath}
 					width={320}
 				/>
 			) : (
-				<div className='bg-light-50 flex h-40 items-center justify-center border'>
+				<Flex
+					alignItems='center'
+					justifyContent='center'
+					border='solid 1px #e5e7eb'
+					bgColor='#fdfdfd'
+					height={160}
+				>
 					画像なし
-				</div>
+				</Flex>
 			)}
-			<h3 className='py-2 text-xl font-bold'>{title}</h3>
-			<p className='h-16 md:h-24'>{description}</p>
-			<button
-				className='h-10 w-full border-2 py-1 hover:border-sky-300'
+			<Heading as='h3' py={8} fontSize='1.25rem' fontWeight='bold'>
+				{title}
+			</Heading>
+			<Text height={['auto', 96]}>{description}</Text>
+			<Button
+				height={40}
+				width='100%'
+				border='solid 1.5px #b8c0d2'
+				_hover={{
+					borderColor: '#7dd3fc',
+				}}
+				mt={8}
+				py={4}
 				onClick={() => setCurrentWork(work)}
 			>
 				詳細を見る
-			</button>
-		</div>
+			</Button>
+		</Box>
 	)
 }

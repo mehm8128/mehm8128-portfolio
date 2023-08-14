@@ -1,13 +1,28 @@
-interface Props {
+import { Box, css } from '@kuma-ui/core'
+
+//TODO: use space
+export default function UList({
+	isNested,
+	space,
+	children,
+}: {
 	isNested?: boolean
 	space?: number
 	children: React.ReactNode
-}
-
-export default function UList({ isNested, space, children }: Props) {
+}) {
 	return (
-		<ul className={`list-disc space-y-${space} ${isNested && 'ml-8'}`}>
+		<Box
+			as='ul'
+			listStyle='disc'
+			className={
+				isNested
+					? css`
+							margin-left: 32px;
+					  `
+					: ''
+			}
+		>
 			{children}
-		</ul>
+		</Box>
 	)
 }
