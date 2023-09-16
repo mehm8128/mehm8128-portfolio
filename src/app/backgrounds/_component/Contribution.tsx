@@ -22,6 +22,18 @@ export default function Contribution() {
 		>
 			<UList>
 				<ListItem>
+					<StyledAnchor href='https://github.com/vuejs/vitepress/pull/2941'>
+						fix: customizing the starting line number even if globally set by
+						mehm8128 · Pull Request #2941 · vuejs/vitepress
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
+					<StyledAnchor href='https://github.com/vuejs/vitepress/issues/2907'>
+						Specifing the start line number on code block · Issue #2907 ·
+						vuejs/vitepress
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href='https://github.com/kuma-ui/kuma-ui/pull/283'>
 						Fix the way to calculate processedProps by mehm8128 · Pull Request
 						#283 · kuma-ui/kuma-ui

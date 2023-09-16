@@ -48,6 +48,19 @@ export default function Internship() {
 						</ListItem>
 					</UList>
 				</ListItem>
+				<ListItem>
+					<p>2023年8月～9月 株式会社ゆめみで2週間のサマーインターンに参加</p>
+					<UList isNested>
+						<ListItem>
+							ジョブボードという社内求人ツールの開発にフロントエンドとして参加した
+						</ListItem>
+						<ListItem>
+							<StyledAnchor href='https://note.com/mehm8128/n/n2acd21311531'>
+								参加記事
+							</StyledAnchor>
+						</ListItem>
+					</UList>
+				</ListItem>
 			</UList>
 		</Tag>
 	)

@@ -146,6 +146,16 @@ export default function Trap() {
 								Gitを作ってみようとした話
 							</StyledAnchor>
 						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href='https://trap.jp/post/1962/'>
+								フロントエンドテストに入門してみた話
+							</StyledAnchor>
+						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href='https://trap.jp/post/1963/'>
+								Kuma UIに†OSS Contribution†した話
+							</StyledAnchor>
+						</ListItem>
 					</UList>
 				</ListItem>
 				<ListItem>

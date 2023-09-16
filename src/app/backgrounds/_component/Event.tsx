@@ -29,12 +29,6 @@ export default function Event() {
 					参加
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href='https://isucon.net/archives/56571716.html'>
-						ISUCON12
-					</StyledAnchor>{' '}
-					参加
-				</ListItem>
-				<ListItem>
 					<StyledAnchor href='https://2023.hackathon.miyagi.jp/'>
 						みやぎハッカソン
 					</StyledAnchor>{' '}
@@ -59,23 +53,6 @@ export default function Event() {
 						Web Speed Hackathon 2023
 					</StyledAnchor>{' '}
 					参加
-				</ListItem>
-				<ListItem>
-					<StyledAnchor href='https://inside.pixiv.blog/2023/03/28/130000'>
-						pixivスピードアップチャレンジ
-					</StyledAnchor>{' '}
-					参加
-				</ListItem>
-				<ListItem>
-					ディップ株式会社主催 AWSハンズオン 参加
-					<UList>
-						<ListItem isNested>
-							参加記事：
-							<StyledAnchor href='https://trap.jp/post/1850/'>
-								ディップさんのAWSハンズオンに参加してきました
-							</StyledAnchor>
-						</ListItem>
-					</UList>
 				</ListItem>
 			</UList>
 		</Tag>
