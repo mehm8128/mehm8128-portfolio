@@ -87,6 +87,19 @@ export const works: WorkType[] = [
 		imagePath: '/assets/traquest.png',
 	},
 	{
+		id: 'comic_doQ',
+		title: 'Comic DoQ',
+		productLink: '',
+		links: [
+			{ name: 'GitHub', url: 'https://github.com/digicon-trap1-2023/frontend' },
+		],
+		description:
+			'漫画家が漫画の制作のために自由に使っていい資料を投稿するサービス。',
+		longDescription:
+			'Digi-Con Hackathon 2023で作った、漫画家が漫画の制作のために自由に使っていい資料を投稿するサービス。\n漫画家から要望を投稿する機能や、参考にした資料には漫画家から参考にしたというリアクションを示せたり、リアクションを示した資料は完成した漫画のコマと関連づけて保存しておける機能もある。\nVue.jsを用いていて、自分は一覧画面以外のページの作成を担当した。',
+		imagePath: '/assets/comic_doQ.jpg',
+	},
+	{
 		id: 'thanqyou',
 		title: 'ThanQ-you',
 		productLink: '',
@@ -97,7 +110,7 @@ export const works: WorkType[] = [
 		imagePath: '/assets/thanqyou.png',
 	},
 	{
-		id: 'progreesstree',
+		id: 'progresstree',
 		title: '進捗が木になる～',
 		productLink: '',
 		links: [

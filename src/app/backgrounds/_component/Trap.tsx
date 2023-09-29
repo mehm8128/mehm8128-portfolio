@@ -156,6 +156,11 @@ export default function Trap() {
 								Kuma UIに†OSS Contribution†した話
 							</StyledAnchor>
 						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href='https://trap.jp/post/1964/'>
+								traQのa11yについて
+							</StyledAnchor>
+						</ListItem>
 					</UList>
 				</ListItem>
 				<ListItem>
@@ -170,6 +175,12 @@ export default function Trap() {
 						<ListItem isNested>
 							<StyledAnchor href='https://www.titech.ac.jp/news/2022/064915'>
 								デジタル創作同好会traPが「中高生のためのプログラミング教室（2022年夏）」を開催
+								| 東工大ニュース
+							</StyledAnchor>
+						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href='https://www.titech.ac.jp/news/2023/066799'>
+								デジタル創作同好会traPが「中高生のためのプログラミング教室（2023年春）」を開催
 								| 東工大ニュース
 							</StyledAnchor>
 						</ListItem>
