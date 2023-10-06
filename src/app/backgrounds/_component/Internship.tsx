@@ -61,6 +61,17 @@ export default function Internship() {
 						</ListItem>
 					</UList>
 				</ListItem>
+				<ListItem>
+					<p>2023年9月 株式会社ナレッジワークで2週間のサマーインターンに参加</p>
+					<UList isNested>
+						<ListItem>
+							ナレッジワークのwork領域の開発に参加し、ミーティング詳細情報画面の改善に取り組んだ
+						</ListItem>
+						<ListItem>
+							ResourceSetを扱ったり、デザイン改善の発案やその実装、リッチテキストエディタの調査・導入などを行った
+						</ListItem>
+					</UList>
+				</ListItem>
 			</UList>
 		</Tag>
 	)
