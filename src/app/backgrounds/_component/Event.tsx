@@ -29,6 +29,12 @@ export default function Event() {
 					参加
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href='https://isucon.net/archives/56571716.html'>
+						ISUCON12
+					</StyledAnchor>{' '}
+					参加
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href='https://2023.hackathon.miyagi.jp/'>
 						みやぎハッカソン
 					</StyledAnchor>{' '}
