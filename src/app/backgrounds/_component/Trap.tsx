@@ -161,6 +161,11 @@ export default function Trap() {
 								traQのa11yについて
 							</StyledAnchor>
 						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href='https://trap.jp/post/2020/'>
+								プログラミング教室の資料を改善した話
+							</StyledAnchor>
+						</ListItem>
 					</UList>
 				</ListItem>
 				<ListItem>
