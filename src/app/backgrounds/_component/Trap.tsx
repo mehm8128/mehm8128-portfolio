@@ -166,6 +166,11 @@ export default function Trap() {
 								プログラミング教室の資料を改善した話
 							</StyledAnchor>
 						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href='https://trap.jp/post/2021/'>
+								DIGI-CON HACKATHON 参加記事「Comic DoQ」
+							</StyledAnchor>
+						</ListItem>
 					</UList>
 				</ListItem>
 				<ListItem>
