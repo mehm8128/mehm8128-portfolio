@@ -194,6 +194,12 @@ export default function Trap() {
 								| 東工大ニュース
 							</StyledAnchor>
 						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href='https://www.titech.ac.jp/news/2023/067714'>
+								デジタル創作同好会traPが「中高生のためのプログラミング教室（2023年夏）」を開催
+								| 東工大ニュース
+							</StyledAnchor>
+						</ListItem>
 					</UList>
 				</ListItem>
 			</UList>
