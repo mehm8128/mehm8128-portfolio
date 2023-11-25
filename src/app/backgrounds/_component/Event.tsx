@@ -60,6 +60,12 @@ export default function Event() {
 					</StyledAnchor>{' '}
 					参加
 				</ListItem>
+				<ListItem>
+					<StyledAnchor href='https://isucon.net/archives/57801192.html'>
+						ISUCON13
+					</StyledAnchor>{' '}
+					参加
+				</ListItem>
 			</UList>
 		</Tag>
 	)
