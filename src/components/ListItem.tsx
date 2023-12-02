@@ -9,8 +9,8 @@ export default function ListItem({
 }) {
 	return (
 		<Box
-			as='li'
-			lineHeight='2rem'
+			as="li"
+			lineHeight="2rem"
 			className={
 				isNested
 					? css`

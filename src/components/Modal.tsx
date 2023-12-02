@@ -2,7 +2,7 @@
 /* eslint jsx-a11y/no-static-element-interactions: 0 */
 /* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
 
-import { css, Box } from '@kuma-ui/core'
+import { Box, css } from '@kuma-ui/core'
 import React, { forwardRef } from 'react'
 
 const Modal = forwardRef<
@@ -31,6 +31,7 @@ const Modal = forwardRef<
 			`}
 			ref={ref}
 			onClick={onClose}
+			onKeyDown={() => null}
 		>
 			<Box px={48} pt={48} pb={16} onClick={e => e.stopPropagation()}>
 				{children}

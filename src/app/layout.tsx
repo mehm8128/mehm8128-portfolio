@@ -17,16 +17,16 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang='ja'>
+		<html lang="ja">
 			<body>
 				<KumaRegistry>
 					<Header />
 					<Box
-						as='main'
-						bgColor='#f4f4f4'
+						as="main"
+						bgColor="#f4f4f4"
 						fontSize={['', '1.25rem']}
-						height='100vh'
-						overflow='visible scroll'
+						height="100vh"
+						overflow="visible scroll"
 						pb={48}
 						pt={[104, 64]}
 					>

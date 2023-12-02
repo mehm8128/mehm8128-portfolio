@@ -17,10 +17,10 @@ export default function WorkModalContent({
 
 	return (
 		<>
-			<Box textAlign='center'>
+			<Box textAlign="center">
 				{imagePath ? (
 					<Image
-						alt=''
+						alt=""
 						style={{
 							objectFit: 'contain',
 						}}
@@ -32,20 +32,20 @@ export default function WorkModalContent({
 					<Text
 						height={400}
 						width={860}
-						display='flex'
-						alignItems='center'
-						justifyContent='center'
+						display="flex"
+						alignItems="center"
+						justifyContent="center"
 					>
 						画像なし
 					</Text>
 				)}
 			</Box>
-			<Box as='section' py={16}>
-				<Heading as='h3' mb={8} fontSize='1.5rem'>
+			<Box as="section" py={16}>
+				<Heading as="h3" mb={8} fontSize="1.5rem">
 					{title}
 				</Heading>
 				<Tag
-					tagName={<Heading as='h4'>作品リンク</Heading>}
+					tagName={<Heading as="h4">作品リンク</Heading>}
 					className={css`
 						margin-bottom: 0.5rem;
 					`}
@@ -59,8 +59,8 @@ export default function WorkModalContent({
 					)}
 				</Tag>
 				<Tag
-					direction='column'
-					tagName={<Heading as='h4'>その他リンク</Heading>}
+					direction="column"
+					tagName={<Heading as="h4">その他リンク</Heading>}
 				>
 					<Box>
 						{links.length > 0 ? (
@@ -76,17 +76,17 @@ export default function WorkModalContent({
 						)}
 					</Box>
 				</Tag>
-				<Text my={8} whiteSpace='pre-wrap'>
+				<Text my={8} whiteSpace="pre-wrap">
 					{longDescription}
 				</Text>
 			</Box>
-			<Box textAlign='center'>
+			<Box textAlign="center">
 				<Button
-					border='solid 1.5px #b8c0d2'
+					border="solid 1.5px #b8c0d2"
 					px={48}
 					py={8}
 					_hover={{ borderColor: '#7dd3fc' }}
-					borderRadius='0.375rem'
+					borderRadius="0.375rem"
 					onClick={onClose}
 				>
 					閉じる

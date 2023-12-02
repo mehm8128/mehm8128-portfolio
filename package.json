@@ -6,7 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint --fix && prettier --write src"
+		"biome": "biome check --apply src",
+		"biome:ci": "biome ci src"
 	},
 	"dependencies": {
 		"@kuma-ui/core": "^1.1.3",
@@ -17,17 +18,11 @@
 		"the-new-css-reset": "^1.9.0"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "1.4.1",
 		"@kuma-ui/next-plugin": "^1.1.5",
 		"@types/node": "20.9.0",
 		"@types/react": "18.2.20",
 		"@types/react-dom": "18.2.7",
-		"@typescript-eslint/eslint-plugin": "^6.3.0",
-		"@typescript-eslint/parser": "^6.3.0",
-		"eslint": "8.47.0",
-		"eslint-config-next": "^13.4.13",
-		"eslint-config-prettier": "^9.0.0",
-		"eslint-plugin-unused-imports": "^3.0.0",
-		"prettier": "^3.0.1",
 		"typescript": "5.1.6"
 	}
 }

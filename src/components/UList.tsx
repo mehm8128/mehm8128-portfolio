@@ -12,8 +12,8 @@ export default function UList({
 }) {
 	return (
 		<Box
-			as='ul'
-			listStyle='disc'
+			as="ul"
+			listStyle="disc"
 			className={
 				isNested
 					? css`
