@@ -9,59 +9,59 @@ import UList from '@/components/UList'
 export default function Event() {
 	return (
 		<Tag
-			as='section'
+			as="section"
 			className={css`
 				margin-bottom: 1rem;
 			`}
-			direction='column'
-			color='primary'
+			direction="column"
+			color="primary"
 			tagName={
-				<Heading as='h3' fontSize='1.5rem' fontWeight='bold'>
+				<Heading as="h3" fontSize="1.5rem" fontWeight="bold">
 					イベント・大会
 				</Heading>
 			}
 		>
 			<UList>
 				<ListItem>
-					<StyledAnchor href='https://github.com/CyberAgentHack/web-speed-hackathon-2022/blob/main/docs/internal/README.md'>
+					<StyledAnchor href="https://github.com/CyberAgentHack/web-speed-hackathon-2022/blob/main/docs/internal/README.md">
 						Web Speed Hackathon 2022 for Students
 					</StyledAnchor>{' '}
 					参加
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href='https://isucon.net/archives/56571716.html'>
+					<StyledAnchor href="https://isucon.net/archives/56571716.html">
 						ISUCON12
 					</StyledAnchor>{' '}
 					参加
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href='https://2023.hackathon.miyagi.jp/'>
+					<StyledAnchor href="https://2023.hackathon.miyagi.jp/">
 						みやぎハッカソン
 					</StyledAnchor>{' '}
 					参加
 					<UList>
 						<ListItem isNested>
-							<NextLink href='/works?workId=tuitui'>
+							<NextLink href="/works?workId=tuitui">
 								直感観光地検索サービス「tuitui」
 							</NextLink>
 							を制作
 						</ListItem>
 						<ListItem isNested>
 							参加記事：
-							<StyledAnchor href='https://trap.jp/post/1808/'>
+							<StyledAnchor href="https://trap.jp/post/1808/">
 								みやぎハッカソン2023に参加しました(ずんだ食べ食べ委員会)
 							</StyledAnchor>
 						</ListItem>
 					</UList>
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href='https://github.com/CyberAgentHack/web-speed-hackathon-2023'>
+					<StyledAnchor href="https://github.com/CyberAgentHack/web-speed-hackathon-2023">
 						Web Speed Hackathon 2023
 					</StyledAnchor>{' '}
 					参加
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href='https://isucon.net/archives/57801192.html'>
+					<StyledAnchor href="https://isucon.net/archives/57801192.html">
 						ISUCON13
 					</StyledAnchor>{' '}
 					参加

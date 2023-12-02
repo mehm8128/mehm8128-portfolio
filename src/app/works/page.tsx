@@ -1,6 +1,6 @@
 'use client'
 
-import { Heading, Box, Flex } from '@kuma-ui/core'
+import { Box, Flex, Heading } from '@kuma-ui/core'
 import { useEffect, useRef, useState } from 'react'
 
 import Modal from '@/components/Modal'
@@ -40,17 +40,17 @@ export default function Works({
 	return (
 		<div>
 			<Heading
-				as='h2'
-				display='flex'
-				justifyContent='center'
+				as="h2"
+				display="flex"
+				justifyContent="center"
 				py={32}
-				alignItems='center'
-				fontSize='1.875rem'
+				alignItems="center"
+				fontSize="1.875rem"
 			>
 				制作物
 			</Heading>
 			<Box px={[32, 48]} pb={80}>
-				<Flex as='ul' flexWrap='wrap' gap={48}>
+				<Flex as="ul" flexWrap="wrap" gap={48}>
 					{works.map(work => (
 						<li key={work.title}>
 							<Work setCurrentWork={handleSetCurrentWork} work={work} />

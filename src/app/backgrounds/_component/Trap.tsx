@@ -1,4 +1,4 @@
-import { Heading, Box, css } from '@kuma-ui/core'
+import { Box, Heading, css } from '@kuma-ui/core'
 
 import ListItem from '@/components/ListItem'
 import StyledAnchor from '@/components/StyledAnchor'
@@ -8,24 +8,24 @@ import UList from '@/components/UList'
 export default function Trap() {
 	return (
 		<Tag
-			as='section'
+			as="section"
 			className={css`
 				margin-bottom: 1rem;
 			`}
-			direction='column'
-			color='primary'
+			direction="column"
+			color="primary"
 			tagName={
-				<Heading as='h3' fontSize='1.5rem' fontWeight='bold'>
+				<Heading as="h3" fontSize="1.5rem" fontWeight="bold">
 					traPでの活動
 				</Heading>
 			}
 		>
 			<UList>
 				<ListItem>
-					<StyledAnchor href='https://github.com/traPtitech/traQ_S-UI'>
+					<StyledAnchor href="https://github.com/traPtitech/traQ_S-UI">
 						サークル内SNS traQ
 					</StyledAnchor>
-					<Box as='span' ml={4}>
+					<Box as="span" ml={4}>
 						のフロントエンドの開発
 					</Box>
 					<UList>
@@ -35,10 +35,10 @@ export default function Trap() {
 					</UList>
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href='https://github.com/traPtitech/Jomon-UI'>
+					<StyledAnchor href="https://github.com/traPtitech/Jomon-UI">
 						サークル内会計支援システム Jomon
 					</StyledAnchor>
-					<Box as='span' ml={4}>
+					<Box as="span" ml={4}>
 						のフロントエンドの開発
 					</Box>
 					<UList>
@@ -48,10 +48,10 @@ export default function Trap() {
 					</UList>
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href='https://github.com/traPtitech/traPortfolio-Dashboard'>
+					<StyledAnchor href="https://github.com/traPtitech/traPortfolio-Dashboard">
 						外部向けポートフォリオ作成アプリ traPortfolio
 					</StyledAnchor>
-					<Box as='span' ml={4}>
+					<Box as="span" ml={4}>
 						のフロントエンドの開発
 					</Box>
 					<UList>
@@ -61,10 +61,10 @@ export default function Trap() {
 					</UList>
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href='https://github.com/traPtitech/Emoine_R-UI'>
+					<StyledAnchor href="https://github.com/traPtitech/Emoine_R-UI">
 						サークル内動画閲覧アプリ Emoine
 					</StyledAnchor>
-					<Box as='span' ml={4}>
+					<Box as="span" ml={4}>
 						のフロントエンドの開発
 					</Box>
 					<UList>
@@ -74,10 +74,10 @@ export default function Trap() {
 					</UList>
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href='https://github.com/traPtitech/gitea'>
+					<StyledAnchor href="https://github.com/traPtitech/gitea">
 						サークルで使用しているOSS Gitea
 					</StyledAnchor>
-					<Box as='span' ml={4}>
+					<Box as="span" ml={4}>
 						の定期的なアップデートを担当
 					</Box>
 					<UList>
@@ -87,10 +87,10 @@ export default function Trap() {
 					</UList>
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href='https://trap.jp/post/1862/'>
+					<StyledAnchor href="https://trap.jp/post/1862/">
 						CPCTF2023のスコアサーバー
 					</StyledAnchor>
-					<Box as='span' ml={4}>
+					<Box as="span" ml={4}>
 						の昨年度使用したものからのUI変更に参加
 					</Box>
 				</ListItem>
@@ -102,7 +102,7 @@ export default function Trap() {
 						</ListItem>
 						<ListItem isNested>
 							ブログ記事：
-							<StyledAnchor href='https://trap.jp/post/1722/'>
+							<StyledAnchor href="https://trap.jp/post/1722/">
 								traPの講習会とブログリレーの運営について
 							</StyledAnchor>
 						</ListItem>
@@ -112,62 +112,62 @@ export default function Trap() {
 					ブログ記事の執筆
 					<UList space={1}>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/1486/'>
+							<StyledAnchor href="https://trap.jp/post/1486/">
 								ReactでToDoリストを作る(新歓ブログ)
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/1646/'>
+							<StyledAnchor href="https://trap.jp/post/1646/">
 								草を生やす
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/1652/'>
+							<StyledAnchor href="https://trap.jp/post/1652/">
 								Giteaをアップデートした話
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/1777/'>
+							<StyledAnchor href="https://trap.jp/post/1777/">
 								ESLintプラグイン作ってみた
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/1776/'>
+							<StyledAnchor href="https://trap.jp/post/1776/">
 								春休みに色々した話
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/1848/'>
+							<StyledAnchor href="https://trap.jp/post/1848/">
 								type challengesやってみた
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/1775/'>
+							<StyledAnchor href="https://trap.jp/post/1775/">
 								Gitを作ってみようとした話
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/1962/'>
+							<StyledAnchor href="https://trap.jp/post/1962/">
 								フロントエンドテストに入門してみた話
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/1963/'>
+							<StyledAnchor href="https://trap.jp/post/1963/">
 								Kuma UIに†OSS Contribution†した話
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/1964/'>
+							<StyledAnchor href="https://trap.jp/post/1964/">
 								traQのa11yについて
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/2020/'>
+							<StyledAnchor href="https://trap.jp/post/2020/">
 								プログラミング教室の資料を改善した話
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://trap.jp/post/2021/'>
+							<StyledAnchor href="https://trap.jp/post/2021/">
 								DIGI-CON HACKATHON 参加記事「Comic DoQ」
 							</StyledAnchor>
 						</ListItem>
@@ -177,25 +177,25 @@ export default function Trap() {
 					役員として中高生のためのプログラミング教室の運営に参加
 					<UList>
 						<ListItem isNested>
-							<StyledAnchor href='https://www.titech.ac.jp/news/2022/063977'>
+							<StyledAnchor href="https://www.titech.ac.jp/news/2022/063977">
 								デジタル創作同好会traPが「中高生のためのプログラミング教室（2022年春）」を開催
 								| 東工大ニュース
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://www.titech.ac.jp/news/2022/064915'>
+							<StyledAnchor href="https://www.titech.ac.jp/news/2022/064915">
 								デジタル創作同好会traPが「中高生のためのプログラミング教室（2022年夏）」を開催
 								| 東工大ニュース
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://www.titech.ac.jp/news/2023/066799'>
+							<StyledAnchor href="https://www.titech.ac.jp/news/2023/066799">
 								デジタル創作同好会traPが「中高生のためのプログラミング教室（2023年春）」を開催
 								| 東工大ニュース
 							</StyledAnchor>
 						</ListItem>
 						<ListItem isNested>
-							<StyledAnchor href='https://www.titech.ac.jp/news/2023/067714'>
+							<StyledAnchor href="https://www.titech.ac.jp/news/2023/067714">
 								デジタル創作同好会traPが「中高生のためのプログラミング教室（2023年夏）」を開催
 								| 東工大ニュース
 							</StyledAnchor>

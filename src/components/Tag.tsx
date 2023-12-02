@@ -1,4 +1,4 @@
-import { Box, Flex, styled, css } from '@kuma-ui/core'
+import { Box, Flex, css, styled } from '@kuma-ui/core'
 import clsx from 'clsx'
 import React from 'react'
 
@@ -24,7 +24,7 @@ export default function Tag({
 		<Flex
 			as={as}
 			gap={8}
-			flexWrap='wrap'
+			flexWrap="wrap"
 			className={clsx(
 				direction === 'row'
 					? css`
@@ -56,7 +56,7 @@ export default function Tag({
 				{children}
 			</Box>
 			<TagElement data-color={color}>
-				<Box as='span' mr={2}>
+				<Box as="span" mr={2}>
 					/
 				</Box>
 				{tagName}

@@ -9,10 +9,10 @@ export default function StyledAnchor({
 }) {
 	return (
 		<Link
-			color='#0ea5e9'
-			textDecorationLine='underline'
+			color="#0ea5e9"
+			textDecorationLine="underline"
 			_hover={{ color: '#0369a1' }}
-			target='_blank'
+			target="_blank"
 			href={href}
 		>
 			{children}

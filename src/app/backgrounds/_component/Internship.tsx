@@ -8,14 +8,14 @@ import UList from '@/components/UList'
 export default function Internship() {
 	return (
 		<Tag
-			as='section'
+			as="section"
 			className={css`
 				margin-bottom: 1rem;
 			`}
-			direction='column'
-			color='primary'
+			direction="column"
+			color="primary"
 			tagName={
-				<Heading as='h3' fontSize='1.5rem' fontWeight='bold'>
+				<Heading as="h3" fontSize="1.5rem" fontWeight="bold">
 					インターンシップ
 				</Heading>
 			}
@@ -42,7 +42,7 @@ export default function Internship() {
 						</ListItem>
 						<ListItem>ダッシュボードや作品登録画面等の実装をした</ListItem>
 						<ListItem>
-							<StyledAnchor href='https://twitter.com/yudai112535/status/1655919698398289933?s=20'>
+							<StyledAnchor href="https://twitter.com/yudai112535/status/1655919698398289933?s=20">
 								リリースについてのツイート
 							</StyledAnchor>
 						</ListItem>
@@ -55,7 +55,7 @@ export default function Internship() {
 							ジョブボードという社内求人ツールの開発にフロントエンドとして参加した
 						</ListItem>
 						<ListItem>
-							<StyledAnchor href='https://note.com/mehm8128/n/n2acd21311531'>
+							<StyledAnchor href="https://note.com/mehm8128/n/n2acd21311531">
 								参加記事
 							</StyledAnchor>
 						</ListItem>
