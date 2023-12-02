@@ -15,4 +15,4 @@ jobs:
         with:
           node-version: '20.x'
       - run: npm install
-      - run: biome ci src
+      - run: npm run biome:ci
