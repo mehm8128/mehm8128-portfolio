@@ -19,7 +19,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.4.1",
-		"@kuma-ui/next-plugin": "^1.1.5",
+		"@kuma-ui/next-plugin": "^1.1.15",
 		"@types/node": "20.9.0",
 		"@types/react": "18.2.20",
 		"@types/react-dom": "18.2.7",
