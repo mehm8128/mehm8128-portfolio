@@ -5,7 +5,6 @@ import { Box } from '@kuma-ui/core'
 import { KumaRegistry } from '@kuma-ui/next-plugin/registry'
 import { Metadata } from 'next'
 
-import Header from '@/components/Header'
 
 export const metadata: Metadata = {
 	title: 'mehm8128-portfolio',
@@ -20,14 +19,15 @@ export default function RootLayout({
 		<html lang="ja">
 			<body>
 				<KumaRegistry>
-					<Header />
 					<Box
 						as="main"
-						bgColor="#f4f4f4"
+						bgColor="#0a1e69"
+						color="#edf1ff"
 						fontSize={['', '1.25rem']}
 						height="100vh"
 						overflow="visible scroll"
 						pb={48}
+						px={32}
 						pt={[104, 64]}
 					>
 						{children}

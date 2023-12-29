@@ -12,8 +12,10 @@ export default function StyledAnchor({
 			color="#0ea5e9"
 			textDecorationLine="underline"
 			_hover={{ color: '#0369a1' }}
+			rel="noopener noreferrer"
 			target="_blank"
 			href={href}
+			display="flex"
 		>
 			{children}
 		</Link>

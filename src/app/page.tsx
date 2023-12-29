@@ -1,20 +1,23 @@
-import { Box, Flex, Heading } from '@kuma-ui/core'
+import { Box, Flex, Heading, Text, VStack, css } from '@kuma-ui/core'
 import Image from 'next/image'
 
 import { DeployDateTimeResponse } from '@/app/api/deploy_datetime/route'
 
 import StyledAnchor from '@/components/StyledAnchor'
-import Tag from '@/components/Tag'
 
+import NextLink from '@/components/NextLink'
 import { links } from '@/consts/links'
+import { navs } from '@/consts/navs'
 import { formatDate } from '@/lib/date'
+import IconImg from '/public/assets/mehm8128_circle.png'
 
 const fetchDeployDate = async () => {
 	const res = await fetch(
-		'https://mehm8128-portfolio.vercel.app/api/deploy_datetime',
+		'https://mehm8128-portfolio.vercel.app/api/deploy_datetime'
 	)
 	if (!res.ok) throw new Error('Failed to fetch deploy date')
-	const data = (await res.json()) as DeployDateTimeResponse
+
+	const data: DeployDateTimeResponse = await res.json()
 	return data.deployDateTime
 }
 
@@ -22,60 +25,78 @@ export default async function Home() {
 	const deployDateTime = await fetchDeployDate()
 
 	return (
-		<>
+		<Box>
 			<Heading
 				alignItems="center"
-				as="h2"
+				as="h1"
 				display="flex"
 				fontSize="1.875rem"
-				gap={8}
+				gap={16}
 				justifyContent="center"
 				py={32}
 			>
 				<Image
 					alt=""
-					height={60}
-					width={60}
-					src="/assets/mehm8128_circle.png"
+					src={IconImg}
+					className={css`
+						width: 60px;
+						height: 60px;
+					`}
 				/>
 				mehm8128
 			</Heading>
-			<Box mx="auto" width={['80%', '60%']} lineHeight={1.625}>
-				<p>ここはmehm8128（読み方：めふも）のポートフォリオサイトです。</p>
-				<ul>
-					<li>
-						<Tag tagName="所属">
-							東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
-						</Tag>
-					</li>
-					<li>
-						<Tag tagName="フロントエンド">
-							Next.js、React、Vue.js、TypeScript、Storybookなど
-						</Tag>
-					</li>
-					<li>
-						<Tag tagName="バックエンド">Go</Tag>
-					</li>
-				</ul>
-			</Box>
-			<Flex
-				mt={48}
-				flexWrap="wrap"
-				justifyContent="center"
-				gap={48}
-				fontSize="1.5rem"
-			>
-				{links.map(link => (
-					<StyledAnchor key={link.href} href={link.href}>
-						{link.text}
-					</StyledAnchor>
+			<VStack gap={12} mx="auto" width={['80%', '60%']}>
+				<Box as="section">
+					<Heading as="h2">所属</Heading>
+					<Text>
+						東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
+					</Text>
+				</Box>
+				<Box as="section">
+					<Heading as="h2">スキル</Heading>
+					<Text>Next.js、React、TypeScript、Storybook、a11y、Vue.js、Go</Text>
+				</Box>
+			</VStack>
+
+			<Flex alignItems="center" gap={24} width="fit-content" mx="auto" my={32}>
+				{navs.map(nav => (
+					<NextLink
+						href={nav.href}
+						key={nav.href}
+						className={css`
+						font-size: 1.5rem;
+					`}
+					>
+						{nav.text}
+					</NextLink>
 				))}
 			</Flex>
-			<Flex mr={8} mt={16} justifyContent={['start', 'end']}>
-				<Tag tagName="最終更新日時">
-					<p>{formatDate(new Date(deployDateTime))}</p>
-				</Tag>
+
+			<Flex
+				gap={[16, 24]}
+				justifyContent="end"
+				alignItems={['end', 'center']}
+				flexDirection={['column', 'row']}
+			>
+				<Flex alignItems="center" gap={20}>
+					{links.map(link => (
+						<StyledAnchor key={link.alt} href={link.href}>
+							<Image
+								src={link.src}
+								alt={link.alt}
+								className={css`
+									width: 24px;
+									height: 24px;
+								`}
+							/>
+						</StyledAnchor>
+					))}
+				</Flex>
+				<Text display="flex" gap={8}>
+					<span>最終更新日時</span>
+					{formatDate(new Date(deployDateTime))}
+				</Text>
 			</Flex>
-		</>
+		</Box>
 	)
 }

@@ -1,5 +1,13 @@
+import GitHubLogo from '/public/github_logo.svg'
+import traPLogo from '/public/traP_logo.svg'
+import XLogo from '/public/x_logo.svg'
+
 export const links = [
-	{ href: 'https://github.com/mehm8128', text: 'GitHub' },
-	{ href: 'https://trap.jp/author/mehm8128', text: 'traPブログ' },
-	{ href: 'https://x.com/mehm08128', text: '𝕏' },
+	{ src: GitHubLogo, href: 'https://github.com/mehm8128', alt: 'GitHub' },
+	{
+		src: traPLogo,
+		href: 'https://trap.jp/author/mehm8128',
+		alt: 'traPブログ'
+	},
+	{ src: XLogo, href: 'https://x.com/mehm08128', alt: '𝕏' }
 ]
