@@ -1,5 +1,5 @@
 import { Box, css } from '@kuma-ui/core'
-import React, { forwardRef } from 'react'
+import React, { MouseEvent, forwardRef } from 'react'
 
 const Modal = forwardRef<
 	HTMLDialogElement,
@@ -29,7 +29,12 @@ const Modal = forwardRef<
 			onClick={onClose}
 			onKeyDown={() => null}
 		>
-			<Box px={48} pt={48} pb={16} onClick={e => e.stopPropagation()}>
+			<Box
+				px={48}
+				pt={48}
+				pb={16}
+				onClick={(e: MouseEvent<HTMLDivElement>) => e.stopPropagation()}
+			>
 				{children}
 			</Box>
 		</dialog>
