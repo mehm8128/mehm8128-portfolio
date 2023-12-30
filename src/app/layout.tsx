@@ -5,13 +5,12 @@ import { Box } from '@kuma-ui/core'
 import { KumaRegistry } from '@kuma-ui/next-plugin/registry'
 import { Metadata } from 'next'
 
-
 export const metadata: Metadata = {
-	title: 'mehm8128-portfolio',
+	title: 'mehm8128-portfolio'
 }
 
 export default function RootLayout({
-	children,
+	children
 }: {
 	children: React.ReactNode
 }) {

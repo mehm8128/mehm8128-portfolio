@@ -12,7 +12,7 @@ import { works } from '@/consts/works'
 import type { WorkType } from '@/consts/works'
 
 export default function Works({
-	searchParams: { workId },
+	searchParams: { workId }
 }: {
 	searchParams: { workId: string }
 }) {

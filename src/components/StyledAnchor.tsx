@@ -2,7 +2,7 @@ import { Link } from '@kuma-ui/core'
 
 export default function StyledAnchor({
 	href,
-	children,
+	children
 }: {
 	href: string
 	children: React.ReactNode

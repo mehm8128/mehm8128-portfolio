@@ -2,7 +2,7 @@ import { Box, css } from '@kuma-ui/core'
 
 export default function ListItem({
 	isNested,
-	children,
+	children
 }: {
 	isNested?: boolean
 	children: React.ReactNode

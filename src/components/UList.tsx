@@ -4,7 +4,7 @@ import { Box, css } from '@kuma-ui/core'
 export default function UList({
 	isNested,
 	space,
-	children,
+	children
 }: {
 	isNested?: boolean
 	space?: number
