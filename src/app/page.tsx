@@ -94,7 +94,9 @@ export default async function Home() {
 				</Flex>
 				<Text display="flex" gap={8}>
 					<span>最終更新日時</span>
-					{formatDate(new Date(deployDateTime))}
+					<time dateTime={deployDateTime}>
+						{formatDate(new Date(deployDateTime))}
+					</time>
 				</Text>
 			</Flex>
 		</Box>
