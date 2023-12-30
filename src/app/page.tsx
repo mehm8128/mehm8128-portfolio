@@ -26,26 +26,26 @@ export default async function Home() {
 
 	return (
 		<Box>
-			<Heading
-				alignItems="center"
-				as="h1"
-				display="flex"
-				fontSize="1.875rem"
-				gap={16}
-				justifyContent="center"
-				py={32}
-			>
-				<Image
-					alt=""
-					src={IconImg}
-					className={css`
+			<VStack gap={12} mx="auto" width={['80%', '60%']}>
+				<Heading
+					alignItems="center"
+					as="h1"
+					display="flex"
+					fontSize="1.875rem"
+					gap={16}
+					pt={32}
+					pb={16}
+				>
+					<Image
+						alt=""
+						src={IconImg}
+						className={css`
 						width: 60px;
 						height: 60px;
 					`}
-				/>
-				mehm8128
-			</Heading>
-			<VStack gap={12} mx="auto" width={['80%', '60%']}>
+					/>
+					mehm8128
+				</Heading>
 				<Box as="section">
 					<Heading as="h2">所属</Heading>
 					<Text>

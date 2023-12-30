@@ -2,13 +2,12 @@ import { Box, Button, Heading, Text, css } from '@kuma-ui/core'
 import Image from 'next/image'
 
 import StyledAnchor from '@/components/StyledAnchor'
-import Tag from '@/components/Tag'
 
 import type { WorkType } from '../consts/works'
 
 export default function WorkModalContent({
 	work,
-	onClose,
+	onClose
 }: {
 	work: WorkType
 	onClose: () => void
@@ -22,7 +21,7 @@ export default function WorkModalContent({
 					<Image
 						alt=""
 						style={{
-							objectFit: 'contain',
+							objectFit: 'contain'
 						}}
 						height={400}
 						src={imagePath}
@@ -44,12 +43,13 @@ export default function WorkModalContent({
 				<Heading as="h3" mb={8} fontSize="1.5rem">
 					{title}
 				</Heading>
-				<Tag
-					tagName={<Heading as="h4">作品リンク</Heading>}
+				<Box
+					as="section"
 					className={css`
 						margin-bottom: 0.5rem;
 					`}
 				>
+					<Heading as="h4">作品リンク</Heading>
 					{productLink !== '' ? (
 						<p>
 							<StyledAnchor href={productLink}>{productLink}</StyledAnchor>
@@ -57,11 +57,9 @@ export default function WorkModalContent({
 					) : (
 						<p>なし</p>
 					)}
-				</Tag>
-				<Tag
-					direction="column"
-					tagName={<Heading as="h4">その他リンク</Heading>}
-				>
+				</Box>
+				<Box as="section">
+					<Heading as="h4">その他リンク</Heading>
 					<Box>
 						{links.length > 0 ? (
 							links.map(link => (
@@ -75,7 +73,7 @@ export default function WorkModalContent({
 							<p>なし</p>
 						)}
 					</Box>
-				</Tag>
+				</Box>
 				<Text my={8} whiteSpace="pre-wrap">
 					{longDescription}
 				</Text>
