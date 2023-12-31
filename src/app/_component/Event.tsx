@@ -1,4 +1,4 @@
-import { Box, Heading, css } from '@kuma-ui/core'
+import { Box, Heading } from '@kuma-ui/core'
 
 import ListItem from '@/components/ListItem'
 import StyledAnchor from '@/components/StyledAnchor'
@@ -6,13 +6,8 @@ import UList from '@/components/UList'
 
 export default function Event() {
 	return (
-		<Box
-			as="section"
-			className={css`
-				margin-bottom: 1rem;
-			`}
-		>
-			<Heading as="h3" fontSize="1.5rem" fontWeight="bold">
+		<Box as="section" mb={16}>
+			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
 				イベント・大会
 			</Heading>
 			<UList>

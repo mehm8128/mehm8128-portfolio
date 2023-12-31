@@ -13,9 +13,9 @@ export default function NextLink({
 	return (
 		<Link legacyBehavior href={href}>
 			<KumaLink
-				color="#edf1ff"
+				color="#0ea5e9"
 				textDecorationLine="underline"
-				_hover={{ color: '#8fa6fa' }}
+				_hover={{ color: '#b4c2f6' }}
 				className={className}
 			>
 				{children}

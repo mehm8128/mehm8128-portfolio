@@ -6,8 +6,8 @@ import UList from '@/components/UList'
 
 export default function Trap() {
 	return (
-		<Box as="section" marginBottom={16}>
-			<Heading as="h3" fontSize="1.5rem" fontWeight="bold">
+		<Box as="section" mb={16}>
+			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
 				traPでの活動
 			</Heading>
 			<UList>

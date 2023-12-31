@@ -5,9 +5,11 @@ import { DeployDateTimeResponse } from '@/app/api/deploy_datetime/route'
 
 import StyledAnchor from '@/components/StyledAnchor'
 
-import NextLink from '@/components/NextLink'
+import Contribution from '@/app/_component/Contribution'
+import Event from '@/app/_component/Event'
+import Internship from '@/app/_component/Internship'
+import Trap from '@/app/_component/Trap'
 import { links } from '@/consts/links'
-import { navs } from '@/consts/navs'
 import { formatDate } from '@/lib/date'
 import IconImg from '/public/assets/mehm8128_circle.png'
 
@@ -26,11 +28,12 @@ export default async function Home() {
 
 	return (
 		<Box>
-			<VStack gap={12} mx="auto" width={['80%', '60%']}>
+			<VStack gap={12} mx="auto" width={['90%', '60%']}>
 				<Heading
 					alignItems="center"
 					as="h1"
 					display="flex"
+					flexWrap="wrap"
 					fontSize="1.875rem"
 					gap={16}
 					pt={32}
@@ -45,60 +48,49 @@ export default async function Home() {
 					`}
 					/>
 					mehm8128
+					<Flex alignItems="center" gap={20}>
+						{links.map(link => (
+							<StyledAnchor key={link.alt} href={link.href}>
+								<Image
+									src={link.src}
+									alt={link.alt}
+									className={css`
+									width: 24px;
+									height: 24px;
+								`}
+								/>
+							</StyledAnchor>
+						))}
+					</Flex>
 				</Heading>
+
 				<Box as="section">
-					<Heading as="h2">所属</Heading>
+					<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
+						所属
+					</Heading>
 					<Text>
 						東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
 					</Text>
 				</Box>
 				<Box as="section">
-					<Heading as="h2">スキル</Heading>
+					<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
+						スキル
+					</Heading>
 					<Text>Next.js、React、TypeScript、Storybook、a11y、Vue.js、Go</Text>
 				</Box>
+
+				<Event />
+				<Internship />
+				<Trap />
+				<Contribution />
 			</VStack>
 
-			<Flex alignItems="center" gap={24} width="fit-content" mx="auto" my={32}>
-				{navs.map(nav => (
-					<NextLink
-						href={nav.href}
-						key={nav.href}
-						className={css`
-						font-size: 1.5rem;
-					`}
-					>
-						{nav.text}
-					</NextLink>
-				))}
-			</Flex>
-
-			<Flex
-				gap={[16, 24]}
-				justifyContent="end"
-				alignItems={['end', 'center']}
-				flexDirection={['column', 'row']}
-			>
-				<Flex alignItems="center" gap={20}>
-					{links.map(link => (
-						<StyledAnchor key={link.alt} href={link.href}>
-							<Image
-								src={link.src}
-								alt={link.alt}
-								className={css`
-									width: 24px;
-									height: 24px;
-								`}
-							/>
-						</StyledAnchor>
-					))}
-				</Flex>
-				<Text display="flex" gap={8}>
-					<span>最終更新日時</span>
-					<time dateTime={deployDateTime}>
-						{formatDate(new Date(deployDateTime))}
-					</time>
-				</Text>
-			</Flex>
+			<Text display="flex" gap={8} justifyContent="end">
+				<span>最終更新日時</span>
+				<time dateTime={deployDateTime}>
+					{formatDate(new Date(deployDateTime))}
+				</time>
+			</Text>
 		</Box>
 	)
 }

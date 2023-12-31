@@ -14,6 +14,7 @@ export default function UList({
 		<Box
 			as="ul"
 			listStyle="disc"
+			listStylePosition="inside"
 			className={
 				isNested
 					? css`
