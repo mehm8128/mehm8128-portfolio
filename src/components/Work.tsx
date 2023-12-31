@@ -5,7 +5,7 @@ import type { WorkType } from '../consts/works'
 
 export default function Work({
 	work,
-	setCurrentWork,
+	setCurrentWork
 }: {
 	work: WorkType
 	setCurrentWork: (work: WorkType) => void
@@ -26,7 +26,7 @@ export default function Work({
 					style={{
 						objectFit: 'contain',
 						height: 160,
-						width: 320,
+						width: 320
 					}}
 					height={160}
 					src={imagePath}
@@ -52,7 +52,7 @@ export default function Work({
 				width="100%"
 				border="solid 1.5px #b8c0d2"
 				_hover={{
-					borderColor: '#7dd3fc',
+					borderColor: '#7dd3fc'
 				}}
 				mt={8}
 				py={4}

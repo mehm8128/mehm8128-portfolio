@@ -43,7 +43,7 @@ export default function Header() {
 							px={[8, 16]}
 							py={8}
 							_hover={{
-								bgColor: '#38bdf8',
+								bgColor: '#38bdf8'
 							}}
 							className={
 								pathname === nav.href

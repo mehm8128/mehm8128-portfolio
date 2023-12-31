@@ -2,7 +2,7 @@ import { Link } from '@kuma-ui/core'
 
 export default function StyledAnchor({
 	href,
-	children,
+	children
 }: {
 	href: string
 	children: React.ReactNode
@@ -11,9 +11,11 @@ export default function StyledAnchor({
 		<Link
 			color="#0ea5e9"
 			textDecorationLine="underline"
-			_hover={{ color: '#0369a1' }}
+			_hover={{ color: '#a2b4f6' }}
+			rel="noopener noreferrer"
 			target="_blank"
 			href={href}
+			display="inline-flex"
 		>
 			{children}
 		</Link>
