@@ -76,6 +76,11 @@ export default function Trap() {
 								次世代Webカンファレンス2023参加記
 							</StyledAnchor>
 						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href="https://trap.jp/post/2036/">
+								Rustでmini-gitを作った話
+							</StyledAnchor>
+						</ListItem>
 					</UList>
 				</ListItem>
 			</UList>
