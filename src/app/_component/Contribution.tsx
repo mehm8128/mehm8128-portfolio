@@ -13,6 +13,12 @@ export default function Contribution() {
 
 			<UList>
 				<ListItem>
+					<StyledAnchor href="https://github.com/biomejs/biome/pull/1551">
+						feat(linter): show dependency variable name by
+						useExhaustiveDependencies #1551 · biomejs/biome
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://github.com/vuejs/vitepress/pull/2941">
 						fix: customizing the starting line number even if globally set #2941
 						· vuejs/vitepress
