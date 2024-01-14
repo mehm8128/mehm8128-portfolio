@@ -76,7 +76,9 @@ export default async function Home() {
 					<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
 						スキル
 					</Heading>
-					<Text>Next.js、React、TypeScript、Storybook、a11y、Vue.js、Go</Text>
+					<Text>
+						Next.js、React、TypeScript、Storybook、a11y、Git、Rust、Vue.js、Go
+					</Text>
 				</Box>
 
 				<Event />
