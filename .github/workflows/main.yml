@@ -14,5 +14,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-      - run: npm install
-      - run: npm run biome:ci
+      - run: pnpm install
+      - run: pnpm run biome:ci
