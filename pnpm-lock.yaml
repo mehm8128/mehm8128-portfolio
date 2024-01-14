@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^1.1.15
     version: 1.1.15(@babel/core@7.23.7)(@types/react@18.2.46)(next@14.0.4)(react@18.2.0)(webpack@5.89.0)
   '@types/node':
-    specifier: 20.10.5
-    version: 20.10.5
+    specifier: 20.11.0
+    version: 20.11.0
   '@types/react':
     specifier: 18.2.46
     version: 18.2.46
@@ -1844,6 +1844,12 @@ packages:
       undici-types: 5.26.5
     dev: true
 
+  /@types/node@20.11.0:
+    resolution: {integrity: sha512-o9bjXmDNcF7GbM4CNQpmi+TutCgap/K3w1JyKgxAjqx41zp9qlIAVFi0IhCNsJcXolEqLWhbFbEeL0PvYm4pcQ==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+
   /@types/prop-types@15.7.11:
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
 
@@ -2297,7 +2303,7 @@ packages:
     resolution: {integrity: sha512-EzV94NYKoO09GLXGjXj9JIlXijVck4ONSr5wiCWDvhsvj5jxSrzTmRU/9C1DyB6uToszLs8aifA6NQ7lEQdvFw==}
     engines: {node: '>= 0.8'}
     dependencies:
-      '@types/node': 20.10.5
+      '@types/node': 20.11.0
       require-like: 0.1.2
     dev: true
 
