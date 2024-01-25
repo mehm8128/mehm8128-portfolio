@@ -13,13 +13,13 @@ export default function UList({
 	return (
 		<Box
 			as="ul"
-			listStyle="disc"
+			listStyle="none"
 			listStylePosition="inside"
 			className={
 				isNested
 					? css`
 							margin-left: 32px;
-					  `
+						`
 					: ''
 			}
 		>

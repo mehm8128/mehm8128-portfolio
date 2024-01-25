@@ -26,8 +26,8 @@ export default function RootLayout({
 						height="100vh"
 						overflow="visible scroll"
 						pb={48}
-						px={32}
-						pt={[104, 64]}
+						px={[16, 32]}
+						pt={[32, 64]}
 					>
 						{children}
 					</Box>
