@@ -6,7 +6,7 @@ import UList from '@/components/UList'
 
 export default function Internship() {
 	return (
-		<Box as="section" mb={16}>
+		<Box as="section" mb={16} animation="evenFadein 2.5s ease-out">
 			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
 				インターンシップ
 			</Heading>

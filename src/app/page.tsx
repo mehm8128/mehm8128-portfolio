@@ -38,6 +38,17 @@ export default async function Home() {
 					gap={16}
 					pt={32}
 					pb={16}
+					className={css`
+					@keyframes fadein {
+							0% {
+								transform: translateX(100%);
+							}
+							100% {
+								transform: translateX(0%);
+							}
+						}
+					`}
+					animation="fadein 0.5s ease-out"
 				>
 					<Image
 						alt=""
@@ -64,27 +75,49 @@ export default async function Home() {
 					</Flex>
 				</Heading>
 
-				<Box as="section">
-					<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
-						所属
-					</Heading>
-					<Text>
-						東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
-					</Text>
-				</Box>
-				<Box as="section">
-					<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
-						スキル
-					</Heading>
-					<Text>
-						Next.js、React、TypeScript、Storybook、a11y、Git、Rust、Vue.js、Go
-					</Text>
-				</Box>
+				<VStack
+					gap={12}
+					className={css`
+						@keyframes oddFadein {
+							0% {
+								transform: translateX(100%) rotate(180deg);
+							}
+							100% {
+								transform: translateX(0%) rotate(0deg);
+							}
+						}
+						@keyframes evenFadein {
+							0% {
+								transform: translateX(-100%) rotate(-180deg);
+							}
+							100% {
+								transform: translateX(0%) rotate(0deg);
+							}
+						}
+					`}
+				>
+					<Box as="section" animation="oddFadein 1s ease-out">
+						<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
+							所属
+						</Heading>
+						<Text>
+							東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
+						</Text>
+					</Box>
+					<Box as="section" animation="evenFadein 1.5s ease-out">
+						<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
+							スキル
+						</Heading>
+						<Text>
+							Next.js、React、TypeScript、Storybook、a11y、Git、Rust、Vue.js、Go
+						</Text>
+					</Box>
 
-				<Event />
-				<Internship />
-				<Trap />
-				<Contribution />
+					<Event />
+					<Internship />
+					<Trap />
+					<Contribution />
+				</VStack>
 			</VStack>
 
 			<Text display="flex" gap={8} justifyContent="end">

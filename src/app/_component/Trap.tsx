@@ -6,7 +6,7 @@ import UList from '@/components/UList'
 
 export default function Trap() {
 	return (
-		<Box as="section" mb={16}>
+		<Box as="section" mb={16} animation="oddFadein 3s ease-out">
 			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
 				traPでの活動
 			</Heading>
