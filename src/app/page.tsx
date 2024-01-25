@@ -38,17 +38,6 @@ export default async function Home() {
 					gap={16}
 					pt={32}
 					pb={16}
-					className={css`
-					@keyframes fadein {
-							0% {
-								transform: translateX(100%);
-							}
-							100% {
-								transform: translateX(0%);
-							}
-						}
-					`}
-					animation="fadein 0.5s ease-out"
 				>
 					<Image
 						alt=""
@@ -56,15 +45,15 @@ export default async function Home() {
 						width={60}
 						height={60}
 						className={css`
-						@keyframes fadein {
+						@keyframes iconFadein {
 							0% {
-								transform: translateX(-500%) rotate(1800deg);
+								transform: translateX(-50vw) rotate(9000deg);
 							}
 							100% {
 								transform: translateX(0%) rotate(0deg);
 							}
 						}
-						animation: fadein 4s ease-out;
+						animation: iconFadein 4s ease-out;
 					`}
 					/>
 					mehm8128
