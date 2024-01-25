@@ -120,7 +120,7 @@ export default async function Home() {
 				</VStack>
 			</VStack>
 
-			<Text display="flex" gap={8} justifyContent="end">
+			<Text display="flex" gap={8} justifyContent="flex-end">
 				<span>最終更新日時</span>
 				<time dateTime={deployDateTime}>
 					{formatDate(new Date(deployDateTime))}
