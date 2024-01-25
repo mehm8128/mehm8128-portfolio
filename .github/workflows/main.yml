@@ -20,3 +20,16 @@ jobs:
           cache: pnpm
       - run: pnpm install
       - run: pnpm run biome:ci
+  markuplint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - uses: actions/setup-node@v3
+        with:
+          node-version: latest
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm run lint:markup

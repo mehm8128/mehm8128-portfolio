@@ -7,7 +7,8 @@
 		"build": "next build",
 		"start": "next start",
 		"biome": "biome check --apply src",
-		"biome:ci": "biome ci src"
+		"biome:ci": "biome ci src",
+		"lint:markup": "markuplint \"**/*.[jt]sx\""
 	},
 	"dependencies": {
 		"@kuma-ui/core": "^1.5.5",
@@ -20,9 +21,12 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.4.1",
 		"@kuma-ui/next-plugin": "^1.1.15",
+		"@markuplint/jsx-parser": "^3.12.0",
+		"@markuplint/react-spec": "^3.13.0",
 		"@types/node": "20.11.0",
 		"@types/react": "18.2.46",
 		"@types/react-dom": "18.2.18",
+		"markuplint": "^3.15.0",
 		"typescript": "5.3.3"
 	}
 }
