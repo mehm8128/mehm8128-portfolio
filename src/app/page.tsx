@@ -53,9 +53,18 @@ export default async function Home() {
 					<Image
 						alt=""
 						src={IconImg}
+						width={60}
+						height={60}
 						className={css`
-						width: 60px;
-						height: 60px;
+						@keyframes fadein {
+							0% {
+								transform: translateX(-500%) rotate(1800deg);
+							}
+							100% {
+								transform: translateX(0%) rotate(0deg);
+							}
+						}
+						animation: fadein 4s ease-out;
 					`}
 					/>
 					mehm8128
