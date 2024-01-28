@@ -15,7 +15,6 @@ export default function StyledAnchor({
 			rel="noopener noreferrer"
 			target="_blank"
 			href={href}
-			display="inline-flex"
 		>
 			{children}
 		</Link>
