@@ -29,8 +29,8 @@ devDependencies:
     specifier: 1.5.3
     version: 1.5.3
   '@kuma-ui/next-plugin':
-    specifier: ^1.1.15
-    version: 1.1.15(@babel/core@7.23.7)(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)(webpack@5.89.0)
+    specifier: ^1.2.0
+    version: 1.2.0(@babel/core@7.23.7)(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)(webpack@5.89.0)
   '@markuplint/jsx-parser':
     specifier: ^3.12.0
     version: 3.12.0(typescript@5.3.3)
@@ -1657,14 +1657,14 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@kuma-ui/babel-plugin@1.1.14(@types/react@18.2.48)(next@14.1.0)(react@18.2.0):
-    resolution: {integrity: sha512-IHsYyTzT/V3AvUJm88gQFjSMeIHvELsYbov5AwDTFU8TddHc1NgRlvP2BUKa+HmAUTcFtSrFYX+j0L+yj+Y+sQ==}
+  /@kuma-ui/babel-plugin@1.1.15(@types/react@18.2.48)(next@14.1.0)(react@18.2.0):
+    resolution: {integrity: sha512-H+hiyFI8BOwjvdI0VHPqpIuslh2vZu1lYX9SyUiKVrha/nDDd3LdL4ykukIkLmvekGMYpO5R9+teTkuhxTk+wA==}
     dependencies:
       '@babel/core': 7.23.7
-      '@kuma-ui/compiler': 1.2.5(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)
+      '@kuma-ui/compiler': 1.2.6(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)
       '@kuma-ui/core': 1.5.6(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)
       '@kuma-ui/sheet': 1.3.0
-      '@kuma-ui/system': 1.7.2
+      '@kuma-ui/system': 1.7.3
     transitivePeerDependencies:
       - '@types/react'
       - next
@@ -1672,12 +1672,12 @@ packages:
       - supports-color
     dev: true
 
-  /@kuma-ui/compiler@1.2.5(@types/react@18.2.48)(next@14.1.0)(react@18.2.0):
-    resolution: {integrity: sha512-vnDT0gYT1pfnlqie6REX/TbG10vsjTcYWEN5P38FB1Zt88fnM7P/NC95cQBIZ0XLOEjArVCsKG2rqBhJBpLzWQ==}
+  /@kuma-ui/compiler@1.2.6(@types/react@18.2.48)(next@14.1.0)(react@18.2.0):
+    resolution: {integrity: sha512-6cNbEJxkk4OO4QS9HeU6yKNkcvqAnYME7eeUBqXR8G8XTGTDlJgB2PauQmGlii2ZOlKxC9vQ5skE0jboYXVFzg==}
     dependencies:
       '@kuma-ui/core': 1.5.6(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)
       '@kuma-ui/sheet': 1.3.0
-      '@kuma-ui/system': 1.7.2
+      '@kuma-ui/system': 1.7.3
       ts-morph: 19.0.0
     transitivePeerDependencies:
       - '@types/react'
@@ -1705,8 +1705,8 @@ packages:
       react: 18.2.0
       stylis: 4.3.1
 
-  /@kuma-ui/next-plugin@1.1.15(@babel/core@7.23.7)(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)(webpack@5.89.0):
-    resolution: {integrity: sha512-pxHgQGrZzkbPWdyOuXV/nfXSqdG+25Hh14oAt+fXFyBQ2I2+Q5I+8qdADvG8B0OPrLA2j0drnLhOS5axDSiO2Q==}
+  /@kuma-ui/next-plugin@1.2.0(@babel/core@7.23.7)(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)(webpack@5.89.0):
+    resolution: {integrity: sha512-NRSuikitaeGXCtQ3o0GI6fk0u/5o86ESLhecLaaY2jGH8orj4kQO8FR8YesaJ/MM0TseSrOS8HYdFAgUHWuVqA==}
     peerDependencies:
       '@types/react': ^18.0.32
       next: '>=13.4.5'
@@ -1720,7 +1720,7 @@ packages:
       '@babel/preset-react': 7.23.3(@babel/core@7.23.7)
       '@babel/preset-typescript': 7.23.3(@babel/core@7.23.7)
       '@kuma-ui/core': 1.5.6(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)
-      '@kuma-ui/webpack-plugin': 1.2.7(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)(webpack@5.89.0)
+      '@kuma-ui/webpack-plugin': 1.3.0(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)(webpack@5.89.0)
       '@types/react': 18.2.48
       babel-loader: 9.1.3(@babel/core@7.23.7)(webpack@5.89.0)
       browserslist: 4.21.5
@@ -1737,27 +1737,20 @@ packages:
     dependencies:
       stylis: 4.3.1
 
-  /@kuma-ui/system@1.7.2:
-    resolution: {integrity: sha512-f9jsAFHHzX13gQzv4h1V3QUwpHpT9wC2JihFuX0mlFt9dOSs+0z/11kUYuGmqs7Rm/zuN5k23IHUZGV6gS5O5Q==}
-    dependencies:
-      '@kuma-ui/sheet': 1.3.0
-      csstype: 3.1.3
-    dev: true
-
   /@kuma-ui/system@1.7.3:
     resolution: {integrity: sha512-d+L4d4p34UDY05fGF5JL3ZIbhE928v9nuzhpoSGUo4LM6u81snajjNQaIxHOpuwP7C0JDCWRNTjDpdBN3wW9Vw==}
     dependencies:
       '@kuma-ui/sheet': 1.3.0
       csstype: 3.1.3
 
-  /@kuma-ui/webpack-plugin@1.2.7(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)(webpack@5.89.0):
-    resolution: {integrity: sha512-Y+YQ+iauw0iAiPf4kuBozAx8jejnzhw4HUgWodiaJFOOITuQMA5jT8X1J/pvFwdRXuefO9lnN5YNKIc/a6P0XA==}
+  /@kuma-ui/webpack-plugin@1.3.0(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)(webpack@5.89.0):
+    resolution: {integrity: sha512-B75pGsdJrDniNz5J55la3uIZNu+Jr81Jobo8baZHRd+z7OvjSJBxYwpyaexVzR6NaEqg6qmerX+a5HZwZjQtjA==}
     peerDependencies:
       webpack: ^5
     dependencies:
-      '@kuma-ui/babel-plugin': 1.1.14(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)
+      '@kuma-ui/babel-plugin': 1.1.15(@types/react@18.2.48)(next@14.1.0)(react@18.2.0)
       '@kuma-ui/sheet': 1.3.0
-      '@kuma-ui/system': 1.7.2
+      '@kuma-ui/system': 1.7.3
       esbuild: 0.18.20
       eval: 0.1.8
       webpack: 5.89.0
@@ -2588,7 +2581,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001576
+      caniuse-lite: 1.0.30001581
       electron-to-chromium: 1.4.630
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.21.5)
@@ -2599,7 +2592,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001576
+      caniuse-lite: 1.0.30001581
       electron-to-chromium: 1.4.630
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.2)
@@ -2632,9 +2625,6 @@ packages:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
     engines: {node: '>=6'}
     dev: true
-
-  /caniuse-lite@1.0.30001576:
-    resolution: {integrity: sha512-ff5BdakGe2P3SQsMsiqmt1Lc8221NR1VzHj5jXN5vBny9A6fpze94HiVV/n7XRosOlsShJcvMv5mdnpjOGCEgg==}
 
   /caniuse-lite@1.0.30001581:
     resolution: {integrity: sha512-whlTkwhqV2tUmP3oYhtNfaWGYHDdS3JYFQBKXxcUR9qqPWsRhFHhoISO2Xnl/g0xyKzht9mI1LZpiNWfMzHixQ==}

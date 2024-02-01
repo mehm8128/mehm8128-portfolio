@@ -20,7 +20,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
-		"@kuma-ui/next-plugin": "^1.1.15",
+		"@kuma-ui/next-plugin": "^1.2.0",
 		"@markuplint/jsx-parser": "^3.12.0",
 		"@markuplint/react-spec": "^3.13.0",
 		"@types/node": "20.11.14",
