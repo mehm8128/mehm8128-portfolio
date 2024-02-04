@@ -33,3 +33,18 @@ jobs:
           cache: pnpm
       - run: pnpm install
       - run: pnpm run lint:markup
+  lighthouseci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - uses: actions/setup-node@v3
+        with:
+          node-version: latest
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm add -g @lhci/cli@latest
+      - run: pnpm run build
+      - run: lhci autorun
