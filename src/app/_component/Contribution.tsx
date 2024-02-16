@@ -13,6 +13,12 @@ export default function Contribution() {
 
 			<UList>
 				<ListItem>
+					<StyledAnchor href="https://github.com/biomejs/biome/pull/1836">
+						fix(website): show eslint-plugin-import-access link name #1836 ·
+						biomejs/biome
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://github.com/biomejs/biome/pull/1551">
 						feat(linter): show dependency variable name by
 						useExhaustiveDependencies #1551 · biomejs/biome
