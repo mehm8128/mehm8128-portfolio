@@ -12,7 +12,7 @@ export default function Event() {
 			</Heading>
 			<UList>
 				<ListItem>
-					<StyledAnchor href="https://github.com/CyberAgentHack/web-speed-hackathon-2022/blob/main/docs/internal/README.md">
+					<StyledAnchor href="https://github.com/CyberAgentHack/web-speed-hackathon-2022">
 						Web Speed Hackathon 2022 for Students
 					</StyledAnchor>
 				</ListItem>
@@ -42,6 +42,18 @@ export default function Event() {
 					<StyledAnchor href="https://isucon.net/archives/57801192.html">
 						ISUCON13
 					</StyledAnchor>
+				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://github.com/CyberAgentHack/web-speed-hackathon-2024">
+						Web Speed Hackathon 2024
+					</StyledAnchor>
+					<UList>
+						<ListItem isNested>
+							<StyledAnchor href="https://trap.jp/post/2172/">
+								参加記事
+							</StyledAnchor>
+						</ListItem>
+					</UList>
 				</ListItem>
 			</UList>
 		</Box>

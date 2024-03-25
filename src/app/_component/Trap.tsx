@@ -81,6 +81,16 @@ export default function Trap() {
 								Rustでmini-gitを作った話
 							</StyledAnchor>
 						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href="https://trap.jp/post/2153/">
+								VSCodeをカオスにしよう
+							</StyledAnchor>
+						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href="https://trap.jp/post/2121/">
+								traPに入ってから最強Webエンジニアになるまで
+							</StyledAnchor>
+						</ListItem>
 					</UList>
 				</ListItem>
 			</UList>
