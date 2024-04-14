@@ -91,6 +91,11 @@ export default function Trap() {
 								traPに入ってから最強Webエンジニアになるまで
 							</StyledAnchor>
 						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href="https://trap.jp/post/2157/">
+								traP部員の凍結・除名について
+							</StyledAnchor>
+						</ListItem>
 					</UList>
 				</ListItem>
 			</UList>
