@@ -5,13 +5,13 @@ import { DeployDateTimeResponse } from '@/app/api/deploy_datetime/route'
 
 import StyledAnchor from '@/components/StyledAnchor'
 
-import Contribution from '@/app/_component/Contribution'
-import Event from '@/app/_component/Event'
-import Internship from '@/app/_component/Internship'
-import Trap from '@/app/_component/Trap'
 import { links } from '@/consts/links'
 import { formatDate } from '@/lib/date'
-import IconImg from '/public/assets/mehm8128_circle.png'
+import IconImg from '/public/mehm8128_circle.png'
+import Contribution from './_component/Contribution'
+import Event from './_component/Event'
+import Internship from './_component/Internship'
+import Trap from './_component/Trap'
 
 const fetchDeployDate = async () => {
 	const res = await fetch(
