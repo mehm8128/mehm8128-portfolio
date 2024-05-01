@@ -96,6 +96,11 @@ export default function Trap() {
 								traP部員の凍結・除名について
 							</StyledAnchor>
 						</ListItem>
+						<ListItem isNested>
+							<StyledAnchor href="https://trap.jp/post/2216/">
+								Reactで将棋作った話
+							</StyledAnchor>
+						</ListItem>
 					</UList>
 				</ListItem>
 			</UList>
