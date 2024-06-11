@@ -55,6 +55,18 @@ export default function Event() {
 						</ListItem>
 					</UList>
 				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://techbookfest.org/event/tbf16">
+						技術書典16 traP TechBook執筆
+					</StyledAnchor>
+					<UList>
+						<ListItem isNested>
+							<StyledAnchor href="https://sizu.me/mehm8128/posts/mb6nidhor1v3">
+								参加記事
+							</StyledAnchor>
+						</ListItem>
+					</UList>
+				</ListItem>
 			</UList>
 		</Box>
 	)
