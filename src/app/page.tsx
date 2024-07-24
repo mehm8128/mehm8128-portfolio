@@ -8,10 +8,10 @@ import StyledAnchor from '@/components/StyledAnchor'
 import { links } from '@/consts/links'
 import { formatDate } from '@/lib/date'
 import IconImg from '/public/mehm8128_circle.png'
+import Blog from './_component/Blog'
 import Contribution from './_component/Contribution'
 import Event from './_component/Event'
 import Internship from './_component/Internship'
-import Trap from './_component/Trap'
 
 const fetchDeployDate = async () => {
 	const res = await fetch(
@@ -99,7 +99,7 @@ export default async function Home() {
 							所属
 						</Heading>
 						<Text>
-							東京工業大学工学院情報通信系(2021年4月～)、東京工業大学デジタル創作同好会traP
+							東京工業大学工学院情報通信系(2021年4月～2024年9月)、東京工業大学デジタル創作同好会traP
 						</Text>
 					</Box>
 					<Box as="section" animation="evenFadein 1.5s ease-out">
@@ -107,13 +107,13 @@ export default async function Home() {
 							スキル
 						</Heading>
 						<Text>
-							Next.js、React、TypeScript、Storybook、a11y、Git、Rust、Vue.js、Go
+							Next.js、React、TypeScript、Storybook、Testing、a11y、Git、js、Go、Rust、Vue
 						</Text>
 					</Box>
 
 					<Event />
 					<Internship />
-					<Trap />
+					<Blog />
 					<Contribution />
 				</VStack>
 			</VStack>
