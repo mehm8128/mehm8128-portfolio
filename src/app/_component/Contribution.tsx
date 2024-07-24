@@ -13,15 +13,14 @@ export default function Contribution() {
 
 			<UList>
 				<ListItem>
-					<StyledAnchor href="https://github.com/biomejs/biome/pull/1836">
-						fix(website): show eslint-plugin-import-access link name #1836 ·
-						biomejs/biome
-					</StyledAnchor>
-				</ListItem>
-				<ListItem>
 					<StyledAnchor href="https://github.com/biomejs/biome/pull/1551">
 						feat(linter): show dependency variable name by
 						useExhaustiveDependencies #1551 · biomejs/biome
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://github.com/kuma-ui/kuma-ui/pull/283">
+						Fix the way to calculate processedProps #283 · kuma-ui/kuma-ui
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
@@ -31,8 +30,32 @@ export default function Contribution() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href="https://github.com/kuma-ui/kuma-ui/pull/283">
-						Fix the way to calculate processedProps #283 · kuma-ui/kuma-ui
+					<StyledAnchor href="https://github.com/fabian-hiller/valibot/pull/738">
+						Doc: add tupleAsync docs by mehm8128 #738 · fabian-hiller/valibot
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://github.com/fabian-hiller/valibot/pull/739">
+						Doc: add tupleWithRestAsync doc by mehm8128 #739 ·
+						fabian-hiller/valibot
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://github.com/fabian-hiller/valibot/pull/740">
+						Doc: add looseTupleAsync doc by mehm8128 #740 ·
+						fabian-hiller/valibot
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://github.com/fabian-hiller/valibot/pull/741">
+						Doc: add strictTupleAsync doc by mehm8128 #741 ·
+						fabian-hiller/valibot
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://github.com/biomejs/biome/pull/1836">
+						fix(website): show eslint-plugin-import-access link name #1836 ·
+						biomejs/biome
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
