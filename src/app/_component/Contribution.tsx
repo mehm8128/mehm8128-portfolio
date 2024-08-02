@@ -31,25 +31,22 @@ export default function Contribution() {
 				</ListItem>
 				<ListItem>
 					<StyledAnchor href="https://github.com/fabian-hiller/valibot/pull/738">
-						Doc: add tupleAsync docs by mehm8128 #738 · fabian-hiller/valibot
+						Doc: add tupleAsync docs #738 · fabian-hiller/valibot
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
 					<StyledAnchor href="https://github.com/fabian-hiller/valibot/pull/739">
-						Doc: add tupleWithRestAsync doc by mehm8128 #739 ·
-						fabian-hiller/valibot
+						Doc: add tupleWithRestAsync doc #739 · fabian-hiller/valibot
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
 					<StyledAnchor href="https://github.com/fabian-hiller/valibot/pull/740">
-						Doc: add looseTupleAsync doc by mehm8128 #740 ·
-						fabian-hiller/valibot
+						Doc: add looseTupleAsync doc #740 · fabian-hiller/valibot
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
 					<StyledAnchor href="https://github.com/fabian-hiller/valibot/pull/741">
-						Doc: add strictTupleAsync doc by mehm8128 #741 ·
-						fabian-hiller/valibot
+						Doc: add strictTupleAsync doc #741 · fabian-hiller/valibot
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
