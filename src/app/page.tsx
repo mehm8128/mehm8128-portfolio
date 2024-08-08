@@ -107,7 +107,7 @@ export default async function Home() {
 							スキル
 						</Heading>
 						<Text>
-							Next.js、React、TypeScript、Storybook、Testing、a11y、Git、js、Go、Rust、Vue
+							Next.js、React、TypeScript、Storybook、Testing、a11y、Git、Go、Rust、Vue.js
 						</Text>
 					</Box>
 
