@@ -15,6 +15,11 @@ export default function Internship() {
 					2022年11月～ 株式会社ナンバーナイン
 					<UList isNested>
 						<ListItem>
+							<StyledAnchor href="https://zenn.dev/no9_dev/articles/next-migration">
+								ナンバーナインのフロントエンドをNext.jsに移行した
+							</StyledAnchor>
+						</ListItem>
+						<ListItem>
 							<StyledAnchor href="https://twitter.com/yudai112535/status/1655919698398289933?s=20">
 								リリースツイート
 							</StyledAnchor>
