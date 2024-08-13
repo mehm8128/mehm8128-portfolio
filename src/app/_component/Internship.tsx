@@ -8,11 +8,11 @@ export default function Internship() {
 	return (
 		<Box as="section" mb={16} animation="evenFadein 2.5s ease-out">
 			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
-				インターンシップ
+				経歴
 			</Heading>
 			<UList>
 				<ListItem>
-					2022年11月～ 株式会社ナンバーナイン
+					2022年11月～2025年2月 株式会社ナンバーナイン 長期インターン、業務委託
 					<UList isNested>
 						<ListItem>
 							<StyledAnchor href="https://zenn.dev/no9_dev/articles/next-migration">
@@ -44,6 +44,7 @@ export default function Internship() {
 				<ListItem>
 					2023年9月 株式会社ナレッジワーク 2週間のサマーインターン
 				</ListItem>
+				<ListItem>2024年8～9月 株式会社CoeFont 業務委託</ListItem>
 			</UList>
 		</Box>
 	)
