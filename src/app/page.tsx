@@ -111,9 +111,9 @@ export default async function Home() {
 						</Text>
 					</Box>
 
-					<Event />
 					<Internship />
 					<Blog />
+					<Event />
 					<Contribution />
 				</VStack>
 			</VStack>

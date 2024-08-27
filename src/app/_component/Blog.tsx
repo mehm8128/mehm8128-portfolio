@@ -12,11 +12,6 @@ export default function Blog() {
 			</Heading>
 			<UList>
 				<ListItem isNested>
-					<StyledAnchor href="https://trap.jp/post/1652/">
-						Giteaをアップデートした話
-					</StyledAnchor>
-				</ListItem>
-				<ListItem isNested>
 					<StyledAnchor href="https://trap.jp/post/1775/">
 						Gitを作ってみようとした話
 					</StyledAnchor>
@@ -59,21 +54,6 @@ export default function Blog() {
 				<ListItem isNested>
 					<StyledAnchor href="https://trap.jp/post/2044/">
 						imgタグについて色んな仕様書とかドキュメントとか眺めてみた話
-					</StyledAnchor>
-				</ListItem>
-				<ListItem isNested>
-					<StyledAnchor href="https://trap.jp/post/2216/">
-						Reactで将棋作った話
-					</StyledAnchor>
-				</ListItem>
-				<ListItem isNested>
-					<StyledAnchor href="https://trap.jp/post/2089/">
-						次世代Webカンファレンス2023参加記
-					</StyledAnchor>
-				</ListItem>
-				<ListItem isNested>
-					<StyledAnchor href="https://trap.jp/post/2021/">
-						DIGI-CON HACKATHON 参加記事「Comic DoQ」
 					</StyledAnchor>
 				</ListItem>
 			</UList>
