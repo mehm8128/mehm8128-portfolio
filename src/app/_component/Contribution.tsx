@@ -6,7 +6,7 @@ import UList from '@/components/UList'
 
 export default function Contribution() {
 	return (
-		<Box as="section" mb={16} animation="evenFadein 3.5s ease-out">
+		<Box as="section" animation="evenFadein 3.5s ease-out">
 			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
 				コントリビューション
 			</Heading>

@@ -74,7 +74,7 @@ export default async function Home() {
 				</Heading>
 
 				<VStack
-					gap={12}
+					gap={20}
 					className={css`
 						@keyframes oddFadein {
 							0% {

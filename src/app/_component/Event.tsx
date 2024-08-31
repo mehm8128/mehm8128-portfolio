@@ -6,7 +6,7 @@ import UList from '@/components/UList'
 
 export default function Event() {
 	return (
-		<Box as="section" mb={16} animation="oddFadein 2s ease-out">
+		<Box as="section" animation="oddFadein 2s ease-out">
 			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
 				イベント・大会
 			</Heading>

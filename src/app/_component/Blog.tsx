@@ -6,7 +6,7 @@ import UList from '@/components/UList'
 
 export default function Blog() {
 	return (
-		<Box as="section" mb={16} animation="oddFadein 3s ease-out">
+		<Box as="section" animation="oddFadein 3s ease-out">
 			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
 				ブログ記事
 			</Heading>
