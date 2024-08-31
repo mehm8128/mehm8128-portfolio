@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Text, VStack, css } from '@kuma-ui/core'
 import Image from 'next/image'
 
-import { DeployDateTimeResponse } from '@/app/api/deploy_datetime/route'
+import type { DeployDateTimeResponse } from '@/app/api/deploy_datetime/route'
 
 import StyledAnchor from '@/components/StyledAnchor'
 

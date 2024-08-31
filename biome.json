@@ -7,7 +7,7 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true,
-			"nursery": {
+			"correctness": {
 				"noUnusedImports": "warn"
 			}
 		}
@@ -17,7 +17,7 @@
 			"quoteStyle": "single",
 			"semicolons": "asNeeded",
 			"arrowParentheses": "asNeeded",
-			"trailingComma": "none"
+			"trailingCommas": "none"
 		}
 	}
 }
