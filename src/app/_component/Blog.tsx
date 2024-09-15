@@ -32,6 +32,11 @@ export default function Blog() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem isNested>
+					<StyledAnchor href="https://trap.jp/post/2299/">
+						わたくしの開発環境を紹介させていただきます
+					</StyledAnchor>
+				</ListItem>
+				<ListItem isNested>
 					<StyledAnchor href="https://trap.jp/post/2157/">
 						traP部員の凍結・除名について
 					</StyledAnchor>

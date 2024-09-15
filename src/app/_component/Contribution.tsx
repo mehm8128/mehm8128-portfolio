@@ -50,6 +50,11 @@ export default function Contribution() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://github.com/biomejs/website/pull/1046">
+						docs: translate some page to Japanese #1046 · biomejs/website
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://github.com/biomejs/biome/pull/1836">
 						fix(website): show eslint-plugin-import-access link name #1836 ·
 						biomejs/biome
