@@ -1,15 +1,10 @@
-import { Box, Heading } from '@kuma-ui/core'
-
-import ListItem from '@/components/ListItem'
-import StyledAnchor from '@/components/StyledAnchor'
-import UList from '@/components/UList'
+import StyledAnchor from '@/components/ExternalLink'
+import UList, { ListItem } from '@/components/List'
+import SectionWrap from '@/components/SectionWrap'
 
 export default function Event() {
 	return (
-		<Box as="section" animation="oddFadein 2s ease-out">
-			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
-				イベント・大会
-			</Heading>
+		<SectionWrap headingText="イベント・大会">
 			<UList>
 				<ListItem>
 					<StyledAnchor href="https://github.com/CyberAgentHack/web-speed-hackathon-2022">
@@ -68,6 +63,6 @@ export default function Event() {
 					</UList>
 				</ListItem>
 			</UList>
-		</Box>
+		</SectionWrap>
 	)
 }

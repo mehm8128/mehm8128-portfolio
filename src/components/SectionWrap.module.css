@@ -1,0 +1,8 @@
+.wrap {
+	animation: oddFadein 2.5s ease-out;
+}
+
+.heading {
+	font-size: 1.5rem;
+	font-weight: bold;
+}

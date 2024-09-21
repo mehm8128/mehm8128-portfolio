@@ -1,5 +1,4 @@
 import GitHubLogo from '/public/github_logo.svg'
-import hatenaLogo from '/public/hatenablog_logo.svg'
 import SizumeLogo from '/public/sizume_logo.svg'
 import traPLogo from '/public/traP_logo.svg'
 import XLogo from '/public/x_logo.svg'
@@ -16,10 +15,5 @@ export const links = [
 		src: SizumeLogo,
 		href: 'https://sizu.me/mehm8128',
 		alt: 'しずかなインターネット'
-	},
-	{
-		src: hatenaLogo,
-		href: 'https://mehm8128.hatenablog.com/',
-		alt: 'はてなブログ'
 	}
 ]

@@ -1,15 +1,10 @@
-import { Box, Heading } from '@kuma-ui/core'
-
-import ListItem from '@/components/ListItem'
-import StyledAnchor from '@/components/StyledAnchor'
-import UList from '@/components/UList'
+import StyledAnchor from '@/components/ExternalLink'
+import UList, { ListItem } from '@/components/List'
+import SectionWrap from '@/components/SectionWrap'
 
 export default function Internship() {
 	return (
-		<Box as="section" animation="evenFadein 2.5s ease-out">
-			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
-				経歴
-			</Heading>
+		<SectionWrap headingText="経歴">
 			<UList>
 				<ListItem>
 					2022年11月～2025年2月 株式会社ナンバーナイン 長期インターン、業務委託
@@ -46,6 +41,6 @@ export default function Internship() {
 				</ListItem>
 				<ListItem>2024年8～9月 株式会社CoeFont 業務委託</ListItem>
 			</UList>
-		</Box>
+		</SectionWrap>
 	)
 }

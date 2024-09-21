@@ -1,16 +1,10 @@
-import { Box, Heading } from '@kuma-ui/core'
-
-import ListItem from '@/components/ListItem'
-import StyledAnchor from '@/components/StyledAnchor'
-import UList from '@/components/UList'
+import StyledAnchor from '@/components/ExternalLink'
+import UList, { ListItem } from '@/components/List'
+import SectionWrap from '@/components/SectionWrap'
 
 export default function Contribution() {
 	return (
-		<Box as="section" animation="evenFadein 3.5s ease-out">
-			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
-				コントリビューション
-			</Heading>
-
+		<SectionWrap headingText="コントリビューション">
 			<UList>
 				<ListItem>
 					<StyledAnchor href="https://github.com/biomejs/biome/pull/1551">
@@ -66,6 +60,6 @@ export default function Contribution() {
 					</StyledAnchor>
 				</ListItem>
 			</UList>
-		</Box>
+		</SectionWrap>
 	)
 }

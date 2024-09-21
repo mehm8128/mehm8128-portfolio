@@ -1,16 +1,12 @@
-import { Box, Heading } from '@kuma-ui/core'
-
-import ListItem from '@/components/ListItem'
-import StyledAnchor from '@/components/StyledAnchor'
-import UList from '@/components/UList'
+import StyledAnchor from '@/components/ExternalLink'
+import { ListItem } from '@/components/List'
+import List from '@/components/List'
+import SectionWrap from '@/components/SectionWrap'
 
 export default function Blog() {
 	return (
-		<Box as="section" animation="oddFadein 3s ease-out">
-			<Heading as="h2" fontSize="1.5rem" fontWeight="bold">
-				ブログ記事
-			</Heading>
-			<UList>
+		<SectionWrap headingText="ブログ記事">
+			<List>
 				<ListItem isNested>
 					<StyledAnchor href="https://trap.jp/post/1775/">
 						Gitを作ってみようとした話
@@ -61,7 +57,7 @@ export default function Blog() {
 						imgタグについて色んな仕様書とかドキュメントとか眺めてみた話
 					</StyledAnchor>
 				</ListItem>
-			</UList>
-		</Box>
+			</List>
+		</SectionWrap>
 	)
 }

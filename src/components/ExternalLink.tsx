@@ -1,22 +1,21 @@
-import { Link } from '@kuma-ui/core'
+import type { ReactNode } from 'react'
+import styles from './ExternalLink.module.css'
 
 export default function StyledAnchor({
 	href,
 	children
 }: {
 	href: string
-	children: React.ReactNode
+	children: ReactNode
 }) {
 	return (
-		<Link
-			color="#0ea5e9"
-			textDecorationLine="underline"
-			_hover={{ color: '#a2b4f6' }}
+		<a
+			className={styles.wrap}
 			rel="noopener noreferrer"
 			target="_blank"
 			href={href}
 		>
 			{children}
-		</Link>
+		</a>
 	)
 }

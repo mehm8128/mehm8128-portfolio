@@ -1,0 +1,13 @@
+.wrap {
+	background-color: #0a1e69;
+	color: #edf1ff;
+	height: 100vh;
+	overflow: visible scroll;
+	padding: 4rem 2rem 3rem;
+	font-size: 1.25rem;
+
+	@media (width <= 768px) {
+		padding: 2rem 1rem 3rem;
+		font-size: 1rem;
+	}
+}
