@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "run-p dev:next gen:css",
-		"dev:next": "next dev",
+		"dev:next": "NEXT_PUBLIC_BUILD_TIME=$(date --iso-8601=\"second\") next dev",
 		"build": "next build",
 		"start": "next start",
 		"type-check": "tsc --noEmit",
