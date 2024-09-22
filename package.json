@@ -11,7 +11,8 @@
 		"biome": "biome check --write src",
 		"biome:ci": "biome ci src",
 		"lint:markup": "markuplint \"**/*.[jt]sx\"",
-		"gen:css": "hcm 'src/**/*.module.css' --watch"
+		"gen:css": "hcm 'src/**/*.module.css' --watch",
+		"gen:css-ci": "hcm 'src/**/*.module.css'"
 	},
 	"dependencies": {
 		"clsx": "^2.1.1",
