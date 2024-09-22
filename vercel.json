@@ -1,0 +1,4 @@
+{
+	"installCommand": "pnpm install && pnpm run gen:css-ci",
+	"buildCommand": "NEXT_PUBLIC_CURRENT_TIME=$(date +\"%Y-%m-%d %H:%M\") next build"
+}
