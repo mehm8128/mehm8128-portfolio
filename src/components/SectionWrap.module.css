@@ -1,5 +1,7 @@
 .wrap {
 	animation: oddFadein 2.5s ease-out;
+	display: grid;
+	gap: 0.5rem;
 }
 
 .heading {
