@@ -1,4 +1,3 @@
-import type { DeployDateTimeResponse } from '@/app/api/deploy_datetime/route'
 import StyledAnchor from '@/components/ExternalLink'
 import SectionWrap from '@/components/SectionWrap'
 import { links } from '@/consts/links'
@@ -11,18 +10,8 @@ import Event from './_component/Event'
 import Internship from './_component/Internship'
 import styles from './page.module.css'
 
-const fetchDeployDate = async () => {
-	const res = await fetch(
-		'https://mehm8128-portfolio.vercel.app/api/deploy_datetime'
-	)
-	if (!res.ok) throw new Error('Failed to fetch deploy date')
-
-	const data: DeployDateTimeResponse = await res.json()
-	return data.deployDateTime
-}
-
 export default async function Home() {
-	const deployDateTime = await fetchDeployDate()
+	const deployDateTime = process.env.NEXT_PUBLIC_BUILD_TIME
 
 	return (
 		<div>
@@ -72,7 +61,9 @@ export default async function Home() {
 			<p className={styles.lastUpdated}>
 				<span>最終更新日時</span>
 				<time dateTime={deployDateTime}>
-					{formatDate(new Date(deployDateTime))}
+					{deployDateTime
+						? formatDate(new Date(deployDateTime))
+						: '取得できませんでした'}
 				</time>
 			</p>
 		</div>
