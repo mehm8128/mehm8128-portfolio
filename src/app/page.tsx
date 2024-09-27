@@ -16,16 +16,18 @@ export default async function Home() {
 	return (
 		<div>
 			<div className={styles.wrap}>
-				<h1 className={styles.title}>
-					<Image
-						alt=""
-						src={IconImg}
-						width={60}
-						height={60}
-						priority
-						className={styles.icon}
-					/>
-					mehm8128
+				<div className={styles.headingWrap}>
+					<h1 className={styles.title}>
+						<Image
+							alt=""
+							src={IconImg}
+							width={60}
+							height={60}
+							priority
+							className={styles.icon}
+						/>
+						mehm8128
+					</h1>
 					<div className={styles.links}>
 						{links.map(link => (
 							<StyledAnchor key={link.alt} href={link.href}>
@@ -37,7 +39,7 @@ export default async function Home() {
 							</StyledAnchor>
 						))}
 					</div>
-				</h1>
+				</div>
 
 				<div className={styles.sections}>
 					<SectionWrap headingText="所属">
