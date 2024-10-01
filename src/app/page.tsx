@@ -43,9 +43,7 @@ export default async function Home() {
 
 				<div className={styles.sections}>
 					<SectionWrap headingText="所属">
-						<p>
-							東京工業大学工学院情報通信系(2021年4月～2024年9月)、東京工業大学デジタル創作同好会traP
-						</p>
+						<p>Cybozu (Frontend Engineer)、ex-traP</p>
 					</SectionWrap>
 					<SectionWrap headingText="スキル">
 						<p>
