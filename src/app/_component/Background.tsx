@@ -2,7 +2,7 @@ import StyledAnchor from '@/components/ExternalLink'
 import UList, { ListItem } from '@/components/List'
 import SectionWrap from '@/components/SectionWrap'
 
-export default function Internship() {
+export default function Background() {
 	return (
 		<SectionWrap headingText="経歴">
 			<UList>

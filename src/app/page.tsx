@@ -4,10 +4,10 @@ import { links } from '@/consts/links'
 import { formatDate } from '@/lib/date'
 import Image from 'next/image'
 import IconImg from '/public/mehm8128_circle.png'
+import Background from './_component/Background'
 import Blog from './_component/Blog'
 import Contribution from './_component/Contribution'
 import Event from './_component/Event'
-import Internship from './_component/Internship'
 import styles from './page.module.css'
 
 export default async function Home() {
@@ -51,7 +51,7 @@ export default async function Home() {
 						</p>
 					</SectionWrap>
 
-					<Internship />
+					<Background />
 					<Blog />
 					<Event />
 					<Contribution />
