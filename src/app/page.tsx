@@ -61,9 +61,11 @@ export default async function Home() {
 			<p className={styles.lastUpdated}>
 				<span>最終更新日時</span>
 				<time dateTime={deployDateTime}>
-					{deployDateTime
-						? formatDate(new Date(deployDateTime))
-						: '取得できませんでした'}
+					{deployDateTime ? (
+						<>{formatDate(new Date(deployDateTime))} (UTC)</>
+					) : (
+						'取得できませんでした'
+					)}
 				</time>
 			</p>
 		</div>
