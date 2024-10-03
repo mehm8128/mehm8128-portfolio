@@ -7,8 +7,8 @@ export default function Background() {
 		<SectionWrap headingText="経歴">
 			<UList>
 				<ListItem>
-					2021年4月～2024年9月 東京工業大学
-					工学院情報通信系、東京工業大学デジタル創作同好会traP
+					2021年4月～2024年9月 東京工業大学 工学院情報通信系
+					(早期卒業)、東京工業大学デジタル創作同好会traP
 				</ListItem>
 				<ListItem>
 					2022年11月～2025年2月 株式会社ナンバーナイン 長期インターン、業務委託
