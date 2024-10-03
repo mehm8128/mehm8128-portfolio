@@ -18,9 +18,20 @@ export default function Contribution() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://github.com/storybookjs/storybook/pull/28672">
+						A11y: Improved toolbar a11y by fixing semantics #28672 ·
+						storybookjs/storybook
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://github.com/vuejs/vitepress/pull/2941">
 						fix: customizing the starting line number even if globally set #2941
 						· vuejs/vitepress
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://github.com/biomejs/website/pull/1046">
+						docs: translate some page to Japanese #1046 · biomejs/website
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
@@ -44,19 +55,14 @@ export default function Contribution() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href="https://github.com/biomejs/website/pull/1046">
-						docs: translate some page to Japanese #1046 · biomejs/website
+					<StyledAnchor href="https://github.com/vercel/swr-site/pull/344">
+						doc: translate typescript page into Japanese #344 · vercel/swr-site
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
 					<StyledAnchor href="https://github.com/biomejs/biome/pull/1836">
 						fix(website): show eslint-plugin-import-access link name #1836 ·
 						biomejs/biome
-					</StyledAnchor>
-				</ListItem>
-				<ListItem>
-					<StyledAnchor href="https://github.com/vercel/swr-site/pull/344">
-						doc: translate typescript page into Japanese #344 · vercel/swr-site
 					</StyledAnchor>
 				</ListItem>
 			</UList>
