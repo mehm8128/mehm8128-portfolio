@@ -42,10 +42,10 @@ export default async function Home() {
 				</div>
 
 				<div className={styles.sections}>
-					<SectionWrap headingText="所属">
+					<SectionWrap headingText="Affiliation">
 						<p>Cybozu (Frontend Engineer)、ex-traP</p>
 					</SectionWrap>
-					<SectionWrap headingText="スキル">
+					<SectionWrap headingText="skills">
 						<p>
 							Next.js、React、TypeScript、Storybook、Testing、a11y、Git、Go、Rust、Vue.js
 						</p>
@@ -59,12 +59,12 @@ export default async function Home() {
 			</div>
 
 			<p className={styles.lastUpdated}>
-				<span>最終更新日時</span>
+				<span>Last updated at</span>
 				<time dateTime={deployDateTime}>
 					{deployDateTime ? (
 						<>{formatDate(new Date(deployDateTime))} (UTC)</>
 					) : (
-						'取得できませんでした'
+						'Failed to get the last updated date'
 					)}
 				</time>
 			</p>

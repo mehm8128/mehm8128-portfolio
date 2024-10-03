@@ -5,7 +5,7 @@ import SectionWrap from '@/components/SectionWrap'
 
 export default function Blog() {
 	return (
-		<SectionWrap headingText="ブログ記事">
+		<SectionWrap headingText="Blogs">
 			<List>
 				<ListItem>
 					<StyledAnchor href="https://trap.jp/post/1775/">

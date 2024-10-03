@@ -4,7 +4,7 @@ import SectionWrap from '@/components/SectionWrap'
 
 export default function Event() {
 	return (
-		<SectionWrap headingText="イベント・大会">
+		<SectionWrap headingText="Events・Contests">
 			<UList>
 				<ListItem>
 					<StyledAnchor href="https://github.com/CyberAgentHack/web-speed-hackathon-2022">

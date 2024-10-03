@@ -4,7 +4,7 @@ import SectionWrap from '@/components/SectionWrap'
 
 export default function Background() {
 	return (
-		<SectionWrap headingText="経歴">
+		<SectionWrap headingText="Backgrounds">
 			<UList>
 				<ListItem>
 					2021年4月～2024年9月 東京工業大学 工学院情報通信系
