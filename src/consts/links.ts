@@ -16,7 +16,7 @@ export const links = [
 		href: 'https://zenn.dev/mehm8128',
 		alt: 'Zenn'
 	},
-	{ src: XLogo, href: 'https://x.com/mehm08128', alt: '𝕏' },
+	{ src: XLogo, href: 'https://x.com/mehm8128', alt: '𝕏' },
 	{
 		src: SizumeLogo,
 		href: 'https://sizu.me/mehm8128',
