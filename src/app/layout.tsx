@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary',
-		site: '@mehm08128',
+		site: '@mehm8128',
 		title: 'mehm8128-portfolio',
 		description: 'mehm8128のポートフォリオです。'
 	}
