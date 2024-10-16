@@ -42,10 +42,10 @@ export default async function Home() {
 				</div>
 
 				<div className={styles.sections}>
-					<SectionWrap headingText="Affiliation">
+					<SectionWrap headingText="Affiliations">
 						<p>Cybozu (Frontend Engineer)、ex-traP</p>
 					</SectionWrap>
-					<SectionWrap headingText="skills">
+					<SectionWrap headingText="Skills">
 						<p>
 							Next.js、React、TypeScript、Storybook、Testing、a11y、Git、Go、Rust、Vue.js
 						</p>
