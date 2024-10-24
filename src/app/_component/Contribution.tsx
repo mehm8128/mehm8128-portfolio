@@ -24,6 +24,11 @@ export default function Contribution() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://github.com/adobe/react-spectrum/pull/7239">
+						fix: useButton href condition #7239 · adobe/react-spectrum
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://github.com/vuejs/vitepress/pull/2941">
 						fix: customizing the starting line number even if globally set #2941
 						· vuejs/vitepress
