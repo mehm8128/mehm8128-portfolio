@@ -20,7 +20,7 @@ export const links = [
 	{ src: XLogo, href: 'https://x.com/mehm8128', alt: '𝕏' },
 	{
 		src: bskyLogo,
-		href: 'https://bsky.app/profile/mehm8128.bsky.social',
+		href: 'https://bsky.app/profile/hm8128.me',
 		alt: 'Bluesky'
 	},
 	{
