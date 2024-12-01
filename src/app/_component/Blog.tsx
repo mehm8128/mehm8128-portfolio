@@ -1,5 +1,5 @@
 import StyledAnchor from '@/components/ExternalLink'
-import { ListItem } from '@/components/List'
+import UList, { ListItem } from '@/components/List'
 import List from '@/components/List'
 import SectionWrap from '@/components/SectionWrap'
 
@@ -7,6 +7,14 @@ export default function Blog() {
 	return (
 		<SectionWrap headingText="Blogs">
 			<List>
+				<ListItem>
+					<StyledAnchor href="https://qiita.com/advent-calendar/2024/react-aria">
+						React Ariaの実装読むぞ Advent Calendar 2024
+					</StyledAnchor>
+					<UList isNested>
+						<ListItem>ページ内に25個記事があります</ListItem>
+					</UList>
+				</ListItem>
 				<ListItem>
 					<StyledAnchor href="https://trap.jp/post/1775/">
 						Gitを作ってみようとした話
@@ -38,11 +46,6 @@ export default function Blog() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
-					<StyledAnchor href="https://trap.jp/post/1962/">
-						フロントエンドテストに入門してみた話
-					</StyledAnchor>
-				</ListItem>
-				<ListItem>
 					<StyledAnchor href="https://trap.jp/post/2153/">
 						VSCodeをカオスにしよう
 					</StyledAnchor>
@@ -50,11 +53,6 @@ export default function Blog() {
 				<ListItem>
 					<StyledAnchor href="https://trap.jp/post/1964/">
 						traQのa11yについて
-					</StyledAnchor>
-				</ListItem>
-				<ListItem>
-					<StyledAnchor href="https://trap.jp/post/2044/">
-						imgタグについて色んな仕様書とかドキュメントとか眺めてみた話
 					</StyledAnchor>
 				</ListItem>
 			</List>

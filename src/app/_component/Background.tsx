@@ -44,7 +44,9 @@ export default function Background() {
 					2023年9月 株式会社ナレッジワーク 2週間のサマーインターン
 				</ListItem>
 				<ListItem>2024年8～9月 株式会社CoeFont 業務委託</ListItem>
-				<ListItem>2024年10月～ サイボウズ株式会社 内定者アルバイト</ListItem>
+				<ListItem>
+					2024年10月～2025年2月 サイボウズ株式会社 内定者アルバイト
+				</ListItem>
 			</UList>
 		</SectionWrap>
 	)
