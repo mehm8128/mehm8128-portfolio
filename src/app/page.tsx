@@ -47,10 +47,9 @@ export default async function Home() {
 					</SectionWrap>
 					<SectionWrap headingText="Skills">
 						<p>
-							Next.js、React、TypeScript、Storybook、Testing、a11y、Git、Go、Rust、Vue.js
+							Next.js、React、TypeScript、a11y、Storybook、Testing、Git、Go、Rust、Vue.js
 						</p>
 					</SectionWrap>
-
 					<Background />
 					<Blog />
 					<Event />

@@ -31,6 +31,11 @@ export default function Blog() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://sizu.me/mehm8128/posts/vahz9skimne4">
+						2024年のa11y活動報告
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://trap.jp/post/2121/">
 						traPに入ってから最強Webエンジニアになるまで
 					</StyledAnchor>
