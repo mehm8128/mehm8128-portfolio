@@ -40,6 +40,12 @@ export default function Contribution() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://github.com/mdn/translated-content/pull/25001">
+						`hidden="until-found"`についてサンプルコードの説明の間違いを修正
+						#25001 · mdn/translated-content
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://github.com/mdn/translated-content/pull/24404">
 						header要素について、意味が逆に捉えられかねない箇所を修正 #24404 ·
 						mdn/translated-content

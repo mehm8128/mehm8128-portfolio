@@ -1,9 +1,9 @@
+import bskyLogo from '/public/bsky_logo.svg'
 import GitHubLogo from '/public/github_logo.svg'
 import SizumeLogo from '/public/sizume_logo.svg'
 import traPLogo from '/public/traP_logo.svg'
 import XLogo from '/public/x_logo.svg'
 import zennLogo from '/public/zenn_logo.svg'
-import bskyLogo from '/public/bsky_logo.svg'
 
 export const links = [
 	{ src: GitHubLogo, href: 'https://github.com/mehm8128', alt: 'GitHub' },
