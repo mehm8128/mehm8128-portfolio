@@ -36,6 +36,11 @@ export default function Blog() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://zenn.dev/mehm8128/articles/accessible-name-and-description-computation-1-2">
+						Accessible Name and Description Computation 1.2 を読む
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://trap.jp/post/2121/">
 						traPに入ってから最強Webエンジニアになるまで
 					</StyledAnchor>
