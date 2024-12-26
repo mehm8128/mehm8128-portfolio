@@ -1,7 +1,7 @@
 .wrap {
-	color: #d3d350;
+	color: #e7e76f;
 	text-decoration: underline;
 	&:hover {
-		color: #b8b847;
+		color: #c4c45f;
 	}
 }
