@@ -13,6 +13,12 @@ export default function Contribution() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://github.com/biomejs/biome/pull/4810">
+						fix(css_semantic): semantic event for css supports at-rule #4810 ·
+						biomejs/biome
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://github.com/kuma-ui/kuma-ui/pull/283">
 						Fix the way to calculate processedProps #283 · kuma-ui/kuma-ui
 					</StyledAnchor>
