@@ -46,6 +46,11 @@ export default function Blog() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://zenn.dev/mehm8128/articles/oss-document-translation/">
+						OSSのドキュメント翻訳に†Contribution†しよう
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://trap.jp/post/2299/">
 						わたくしの開発環境を紹介させていただきます
 					</StyledAnchor>

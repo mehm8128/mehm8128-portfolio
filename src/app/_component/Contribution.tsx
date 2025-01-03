@@ -58,6 +58,11 @@ export default function Contribution() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://github.com/biomejs/website/pull/1615">
+						docs(ja): translate gritql page #1615 · biomejs/website
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://github.com/biomejs/website/pull/1046">
 						docs: translate some page to Japanese #1046 · biomejs/website
 					</StyledAnchor>
