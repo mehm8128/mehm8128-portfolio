@@ -21,6 +21,11 @@ export default function Blog() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://blog.cybozu.io/entry/2025/02/26/112000">
+						25新卒エンジニア5人の内定者アルバイト体験記
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://trap.jp/post/1963/">
 						Kuma UIに†OSS Contribution†した話
 					</StyledAnchor>

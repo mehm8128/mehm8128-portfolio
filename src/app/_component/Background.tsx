@@ -6,6 +6,7 @@ export default function Background() {
 	return (
 		<SectionWrap headingText="Backgrounds">
 			<UList>
+				<ListItem>2025年4月～ サイボウズ株式会社</ListItem>
 				<ListItem>
 					2024年10月～2025年2月 サイボウズ株式会社 内定者アルバイト
 				</ListItem>
