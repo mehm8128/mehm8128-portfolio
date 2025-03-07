@@ -7,7 +7,6 @@ import IconImg from '/public/mehm8128_circle.png'
 import Background from './_component/Background'
 import Blog from './_component/Blog'
 import Contribution from './_component/Contribution'
-import Event from './_component/Event'
 import styles from './page.module.css'
 
 export default async function Home() {
@@ -52,7 +51,6 @@ export default async function Home() {
 					</SectionWrap>
 					<Background />
 					<Blog />
-					<Event />
 					<Contribution />
 				</div>
 			</div>

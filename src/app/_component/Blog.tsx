@@ -50,6 +50,16 @@ export default function Blog() {
 						OSSのドキュメント翻訳に†Contribution†しよう
 					</StyledAnchor>
 				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://trap.jp/post/1808/">
+						みやぎハッカソン2023に参加しました（ずんだ食べ食べ委員会）
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://sizu.me/mehm8128/posts/mb6nidhor1v3">
+						技術書典16 traP TechBook執筆
+					</StyledAnchor>
+				</ListItem>
 			</List>
 		</SectionWrap>
 	)
