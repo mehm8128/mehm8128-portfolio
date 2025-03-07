@@ -1,6 +1,6 @@
-import StyledAnchor from '@/components/ExternalLink'
-import UList, { ListItem } from '@/components/List'
-import SectionWrap from '@/components/SectionWrap'
+import StyledAnchor from '../../components/ExternalLink'
+import UList, { ListItem } from '../../components/List'
+import SectionWrap from '../../components/SectionWrap'
 
 export default function Contribution() {
 	return (

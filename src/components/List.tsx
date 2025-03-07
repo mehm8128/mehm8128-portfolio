@@ -3,11 +3,9 @@ import styles from './List.module.css'
 
 export default function UList({
 	isNested,
-	space,
 	children
 }: {
 	isNested?: boolean
-	space?: number
 	children: ReactNode
 }) {
 	return (
