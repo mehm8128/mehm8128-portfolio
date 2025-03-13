@@ -6,6 +6,7 @@ import { links } from '../consts/links'
 import { formatDate } from '../lib/date'
 import Background from './_component/Background'
 import Blog from './_component/Blog'
+import Certification from './_component/Certification'
 import Contribution from './_component/Contribution'
 import styles from './page.module.css'
 
@@ -49,6 +50,7 @@ export default async function Home() {
 							Next.js、React、TypeScript、a11y、Storybook、Testing、Git、Go、Rust、Vue.js
 						</p>
 					</SectionWrap>
+					<Certification />
 					<Background />
 					<Blog />
 					<Contribution />
