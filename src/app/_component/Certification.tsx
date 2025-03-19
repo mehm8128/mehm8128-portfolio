@@ -7,7 +7,7 @@ export default function Certification() {
 		<SectionWrap headingText="Certifications">
 			<UList>
 				<ListItem>
-					<StyledAnchor href="https://zenn.dev/mehm8128/trusted-tester">
+					<StyledAnchor href="https://zenn.dev/mehm8128/articles/trusted-tester">
 						DHS Trusted Tester Certification
 					</StyledAnchor>
 				</ListItem>
