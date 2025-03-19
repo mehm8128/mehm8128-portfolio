@@ -8,7 +8,7 @@ export default function Certification() {
 			<UList>
 				<ListItem>
 					<StyledAnchor href="https://zenn.dev/mehm8128/trusted-tester">
-						DHS Trusted Tester
+						DHS Trusted Tester Certification
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
