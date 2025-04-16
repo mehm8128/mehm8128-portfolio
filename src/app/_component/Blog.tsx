@@ -60,6 +60,11 @@ export default function Blog() {
 						技術書典16 traP TechBook執筆
 					</StyledAnchor>
 				</ListItem>
+				<ListItem>
+					<StyledAnchor href="https://gist.github.com/mehm8128/ec0ea128b5cbd5547708535a81b91c85">
+						読んだ本
+					</StyledAnchor>
+				</ListItem>
 			</List>
 		</SectionWrap>
 	)
