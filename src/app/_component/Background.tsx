@@ -1,4 +1,3 @@
-import StyledAnchor from '../../components/ExternalLink'
 import UList, { ListItem } from '../../components/List'
 import SectionWrap from '../../components/SectionWrap'
 
@@ -16,23 +15,9 @@ export default function Background() {
 				</ListItem>
 				<ListItem>
 					2023年8月～9月 株式会社ゆめみ 2週間のサマーインターン
-					<UList isNested>
-						<ListItem>
-							<StyledAnchor href="https://note.com/mehm8128/n/n2acd21311531">
-								ゆめみサマーインターン2023 参加記事
-							</StyledAnchor>
-						</ListItem>
-					</UList>
 				</ListItem>
 				<ListItem>
 					2022年11月～2025年2月 株式会社ナンバーナイン 長期インターン、業務委託
-					<UList isNested>
-						<ListItem>
-							<StyledAnchor href="https://zenn.dev/no9_dev/articles/next-migration">
-								ナンバーナインのフロントエンドをNext.jsに移行した
-							</StyledAnchor>
-						</ListItem>
-					</UList>
 				</ListItem>
 				<ListItem>
 					2021年4月～2024年9月 東京工業大学 工学院情報通信系

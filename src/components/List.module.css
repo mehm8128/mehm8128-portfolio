@@ -1,5 +1,5 @@
 .ul {
-	list-style: none;
+	list-style: disc;
 	list-style-position: inside;
 
 	&[data-is-nested="true"] {
@@ -12,13 +12,5 @@
 
 	&[data-is-nested="true"] {
 		margin-left: 2rem;
-	}
-	&::before {
-		content: "•";
-		display: inline;
-		margin-right: 0.5rem;
-		@media (width <= 768px) {
-			margin-right: 0;
-		}
 	}
 }

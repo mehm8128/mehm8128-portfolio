@@ -46,6 +46,11 @@ export default function Blog() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://zenn.dev/mehm8128/articles/aria-label-target">
+						aria-label、ボタン/リンクに付けるか？アイコンに付けるか？
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://zenn.dev/mehm8128/articles/oss-document-translation/">
 						OSSのドキュメント翻訳に†Contribution†しよう
 					</StyledAnchor>
