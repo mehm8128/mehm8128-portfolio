@@ -1,5 +1,4 @@
 import StyledAnchor from '../../components/ExternalLink'
-import UList from '../../components/List'
 import List, { ListItem } from '../../components/List'
 import SectionWrap from '../../components/SectionWrap'
 
@@ -11,9 +10,6 @@ export default function Blog() {
 					<StyledAnchor href="https://qiita.com/advent-calendar/2024/react-aria">
 						React Ariaの実装読むぞ Advent Calendar 2024
 					</StyledAnchor>
-					<UList isNested>
-						<ListItem>ページ内に25個記事があります</ListItem>
-					</UList>
 				</ListItem>
 				<ListItem>
 					<StyledAnchor href="https://trap.jp/post/2036/">

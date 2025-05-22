@@ -10,6 +10,11 @@ export default function Contribution() {
 					Features and Bugfixes
 					<UList isNested>
 						<ListItem>
+							<StyledAnchor href="https://github.com/biomejs/biome/pull/6082">
+								feat(lint): implement useUniqueElementIds #6082 · biomejs/biome
+							</StyledAnchor>
+						</ListItem>
+						<ListItem>
 							<StyledAnchor href="https://github.com/biomejs/biome/pull/1551">
 								feat(linter): show dependency variable name by
 								useExhaustiveDependencies #1551 · biomejs/biome
