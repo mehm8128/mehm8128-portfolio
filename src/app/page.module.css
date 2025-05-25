@@ -36,6 +36,10 @@
 
 .icon {
 	animation: iconFadein 3s ease-out;
+
+	@media (prefers-reduced-motion: reduce) {
+		animation: none;
+	}
 }
 
 .links {
