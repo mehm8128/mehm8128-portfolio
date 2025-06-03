@@ -22,6 +22,11 @@ export default function Blog() {
 					</StyledAnchor>
 				</ListItem>
 				<ListItem>
+					<StyledAnchor href="https://zenn.dev/mehm8128/articles/query-by-role">
+						query-by-role というライブラリを作った
+					</StyledAnchor>
+				</ListItem>
+				<ListItem>
 					<StyledAnchor href="https://trap.jp/post/1963/">
 						Kuma UIに†OSS Contribution†した話
 					</StyledAnchor>
