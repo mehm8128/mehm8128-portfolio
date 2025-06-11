@@ -45,10 +45,8 @@ export default async function Home() {
 					<SectionWrap headingText="Affiliations">
 						<p>Cybozu (Frontend Engineer)、ex-traP</p>
 					</SectionWrap>
-					<SectionWrap headingText="Skills">
-						<p>
-							Next.js、React、TypeScript、a11y、Storybook、Testing、Git、Go、Rust、Vue.js
-						</p>
+					<SectionWrap headingText="Interests">
+						<p>Accessibility、UI、TypeScript</p>
 					</SectionWrap>
 					<Certification />
 					<Background />
