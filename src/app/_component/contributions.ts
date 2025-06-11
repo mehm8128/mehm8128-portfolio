@@ -5,6 +5,11 @@ interface Contribution {
 
 export const featuresAndBugfixes = [
 	{
+		title:
+			'feat(biome_js_analyze): implement noExcessiveLinesPerFunction #6166 · biomejs/biome',
+		link: 'https://github.com/biomejs/biome/pull/6166'
+	},
+	{
 		title: 'feat(lint): implement useUniqueElementIds #6082 · biomejs/biome',
 		link: 'https://github.com/biomejs/biome/pull/6082'
 	},
