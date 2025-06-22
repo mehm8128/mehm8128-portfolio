@@ -1,15 +1,9 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
+	"$schema": "https://biomejs.dev/schemas/2.0.4/schema.json",
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true,
-			"correctness": {
-				"noUnusedImports": "warn"
-			}
+			"recommended": true
 		}
 	},
 	"javascript": {

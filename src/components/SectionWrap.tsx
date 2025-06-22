@@ -1,14 +1,24 @@
-import type { ReactNode } from 'react'
+import { type ReactNode, useId } from 'react'
 import styles from './SectionWrap.module.css'
 
 export default function SectionWrap({
 	headingText,
+	level = 2,
 	children
-}: { headingText: string; children: ReactNode }) {
+}: {
+	headingText: string
+	level?: number
+	children: ReactNode
+}) {
+	const id = useId()
+	const Heading = `h${level}` as keyof JSX.IntrinsicElements
+
 	return (
-		<div className={styles.wrap}>
-			<h2 className={styles.heading}>{headingText}</h2>
+		<section className={styles.wrap} aria-labelledby={id}>
+			<Heading className={styles.heading} id={id}>
+				{headingText}
+			</Heading>
 			{children}
-		</div>
+		</section>
 	)
 }

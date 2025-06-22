@@ -1,7 +1,7 @@
-import 'the-new-css-reset/css/reset.css'
 import './globals.css'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
+import Footer from './_component/Footer'
 import styles from './layout.module.css'
 
 export const metadata: Metadata = {
@@ -23,15 +23,12 @@ export const metadata: Metadata = {
 	}
 }
 
-export default function RootLayout({
-	children
-}: {
-	children: ReactNode
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="ja">
-			<body>
-				<main className={styles.wrap}>{children}</main>
+			<body className={styles.body}>
+				<main>{children}</main>
+				<Footer />
 			</body>
 		</html>
 	)
