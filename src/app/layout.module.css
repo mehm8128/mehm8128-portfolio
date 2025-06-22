@@ -1,9 +1,7 @@
 .body {
 	background-color: #0a1e69;
 	color: #edf1ff;
-	height: 100vh;
-	overflow: visible scroll;
-	padding: 4rem 2rem 3rem;
+	padding: 2rem 2rem 2rem;
 	font-size: 1.25rem;
 	display: flex;
 	flex-direction: column;
