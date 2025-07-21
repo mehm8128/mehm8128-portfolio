@@ -17,32 +17,16 @@ export const blogs = [
 		link: 'https://blog.cybozu.io/entry/2025/02/26/112000'
 	},
 	{
-		title: 'query-by-role というライブラリを作った',
-		link: 'https://zenn.dev/mehm8128/articles/query-by-role'
+		title: '2024年のa11y活動報告',
+		link: 'https://sizu.me/mehm8128/posts/vahz9skimne4'
 	},
 	{
 		title: 'Kuma UIに†OSS Contribution†した話',
 		link: 'https://trap.jp/post/1963/'
 	},
 	{
-		title: '2024年のa11y活動報告',
-		link: 'https://sizu.me/mehm8128/posts/vahz9skimne4'
-	},
-	{
-		title: 'traPに入ってから最強Webエンジニアになるまで',
-		link: 'https://trap.jp/post/2121/'
-	},
-	{
 		title: 'BiomeのPluginについて',
 		link: 'https://zenn.dev/mehm8128/articles/biome-plugin'
-	},
-	{
-		title: 'aria-label、ボタン/リンクに付けるか？アイコンに付けるか？',
-		link: 'https://zenn.dev/mehm8128/articles/aria-label-target'
-	},
-	{
-		title: 'OSSのドキュメント翻訳に†Contribution†しよう',
-		link: 'https://zenn.dev/mehm8128/articles/oss-document-translation/'
 	},
 	{
 		title: 'みやぎハッカソン2023に参加しました（ずんだ食べ食べ委員会）',
