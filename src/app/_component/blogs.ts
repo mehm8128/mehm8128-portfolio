@@ -21,8 +21,12 @@ export const blogs = [
 		link: 'https://sizu.me/mehm8128/posts/vahz9skimne4'
 	},
 	{
-		title: 'Kuma UIに†OSS Contribution†した話',
-		link: 'https://trap.jp/post/1963/'
+		title: 'a11y 上の理由で Deprecated になった HTML と ARIA まとめ',
+		link: 'https://zenn.dev/cybozu_frontend/articles/deprecated-html-and-aria'
+	},
+	{
+		title: '命令的な ARIA ライブリージョン：ARIA Notifyの紹介',
+		link: 'https://zenn.dev/mehm8128/articles/aria-notify-introduction'
 	},
 	{
 		title: 'BiomeのPluginについて',
