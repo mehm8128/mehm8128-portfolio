@@ -38,7 +38,7 @@ export default function Home() {
 					<p>Cybozu (Frontend Engineer)、ex-traP</p>
 				</SectionWrap>
 				<SectionWrap headingText="Interests">
-					<p>Accessibility、UI、TypeScript</p>
+					<p>Accessibility、Web Components、UI</p>
 				</SectionWrap>
 				<Certification />
 				<Background />
