@@ -28,6 +28,11 @@ export const featuresAndBugfixes = [
 		link: 'https://github.com/kuma-ui/kuma-ui/pull/283'
 	},
 	{
+		title:
+			'feat: トピック名の文字数をvalidateするように #545 · zenn-dev/zenn-editor',
+		link: 'https://github.com/zenn-dev/zenn-editor/pull/545'
+	},
+	{
 		title: 'fix: useButton href condition #7239 · adobe/react-spectrum',
 		link: 'https://github.com/adobe/react-spectrum/pull/7239'
 	},

@@ -17,6 +17,11 @@ export const blogs = [
 		link: 'https://blog.cybozu.io/entry/2025/02/26/112000'
 	},
 	{
+		title:
+			'サイボウズのフロントエンドエンジニアの探究活動について全てをお話します',
+		link: 'https://blog.cybozu.io/entry/2025/08/19/113000'
+	},
+	{
 		title: '2024年のa11y活動報告',
 		link: 'https://sizu.me/mehm8128/posts/vahz9skimne4'
 	},
@@ -25,23 +30,11 @@ export const blogs = [
 		link: 'https://zenn.dev/cybozu_frontend/articles/deprecated-html-and-aria'
 	},
 	{
-		title: '命令的な ARIA ライブリージョン：ARIA Notifyの紹介',
-		link: 'https://zenn.dev/mehm8128/articles/aria-notify-introduction'
-	},
-	{
 		title: 'BiomeのPluginについて',
 		link: 'https://zenn.dev/mehm8128/articles/biome-plugin'
 	},
 	{
-		title: 'みやぎハッカソン2023に参加しました（ずんだ食べ食べ委員会）',
-		link: 'https://trap.jp/post/1808/'
-	},
-	{
 		title: '技術書典16 traP TechBook執筆',
 		link: 'https://sizu.me/mehm8128/posts/mb6nidhor1v3'
-	},
-	{
-		title: '読んだ本',
-		link: 'https://gist.github.com/mehm8128/ec0ea128b5cbd5547708535a81b91c85'
 	}
 ] as const satisfies Blog[]
