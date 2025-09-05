@@ -8,11 +8,9 @@ export default function Footer() {
 		<footer className={styles.footer}>
 			<span>Last updated at</span>
 			<time dateTime={deployDateTime}>
-				{deployDateTime ? (
-					<>{formatDate(new Date(deployDateTime))} (UTC)</>
-				) : (
-					'Failed to get the last updated date'
-				)}
+				{deployDateTime
+					? formatDate(new Date(deployDateTime))
+					: 'Failed to get the last updated date'}
 			</time>
 		</footer>
 	)
