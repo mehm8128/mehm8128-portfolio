@@ -1,6 +1,11 @@
 export const formatDate = (date: Date) => {
-	const dateStr1 = date.toISOString().split('T')[0]
-	const dateStr2 = date.toISOString().split('T')[1].slice(0, 5)
-
-	return `${dateStr1} ${dateStr2}`
+	const options: Intl.DateTimeFormatOptions = {
+		year: 'numeric',
+		month: '2-digit',
+		day: '2-digit',
+		hour: '2-digit',
+		minute: '2-digit',
+		timeZone: 'Asia/Tokyo'
+	}
+	return new Intl.DateTimeFormat('ja-JP', options).format(date)
 }
