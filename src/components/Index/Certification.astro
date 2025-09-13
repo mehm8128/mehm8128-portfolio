@@ -1,20 +1,19 @@
 ---
-import UList from "../components/UList.astro";
-import ListItem from "../components/ListItem.astro";
-import SectionWrap from "../components/SectionWrap.astro";
+import UList from "../UList.astro";
+import ListItem from "../ListItem.astro";
+import SectionWrap from "../SectionWrap.astro";
+import ExternalLink from "../ExternalLink.astro";
+import { certifications } from "../../consts/certifications";
 ---
 
 <SectionWrap headingText="Certifications">
   <UList>
-    <ListItem>
-      <a href="https://zenn.dev/mehm8128/articles/trusted-tester">
-        DHS Trusted Tester Certification
-      </a>
-    </ListItem>
-    <ListItem>
-      <a href="https://sizu.me/mehm8128/posts/sfuw6k948udz">
-        kintone認定アソシエイト
-      </a>
-    </ListItem>
+    {
+      certifications.map((cert) => (
+        <ListItem>
+          <ExternalLink href={cert.url}>{cert.name}</ExternalLink>
+        </ListItem>
+      ))
+    }
   </UList>
 </SectionWrap>

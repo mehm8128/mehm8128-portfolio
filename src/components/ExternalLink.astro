@@ -1,0 +1,24 @@
+---
+export interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noreferrer" class="external-link">
+  <slot />
+</a>
+
+<style>
+  .external-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .external-link:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+  }
+</style>

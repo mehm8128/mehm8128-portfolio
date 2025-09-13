@@ -1,0 +1,112 @@
+---
+import { randomId } from "../functions/randomId";
+
+export interface Props {
+  headingText: string;
+  level?: number;
+}
+
+const { headingText, level = 2 } = Astro.props;
+const id = `section-${randomId()}`;
+const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+---
+
+<section class="section-wrap" aria-labelledby={id} id={id}>
+  <div class="section-header">
+    <HeadingTag class="section-heading" id={id}>
+      {headingText}
+    </HeadingTag>
+  </div>
+  <div class="section-content">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .section-wrap {
+    margin-bottom: calc(var(--section-spacing) * 0.4);
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-heading {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    position: relative;
+    display: inline-block;
+    margin: 0;
+  }
+
+  h2.section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  h3.section-heading {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  h4.section-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .section-heading::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--color-accent),
+      var(--color-accent-hover)
+    );
+    border-radius: 2px;
+  }
+
+  .section-content {
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-header {
+      margin-bottom: 2rem;
+    }
+
+    h2.section-heading {
+      font-size: 2rem;
+    }
+
+    h3.section-heading {
+      font-size: 1.75rem;
+    }
+
+    h4.section-heading {
+      font-size: 1.25rem;
+    }
+
+    .section-heading::after {
+      width: 2rem;
+    }
+  }
+</style>

@@ -1,41 +1,129 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import Background from "../components/Index/Background.astro";
-import Blog from "../components/Index/Blog.astro";
 import Certification from "../components/Index/Certification.astro";
 import Contribution from "../components/Index/Contribution.astro";
-import BaseHead from "../components/layout/BaseHead.astro";
-import Footer from "../components/layout/Footer.astro";
-import Header from "../components/layout/Header.astro";
-import { SITE_DESCRIPTION, SITE_IMG, SITE_TITLE } from "../consts";
+import SocialLinks from "../components/SocialLinks.astro";
+import {
+  ICON_DESCRIPTION,
+  SITE_DESCRIPTION,
+  SITE_IMG,
+  SITE_TITLE,
+} from "../consts/consts";
 ---
 
-<!doctype html>
-<html lang="ja">
-  <head>
-    <BaseHead
-      title={SITE_TITLE}
-      description={SITE_DESCRIPTION}
-      image={SITE_IMG}
-    />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <div>
-        <Certification />
-        <Background />
-        <Blog />
-        <Contribution />
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION} image={SITE_IMG}>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-header">
+      <img
+        src="/mehm8128_circle.png"
+        alt={ICON_DESCRIPTION}
+        class="hero-avatar"
+      />
+      <h1 class="hero-title">mehm8128</h1>
+    </div>
+    <div class="hero-content">
+      <div class="hero-description">
+        <p>Frontend Engineer at Cybozu, ex-traP</p>
+        <p>Interested in Accessibility, Web Components, and UI</p>
       </div>
-    </main>
-    <Footer />
-  </body>
-</html>
+      <SocialLinks />
+    </div>
+  </section>
+
+  <!-- Experience Sections -->
+  <div class="sections">
+    <Certification />
+    <Background />
+    <Contribution />
+  </div>
+</Layout>
 
 <style>
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--color-accent);
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    margin: 0;
+    background: linear-gradient(
+      135deg,
+      var(--color-accent),
+      var(--color-accent-hover)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-content {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  .hero-description p {
+    margin: 0.5rem 0;
+    color: var(--color-muted);
+  }
+
+  /* Sections */
   .sections {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: calc(var(--section-spacing) * 0.5);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 1rem 0 1.5rem 0;
+    }
+
+    .hero-header {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .hero-avatar {
+      width: 60px;
+      height: 60px;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .sections {
+      gap: calc(var(--section-spacing) * 0.3);
+    }
   }
 </style>

@@ -1,8 +1,9 @@
 ---
-import UList from "../components/UList.astro";
-import ListItem from "../components/ListItem.astro";
-import SectionWrap from "../components/SectionWrap.astro";
-import { contributions } from "./contributions";
+import SectionWrap from "../SectionWrap.astro";
+import UList from "../UList.astro";
+import ListItem from "../ListItem.astro";
+import ExternalLink from "../ExternalLink.astro";
+import { contributions } from "../../consts/contributions";
 ---
 
 <SectionWrap headingText="Contributions">
@@ -10,7 +11,9 @@ import { contributions } from "./contributions";
     {
       contributions.map((contribution) => (
         <ListItem>
-          <a href={contribution.link}>{contribution.title}</a>
+          <ExternalLink href={contribution.link}>
+            {contribution.title}
+          </ExternalLink>
         </ListItem>
       ))
     }
