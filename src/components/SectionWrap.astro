@@ -11,7 +11,7 @@ const id = `section-${randomId()}`;
 const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 ---
 
-<section class="section-wrap" aria-labelledby={id} id={id}>
+<section class="section-wrap" aria-labelledby={id}>
   <div class="section-header">
     <HeadingTag class="section-heading" id={id}>
       {headingText}
