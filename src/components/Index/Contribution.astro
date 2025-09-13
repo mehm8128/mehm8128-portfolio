@@ -1,0 +1,18 @@
+---
+import UList from "../components/UList.astro";
+import ListItem from "../components/ListItem.astro";
+import SectionWrap from "../components/SectionWrap.astro";
+import { contributions } from "./contributions";
+---
+
+<SectionWrap headingText="Contributions">
+  <UList>
+    {
+      contributions.map((contribution) => (
+        <ListItem>
+          <a href={contribution.link}>{contribution.title}</a>
+        </ListItem>
+      ))
+    }
+  </UList>
+</SectionWrap>
