@@ -10,7 +10,7 @@
   --color-accent: #2563eb;
   --color-accent-hover: #1e40af;
   --color-border: #e5e7eb;
-  
+
   /* Callout Colors */
   --color-info: #3b82f6;
   --color-info-bg: rgba(59, 130, 246, 0.08);
@@ -18,7 +18,7 @@
   --color-warning-bg: rgba(245, 158, 11, 0.08);
   --color-error: #ef4444;
   --color-error-bg: rgba(239, 68, 68, 0.08);
-  
+
   /* Shadow Colors */
   --shadow-color: rgba(0, 0, 0, 0.1);
   --shadow-color-dark: rgba(0, 0, 0, 0.3);
@@ -43,13 +43,13 @@
   --text-sm: 0.875rem;
   --text-xs: 0.75rem;
   --text-small: 0.875rem;
-  
+
   /* Large Typography Scale */
   --text-2xl: 1.75rem;
   --text-3xl: 2.5rem;
   --text-4xl: 3rem;
   --text-6xl: 6rem;
-  
+
   /* Responsive Typography Scale */
   --text-h2-mobile: 1.375rem;
   --text-h3-mobile: 1.125rem;
