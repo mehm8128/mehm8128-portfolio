@@ -55,7 +55,6 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     text-align: center;
-    border-bottom: 1px solid var(--color-border);
   }
 
   .title h1 {
@@ -89,7 +88,7 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
       transparent
     );
     margin: 1rem auto 0;
-    width: 50%;
+    width: 80%;
   }
 
   .content {
@@ -107,6 +106,12 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
     color: var(--color-text);
     margin: 1.5rem 0 0.75rem 0;
     font-size: 1.4rem;
+  }
+
+  /* Icon link styling - hidden by default, shown on hover */
+  .content :global(h2 a:not(:hover, :focus) .icon-link),
+  .content :global(h3 a:not(:hover, :focus) .icon-link) {
+    display: none;
   }
 
   .content :global(p) {
