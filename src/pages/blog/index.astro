@@ -49,6 +49,7 @@ const posts = (await getCollection("blog")).sort(
     max-width: var(--content-width);
     margin: 0 auto;
     padding: 2rem 1rem;
+    container-type: inline-size;
   }
 
   .blog-header {
@@ -123,8 +124,8 @@ const posts = (await getCollection("blog")).sort(
     color: var(--color-muted);
   }
 
-  /* Responsive design */
-  @media (max-width: 768px) {
+  /* Container queries for responsive design */
+  @container (max-width: 768px) {
     .blog-index {
       padding: 1rem;
     }

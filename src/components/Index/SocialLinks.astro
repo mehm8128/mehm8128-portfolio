@@ -59,6 +59,7 @@
     gap: 1.5rem;
     justify-content: center;
     margin: 2rem 0;
+    container-type: inline-size;
   }
 
   .social-link {
@@ -81,8 +82,8 @@
     opacity: 0.7;
   }
 
-  /* Responsive design */
-  @media (max-width: 640px) {
+  /* Container query for responsive design */
+  @container (max-width: 640px) {
     .social-links {
       gap: 1rem;
     }

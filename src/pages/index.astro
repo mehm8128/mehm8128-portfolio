@@ -46,6 +46,7 @@ import {
     text-align: center;
     padding: 1rem 0 0.25rem 0;
     margin-bottom: 2rem;
+    container-type: inline-size;
   }
 
   .hero-header {
@@ -96,10 +97,11 @@ import {
     display: flex;
     flex-direction: column;
     gap: calc(var(--section-spacing) * 0.5);
+    container-type: inline-size;
   }
 
-  /* Responsive Design */
-  @media (max-width: 768px) {
+  /* Container queries for responsive design */
+  @container (max-width: 768px) {
     .hero {
       padding: 1rem 0 1.5rem 0;
     }

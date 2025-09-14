@@ -40,6 +40,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
     max-width: var(--content-width);
     margin: 0 auto;
     padding: 2rem 1rem;
+    container-type: inline-size;
   }
 
   .prose {
@@ -144,8 +145,8 @@ const { title, description, pubDate, updatedDate } = Astro.props;
     border-radius: 0 0.25rem 0.25rem 0;
   }
 
-  /* Responsive design */
-  @media (max-width: 768px) {
+  /* Container queries for responsive design */
+  @container (max-width: 768px) {
     .blog-post {
       padding: 1rem;
     }

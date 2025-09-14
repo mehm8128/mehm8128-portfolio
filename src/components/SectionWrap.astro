@@ -25,6 +25,7 @@ const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 <style>
   .section-wrap {
     animation: fadeInUp 0.6s ease-out;
+    container-type: inline-size;
   }
 
   .section-header {
@@ -87,7 +88,7 @@ const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
     }
   }
 
-  @media (max-width: 768px) {
+  @container (max-width: 768px) {
     .section-header {
       margin-bottom: 2rem;
     }
