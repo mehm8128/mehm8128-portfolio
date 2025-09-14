@@ -1,11 +1,40 @@
 ---
 // Header component
+import RssIcon from "./Blog/RssIcon.astro";
+
+// 現在のページパスを取得
+const currentPath = Astro.url.pathname;
+const isHomePage = currentPath === "/";
+const isBlogPage = currentPath.startsWith("/blog");
 ---
 
 <header class="site-header">
   <nav class="nav">
-    <a href="/" class="nav-link nav-link-home">Home</a>
-    <a href="/blog" class="nav-link nav-link-blog">Blog</a>
+    <div class="nav-links">
+      <a
+        href="/"
+        class="nav-link nav-link-home"
+        aria-current={isHomePage ? "page" : undefined}
+      >
+        Home
+      </a>
+      <a
+        href="/blog"
+        class="nav-link nav-link-blog"
+        aria-current={isBlogPage ? "page" : undefined}
+      >
+        Blog
+      </a>
+    </div>
+    <a
+      href="/rss.xml"
+      class="rss-link"
+      target="_blank"
+      rel="noreferrer"
+      title="RSS Feed"
+    >
+      <RssIcon size={20} />
+    </a>
   </nav>
 </header>
 
@@ -18,8 +47,32 @@
 
   .nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
     gap: 1.5rem;
     justify-content: center;
+    flex: 1;
+  }
+
+  .rss-link {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rss-link:hover {
+    color: var(--color-accent);
+    background-color: var(--color-surface);
+    text-decoration: none;
   }
 
   .nav-link {
@@ -60,10 +113,25 @@
     width: 100%;
   }
 
+  /* Active page styling */
+  .nav-link[aria-current="page"] {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .nav-link[aria-current="page"]::after {
+    width: 100%;
+    background-color: var(--color-accent);
+  }
+
   /* Responsive Design */
   @media (max-width: 768px) {
-    .nav {
+    .nav-links {
       gap: 1rem;
+    }
+
+    .rss-link {
+      padding: 0.375rem;
     }
   }
 </style>
