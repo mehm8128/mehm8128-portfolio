@@ -43,40 +43,33 @@ const allPosts = [...internalPosts, ...externalPosts].toSorted(
   <div class="blog-index">
     <div class="blog-header">
       <h1>Blog</h1>
-      <p>記事の一覧です</p>
     </div>
 
-    <section class="blog-posts">
-      <ul class="posts-list">
-        {
-          allPosts.map((post) => (
-            <li class="post-item">
-              <a
-                href={post.url}
-                class="post-link"
-                target={post.isExternal ? "_blank" : undefined}
-                rel={post.isExternal ? "noreferrer" : undefined}
-              >
-                <div class="post-content">
-                  <p class="post-title">{post.title}</p>
-                  {post.description && (
-                    <p class="post-description">{post.description}</p>
-                  )}
-                </div>
-                <div class="post-meta">
-                  <time class="post-date">
-                    {formatDate(post.publishedDate)}
-                  </time>
-                  {post.isExternal && (
-                    <span class="post-site">{post.site}</span>
-                  )}
-                </div>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
+    <ul class="posts-list">
+      {
+        allPosts.map((post) => (
+          <li class="post-item">
+            <a
+              href={post.url}
+              class="post-link"
+              target={post.isExternal ? "_blank" : undefined}
+              rel={post.isExternal ? "noreferrer" : undefined}
+            >
+              <div class="post-content">
+                <p class="post-title">{post.title}</p>
+                {post.description && (
+                  <p class="post-description">{post.description}</p>
+                )}
+              </div>
+              <div class="post-meta">
+                <time class="post-date">{formatDate(post.publishedDate)}</time>
+                {post.isExternal && <span class="post-site">{post.site}</span>}
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </Layout>
 
