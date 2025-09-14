@@ -39,7 +39,7 @@ const isBlogPage = currentPath.startsWith("/blog");
 </header>
 
 <style>
-  /* Header */
+  /* Header Layout */
   .site-header {
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--color-border);
@@ -58,23 +58,7 @@ const isBlogPage = currentPath.startsWith("/blog");
     flex: 1;
   }
 
-  .rss-link {
-    color: var(--color-text);
-    text-decoration: none;
-    padding: 0.5rem;
-    border-radius: 0.375rem;
-    transition: var(--transition-fast);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .rss-link:hover {
-    color: var(--color-accent);
-    background-color: var(--color-surface);
-    text-decoration: none;
-  }
-
+  /* Navigation Links */
   .nav-link {
     font-family: var(--font-heading);
     font-weight: 600;
@@ -93,11 +77,18 @@ const isBlogPage = currentPath.startsWith("/blog");
     view-transition-name: nav-blog;
   }
 
+  /* Navigation Link States */
   .nav-link:hover {
     color: var(--color-accent);
     text-decoration: none;
   }
 
+  .nav-link[aria-current="page"] {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  /* Navigation Link Underlines */
   .nav-link::after {
     content: "";
     position: absolute;
@@ -109,19 +100,27 @@ const isBlogPage = currentPath.startsWith("/blog");
     transition: width var(--transition-fast);
   }
 
-  .nav-link:hover::after {
-    width: 100%;
-  }
-
-  /* Active page styling */
-  .nav-link[aria-current="page"] {
-    color: var(--color-accent);
-    font-weight: 700;
-  }
-
+  .nav-link:hover::after,
   .nav-link[aria-current="page"]::after {
     width: 100%;
-    background-color: var(--color-accent);
+  }
+
+  /* RSS Link */
+  .rss-link {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rss-link:hover {
+    color: var(--color-accent);
+    background-color: var(--color-surface);
+    text-decoration: none;
   }
 
   /* Responsive Design */

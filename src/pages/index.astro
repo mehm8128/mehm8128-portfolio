@@ -43,7 +43,7 @@ import {
 </Layout>
 
 <style>
-  /* Hero Section */
+  /* Hero Section Layout */
   .hero {
     text-align: center;
     padding: 1rem 0 0.25rem 0;
@@ -59,6 +59,12 @@ import {
     margin-bottom: 1rem;
   }
 
+  .hero-content {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+
+  /* Hero Section Elements */
   .hero-avatar {
     width: 80px;
     height: 80px;
@@ -79,11 +85,6 @@ import {
     background-clip: text;
   }
 
-  .hero-content {
-    max-width: 32rem;
-    margin: 0 auto;
-  }
-
   .hero-description {
     font-size: 1.125rem;
     line-height: 1.6;
@@ -94,7 +95,7 @@ import {
     color: var(--color-muted);
   }
 
-  /* Sections */
+  /* Sections Layout */
   .sections {
     display: flex;
     flex-direction: column;
@@ -102,7 +103,7 @@ import {
     container-type: inline-size;
   }
 
-  /* Container queries for responsive design */
+  /* Container Queries for Responsive Design */
   @container (max-width: 768px) {
     .hero {
       padding: 1rem 0 1.5rem 0;
