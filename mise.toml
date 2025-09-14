@@ -1,3 +1,2 @@
 [tools]
 node = "lts"
-pnpm = "latest"
