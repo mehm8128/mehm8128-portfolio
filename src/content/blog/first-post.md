@@ -1,10 +1,10 @@
 ---
 title: "My first post"
-description: "This is the my first post."
+description: "This is my first post."
 publishedDate: "Sep 14 2025"
 ---
 
-Hello, this is the my first post.
+Hello, this is my first post.
 
 ## 見出し
 
