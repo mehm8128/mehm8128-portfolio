@@ -76,7 +76,7 @@ const posts = (await getCollection("blog")).sort(
   }
 
   .post-item {
-    transition: var(--transition);
+    transition: var(--transition-fast);
   }
 
   .post-item:hover {
@@ -97,7 +97,7 @@ const posts = (await getCollection("blog")).sort(
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.3;
-    transition: var(--transition);
+    transition: var(--transition-fast);
   }
 
   .post-link:hover .post-title {

@@ -114,14 +114,10 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 
   .content :global(a) {
     color: var(--color-accent);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: var(--transition);
   }
 
   .content :global(a:hover) {
     color: var(--color-accent-hover);
-    border-bottom-color: var(--color-accent-hover);
   }
 
   .content :global(code) {

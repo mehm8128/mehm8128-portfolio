@@ -57,80 +57,11 @@ html {
   background-color: var(--color-bg);
 }
 
+/* Site Layout - Base Styles Only */
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-}
-
-/* Site Layout */
-.site-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Header */
-.site-header {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.nav {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.nav-link {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  color: var(--color-text);
-  text-decoration: none;
-  padding: 0.5rem 0;
-  position: relative;
-  transition: var(--transition-fast);
-}
-
-.nav-link:hover {
-  color: var(--color-accent);
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-accent);
-  transition: width var(--transition-fast);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-/* Main Content */
-.main-content {
-  flex: 1;
-  padding: var(--main-content-spacing) 0;
-}
-
-/* Footer */
-.site-footer {
-  border-top: 1px solid var(--color-border);
-  padding: 2rem 0;
-  margin-top: auto;
-}
-
-.footer-content {
-  text-align: center;
-  color: var(--color-muted);
-  font-size: var(--text-small);
 }
 
 /* Typography */
@@ -164,13 +95,19 @@ p {
 
 a {
   color: var(--color-accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 0.031rem;
+  text-decoration-color: var(--color-accent);
   transition: var(--transition-fast);
 }
 
 a:hover {
   color: var(--color-accent-hover);
   text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 0.13rem;
+  text-decoration-color: var(--color-accent-hover);
 }
 
 /* Utility Classes */
@@ -222,14 +159,6 @@ a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .site-container {
-    padding: 0 1rem;
-  }
-
-  .nav {
-    gap: 1rem;
-  }
-
   :root {
     --section-spacing: 2rem;
     --main-content-spacing: 1rem;
@@ -246,10 +175,6 @@ a:hover {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.main-content {
-  animation: fadeIn var(--transition-normal);
 }
 
 /* View Transitions */
@@ -295,19 +220,10 @@ a:hover {
   }
 }
 
-/* 特定の要素に対するカスタムトランジション */
-.nav-link {
-  view-transition-name: nav-link;
-}
-
+/* コンポーネント別のView Transitions */
 ::view-transition-old(nav-link),
 ::view-transition-new(nav-link) {
   animation-duration: 0.2s;
-}
-
-/* メインコンテンツ用のトランジション */
-.main-content {
-  view-transition-name: main-content;
 }
 
 ::view-transition-old(main-content),

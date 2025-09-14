@@ -83,3 +83,90 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </div>
   </body>
 </html>
+
+<style>
+  /* Header */
+  .site-header {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: var(--transition-fast);
+    view-transition-name: nav-link;
+  }
+
+  .nav-link:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: width var(--transition-fast);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Footer */
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem 0;
+    margin-top: auto;
+  }
+
+  .footer-content {
+    text-align: center;
+    color: var(--color-muted);
+    font-size: var(--text-small);
+  }
+
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: var(--main-content-spacing) 0;
+    animation: fadeIn var(--transition-normal);
+    view-transition-name: main-content;
+  }
+
+  /* Site Layout */
+  .site-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .site-container {
+      padding: 0 1rem;
+    }
+
+    .nav {
+      gap: 1rem;
+    }
+  }
+</style>
