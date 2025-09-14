@@ -111,6 +111,7 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
 
   .content :global(p) {
     margin: 1rem 0;
+    white-space: pre-wrap;
   }
 
   .content :global(a) {
@@ -122,7 +123,7 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
   }
 
   .content :global(code) {
-    background: var(--color-surface);
+    background: #e5e7eb;
     padding: 0.2rem 0.4rem;
     border-radius: 0.25rem;
     font-family: var(--font-mono);
@@ -143,6 +144,106 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
     padding: 0.5rem 0 0.5rem 1rem;
     background: var(--color-surface);
     border-radius: 0 0.25rem 0.25rem 0;
+  }
+
+  /* Table styling */
+  .content :global(table) {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5rem 0;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .content :global(th),
+  .content :global(td) {
+    border: 1px solid var(--color-border);
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+
+  .content :global(th) {
+    background: var(--color-surface);
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .content :global(tr:nth-child(even)) {
+    background: var(--color-surface);
+  }
+
+  /* Italic styling */
+  .content :global(em) {
+    font-style: italic;
+    color: var(--color-text);
+  }
+
+  /* Details/Summary styling */
+  .content :global(details) {
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: var(--color-surface);
+  }
+
+  .content :global(summary) {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color-accent);
+    user-select: none;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .content :global(summary::before) {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .content :global(details[open] summary::before) {
+    transform: rotate(90deg);
+  }
+
+  .content :global(summary:hover) {
+    color: var(--color-accent-hover);
+  }
+
+  .content :global(details[open] summary) {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* List styling */
+  .content :global(ul),
+  .content :global(ol) {
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .content :global(li) {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+
+  .content :global(ul li) {
+    list-style-type: disc;
+  }
+
+  .content :global(ol li) {
+    list-style-type: decimal;
+  }
+
+  .content :global(ul ul li) {
+    list-style-type: circle;
+  }
+
+  .content :global(ol ol li) {
+    list-style-type: lower-alpha;
   }
 
   /* Container queries for responsive design */
