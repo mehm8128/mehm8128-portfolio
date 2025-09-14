@@ -3,9 +3,35 @@ import { getCollection } from "astro:content";
 import { SITE_DESCRIPTION, SITE_IMG, SITE_TITLE } from "../../consts/consts";
 import Layout from "../../layouts/Layout.astro";
 import { formatDate } from "../../functions/date";
+import { blogs } from "../../consts/blogs";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+);
+
+// Convert internal posts to a common format
+const internalPosts = posts.map((post) => ({
+  title: post.data.title,
+  description: post.data.description,
+  publishedDate: post.data.publishedDate,
+  url: `/blog/${post.id}/`,
+  isExternal: false,
+  site: undefined,
+}));
+
+// Convert external posts to a common format
+const externalPosts = blogs.map((blog) => ({
+  title: blog.title,
+  description: "", // External posts don't have descriptions in this context
+  publishedDate: new Date(blog.publishedAt),
+  url: blog.link,
+  site: blog.site,
+  isExternal: true,
+}));
+
+// Combine and sort all posts by date
+const allPosts = [...internalPosts, ...externalPosts].toSorted(
+  (a, b) => b.publishedDate.valueOf() - a.publishedDate.valueOf()
 );
 ---
 
@@ -21,25 +47,35 @@ const posts = (await getCollection("blog")).sort(
     </div>
 
     <section class="blog-posts">
-      {
-        posts.length > 0 ? (
-          <ul class="posts-list">
-            {posts.map((post) => (
-              <li class="post-item card">
-                <a href={`/blog/${post.id}/`} class="post-link">
-                  <h2 class="post-title">{post.data.title}</h2>
-                  <p class="post-description">{post.data.description}</p>
-                  <time class="post-date">{formatDate(post.data.pubDate)}</time>
-                </a>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <div class="no-posts">
-            <p>まだ記事がありません。</p>
-          </div>
-        )
-      }
+      <ul class="posts-list">
+        {
+          allPosts.map((post) => (
+            <li class="post-item">
+              <a
+                href={post.url}
+                class="post-link"
+                target={post.isExternal ? "_blank" : undefined}
+                rel={post.isExternal ? "noreferrer" : undefined}
+              >
+                <div class="post-content">
+                  <p class="post-title">{post.title}</p>
+                  {post.description && (
+                    <p class="post-description">{post.description}</p>
+                  )}
+                </div>
+                <div class="post-meta">
+                  <time class="post-date">
+                    {formatDate(post.publishedDate)}
+                  </time>
+                  {post.isExternal && (
+                    <span class="post-site">{post.site}</span>
+                  )}
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </section>
   </div>
 </Layout>
@@ -70,44 +106,67 @@ const posts = (await getCollection("blog")).sort(
 
   .posts-list {
     display: grid;
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: stretch;
   }
 
   .post-item {
+    position: relative;
     transition: var(--transition-fast);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
   }
 
   .post-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+  }
+
+  .post-item:focus-within {
+    transform: translateY(-2px);
   }
 
   .post-link {
-    display: block;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1rem;
     text-decoration: none;
     color: inherit;
+    height: 100%;
+    transition: var(--transition-fast);
+    min-height: 140px;
+  }
+
+  .post-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .post-title {
-    color: var(--color-accent);
-    margin: 0 0 0.75rem 0;
-    font-size: 1.5rem;
+    color: var(--color-text);
+    margin: 0;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.3;
     transition: var(--transition-fast);
   }
 
   .post-link:hover .post-title {
-    color: var(--color-accent-hover);
+    color: var(--color-accent);
   }
 
   .post-description {
     color: var(--color-muted);
-    margin: 0 0 1rem 0;
+    margin: 0;
     line-height: 1.6;
   }
 
@@ -115,13 +174,26 @@ const posts = (await getCollection("blog")).sort(
     color: var(--color-muted);
     font-family: var(--font-mono);
     font-size: 0.875rem;
-    display: block;
   }
 
-  .no-posts {
-    text-align: center;
-    padding: 4rem 2rem;
-    color: var(--color-muted);
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-shrink: 0;
+  }
+
+  .post-site {
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: var(--color-surface);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-border);
   }
 
   /* Container queries for responsive design */
@@ -138,12 +210,18 @@ const posts = (await getCollection("blog")).sort(
       margin-bottom: 2rem;
     }
 
+    .posts-list {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
     .post-link {
-      padding: 1.5rem;
+      padding: 1rem;
+      min-height: 120px;
     }
 
     .post-title {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
   }
 </style>

@@ -6,7 +6,7 @@ import Layout from "./Layout.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+const { title, description, publishedDate, updatedDate } = Astro.props;
 ---
 
 <Layout title={title} description={description} image={SITE_IMG}>
@@ -14,8 +14,8 @@ const { title, description, pubDate, updatedDate } = Astro.props;
     <div class="prose">
       <div class="title">
         <div class="date">
-          <time datetime={pubDate.toISOString()}>
-            {formatDate(pubDate)}
+          <time datetime={publishedDate.toISOString()}>
+            {formatDate(publishedDate)}
           </time>
           {
             updatedDate && (
