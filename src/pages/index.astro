@@ -70,6 +70,14 @@ import {
     height: 80px;
     border-radius: 50%;
     border: 3px solid var(--color-accent);
+    animation: spin 2s ease-out;
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-avatar {
+      animation: none;
+    }
   }
 
   .hero-title {
@@ -101,6 +109,16 @@ import {
     flex-direction: column;
     gap: calc(var(--section-spacing));
     container-type: inline-size;
+  }
+
+  /* Animations */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(calc(240deg * 6));
+    }
   }
 
   /* Container Queries for Responsive Design */
