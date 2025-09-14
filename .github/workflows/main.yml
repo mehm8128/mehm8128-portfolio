@@ -19,6 +19,7 @@ jobs:
           node-version: latest
           cache: pnpm
       - run: pnpm install
+      - run: pnpm run typecheck
       - run: pnpm run build
   markuplint:
     runs-on: ubuntu-latest
