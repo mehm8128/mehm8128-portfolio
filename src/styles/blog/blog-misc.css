@@ -21,6 +21,10 @@
   font-size: 0.9em;
 }
 
+.content pre code {
+  background: transparent;
+}
+
 .content pre {
   background: var(--color-surface);
   padding: 1rem;
