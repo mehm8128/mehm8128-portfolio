@@ -18,6 +18,7 @@
   /* Layout */
   --content-width: 52.5rem;
   --section-spacing: 3rem;
+  --main-content-spacing: 1.5rem;
   --paragraph-spacing: 1em;
 
   /* Typography Scale */
@@ -74,13 +75,13 @@ body {
 
 /* Header */
 .site-header {
-  padding: 2rem 0;
+  padding: 0.5rem 0;
   border-bottom: 1px solid var(--color-border);
 }
 
 .nav {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 
@@ -116,7 +117,7 @@ body {
 /* Main Content */
 .main-content {
   flex: 1;
-  padding: var(--section-spacing) 0;
+  padding: var(--main-content-spacing) 0;
 }
 
 /* Footer */
@@ -231,6 +232,7 @@ a:hover {
 
   :root {
     --section-spacing: 2rem;
+    --main-content-spacing: 1rem;
   }
 }
 
