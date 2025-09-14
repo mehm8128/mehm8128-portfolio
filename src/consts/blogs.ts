@@ -1,7 +1,7 @@
 interface Blog {
   title: string;
   link: string;
-  site: string | undefined;
+  site: "Zenn" | "traP" | "sizu.me" | "Cybozu" | undefined;
   publishedAt: string; // YYYY-MM-DD format
 }
 
