@@ -1,32 +1,30 @@
 {
-	"name": "mehm8128-portfolio",
-	"version": "1.0.0",
-	"private": true,
-	"scripts": {
-		"dev": "NEXT_PUBLIC_BUILD_TIME=$(date --iso-8601=\"second\") next dev",
-		"build": "next build",
-		"start": "next start",
-		"type-check": "tsc --noEmit",
-		"biome": "biome check --write src",
-		"biome:ci": "biome ci src",
-		"lint:markup": "markuplint \"**/*.[jt]sx\""
-	},
-	"dependencies": {
-		"clsx": "^2.1.1",
-		"kiso.css": "^1.2.0",
-		"next": "^14.2.32",
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.0.4",
-		"@css-modules-kit/codegen": "^0.1.3",
-		"@markuplint/jsx-parser": "^4.7.5",
-		"@markuplint/react-spec": "^4.5.5",
-		"@types/node": "22.5.1",
-		"@types/react": "18.3.5",
-		"@types/react-dom": "18.3.0",
-		"markuplint": "^4.9.2",
-		"typescript": "5.5.4"
-	}
+  "name": "mehm8182-portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "typecheck": "astro check",
+    "lint:markup": "markuplint \"**/*.astro\""
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.5",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.5.1",
+    "astro": "^5.13.7",
+    "clsx": "^2.1.1",
+    "kiso.css": "^1.2.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@markuplint/astro-parser": "^4.6.21",
+    "markuplint": "^4.13.1",
+    "prettier": "^3.6.2",
+    "textlint": "^15.2.2",
+    "textlint-rule-preset-ja-technical-writing": "^12.0.2",
+    "typescript": "^5.9.2"
+  }
 }

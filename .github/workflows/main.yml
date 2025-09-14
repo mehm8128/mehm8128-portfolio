@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  biome:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,7 +19,8 @@ jobs:
           node-version: latest
           cache: pnpm
       - run: pnpm install
-      - run: pnpm run biome:ci
+      - run: pnpm run typecheck
+      - run: pnpm run build
   markuplint:
     runs-on: ubuntu-latest
     steps:

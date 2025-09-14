@@ -1,0 +1,96 @@
+---
+// SNSリンクの共通コンポーネント
+---
+
+<div class="social-links">
+  <a
+    href="https://github.com/mehm8128"
+    class="social-link"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <img src="/logo/github-logo.svg" alt="GitHub" />
+  </a>
+  <a
+    href="https://x.com/mehm8128"
+    class="social-link"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <img src="/logo/x-logo.svg" alt="X" />
+  </a>
+  <a
+    href="https://bsky.app/profile/hm8128.me"
+    class="social-link"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <img src="/logo/bsky-logo.svg" alt="Bluesky" />
+  </a>
+  <a
+    href="https://mastodon.social/@mehm8128"
+    class="social-link"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <img src="/logo/mastodon-logo.svg" alt="Mastodon" />
+  </a>
+  <a
+    href="https://sizu.me/mehm8128"
+    class="social-link"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <img src="/logo/sizume-logo.svg" alt="sizu.me" />
+  </a>
+  <a
+    href="https://zenn.dev/mehm8128"
+    class="social-link"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <img src="/logo/zenn-logo.svg" alt="Zenn" />
+  </a>
+</div>
+
+<style>
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 2rem 0;
+    container-type: inline-size;
+  }
+
+  .social-link {
+    display: block;
+    text-decoration: none;
+    transition: var(--transition-fast);
+  }
+
+  .social-link:hover {
+    transform: translateY(-2px);
+  }
+
+  .social-link img {
+    width: 32px;
+    height: 32px;
+    transition: var(--transition-fast);
+  }
+
+  .social-link:hover img {
+    opacity: 0.7;
+  }
+
+  /* Container query for responsive design */
+  @container (max-width: 640px) {
+    .social-links {
+      gap: 1rem;
+    }
+
+    .social-link img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+</style>

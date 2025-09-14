@@ -1,0 +1,12 @@
+---
+import SectionWrap from "../SectionWrap.astro";
+import UList from "../UList.astro";
+import ListItem from "../ListItem.astro";
+import { backgrounds } from "../../consts/backgrounds";
+---
+
+<SectionWrap headingText="Backgrounds">
+  <UList>
+    {backgrounds.map((background) => <ListItem>{background.text}</ListItem>)}
+  </UList>
+</SectionWrap>

@@ -1,0 +1,18 @@
+---
+import UList from "../UList.astro";
+import ListItem from "../ListItem.astro";
+import SectionWrap from "../SectionWrap.astro";
+import { blogs } from "../../consts/blogs";
+---
+
+<SectionWrap headingText="Blogs">
+  <UList>
+    {
+      blogs.map((blog) => (
+        <ListItem>
+          <a href={blog.link}>{blog.title}</a>
+        </ListItem>
+      ))
+    }
+  </UList>
+</SectionWrap>
