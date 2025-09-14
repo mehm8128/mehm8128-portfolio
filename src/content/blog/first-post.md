@@ -59,3 +59,10 @@ https://example.com
 | aaa | aaa | aaa |
 
 https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md
+
+this is `codeblock`.
+
+```ts
+const bbb = () => "bbb";
+console.log(`aaa${bbb}`);
+```
