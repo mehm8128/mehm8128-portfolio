@@ -1,0 +1,69 @@
+---
+// Header component
+---
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="nav-link nav-link-home">Home</a>
+    <a href="/blog" class="nav-link nav-link-blog">Blog</a>
+  </nav>
+</header>
+
+<style>
+  /* Header */
+  .site-header {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: var(--transition-fast);
+  }
+
+  .nav-link-home {
+    view-transition-name: nav-home;
+  }
+
+  .nav-link-blog {
+    view-transition-name: nav-blog;
+  }
+
+  .nav-link:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: width var(--transition-fast);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav {
+      gap: 1rem;
+    }
+  }
+</style>

@@ -1,6 +1,8 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 export interface Props {
   title: string;
@@ -64,83 +66,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <body>
     <div class="site-container">
-      <header class="site-header">
-        <nav class="nav">
-          <a href="/" class="nav-link">Home</a>
-          <a href="/blog" class="nav-link">Blog</a>
-        </nav>
-      </header>
+      <Header />
 
       <main class="main-content">
         <slot />
       </main>
 
-      <footer class="site-footer">
-        <div class="footer-content">
-          <p>&copy; 2025 mehm8128. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   </body>
 </html>
 
 <style>
-  /* Header */
-  .site-header {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .nav {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-  }
-
-  .nav-link {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    color: var(--color-text);
-    text-decoration: none;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: var(--transition-fast);
-    view-transition-name: nav-link;
-  }
-
-  .nav-link:hover {
-    color: var(--color-accent);
-    text-decoration: none;
-  }
-
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-accent);
-    transition: width var(--transition-fast);
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
-  }
-
-  /* Footer */
-  .site-footer {
-    border-top: 1px solid var(--color-border);
-    padding: 2rem 0;
-    margin-top: auto;
-  }
-
-  .footer-content {
-    text-align: center;
-    color: var(--color-muted);
-    font-size: var(--text-small);
-  }
-
   /* Main Content */
   .main-content {
     flex: 1;
@@ -163,10 +100,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   @media (max-width: 768px) {
     .site-container {
       padding: 0 1rem;
-    }
-
-    .nav {
-      gap: 1rem;
     }
   }
 </style>
