@@ -251,6 +251,74 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
     list-style-type: lower-alpha;
   }
 
+  /* remark-callout plugin support */
+  .content :global(div[data-callout]) {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-left: 4px solid;
+    border-radius: 8px;
+    background-color: var(--color-bg-secondary);
+    position: relative;
+  }
+
+  .content :global(div[data-callout-title]) {
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .content :global(div[data-callout-body]) {
+    margin: 0;
+  }
+
+  .content :global(div[data-callout-body] > p:first-child) {
+    margin-top: 0;
+  }
+
+  .content :global(div[data-callout-body] > p:last-child) {
+    margin-bottom: 0;
+  }
+
+  /* Info callout */
+  .content :global(div[data-callout-type="info"]) {
+    border-left-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.08);
+  }
+
+  .content
+    :global(div[data-callout-type="info"] div[data-callout-title]::before) {
+    content: "ℹ️";
+    margin-right: 0.25rem;
+  }
+
+  /* Warning callout */
+  .content :global(div[data-callout-type="warning"]) {
+    border-left-color: #f59e0b;
+    background-color: rgba(245, 158, 11, 0.08);
+  }
+
+  .content
+    :global(div[data-callout-type="warning"] div[data-callout-title]::before) {
+    content: "⚠️";
+    margin-right: 0.25rem;
+  }
+
+  /* Error callout */
+  .content :global(div[data-callout-type="error"]) {
+    border-left-color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.08);
+  }
+
+  .content
+    :global(div[data-callout-type="error"] div[data-callout-title]::before) {
+    content: "🚨";
+    margin-right: 0.25rem;
+  }
+
   /* Container queries for responsive design */
   @container (max-width: 768px) {
     .blog-post {

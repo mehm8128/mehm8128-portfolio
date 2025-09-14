@@ -20,6 +20,9 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.5.1
         version: 3.5.1
+      '@r4ai/remark-callout':
+        specifier: ^0.6.2
+        version: 0.6.2
       astro:
         specifier: ^5.13.7
         version: 5.13.7(@types/node@24.4.0)(rollup@4.50.1)(typescript@5.9.2)(yaml@2.8.1)
@@ -549,6 +552,10 @@ packages:
   '@pkgr/core@0.2.9':
     resolution: {integrity: sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+
+  '@r4ai/remark-callout@0.6.2':
+    resolution: {integrity: sha512-yRj0dzEqdGYquJqTcr68CtAAh47AamWGMbZwiXBTeH6tf2MAh3Rc8C3xYhsRHKX91j9h5JZPTV2YLv+zL08AHQ==}
+    engines: {node: '>=16'}
 
   '@rollup/pluginutils@5.3.0':
     resolution: {integrity: sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q==}
@@ -4443,6 +4450,11 @@ snapshots:
     optional: true
 
   '@pkgr/core@0.2.9': {}
+
+  '@r4ai/remark-callout@0.6.2':
+    dependencies:
+      defu: 6.1.4
+      unist-util-visit: 5.0.0
 
   '@rollup/pluginutils@5.3.0(rollup@4.50.1)':
     dependencies:
