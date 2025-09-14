@@ -99,8 +99,8 @@
   object-fit: cover;
 }
 
-/* Mobile responsive design */
-@media (max-width: 640px) {
+/* Container responsive design */
+@container (max-width: 500px) {
   .content .remark-link-card-plus__card {
     flex-direction: column;
   }

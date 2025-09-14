@@ -19,7 +19,7 @@
 }
 
 /* Container queries for responsive design */
-@container (max-width: 768px) {
+@container (max-width: 600px) {
   .content h2 {
     font-size: 1.375rem;
   }

@@ -41,7 +41,7 @@
 }
 
 /* Container queries for responsive design */
-@container (max-width: 768px) {
+@container (max-width: 600px) {
   .title h1 {
     font-size: 2rem;
   }
