@@ -8,23 +8,23 @@
 
 .title h1 {
   margin: 1rem 0 0 0;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--text-h1);
+  font-weight: var(--font-weight-bold);
   color: var(--color-text);
-  line-height: 1.2;
+  line-height: var(--line-height-tight);
 }
 
 .date {
   margin-bottom: 1rem;
   color: var(--color-muted);
   font-family: var(--font-code);
-  font-size: 0.9rem;
+  font-size: var(--font-size-code);
 }
 
 .last-updated-on {
   font-style: italic;
   margin-top: 0.5rem;
-  font-size: 0.85rem;
+  font-size: var(--font-size-small-text);
 }
 
 .title hr {
@@ -43,6 +43,6 @@
 /* Container queries for responsive design */
 @container (max-width: 600px) {
   .title h1 {
-    font-size: 2rem;
+    font-size: var(--text-2xl);
   }
 }

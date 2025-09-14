@@ -55,16 +55,24 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
 
   .prose {
     width: 100%;
-    max-width: 720px;
+    max-width: var(--content-width);
     margin: 0 auto;
     color: var(--color-text);
-    line-height: 1.7;
+    line-height: var(--line-height-base);
+  }
+
+  .content {
+    font-size: var(--text-base);
   }
 
   /* Container queries for responsive design */
-  @container (max-width: 768px) {
+  @container (max-width: 600px) {
     .blog-post {
       padding: 1rem;
+    }
+
+    .content {
+      font-size: var(--text-h4-mobile);
     }
   }
 </style>

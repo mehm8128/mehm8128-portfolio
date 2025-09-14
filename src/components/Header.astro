@@ -61,7 +61,7 @@ const isBlogPage = currentPath.startsWith("/blog");
   /* Navigation Links */
   .nav-link {
     font-family: var(--font-heading);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     color: var(--color-text);
     text-decoration: none;
     padding: 0.5rem 0;
@@ -85,7 +85,7 @@ const isBlogPage = currentPath.startsWith("/blog");
 
   .nav-link[aria-current="page"] {
     color: var(--color-accent);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
   }
 
   /* Navigation Link Underlines */

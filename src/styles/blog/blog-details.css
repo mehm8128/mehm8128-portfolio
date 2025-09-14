@@ -9,7 +9,7 @@
 }
 
 .content summary {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   cursor: pointer;
   color: var(--color-accent);
   user-select: none;

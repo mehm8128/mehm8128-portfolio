@@ -4,11 +4,24 @@
 :root {
   --color-bg: #ffffff;
   --color-surface: #f9fafb;
+  --color-bg-secondary: #f8fafc;
   --color-text: #111827;
   --color-muted: #4b5563;
   --color-accent: #2563eb;
   --color-accent-hover: #1e40af;
   --color-border: #e5e7eb;
+  
+  /* Callout Colors */
+  --color-info: #3b82f6;
+  --color-info-bg: rgba(59, 130, 246, 0.08);
+  --color-warning: #f59e0b;
+  --color-warning-bg: rgba(245, 158, 11, 0.08);
+  --color-error: #ef4444;
+  --color-error-bg: rgba(239, 68, 68, 0.08);
+  
+  /* Shadow Colors */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-color-dark: rgba(0, 0, 0, 0.3);
 
   /* Typography */
   --font-heading: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -26,15 +39,51 @@
   --text-h1: 2rem;
   --text-h2: 1.5rem;
   --text-h3: 1.25rem;
+  --text-lg: 1.125rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
   --text-small: 0.875rem;
+  
+  /* Large Typography Scale */
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.5rem;
+  --text-4xl: 3rem;
+  --text-6xl: 6rem;
+  
+  /* Responsive Typography Scale */
+  --text-h2-mobile: 1.375rem;
+  --text-h3-mobile: 1.125rem;
+  --text-h4-mobile: 1rem;
+  --text-h5-mobile: 0.875rem;
+  --text-h6-mobile: 0.75rem;
+  --text-3xl-mobile: 2.5rem;
+  --text-4xl-mobile: 4rem;
 
   /* Line Heights */
   --line-height-base: 1.75;
   --line-height-tight: 1.25;
+  --line-height-heading: 1.4;
+  --line-height-relaxed: 1.5;
+  --line-height-loose: 1.6;
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Common Font Sizes */
+  --font-size-code: 0.9rem;
+  --font-size-small-text: 0.85rem;
+  --font-size-smaller: 0.8rem;
 
   /* Border Radius */
-  --radius-sm: 0.375rem;
-  --radius-md: 0.75rem;
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-card: 0.5rem;
 
   /* Animation */
   --transition-fast: 0.2s ease;
@@ -73,7 +122,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   margin: 0 0 var(--paragraph-spacing);
 }

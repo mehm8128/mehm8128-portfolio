@@ -9,7 +9,7 @@
   text-decoration: none;
   color: inherit;
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-card);
   overflow: hidden;
   background: var(--color-bg);
   transition: all 0.2s ease;
@@ -18,7 +18,7 @@
 
 .content .remark-link-card-plus__card:hover {
   border-color: var(--color-accent);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px var(--shadow-color);
   transform: translateY(-1px);
 }
 
@@ -36,10 +36,10 @@
 }
 
 .content .remark-link-card-plus__title {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
   color: var(--color-text);
-  line-height: 1.4;
+  line-height: var(--line-height-heading);
   margin: 0 0 0.5rem 0;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -49,9 +49,9 @@
 }
 
 .content .remark-link-card-plus__description {
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   color: var(--color-muted);
-  line-height: 1.5;
+  line-height: var(--line-height-relaxed);
   margin: 0;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -75,7 +75,7 @@
 }
 
 .content .remark-link-card-plus__url {
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   color: var(--color-muted);
   font-family: var(--font-mono);
   overflow: hidden;
@@ -117,11 +117,11 @@
   }
 
   .content .remark-link-card-plus__title {
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
   }
 
   .content .remark-link-card-plus__description {
-    font-size: 0.8rem;
+    font-size: var(--font-size-smaller);
   }
 }
 
@@ -132,6 +132,6 @@
   }
 
   .content .remark-link-card-plus__card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px var(--shadow-color-dark);
   }
 }

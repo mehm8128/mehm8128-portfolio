@@ -36,8 +36,8 @@ import { SITE_IMG, SITE_TITLE } from "../consts/consts";
   }
 
   .error-title {
-    font-size: 6rem;
-    font-weight: 700;
+    font-size: var(--text-6xl);
+    font-weight: var(--font-weight-bold);
     color: var(--color-accent);
     line-height: 1.1;
     margin: 0 0 2rem 0;
@@ -52,7 +52,7 @@ import { SITE_IMG, SITE_TITLE } from "../consts/consts";
   }
 
   .error-description {
-    font-size: 1.125rem;
+    font-size: var(--text-base);
     color: var(--color-muted);
     line-height: 1.6;
     margin: 0 0 2.5rem 0;
@@ -61,11 +61,11 @@ import { SITE_IMG, SITE_TITLE } from "../consts/consts";
   /* Responsive Design */
   @media (max-width: 768px) {
     .error-title {
-      font-size: 4rem;
+      font-size: var(--text-4xl-mobile);
     }
 
     .error-description {
-      font-size: 1rem;
+      font-size: var(--text-h4-mobile);
     }
 
     .error-actions {

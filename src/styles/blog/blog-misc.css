@@ -14,11 +14,11 @@
 }
 
 .content code {
-  background: #e5e7eb;
+  background: var(--color-border);
   padding: 0.05rem 0.3rem;
   border-radius: 0.25rem;
   font-family: var(--font-code);
-  font-size: 0.9em;
+  font-size: var(--font-size-code);
 }
 
 .content pre code {
