@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "markuplint:recommended"
-  ]
+  "extends": ["markuplint:recommended"]
 }
