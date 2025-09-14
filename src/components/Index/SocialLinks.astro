@@ -1,5 +1,11 @@
 ---
-// SNSリンクの共通コンポーネント
+import { Image } from "astro:assets";
+import githubLogo from "../../assets/logo/github-logo.svg";
+import xLogo from "../../assets/logo/x-logo.svg";
+import bskyLogo from "../../assets/logo/bsky-logo.svg";
+import mastodonLogo from "../../assets/logo/mastodon-logo.svg";
+import sizumeLogo from "../../assets/logo/sizume-logo.svg";
+import zennLogo from "../../assets/logo/zenn-logo.svg";
 ---
 
 <div class="social-links">
@@ -9,7 +15,7 @@
     target="_blank"
     rel="noreferrer"
   >
-    <img src="/logo/github-logo.svg" alt="GitHub" />
+    <Image src={githubLogo} alt="GitHub" width={28} height={28} />
   </a>
   <a
     href="https://x.com/mehm8128"
@@ -17,7 +23,7 @@
     target="_blank"
     rel="noreferrer"
   >
-    <img src="/logo/x-logo.svg" alt="X (旧Twitter)" />
+    <Image src={xLogo} alt="X (旧Twitter)" width={28} height={28} />
   </a>
   <a
     href="https://bsky.app/profile/hm8128.me"
@@ -25,7 +31,7 @@
     target="_blank"
     rel="noreferrer"
   >
-    <img src="/logo/bsky-logo.svg" alt="Bluesky" />
+    <Image src={bskyLogo} alt="Bluesky" width={28} height={28} />
   </a>
   <a
     href="https://mastodon.social/@mehm8128"
@@ -33,7 +39,7 @@
     target="_blank"
     rel="noreferrer"
   >
-    <img src="/logo/mastodon-logo.svg" alt="Mastodon" />
+    <Image src={mastodonLogo} alt="Mastodon" width={28} height={28} />
   </a>
   <a
     href="https://sizu.me/mehm8128"
@@ -41,7 +47,7 @@
     target="_blank"
     rel="noreferrer"
   >
-    <img src="/logo/sizume-logo.svg" alt="sizu.me" />
+    <Image src={sizumeLogo} alt="sizu.me" width={28} height={28} />
   </a>
   <a
     href="https://zenn.dev/mehm8128"
@@ -49,7 +55,7 @@
     target="_blank"
     rel="noreferrer"
   >
-    <img src="/logo/zenn-logo.svg" alt="Zenn" />
+    <Image src={zennLogo} alt="Zenn" width={28} height={28} />
   </a>
 </div>
 
@@ -73,9 +79,10 @@
   }
 
   .social-link img {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     transition: var(--transition-fast);
+    display: block;
   }
 
   .social-link:hover img {
@@ -86,16 +93,6 @@
   @container (max-width: 640px) {
     .social-links {
       gap: 1rem;
-    }
-
-    .social-link img {
-      width: 28px;
-      height: 28px;
-    }
-
-    .social-link svg {
-      width: 28px;
-      height: 28px;
     }
   }
 </style>
