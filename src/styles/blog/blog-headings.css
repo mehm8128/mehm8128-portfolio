@@ -1,0 +1,30 @@
+/* Blog headings styles - h2, h3 and icon links */
+
+.content h2 {
+  color: var(--color-accent);
+  margin: 2rem 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+.content h3 {
+  color: var(--color-text);
+  margin: 1.5rem 0 0.75rem 0;
+  font-size: 1.4rem;
+}
+
+/* Icon link styling - hidden by default, shown on hover */
+.content h2 a:not(:hover, :focus) .icon-link,
+.content h3 a:not(:hover, :focus) .icon-link {
+  display: none;
+}
+
+/* Container queries for responsive design */
+@container (max-width: 768px) {
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content h3 {
+    font-size: 1.25rem;
+  }
+}

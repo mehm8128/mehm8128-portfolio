@@ -1,0 +1,39 @@
+/* Blog details/summary styles */
+
+.content details {
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background: var(--color-surface);
+}
+
+.content summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-accent);
+  user-select: none;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.content summary::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s ease;
+}
+
+.content details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.content summary:hover {
+  color: var(--color-accent-hover);
+}
+
+.content details[open] summary {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}

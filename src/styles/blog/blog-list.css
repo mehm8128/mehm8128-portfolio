@@ -1,0 +1,28 @@
+/* Blog list styles */
+
+.content ul,
+.content ol {
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.content li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.content ul li {
+  list-style-type: disc;
+}
+
+.content ol li {
+  list-style-type: decimal;
+}
+
+.content ul ul li {
+  list-style-type: circle;
+}
+
+.content ol ol li {
+  list-style-type: lower-alpha;
+}
