@@ -42,18 +42,18 @@ const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   }
 
   h2.section-heading {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: var(--text-h1);
+    font-weight: var(--font-weight-bold);
   }
 
   h3.section-heading {
-    font-size: 1.75rem;
-    font-weight: 600;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-semibold);
   }
 
   h4.section-heading {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: var(--text-h3);
+    font-weight: var(--font-weight-semibold);
   }
 
   .section-heading::after {
@@ -94,15 +94,15 @@ const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
     }
 
     h2.section-heading {
-      font-size: 1.75rem;
+      font-size: var(--text-2xl);
     }
 
     h3.section-heading {
-      font-size: 1.5rem;
+      font-size: var(--text-h2);
     }
 
     h4.section-heading {
-      font-size: 1.125rem;
+      font-size: var(--text-base);
     }
 
     .section-heading::after {

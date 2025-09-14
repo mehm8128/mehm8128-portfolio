@@ -11,12 +11,16 @@
     "lint:markup": "markuplint \"**/*.astro\""
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "^6.3.6",
     "@astrojs/mdx": "^4.3.5",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.1",
+    "@r4ai/remark-callout": "^0.6.2",
     "astro": "^5.13.7",
-    "clsx": "^2.1.1",
-    "kiso.css": "^1.2.2"
+    "kiso.css": "^1.2.2",
+    "rehype-autolink-headings": "^7.1.0",
+    "remark-link-card-plus": "^0.7.0",
+    "sharp": "^0.34.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

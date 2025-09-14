@@ -1,0 +1,65 @@
+/* Blog callout styles (remark-callout plugin) */
+
+.content div[data-callout] {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid;
+  border-radius: var(--radius-card);
+  background-color: var(--color-bg-secondary);
+  position: relative;
+}
+
+.content div[data-callout-title] {
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-h4-mobile);
+}
+
+.content div[data-callout-body] {
+  margin: 0;
+}
+
+.content div[data-callout-body] > p:first-child {
+  margin-top: 0;
+}
+
+.content div[data-callout-body] > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Info callout */
+.content div[data-callout-type="info"] {
+  border-left-color: var(--color-info);
+  background-color: var(--color-info-bg);
+}
+
+.content div[data-callout-type="info"] div[data-callout-title]::before {
+  content: "ℹ️";
+  margin-right: 0.25rem;
+}
+
+/* Warning callout */
+.content div[data-callout-type="warning"] {
+  border-left-color: var(--color-warning);
+  background-color: var(--color-warning-bg);
+}
+
+.content div[data-callout-type="warning"] div[data-callout-title]::before {
+  content: "⚠️";
+  margin-right: 0.25rem;
+}
+
+/* Error callout */
+.content div[data-callout-type="error"] {
+  border-left-color: var(--color-error);
+  background-color: var(--color-error-bg);
+}
+
+.content div[data-callout-type="error"] div[data-callout-title]::before {
+  content: "🚨";
+  margin-right: 0.25rem;
+}

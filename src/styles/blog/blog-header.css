@@ -1,0 +1,48 @@
+/* Blog header styles - title, date, and metadata */
+
+.title {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.title h1 {
+  margin: 1rem 0 0 0;
+  font-size: var(--text-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  line-height: var(--line-height-tight);
+}
+
+.date {
+  margin-bottom: 1rem;
+  color: var(--color-muted);
+  font-family: var(--font-code);
+  font-size: var(--font-size-code);
+}
+
+.last-updated-on {
+  font-style: italic;
+  margin-top: 0.5rem;
+  font-size: var(--font-size-small-text);
+}
+
+.title hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-accent),
+    transparent
+  );
+  margin: 1rem auto 0;
+  width: 80%;
+}
+
+/* Container queries for responsive design */
+@container (max-width: 600px) {
+  .title h1 {
+    font-size: var(--text-2xl);
+  }
+}

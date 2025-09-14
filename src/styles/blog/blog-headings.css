@@ -1,0 +1,64 @@
+/* Blog headings styles - h2, h3 and icon links */
+
+.content h2 {
+  color: var(--color-accent);
+  margin: 2rem 0 1rem 0;
+  font-size: var(--text-h2);
+}
+
+.content h3 {
+  color: var(--color-text);
+  margin: 1.5rem 0 0.75rem 0;
+  font-size: var(--text-h3);
+}
+
+/* h4-h6 headings */
+.content h4 {
+  color: var(--color-text);
+  margin: 1.25rem 0 0.5rem 0;
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.content h5 {
+  color: var(--color-text);
+  margin: 1rem 0 0.5rem 0;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.content h6 {
+  color: var(--color-text);
+  margin: 1rem 0 0.5rem 0;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Icon link styling - hidden by default, shown on hover */
+.content h2 a:not(:hover, :focus) .icon-link,
+.content h3 a:not(:hover, :focus) .icon-link {
+  display: none;
+}
+
+/* Container queries for responsive design */
+@container (max-width: 600px) {
+  .content h2 {
+    font-size: var(--text-h2-mobile);
+  }
+
+  .content h3 {
+    font-size: var(--text-h3-mobile);
+  }
+
+  .content h4 {
+    font-size: var(--text-h4-mobile);
+  }
+
+  .content h5 {
+    font-size: var(--text-h5-mobile);
+  }
+
+  .content h6 {
+    font-size: var(--text-h6-mobile);
+  }
+}

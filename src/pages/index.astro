@@ -1,10 +1,12 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Background from "../components/Index/Background.astro";
 import Certification from "../components/Index/Certification.astro";
 import Contribution from "../components/Index/Contribution.astro";
 import SocialLinks from "../components/Index/SocialLinks.astro";
 import Blog from "../components/Index/Blog.astro";
+import profileImage from "../assets/mehm8128_circle.png";
 import {
   ICON_DESCRIPTION,
   SITE_DESCRIPTION,
@@ -17,10 +19,12 @@ import {
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-header">
-      <img
-        src="/mehm8128_circle.png"
+      <Image
+        src={profileImage}
         alt={ICON_DESCRIPTION}
         class="hero-avatar"
+        width={80}
+        height={80}
       />
       <h1 class="hero-title">mehm8128</h1>
     </div>
@@ -81,7 +85,7 @@ import {
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: var(--text-4xl);
     margin: 0;
     background: linear-gradient(
       135deg,
@@ -94,7 +98,7 @@ import {
   }
 
   .hero-description {
-    font-size: 1.125rem;
+    font-size: var(--text-base);
     line-height: 1.6;
   }
 
@@ -138,11 +142,11 @@ import {
     }
 
     .hero-title {
-      font-size: 2.5rem;
+      font-size: var(--text-3xl-mobile);
     }
 
     .hero-description {
-      font-size: 1rem;
+      font-size: var(--text-h4-mobile);
     }
   }
 </style>

@@ -4,6 +4,16 @@ import { formatDate } from "../functions/date";
 import { SITE_IMG } from "../consts/consts";
 import Layout from "./Layout.astro";
 
+// Import blog styles
+import "../styles/blog/blog-header.css";
+import "../styles/blog/blog-headings.css";
+import "../styles/blog/blog-table.css";
+import "../styles/blog/blog-details.css";
+import "../styles/blog/blog-list.css";
+import "../styles/blog/blog-callout.css";
+import "../styles/blog/blog-linkcard.css";
+import "../styles/blog/blog-misc.css";
+
 type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, publishedDate, updatedDate } = Astro.props;
@@ -45,126 +55,24 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
 
   .prose {
     width: 100%;
-    max-width: 720px;
+    max-width: var(--content-width);
     margin: 0 auto;
     color: var(--color-text);
-    line-height: 1.7;
-  }
-
-  .title {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .title h1 {
-    margin: 1rem 0 0 0;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-text);
-    line-height: 1.2;
-  }
-
-  .date {
-    margin-bottom: 1rem;
-    color: var(--color-muted);
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-  }
-
-  .last-updated-on {
-    font-style: italic;
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-  }
-
-  .title hr {
-    border: none;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      var(--color-accent),
-      transparent
-    );
-    margin: 1rem auto 0;
-    width: 50%;
+    line-height: var(--line-height-base);
   }
 
   .content {
-    font-size: 1.1rem;
-  }
-
-  /* Blog content styling */
-  .content :global(h2) {
-    color: var(--color-accent);
-    margin: 2rem 0 1rem 0;
-    font-size: 1.8rem;
-  }
-
-  .content :global(h3) {
-    color: var(--color-text);
-    margin: 1.5rem 0 0.75rem 0;
-    font-size: 1.4rem;
-  }
-
-  .content :global(p) {
-    margin: 1rem 0;
-  }
-
-  .content :global(a) {
-    color: var(--color-accent);
-  }
-
-  .content :global(a:hover) {
-    color: var(--color-accent-hover);
-  }
-
-  .content :global(code) {
-    background: var(--color-surface);
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-    font-family: var(--font-mono);
-    font-size: 0.9em;
-  }
-
-  .content :global(pre) {
-    background: var(--color-surface);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    overflow-x: auto;
-    margin: 1.5rem 0;
-  }
-
-  .content :global(blockquote) {
-    border-left: 4px solid var(--color-accent);
-    margin: 1.5rem 0;
-    padding: 0.5rem 0 0.5rem 1rem;
-    background: var(--color-surface);
-    border-radius: 0 0.25rem 0.25rem 0;
+    font-size: var(--text-base);
   }
 
   /* Container queries for responsive design */
-  @container (max-width: 768px) {
+  @container (max-width: 600px) {
     .blog-post {
       padding: 1rem;
     }
 
-    .title h1 {
-      font-size: 2rem;
-    }
-
     .content {
-      font-size: 1rem;
-    }
-
-    .content :global(h2) {
-      font-size: 1.5rem;
-    }
-
-    .content :global(h3) {
-      font-size: 1.25rem;
+      font-size: var(--text-h4-mobile);
     }
   }
 </style>
