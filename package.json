@@ -22,6 +22,7 @@
     "@astrojs/check": "^0.9.4",
     "@markuplint/astro-parser": "^4.6.21",
     "markuplint": "^4.13.1",
+    "prettier": "^3.6.2",
     "textlint": "^15.2.2",
     "textlint-rule-preset-ja-technical-writing": "^12.0.2",
     "typescript": "^5.9.2"
