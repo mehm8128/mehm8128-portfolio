@@ -3,13 +3,13 @@
 .content h2 {
   color: var(--color-accent);
   margin: 2rem 0 1rem 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .content h3 {
   color: var(--color-text);
   margin: 1.5rem 0 0.75rem 0;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
 }
 
 /* Icon link styling - hidden by default, shown on hover */
@@ -21,10 +21,10 @@
 /* Container queries for responsive design */
 @container (max-width: 768px) {
   .content h2 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 
   .content h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
