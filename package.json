@@ -19,7 +19,8 @@
     "astro": "^5.13.7",
     "kiso.css": "^1.2.2",
     "rehype-autolink-headings": "^7.1.0",
-    "remark-link-card-plus": "^0.7.0"
+    "remark-link-card-plus": "^0.7.0",
+    "sharp": "^0.34.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
