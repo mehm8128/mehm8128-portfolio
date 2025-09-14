@@ -111,53 +111,6 @@ a:hover {
   text-decoration-color: var(--color-accent-hover);
 }
 
-/* Utility Classes */
-.section {
-  margin-bottom: var(--section-spacing);
-}
-
-.card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: 1.5rem;
-  transition: var(--transition-fast);
-}
-
-.card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.button {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
-  background-color: var(--color-accent);
-  color: white;
-  text-decoration: none;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-heading);
-  font-weight: 600;
-  transition: var(--transition-fast);
-  border: none;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: var(--color-accent-hover);
-  color: white;
-  text-decoration: none;
-}
-
-.tag {
-  display: inline-block;
-  background: var(--color-surface);
-  padding: 0.25rem 0.625rem;
-  border-radius: var(--radius-md);
-  font-size: var(--text-small);
-  color: var(--color-muted);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   :root {
