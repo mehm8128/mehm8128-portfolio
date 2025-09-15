@@ -9,73 +9,48 @@ import { SITE_IMG, SITE_TITLE } from "../consts/consts";
   image={SITE_IMG}
 >
   <div class="error-page">
-    <div class="error-content">
-      <h1 class="error-title">404 Page Not Found</h1>
-      <p class="error-description">
-        お探しのページが見つかりませんでした。
-        <br />
-        URLが間違っているか、ページが移動・削除された可能性があります。
-      </p>
-    </div>
+    <h1 class="error-title">404 Page Not Found</h1>
+    <p class="error-description">
+      お探しのページが見つかりませんでした。
+      <br />
+      URLが間違っているか、ページが移動・削除された可能性があります。
+    </p>
   </div>
 </Layout>
 
 <style>
   .error-page {
-    min-height: 60vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .error-content {
+    place-content: center;
+    flex-direction: column;
+    gap: 2rem;
     max-width: 600px;
     margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
   }
 
   .error-title {
     font-size: var(--text-6xl);
     font-weight: var(--font-weight-bold);
     color: var(--color-accent);
-    line-height: 1.1;
-    margin: 0 0 2rem 0;
-    background: linear-gradient(
-      135deg,
-      var(--color-accent),
-      var(--color-accent-hover)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    line-height: 1;
   }
 
   .error-description {
     font-size: var(--text-base);
     color: var(--color-muted);
-    line-height: 1.6;
-    margin: 0 0 2.5rem 0;
+    line-height: var(--line-height-loose);
+    margin: 0;
   }
 
-  /* Responsive Design */
-  @media (max-width: 768px) {
+  @container (max-width: 768px) {
     .error-title {
       font-size: var(--text-4xl-mobile);
     }
 
     .error-description {
-      font-size: var(--text-h4-mobile);
-    }
-
-    .error-actions {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      width: 200px;
+      font-size: var(--text-normal);
     }
   }
 </style>
