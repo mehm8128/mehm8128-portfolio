@@ -17,7 +17,7 @@ const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
       {headingText}
     </HeadingTag>
   </div>
-  <div class="section-content">
+  <div>
     <slot />
   </div>
 </section>
@@ -70,11 +70,6 @@ const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
       var(--color-accent-hover)
     );
     border-radius: 2px;
-  }
-
-  .section-content {
-    max-width: var(--content-width);
-    margin: 0 auto;
   }
 
   @keyframes fadeInUp {

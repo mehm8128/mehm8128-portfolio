@@ -87,7 +87,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    max-width: var(--content-width);
+    max-width: 52.5rem;
     margin: 0 auto;
   }
 
@@ -97,8 +97,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     view-transition-name: main-content;
   }
   .container {
-    max-width: var(--content-width);
-    margin: 0 auto;
     padding: 2rem 1rem;
     container-type: inline-size;
   }
@@ -109,6 +107,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     }
     .container {
       padding: 1rem 0.5rem;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 </style>
