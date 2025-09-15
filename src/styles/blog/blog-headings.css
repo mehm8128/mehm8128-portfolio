@@ -16,7 +16,7 @@
 .content h4 {
   color: var(--color-text);
   margin: 1.25rem 0 0.5rem 0;
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   font-weight: var(--font-weight-semibold);
 }
 

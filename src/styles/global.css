@@ -37,7 +37,6 @@
   --text-h1: 2rem;
   --text-h2: 1.5rem;
   --text-h3: 1.25rem;
-  --text-lg: 1.125rem;
   --text-sm: 0.875rem;
   --text-xs: 0.75rem;
 
@@ -71,7 +70,6 @@
 
   /* Common Font Sizes */
   --font-size-code: 0.9rem;
-  --font-size-small-text: 0.85rem;
   --font-size-smaller: 0.8rem;
 
   /* Border Radius */
