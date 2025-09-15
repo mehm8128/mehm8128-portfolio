@@ -30,3 +30,14 @@ jobs:
             pnpm = "latest"
       - run: pnpm install
       - run: pnpm run lint:markup
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: jdx/mise-action@v3
+        with:
+          mise_toml: |
+            [tools]
+            pnpm = "latest"
+      - run: pnpm install
+      - run: pnpm run test
