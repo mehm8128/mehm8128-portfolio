@@ -1,5 +1,5 @@
 ---
-import { randomId } from "../functions/randomId";
+import { getRandomId } from "../functions/randomId";
 
 export interface Props {
   headingText: string;
@@ -7,7 +7,7 @@ export interface Props {
 }
 
 const { headingText, level = 2 } = Astro.props;
-const id = `section-${randomId()}`;
+const id = getRandomId();
 const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 ---
 

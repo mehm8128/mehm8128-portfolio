@@ -12,11 +12,13 @@ import {
   SITE_IMG,
   SITE_TITLE,
 } from "../consts/consts";
+import { getRandomId } from "../functions/randomId";
+
+const id = getRandomId();
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} image={SITE_IMG}>
-  <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" aria-labelledby={id}>
     <div class="hero-header">
       <Image
         src={SITE_IMG}
@@ -25,7 +27,7 @@ import {
         width={80}
         height={80}
       />
-      <h1 class="hero-title">mehm8128</h1>
+      <h1 class="hero-title" id={id}>mehm8128</h1>
     </div>
     <div class="hero-content">
       <div class="hero-description">
@@ -36,7 +38,6 @@ import {
     </div>
   </section>
 
-  <!-- Experience Sections -->
   <div class="sections">
     <Certification />
     <Blog />
@@ -46,10 +47,12 @@ import {
 </Layout>
 
 <style>
-  /* Hero Section Layout */
   .hero {
-    text-align: center;
-    padding: 1rem 0 0.25rem 0;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
     margin-bottom: 2rem;
     container-type: inline-size;
   }
@@ -59,7 +62,6 @@ import {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 1rem;
   }
 
   .hero-content {
@@ -67,7 +69,6 @@ import {
     margin: 0 auto;
   }
 
-  /* Hero Section Elements */
   .hero-avatar {
     width: 80px;
     height: 80px;
@@ -76,7 +77,6 @@ import {
     animation: spin 2s ease-out;
   }
 
-  /* Respect user's motion preferences */
   @media (prefers-reduced-motion: reduce) {
     .hero-avatar {
       animation: none;
@@ -85,36 +85,22 @@ import {
 
   .hero-title {
     font-size: var(--text-4xl);
-    margin: 0;
-    background: linear-gradient(
-      135deg,
-      var(--color-accent),
-      var(--color-accent-hover)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-accent);
   }
 
   .hero-description {
-    font-size: var(--text-base);
-    line-height: 1.6;
-  }
-
-  .hero-description p {
-    margin: 0.5rem 0;
+    text-align: center;
     color: var(--color-muted);
+    font-size: var(--text-base);
+    line-height: var(--line-height-tight);
   }
 
-  /* Sections Layout */
   .sections {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--section-spacing));
-    container-type: inline-size;
+    gap: 3rem;
   }
 
-  /* Animations */
   @keyframes spin {
     from {
       transform: rotate(0deg);
@@ -124,12 +110,7 @@ import {
     }
   }
 
-  /* Container Queries for Responsive Design */
   @container (max-width: 768px) {
-    .hero {
-      padding: 1rem 0 1.5rem 0;
-    }
-
     .hero-header {
       flex-direction: column;
       gap: 0.75rem;
@@ -145,7 +126,11 @@ import {
     }
 
     .hero-description {
-      font-size: var(--text-h4-mobile);
+      font-size: var(--text-normal);
+    }
+
+    .sections {
+      gap: 2rem;
     }
   }
 </style>

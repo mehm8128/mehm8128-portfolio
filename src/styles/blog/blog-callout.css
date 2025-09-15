@@ -6,7 +6,6 @@
   border: 1px solid var(--color-border);
   border-left: 4px solid;
   border-radius: var(--radius-card);
-  background-color: var(--color-bg-secondary);
   position: relative;
 }
 

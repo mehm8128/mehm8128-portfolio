@@ -124,14 +124,3 @@
     font-size: var(--font-size-smaller);
   }
 }
-
-/* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-  .content .remark-link-card-plus__card {
-    background: var(--color-bg-secondary);
-  }
-
-  .content .remark-link-card-plus__card:hover {
-    box-shadow: 0 4px 12px var(--shadow-color-dark);
-  }
-}

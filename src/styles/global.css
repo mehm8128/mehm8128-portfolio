@@ -1,10 +1,9 @@
-/* CSS Variables - Theme Colors */
 @import "kiso.css";
 
 :root {
   --color-bg: #ffffff;
   --color-surface: #f9fafb;
-  --color-bg-secondary: #f8fafc;
+  --color-bg-secondary: #f3f4f6;
   --color-text: #111827;
   --color-muted: #4b5563;
   --color-accent: #2563eb;
@@ -30,11 +29,10 @@
 
   /* Layout */
   --content-width: 52.5rem;
-  --section-spacing: 3rem;
-  --main-content-spacing: 1.5rem;
   --paragraph-spacing: 1em;
 
   /* Typography Scale */
+  --text-normal: 1rem;
   --text-base: 1.125rem;
   --text-h1: 2rem;
   --text-h2: 1.5rem;
@@ -42,7 +40,6 @@
   --text-lg: 1.125rem;
   --text-sm: 0.875rem;
   --text-xs: 0.75rem;
-  --text-small: 0.875rem;
 
   /* Large Typography Scale */
   --text-2xl: 1.75rem;
@@ -124,7 +121,7 @@ h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  margin: 0 0 var(--paragraph-spacing);
+  margin: 0;
 }
 
 h1 {
@@ -160,14 +157,6 @@ a:hover {
   text-decoration-color: var(--color-accent-hover);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  :root {
-    --section-spacing: 2rem;
-    --main-content-spacing: 1rem;
-  }
-}
-
 /* Page Fade-in Animation */
 @keyframes fadeIn {
   from {
@@ -180,12 +169,10 @@ a:hover {
   }
 }
 
-/* View Transitions */
 @view-transition {
   navigation: auto;
 }
 
-/* Custom view transition animations - より控えめで滑らか */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: 0.25s;
@@ -200,7 +187,6 @@ a:hover {
   animation-name: fade-in;
 }
 
-/* より控えめなフェードアニメーション */
 @keyframes fade-out {
   from {
     opacity: 1;
@@ -223,7 +209,6 @@ a:hover {
   }
 }
 
-/* コンポーネント別のView Transitions */
 ::view-transition-old(nav-link),
 ::view-transition-new(nav-link) {
   animation-duration: 0.2s;

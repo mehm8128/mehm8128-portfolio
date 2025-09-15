@@ -64,17 +64,16 @@ import zennLogo from "../../assets/logo/zenn-logo.svg";
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    margin: 2rem 0;
-    container-type: inline-size;
+    padding: 1.5rem 0;
   }
 
   .social-link {
-    display: block;
     text-decoration: none;
     transition: var(--transition-fast);
   }
 
-  .social-link:hover {
+  .social-link:hover,
+  .social-link:focus {
     transform: translateY(-2px);
   }
 
@@ -82,14 +81,13 @@ import zennLogo from "../../assets/logo/zenn-logo.svg";
     width: 28px;
     height: 28px;
     transition: var(--transition-fast);
-    display: block;
   }
 
-  .social-link:hover img {
+  .social-link:hover img,
+  .social-link:focus img {
     opacity: 0.7;
   }
 
-  /* Container query for responsive design */
   @container (max-width: 640px) {
     .social-links {
       gap: 1rem;
