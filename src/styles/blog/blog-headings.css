@@ -41,7 +41,7 @@
 }
 
 /* Container queries for responsive design */
-@container (max-width: 600px) {
+@container (width < 600px) {
   .content h2 {
     font-size: var(--text-h2-mobile);
   }

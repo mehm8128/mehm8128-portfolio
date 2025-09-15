@@ -1,10 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { formatDate } from "../functions/date";
-import { SITE_IMG } from "../consts/consts";
+import { SITE_IMG, SITE_TITLE } from "../consts/consts";
 import Layout from "./Layout.astro";
 
-// Import blog styles
 import "../styles/blog/blog-header.css";
 import "../styles/blog/blog-headings.css";
 import "../styles/blog/blog-table.css";
@@ -19,8 +18,12 @@ type Props = CollectionEntry<"blog">["data"];
 const { title, description, publishedDate, updatedDate } = Astro.props;
 ---
 
-<Layout title={title} description={description} image={SITE_IMG}>
-  <article class="blog-post">
+<Layout
+  title={`${title} - ${SITE_TITLE}`}
+  description={description}
+  image={SITE_IMG}
+>
+  <article>
     <div class="prose">
       <div class="title">
         <div class="date">
@@ -46,13 +49,6 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
 </Layout>
 
 <style>
-  .blog-post {
-    max-width: var(--content-width);
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    container-type: inline-size;
-  }
-
   .prose {
     width: 100%;
     max-width: var(--content-width);
@@ -65,12 +61,7 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
     font-size: var(--text-base);
   }
 
-  /* Container queries for responsive design */
-  @container (max-width: 600px) {
-    .blog-post {
-      padding: 1rem;
-    }
-
+  @container (width < 600px) {
     .content {
       font-size: var(--text-h4-mobile);
     }

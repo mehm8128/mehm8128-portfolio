@@ -24,14 +24,10 @@ import { SITE_IMG, SITE_TITLE } from "../consts/consts";
     place-content: center;
     flex-direction: column;
     gap: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1rem;
     text-align: center;
   }
 
   .error-title {
-    font-size: var(--text-6xl);
     font-weight: var(--font-weight-bold);
     color: var(--color-accent);
     line-height: 1;
@@ -44,9 +40,9 @@ import { SITE_IMG, SITE_TITLE } from "../consts/consts";
     margin: 0;
   }
 
-  @container (max-width: 768px) {
+  @container (width < 600px) {
     .error-title {
-      font-size: var(--text-4xl-mobile);
+      font-size: var(--text-2xl);
     }
 
     .error-description {

@@ -40,52 +40,43 @@ const allPosts = [...internalPosts, ...externalPosts].toSorted(
   description={SITE_DESCRIPTION}
   image={SITE_IMG}
 >
-  <div class="blog-index">
-    <div class="blog-header">
-      <h1>Blog</h1>
-    </div>
-
-    <ul class="posts-list">
-      {
-        allPosts.map((post) => (
-          <li class="post-item">
-            <a
-              href={post.url}
-              class="post-link"
-              target={post.isExternal ? "_blank" : undefined}
-              rel={post.isExternal ? "noreferrer" : undefined}
-            >
-              <div class="post-content">
-                <p class="post-title">{post.title}</p>
-                {post.description && (
-                  <p class="post-description">{post.description}</p>
-                )}
-              </div>
-              <div class="post-meta">
-                <time
-                  class="post-date"
-                  datetime={post.publishedDate.toISOString()}
-                >
-                  {formatDate(post.publishedDate)}
-                </time>
-                {post.isExternal && <span class="post-site">{post.site}</span>}
-              </div>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+  <div class="blog-header">
+    <h1>Blog</h1>
   </div>
+
+  <ul class="posts-list">
+    {
+      allPosts.map((post) => (
+        <li class="post-item">
+          <a
+            href={post.url}
+            class="post-link"
+            target={post.isExternal ? "_blank" : undefined}
+            rel={post.isExternal ? "noreferrer" : undefined}
+          >
+            <div class="post-content">
+              <p class="post-title">{post.title}</p>
+              {post.description && (
+                <p class="post-description">{post.description}</p>
+              )}
+            </div>
+            <div class="post-meta">
+              <time
+                class="post-date"
+                datetime={post.publishedDate.toISOString()}
+              >
+                {formatDate(post.publishedDate)}
+              </time>
+              {post.isExternal && <span class="post-site">{post.site}</span>}
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>
 
 <style>
-  .blog-index {
-    max-width: var(--content-width);
-    margin: 0 auto;
-    padding: 1rem;
-    container-type: inline-size;
-  }
-
   .blog-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -178,7 +169,7 @@ const allPosts = [...internalPosts, ...externalPosts].toSorted(
     border: 1px solid var(--color-border);
   }
 
-  @container (max-width: 768px) {
+  @container (width < 600px) {
     .blog-header {
       margin-bottom: 2rem;
     }

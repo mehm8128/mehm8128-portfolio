@@ -100,7 +100,7 @@
 }
 
 /* Container responsive design */
-@container (max-width: 500px) {
+@container (width < 500px) {
   .content .remark-link-card-plus__card {
     flex-direction: column;
   }

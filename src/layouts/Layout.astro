@@ -73,7 +73,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <div class="site-container">
       <Header />
       <main class="main-content">
-        <slot />
+        <div class="container">
+          <slot />
+        </div>
       </main>
       <Footer />
     </div>
@@ -91,18 +93,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   .main-content {
     flex: 1;
-    padding: 1.5rem 0;
     animation: fadeIn var(--transition-normal);
     view-transition-name: main-content;
+  }
+  .container {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
     container-type: inline-size;
   }
 
-  @media (max-width: 768px) {
+  @media (width < 768px) {
     .site-container {
       padding: 0 1rem;
     }
-    .main-content {
-      padding: 1rem 0;
+    .container {
+      padding: 1rem 0.5rem;
     }
   }
 </style>
