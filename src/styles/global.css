@@ -2,13 +2,14 @@
 
 :root {
   --color-bg: #ffffff;
-  --color-surface: #f9fafb;
+  --color-surface: #f3f4f6;
   --color-bg-secondary: #f3f4f6;
   --color-text: #111827;
   --color-muted: #4b5563;
   --color-accent: #2563eb;
   --color-accent-hover: #1e40af;
   --color-border: #e5e7eb;
+  --color-code: #e5e7eb;
 
   /* Callout Colors */
   --color-info: #3b82f6;

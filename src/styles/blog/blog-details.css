@@ -1,5 +1,3 @@
-/* Blog details/summary styles */
-
 .content details {
   border: 1px solid var(--color-border);
   border-radius: 0.5rem;
@@ -10,7 +8,6 @@
 
 .content summary {
   font-weight: var(--font-weight-semibold);
-  cursor: pointer;
   color: var(--color-accent);
   user-select: none;
   position: relative;
@@ -33,7 +30,5 @@
 }
 
 .content details[open] summary {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--color-border);
 }
