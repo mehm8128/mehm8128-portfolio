@@ -21,8 +21,8 @@ importers:
         specifier: ^3.5.1
         version: 3.5.1
       '@mehm8128/rehype-toc':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.1.1
+        version: 1.1.1
       '@r4ai/remark-callout':
         specifier: ^0.6.2
         version: 0.6.2
@@ -535,8 +535,8 @@ packages:
   '@mdx-js/mdx@3.1.1':
     resolution: {integrity: sha512-f6ZO2ifpwAQIpzGWaBQT2TXxPv6z3RBzQKpVftEWN78Vl/YweF1uwussDx8ECAXVtr3Rs89fKyG9YlzUs9DyGQ==}
 
-  '@mehm8128/rehype-toc@1.0.0':
-    resolution: {integrity: sha512-Mp1LnxIaxtS5VXDZxQ23+6iofBIIpEHncV/G6ZEWTmBVVKUp2Vm5BSjdTFlVjKTtdVwpuw0s0+MuRrgD7sVyRQ==}
+  '@mehm8128/rehype-toc@1.1.1':
+    resolution: {integrity: sha512-5JUGCg00nnrhzDo5L66b0AbK/OEwhSwOjxV2GTDcrfdct2yuV9uIneFouBdFJqJKOEpS70TJyi7z0wgHeMcsxw==}
 
   '@modelcontextprotocol/sdk@1.18.0':
     resolution: {integrity: sha512-JvKyB6YwS3quM+88JPR0axeRgvdDu3Pv6mdZUy+w4qVkCzGgumb9bXG/TmtDRQv+671yaofVfXSQmFLlWU5qPQ==}
@@ -4539,7 +4539,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mehm8128/rehype-toc@1.0.0':
+  '@mehm8128/rehype-toc@1.1.1':
     dependencies:
       unist-util-visit: 5.0.0
 

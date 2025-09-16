@@ -15,7 +15,7 @@
     "@astrojs/mdx": "^4.3.5",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.1",
-    "@mehm8128/rehype-toc": "^1.0.0",
+    "@mehm8128/rehype-toc": "^1.1.1",
     "@r4ai/remark-callout": "^0.6.2",
     "astro": "^5.13.7",
     "kiso.css": "^1.2.2",
