@@ -32,6 +32,9 @@ importers:
       rehype-autolink-headings:
         specifier: ^7.1.0
         version: 7.1.0
+      rehype-toc:
+        specifier: link:../rehype-toc
+        version: link:../rehype-toc
       remark-link-card-plus:
         specifier: ^0.7.0
         version: 0.7.0
