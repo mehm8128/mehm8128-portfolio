@@ -1,24 +1,16 @@
 import type { Root, Element } from "hast";
 import { visit } from "unist-util-visit";
-import { getRandomId } from "../functions/getRandomId";
-
-export type TocNode = Element & { id: string };
 
 export const rehypeCollapsableToc = () => {
   return (tree: Root) => {
-    let tocList: TocNode[] = [];
-    let parentToc: TocNode | undefined = undefined;
-    let currentToc: TocNode | undefined = undefined;
+    let tocList: Element[] = [];
 
     visit(tree, "element", (node) => {
       if (!/^h[2-6]$/.test(node.tagName)) {
         return;
       }
 
-      const result = visitorCallback(node, tocList, parentToc, currentToc);
-      tocList = result.tocList;
-      parentToc = result.parentToc;
-      currentToc = result.currentToc;
+      visitorCallback(node, tocList);
     });
 
     const detailsElement = createCollapsableToc(tocList);
@@ -26,164 +18,110 @@ export const rehypeCollapsableToc = () => {
   };
 };
 
-export const visitorCallback = (
-  node: Element,
-  tocList: TocNode[],
-  parentToc: TocNode | undefined,
-  currentToc: TocNode | undefined
-) => {
+export const visitorCallback = (node: Element, tocList: Element[]) => {
   const headingLevel = getHeadingLevel(node);
   const liElement = createListItemElement(node);
   // h2ならtocListに直接追加
   if (headingLevel === 2) {
-    return {
-      tocList: [...tocList, liElement],
-      parentToc,
-      currentToc: liElement,
-    };
+    tocList.push(liElement);
+    return;
   }
 
-  if (!currentToc) {
-    throw new Error("Current TOC is undefined");
+  // 一番新しいh2から掘っていく
+  const newestH2 = tocList[tocList.length - 1];
+  const sameLevelTocElement = searchSameLevelTocElement(newestH2, headingLevel);
+  if (sameLevelTocElement) {
+    sameLevelTocElement.children.push(liElement);
+    return;
   }
 
-  // ネストを1つ深くし、子要素に追加
-  if (headingLevel > getHeadingLevelFromTextNode(currentToc)) {
-    const ulElement = createUListElement();
-    ulElement.children.push(liElement);
-    currentToc.children.push(ulElement);
-    return {
-      tocList,
-      parentToc: currentToc,
-      currentToc: liElement,
-    };
-  }
-
-  if (!parentToc) {
-    throw new Error("Parent TOC is undefined");
-  }
-
-  // 同じネストレベルの兄弟要素に追加
-  if (headingLevel === getHeadingLevelFromTextNode(currentToc)) {
-    const parentChildren = parentToc.children.find(
-      (child) => child.type === "element" && child.tagName === "ul"
-    ) as TocNode;
-    if (!parentChildren) {
-      throw new Error("Parent TOC children is undefined");
-    }
-    parentChildren.children.push(liElement);
-    return {
-      tocList,
-      parentToc,
-      currentToc: liElement,
-    };
-  }
-
-  // ネストを1つ浅くし、追加
-  parentToc = searchParentTocElement(tocList, parentToc.id);
-  if (!parentToc) {
-    throw new Error("Parent TOC is undefined");
-  }
-  parentToc.children.push(liElement);
-  return {
-    tocList,
-    parentToc,
-    currentToc: liElement,
-  };
+  // 見つからなかったら一番新しいh2の一番深いところに新しくulを作って追加
+  const deepestTocElement = getDeepestTocElement(newestH2);
+  const newUlElement = createUListElement();
+  newUlElement.children.push(liElement);
+  deepestTocElement.children.push(newUlElement);
 };
 
-const searchParentTocElement = (
-  tocList: TocNode[],
-  id: string
-): TocNode | undefined => {
-  for (const toc of tocList) {
-    if (toc.id === id) {
-      return toc;
-    }
-    const ulElement = toc.children.find(
-      (child) => child.type === "element" && child.tagName === "ul"
-    ) as TocNode | undefined;
-    if (!ulElement) {
-      continue;
-    }
-
-    const found = searchParentTocElement(
-      ulElement.children.filter(
-        (child) => child.type === "element"
-      ) as TocNode[],
-      id
-    );
-    if (found) {
-      return ulElement;
-    }
+const searchSameLevelTocElement = (
+  rootElement: Element,
+  level: number
+): Element | undefined => {
+  const rootElementHeadingLevel = getHeadingLevel(rootElement);
+  if (rootElementHeadingLevel === level) {
+    return rootElement;
   }
-  return undefined;
+
+  return searchSameLevelTocElement(rootElement.children[0] as Element, level);
+};
+
+const getDeepestTocElement = (rootElement: Element): Element => {
+  const ulElement = rootElement.children[
+    rootElement.children.length - 1
+  ] as Element;
+  if (!ulElement || ulElement.tagName !== "ul") {
+    return rootElement;
+  }
+
+  return getDeepestTocElement(
+    ulElement.children[ulElement.children.length - 1] as Element
+  );
 };
 
 const getHeadingLevel = (node: Element): number => {
   const headingLevel = Number(node.tagName.charAt(1));
   return headingLevel;
 };
-const getHeadingLevelFromTextNode = (
-  liElement: TocNode | undefined
-): number => {
-  const headingLevelText = liElement?.children
-    .find((child) => child.type === "text")
-    ?.value.charAt(1);
-  if (!headingLevelText) {
-    return 0;
-  }
-  return Number(headingLevelText);
-};
 
-const createUListElement = (): TocNode => {
+const createUListElement = (): Element => {
   return {
     type: "element",
     tagName: "ul",
     properties: {},
     children: [],
-    id: getRandomId(),
   };
 };
 
-const createListItemElement = (node: Element): TocNode => {
+const createListItemElement = (node: Element): Element => {
   const headingChildren = node.children
     .map((child) => (child.type === "element" ? child.children : []))
     .flat();
   const headingText =
     headingChildren.find((child) => child.type === "text")?.value ?? "";
 
+  const anchorElement: Element = {
+    type: "element",
+    tagName: "a",
+    properties: { href: `#${headingText}` },
+    children: [{ type: "text", value: headingText }],
+  };
+
   return {
     type: "element",
     tagName: "li",
     properties: {},
-    children: [{ type: "text", value: headingText }],
-    id: getRandomId(),
+    children: [anchorElement],
   };
 };
 
-const createCollapsableToc = (tocList: TocNode[]): TocNode => {
-  const ulElement: TocNode = {
+const createCollapsableToc = (tocList: Element[]): Element => {
+  const ulElement: Element = {
     type: "element",
     tagName: "ul",
     properties: {},
     children: tocList,
-    id: getRandomId(),
   };
 
-  const summaryElement: TocNode = {
+  const summaryElement: Element = {
     type: "element",
     tagName: "summary",
     properties: {},
     children: [{ type: "text", value: "目次" }],
-    id: getRandomId(),
   };
-  const detailsElement: TocNode = {
+  const detailsElement: Element = {
     type: "element",
     tagName: "details",
     properties: {},
     children: [summaryElement, ulElement],
-    id: getRandomId(),
   };
 
   return detailsElement;
