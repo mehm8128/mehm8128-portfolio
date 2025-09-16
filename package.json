@@ -8,32 +8,28 @@
     "preview": "astro preview",
     "astro": "astro",
     "typecheck": "astro check",
-    "lint:markup": "markuplint \"**/*.astro\"",
-    "test": "vitest"
+    "lint:markup": "markuplint \"**/*.astro\""
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^6.3.6",
     "@astrojs/mdx": "^4.3.5",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.1",
+    "@mehm8128/rehype-toc": "^1.0.0",
     "@r4ai/remark-callout": "^0.6.2",
     "astro": "^5.13.7",
     "kiso.css": "^1.2.2",
     "rehype-autolink-headings": "^7.1.0",
     "remark-link-card-plus": "^0.7.0",
-    "sharp": "^0.34.3",
-    "unist-util-visit": "^5.0.0"
+    "sharp": "^0.34.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@markuplint/astro-parser": "^4.6.21",
-    "@types/hast": "^3.0.4",
     "markuplint": "^4.13.1",
     "prettier": "^3.6.2",
-    "rehype": "^13.0.2",
     "textlint": "^15.2.2",
     "textlint-rule-preset-ja-technical-writing": "^12.0.2",
-    "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
+    "typescript": "^5.9.2"
   }
 }
