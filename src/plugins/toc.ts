@@ -5,7 +5,7 @@ export const rehypeCollapsableToc = () => {
   return (tree: Root) => {
     const rootUlElement: Element = {
       type: "element",
-      tagName: "ul",
+      tagName: "ol",
       properties: {},
       children: [],
     };
@@ -28,13 +28,13 @@ export const visitorCallback = (node: Element, rootUlElement: Element) => {
   const liElement = createListItemElement(node);
   const rootUlElementChildren = assertElementNodeList(rootUlElement.children);
 
-  // h2ならulに直接追加
+  // h2ならolに直接追加
   if (headingLevel === 2) {
     rootUlElement.children.push(liElement);
     return;
   }
 
-  // 一番新しいliから、同じレベルのheadingを入れているulを探す
+  // 一番新しいliから、同じレベルのheadingを入れているolを探す
   const sameLevelUlElement = searchSameLevelUlElement(
     rootUlElementChildren,
     headingLevel
@@ -44,7 +44,7 @@ export const visitorCallback = (node: Element, rootUlElement: Element) => {
     return;
   }
 
-  // 一番新しいliの一番深いところに新しくulを作って追加
+  // 一番新しいliの一番深いところに新しくolを作って追加
   const deepestLiElement = getDeepestLiElement(rootUlElementChildren);
   const newUlElement = createUlElement();
   newUlElement.children.push(liElement);
@@ -52,7 +52,7 @@ export const visitorCallback = (node: Element, rootUlElement: Element) => {
 };
 
 /**
- * 引数のulに入っている一番新しいliの中で、levelと同じ見出しレベルのli要素を返す
+ * 引数のolに入っている一番新しいliの中で、levelと同じ見出しレベルのli要素を返す
  */
 const searchSameLevelUlElement = (
   rootUlElement: Element[],
@@ -82,7 +82,7 @@ const searchSameLevelUlElement = (
 };
 
 /**
- * 引数のulに入っている一番新しいliの中で、一番深いli要素を取得する
+ * 引数のolに入っている一番新しいliの中で、一番深いli要素を取得する
  */
 const getDeepestLiElement = (rootUlElement: Element[]): Element => {
   const rootLiElement = assertElementNode(
@@ -92,9 +92,9 @@ const getDeepestLiElement = (rootUlElement: Element[]): Element => {
   if (!rootLiElement.children[1]) {
     return rootLiElement;
   }
-  const ulElement = assertElementNode(rootLiElement.children[1]);
+  const olElement = assertElementNode(rootLiElement.children[1]);
 
-  return getDeepestLiElement(assertElementNodeList(ulElement.children));
+  return getDeepestLiElement(assertElementNodeList(olElement.children));
 };
 
 const getHeadingLevelFromElement = (headingElement: Element) => {
@@ -109,7 +109,7 @@ const getHeadingLevelFromText = (headingElement: Text) => {
 const createUlElement = (): Element => {
   return {
     type: "element",
-    tagName: "ul",
+    tagName: "ol",
     properties: {},
     children: [],
   };
