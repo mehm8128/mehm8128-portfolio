@@ -57,6 +57,9 @@ importers:
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
+      rehype:
+        specifier: ^13.0.2
+        version: 13.0.2
       textlint:
         specifier: ^15.2.2
         version: 15.2.2

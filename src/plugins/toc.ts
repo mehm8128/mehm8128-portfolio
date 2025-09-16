@@ -1,190 +1,181 @@
-import type { Root, Element } from "hast";
+import type { Root, Element, ElementContent, Text } from "hast";
 import { visit } from "unist-util-visit";
-import { getRandomId } from "../functions/getRandomId";
-
-export type TocNode = Element & { id: string };
 
 export const rehypeCollapsableToc = () => {
   return (tree: Root) => {
-    let tocList: TocNode[] = [];
-    let parentToc: TocNode | undefined = undefined;
-    let currentToc: TocNode | undefined = undefined;
+    const rootUlElement: Element = {
+      type: "element",
+      tagName: "ul",
+      properties: {},
+      children: [],
+    };
 
     visit(tree, "element", (node) => {
-      if (!/^h[2-6]$/.test(node.tagName)) {
-        return;
-      }
-
-      const result = visitorCallback(node, tocList, parentToc, currentToc);
-      tocList = result.tocList;
-      parentToc = result.parentToc;
-      currentToc = result.currentToc;
+      visitorCallback(node, rootUlElement);
     });
 
-    const detailsElement = createCollapsableToc(tocList);
+    const detailsElement = createCollapsableToc(rootUlElement);
     tree.children.unshift(detailsElement);
   };
 };
 
-export const visitorCallback = (
-  node: Element,
-  tocList: TocNode[],
-  parentToc: TocNode | undefined,
-  currentToc: TocNode | undefined
-) => {
-  const headingLevel = getHeadingLevel(node);
+export const visitorCallback = (node: Element, rootUlElement: Element) => {
+  if (!/^h[2-6]$/.test(node.tagName)) {
+    return;
+  }
+
+  const headingLevel = getHeadingLevelFromElement(node);
   const liElement = createListItemElement(node);
-  // h2ならtocListに直接追加
+  const rootUlElementChildren = assertElementNodeList(rootUlElement.children);
+
+  // h2ならulに直接追加
   if (headingLevel === 2) {
-    return {
-      tocList: [...tocList, liElement],
-      parentToc,
-      currentToc: liElement,
-    };
+    rootUlElement.children.push(liElement);
+    return;
   }
 
-  if (!currentToc) {
-    throw new Error("Current TOC is undefined");
+  // 一番新しいliから、同じレベルのheadingを入れているulを探す
+  const sameLevelUlElement = searchSameLevelUlElement(
+    rootUlElementChildren,
+    headingLevel
+  );
+  if (sameLevelUlElement) {
+    sameLevelUlElement.children.push(liElement);
+    return;
   }
 
-  // ネストを1つ深くし、子要素に追加
-  if (headingLevel > getHeadingLevelFromTextNode(currentToc)) {
-    const ulElement = createUListElement();
-    ulElement.children.push(liElement);
-    currentToc.children.push(ulElement);
-    return {
-      tocList,
-      parentToc: currentToc,
-      currentToc: liElement,
-    };
-  }
-
-  if (!parentToc) {
-    throw new Error("Parent TOC is undefined");
-  }
-
-  // 同じネストレベルの兄弟要素に追加
-  if (headingLevel === getHeadingLevelFromTextNode(currentToc)) {
-    const parentChildren = parentToc.children.find(
-      (child) => child.type === "element" && child.tagName === "ul"
-    ) as TocNode;
-    if (!parentChildren) {
-      throw new Error("Parent TOC children is undefined");
-    }
-    parentChildren.children.push(liElement);
-    return {
-      tocList,
-      parentToc,
-      currentToc: liElement,
-    };
-  }
-
-  // ネストを1つ浅くし、追加
-  parentToc = searchParentTocElement(tocList, parentToc.id);
-  if (!parentToc) {
-    throw new Error("Parent TOC is undefined");
-  }
-  parentToc.children.push(liElement);
-  return {
-    tocList,
-    parentToc,
-    currentToc: liElement,
-  };
+  // 一番新しいliの一番深いところに新しくulを作って追加
+  const deepestLiElement = getDeepestLiElement(rootUlElementChildren);
+  const newUlElement = createUlElement();
+  newUlElement.children.push(liElement);
+  deepestLiElement.children.push(newUlElement);
 };
 
-const searchParentTocElement = (
-  tocList: TocNode[],
-  id: string
-): TocNode | undefined => {
-  for (const toc of tocList) {
-    if (toc.id === id) {
-      return toc;
-    }
-    const ulElement = toc.children.find(
-      (child) => child.type === "element" && child.tagName === "ul"
-    ) as TocNode | undefined;
-    if (!ulElement) {
-      continue;
-    }
-
-    const found = searchParentTocElement(
-      ulElement.children.filter(
-        (child) => child.type === "element"
-      ) as TocNode[],
-      id
-    );
-    if (found) {
-      return ulElement;
-    }
+/**
+ * 引数のulに入っている一番新しいliの中で、levelと同じ見出しレベルのli要素を返す
+ */
+const searchSameLevelUlElement = (
+  rootUlElement: Element[],
+  level: number
+): Element | undefined => {
+  const rootLiElement = assertElementNode(
+    rootUlElement[rootUlElement.length - 1]
+  );
+  const headingAnchorElement = assertElementNode(rootLiElement.children[0]);
+  const headingTextElement = assertElementText(
+    headingAnchorElement.children[0]
+  );
+  const rootElementHeadingLevel = getHeadingLevelFromText(headingTextElement);
+  if (rootElementHeadingLevel === level) {
+    return rootLiElement;
   }
-  return undefined;
+
+  if (rootLiElement.children[1] === undefined) {
+    return;
+  }
+  const childUlElement = assertElementNode(rootLiElement.children[1]);
+
+  return searchSameLevelUlElement(
+    assertElementNodeList(childUlElement.children),
+    level
+  );
 };
 
-const getHeadingLevel = (node: Element): number => {
-  const headingLevel = Number(node.tagName.charAt(1));
+/**
+ * 引数のulに入っている一番新しいliの中で、一番深いli要素を取得する
+ */
+const getDeepestLiElement = (rootUlElement: Element[]): Element => {
+  const rootLiElement = assertElementNode(
+    rootUlElement[rootUlElement.length - 1]
+  );
+
+  if (!rootLiElement.children[1]) {
+    return rootLiElement;
+  }
+  const ulElement = assertElementNode(rootLiElement.children[1]);
+
+  return getDeepestLiElement(assertElementNodeList(ulElement.children));
+};
+
+const getHeadingLevelFromElement = (headingElement: Element) => {
+  const headingLevel = Number(headingElement.tagName.charAt(1));
   return headingLevel;
 };
-const getHeadingLevelFromTextNode = (
-  liElement: TocNode | undefined
-): number => {
-  const headingLevelText = liElement?.children
-    .find((child) => child.type === "text")
-    ?.value.charAt(1);
-  if (!headingLevelText) {
-    return 0;
-  }
-  return Number(headingLevelText);
+const getHeadingLevelFromText = (headingElement: Text) => {
+  const headingLevel = Number(headingElement.value.charAt(1));
+  return headingLevel;
 };
 
-const createUListElement = (): TocNode => {
+const createUlElement = (): Element => {
   return {
     type: "element",
     tagName: "ul",
     properties: {},
     children: [],
-    id: getRandomId(),
   };
 };
 
-const createListItemElement = (node: Element): TocNode => {
+const createListItemElement = (node: Element): Element => {
   const headingChildren = node.children
     .map((child) => (child.type === "element" ? child.children : []))
     .flat();
-  const headingText =
-    headingChildren.find((child) => child.type === "text")?.value ?? "";
+  const headingTextElement = headingChildren.find(
+    (child) => child.type === "text"
+  );
+  if (!headingTextElement) {
+    throw new Error("見出しにテキストがありません");
+  }
+  const headingText = headingTextElement.value;
+
+  const anchorElement: Element = {
+    type: "element",
+    tagName: "a",
+    properties: { href: `#${headingText}` },
+    children: [{ type: "text", value: headingText }],
+  };
 
   return {
     type: "element",
     tagName: "li",
     properties: {},
-    children: [{ type: "text", value: headingText }],
-    id: getRandomId(),
+    children: [anchorElement],
   };
 };
 
-const createCollapsableToc = (tocList: TocNode[]): TocNode => {
-  const ulElement: TocNode = {
-    type: "element",
-    tagName: "ul",
-    properties: {},
-    children: tocList,
-    id: getRandomId(),
-  };
-
-  const summaryElement: TocNode = {
+const createCollapsableToc = (rootUlElement: Element): Element => {
+  const summaryElement: Element = {
     type: "element",
     tagName: "summary",
     properties: {},
     children: [{ type: "text", value: "目次" }],
-    id: getRandomId(),
   };
-  const detailsElement: TocNode = {
+  const detailsElement: Element = {
     type: "element",
     tagName: "details",
     properties: {},
-    children: [summaryElement, ulElement],
-    id: getRandomId(),
+    children: [summaryElement, rootUlElement],
   };
 
   return detailsElement;
+};
+
+const assertElementNode = (node: ElementContent): Element => {
+  if (node.type !== "element") {
+    throw new Error("Elementノードではありません");
+  }
+  return node;
+};
+
+const assertElementNodeList = (nodeList: ElementContent[]): Element[] => {
+  if (nodeList.some((node) => node.type !== "element")) {
+    throw new Error("Elementノードではありません");
+  }
+  return nodeList as Element[];
+};
+
+const assertElementText = (node: ElementContent): Text => {
+  if (node.type !== "text") {
+    throw new Error("Textノードではありません");
+  }
+  return node;
 };
