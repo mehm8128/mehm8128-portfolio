@@ -7,7 +7,7 @@ import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkCallout from "@r4ai/remark-callout";
 import remarkLinkCard from "remark-link-card-plus";
-import { rehypeCollapsableToc } from "rehype-toc";
+import { rehypeCollapsableToc } from "@mehm8128/rehype-toc";
 
 // https://astro.build/config
 export default defineConfig({
