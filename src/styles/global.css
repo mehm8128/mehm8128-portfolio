@@ -57,6 +57,29 @@
   --transition-normal: 0.3s ease;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f0f0f;
+    --color-surface: #1a1a1a;
+    --color-bg-secondary: #262626;
+    --color-text: #e5e5e5;
+    --color-muted: #a3a3a3;
+    --color-accent: #60a5fa;
+    --color-accent-hover: #93bbfc;
+    --color-border: #404040;
+    --color-code: #2a2a2a;
+
+    --color-info: #60a5fa;
+    --color-info-bg: rgba(96, 165, 250, 0.12);
+    --color-warning: #fbbf24;
+    --color-warning-bg: rgba(251, 191, 36, 0.12);
+    --color-error: #f87171;
+    --color-error-bg: rgba(248, 113, 113, 0.12);
+
+    --shadow-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
