@@ -9,7 +9,7 @@ const posts = (await getCollection("adv2025")).toSorted(
 const internalPosts = posts.map((post) => ({
   title: post.data.title,
   publishedDate: post.data.publishedDate,
-  url: `/adv2025-webcomponetns/${post.id}/`,
+  url: `/adv2025-webcomponents/${post.id}/`,
 }));
 ---
 
