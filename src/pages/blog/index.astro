@@ -3,13 +3,11 @@ import { getCollection } from "astro:content";
 import { SITE_DESCRIPTION, SITE_IMG, SITE_TITLE } from "../../consts/consts";
 import Layout from "../../layouts/Layout.astro";
 import { formatDate } from "../../functions/date";
-import { blogs } from "../../consts/blogs";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
 );
 
-// Convert internal posts to a common format
 const internalPosts = posts.map((post) => ({
   title: post.data.title,
   description: post.data.description,
@@ -18,21 +16,6 @@ const internalPosts = posts.map((post) => ({
   isExternal: false,
   site: undefined,
 }));
-
-// Convert external posts to a common format
-const externalPosts = blogs.map((blog) => ({
-  title: blog.title,
-  description: "", // External posts don't have descriptions in this context
-  publishedDate: new Date(blog.publishedAt),
-  url: blog.link,
-  site: blog.site,
-  isExternal: true,
-}));
-
-// Combine and sort all posts by date
-const allPosts = [...internalPosts, ...externalPosts].toSorted(
-  (a, b) => b.publishedDate.valueOf() - a.publishedDate.valueOf()
-);
 ---
 
 <Layout
@@ -46,7 +29,7 @@ const allPosts = [...internalPosts, ...externalPosts].toSorted(
 
   <ul class="posts-list">
     {
-      allPosts.map((post) => (
+      internalPosts.map((post) => (
         <li class="post-item">
           <a
             href={post.url}
