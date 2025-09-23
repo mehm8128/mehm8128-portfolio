@@ -18,7 +18,8 @@ export interface CalendarWeek {
 
 export const generateAdventCalendar = (
   posts: Post[],
-  year: number
+  year: number,
+  endDate = 24 // 25の場合があるので指定できるようにしている
 ): CalendarWeek[] => {
   const calendarDays: CalendarDay[] = [];
 
@@ -54,7 +55,7 @@ export const generateAdventCalendar = (
       day,
       isCurrentMonth: true,
       post,
-      isAdventDay: day <= 24,
+      isAdventDay: day <= endDate,
     });
   }
 

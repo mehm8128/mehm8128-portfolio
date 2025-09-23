@@ -6,7 +6,7 @@ interface Blog {
 export const blogs = [
   {
     title: "React Ariaの実装読むぞ Advent Calendar 2024",
-    link: "https://qiita.com/advent-calendar/2024/react-aria",
+    link: "https://portfolio.hm8128.me/adv2024-reactaria/",
   },
   {
     title: "Rustでmini-gitを作った話",
