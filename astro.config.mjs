@@ -14,15 +14,7 @@ export default defineConfig({
   site: "https://portfolio.hm8128.me",
   integrations: [mdx(), sitemap()],
   markdown: {
-    remarkPlugins: [
-      remarkCallout,
-      [
-        remarkLinkCard,
-        {
-          cache: true,
-        },
-      ],
-    ],
+    remarkPlugins: [remarkCallout, remarkLinkCard],
     rehypePlugins: [
       // Astroの自動id付与はrehypeが走った後なので、先にidを付与してからautolinkを使う必要がある
       rehypeHeadingIds,
