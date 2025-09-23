@@ -13,8 +13,6 @@ const internalPosts = posts.map((post) => ({
   description: post.data.description,
   publishedDate: post.data.publishedDate,
   url: `/blog/${post.id}/`,
-  isExternal: false,
-  site: undefined,
 }));
 ---
 
@@ -31,12 +29,7 @@ const internalPosts = posts.map((post) => ({
     {
       internalPosts.map((post) => (
         <li class="post-item">
-          <a
-            href={post.url}
-            class="post-link"
-            target={post.isExternal ? "_blank" : undefined}
-            rel={post.isExternal ? "noreferrer" : undefined}
-          >
+          <a href={post.url} class="post-link">
             <div class="post-content">
               <p class="post-title">{post.title}</p>
               {post.description && (
@@ -50,7 +43,6 @@ const internalPosts = posts.map((post) => ({
               >
                 {formatDate(post.publishedDate)}
               </time>
-              {post.isExternal && <span class="post-site">{post.site}</span>}
             </div>
           </a>
         </li>
