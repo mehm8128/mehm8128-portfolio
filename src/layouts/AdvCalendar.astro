@@ -64,7 +64,7 @@ const calendarWeeks = generateAdventCalendar(posts, year, endDate);
                       class:list={["day-post", "day-post-link"]}
                     >
                       <div class="day-number">{dayData.day}</div>
-                      <span class="day-post-title">{dayData.post.title}</span>
+                      <div class="day-post-title">{dayData.post.title}</div>
                     </a>
                   ) : (
                     <div class:list={["day-post"]}>
@@ -155,7 +155,7 @@ const calendarWeeks = generateAdventCalendar(posts, year, endDate);
   }
 
   .day-post {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .day-post-link {
@@ -165,10 +165,6 @@ const calendarWeeks = generateAdventCalendar(posts, year, endDate);
     width: 100%;
     height: 100%;
   }
-  .day-post-link:focus {
-    outline: 2px solid currentColor;
-    outline-offset: -2px;
-  }
 
   .day-post-title {
     font-size: var(--text-sm);
@@ -177,7 +173,7 @@ const calendarWeeks = generateAdventCalendar(posts, year, endDate);
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 5;
     text-overflow: ellipsis;
   }
 
@@ -232,7 +228,7 @@ const calendarWeeks = generateAdventCalendar(posts, year, endDate);
     }
 
     .day-post-title {
-      -webkit-line-clamp: 1;
+      display: none;
     }
 
     .day-placeholder {
