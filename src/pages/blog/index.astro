@@ -4,7 +4,7 @@ import { SITE_DESCRIPTION, SITE_IMG, SITE_TITLE } from "../../consts/consts";
 import Layout from "../../layouts/Layout.astro";
 import { formatDate } from "../../functions/date";
 
-const posts = (await getCollection("blog")).sort(
+const posts = (await getCollection("blog")).toSorted(
   (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
 );
 

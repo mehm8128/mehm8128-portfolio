@@ -8,9 +8,10 @@ export interface Props {
   title: string;
   description: string;
   image: string;
+  maxWidth?: number;
 }
 
-const { title, description, image } = Astro.props;
+const { title, description, image, maxWidth = 840 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -70,7 +71,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
 
   <body>
-    <div class="site-container">
+    <div class="site-container" style={{ "max-width": `${maxWidth}px` }}>
       <Header />
       <main class="main-content">
         <div class="container">
@@ -87,7 +88,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    max-width: 840px;
     margin: 0 auto;
   }
 
