@@ -37,7 +37,7 @@ importers:
         version: 7.1.0
       remark-link-card-plus:
         specifier: ^0.7.0
-        version: 0.7.0
+        version: 0.7.1
       sharp:
         specifier: ^0.34.3
         version: 0.34.4
@@ -2967,8 +2967,8 @@ packages:
   remark-gfm@4.0.1:
     resolution: {integrity: sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg==}
 
-  remark-link-card-plus@0.7.0:
-    resolution: {integrity: sha512-bYLKtCcT/8ouRTf4AZcjncm6HQD31xDQVs1Dg39LrmuFrXNMyz/MDUnUgNAk73+xMuIt1nIvOGWolDuwH18UBw==}
+  remark-link-card-plus@0.7.1:
+    resolution: {integrity: sha512-dk4aonDp30LxkR+PYn9uFSXm5TzmWHcKB168+VolNXtJfksGATf4TezNS2Rzy5XObLPq6KMIwdqyNz+PTsQsuw==}
     engines: {node: '>=20'}
 
   remark-mdx@3.1.1:
@@ -7806,7 +7806,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  remark-link-card-plus@0.7.0:
+  remark-link-card-plus@0.7.1:
     dependencies:
       file-type: 21.0.0
       open-graph-scraper: 6.10.0
