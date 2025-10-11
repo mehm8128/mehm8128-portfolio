@@ -31,6 +31,14 @@
   font-weight: var(--font-weight-semibold);
 }
 
+.content h2 a,
+.content h3 a,
+.content h4 a,
+.content h5 a,
+.content h6 a {
+  text-decoration: none;
+}
+
 .content h2 a:not(:hover, :focus) .icon-link,
 .content h3 a:not(:hover, :focus) .icon-link,
 .content h4 a:not(:hover, :focus) .icon-link,
