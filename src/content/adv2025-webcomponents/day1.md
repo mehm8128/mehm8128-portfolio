@@ -1,11 +1,11 @@
 ---
-title: Reference Target - Cross-root ARIA Delegation/Reflection
+title: Reference Target - Cross-root ARIA Delegation/Reflection, exportid
 publishedDate: "2025-12-01"
 ---
 
-今回は2つ目の案としてCross-root ARIA Delegation/Reflectionを紹介します。
+今回は前回紹介した問題に対しての解決策として提案されたCross-root ARIA Delegation/Reflection及びexportidを紹介します。
 
-DelegationとReflectionでそれぞれ別のproposalになっているので、順番に紹介していきます。
+DelegationとReflection、exportidでそれぞれ別のproposalになっているので、順番に紹介していきます。
 
 ## Cross-root ARIA Delegation
 
@@ -112,7 +112,69 @@ https://github.com/alice/aom/blob/gh-pages/semantic-delegate.md
 
 こうすることで、`<input>`の`id`を`<label>`から参照することもできれば、`<span id="hint">`の`id`を`<input>`から参照することもできるようになっています。
 
-TODO: reference targetと比較した問題点を書く
+## exportid
+
+https://github.com/WICG/aom/blob/gh-pages/exportid-explainer.md
+
+これは、`exportid`というbool値でShadow DOM内の要素の`id`をエクスポートし、`for="hostid::id(childid)`という形式でShadow DOMの外からその要素を参照できるようにするという提案です。
+
+```
+<label for="security::id(real-input)">What was the name of your first pet?</label>
+<x-input id="security">
+  #shadowRoot
+  | <input id="real-input" exportid />
+</x-input>
+```
+
+Shadow rootがネストされてる場合は、以前紹介した`exportparts`と同様に`forwardids="id"`でフォワードすることができます。
+
+```
+<label for="airports::id(real-input)">Destination:</label>
+<x-combobox id="airports">
+  #shadowRoot
+  | <x-input id="textbox" forwardids="real-input">
+  |   #shadowRoot
+  |   | <input id="real-input" exportid />
+  | </x-input>
+  | <x-listbox></x-listbox>
+</x-combobox>
+```
+
+この方法ではShadow DOMの外から中への参照のみが可能ですが、中から外へ参照する方法として`useids`が提案されています。
+
+Shadow hostで`useids="inner-id: outer-idref"`として内部の要素のidと外部の要素のidを指定し、内部で`aria-describedby=":host::id(inner-id)`のように書くことで内部からCSSセレクタのような形で外部の要素を参照することができます。
+
+```
+<x-input-with-hint id="name" useids="hint: name-hint">
+  #shadowRoot
+  | <input aria-describedby=":host::id(hint)" id="real-input" exportid>
+</x-input-with-hint>
+<span id="name-hint">Your name can be in any language.</span>
+```
+
+Cross-root ARIA Delegate/Reflectと同様に、先ほどの`exportid`と組み合わせることで、カスタム要素が兄弟関係にあるときも互いに参照することができます。
+
+```
+<x-label useids="label-for: gender::id(real-input)">
+  #shadowRoot
+  | <label for=":host::id(label-for)">Gender</label>
+</x-label>
+<x-input id="gender">
+  #shadowRoot
+  | <input id="real-input" exportid />
+</x-input>
+```
+
+また、Shadow DOMのカプセル化を維持したいという文脈で`getElementById`や`querySelector`を使ったときの動作についても記載されています。
+`null`を返すか、もしくは`getElementById`の場合はretargetアルゴリズムを使用して、ターゲット要素のShadow hostを返すという案も挙げられています。
+
+## 問題点
+
+感じた問題点：内部実装（どの id があるか）を知る必要がある。既存の属性の仕様を変更する必要がある（`inner-id: outer-idref`みたいなのをサポートする必要があるので）
+
+reject された理由
+複雑＆Reference Target が出てきたのでいらなくなった
+https://groups.google.com/a/chromium.org/g/blink-dev/c/CEdbbQXPIRk
 
 ## まとめ
 
