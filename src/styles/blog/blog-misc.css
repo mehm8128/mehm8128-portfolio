@@ -15,7 +15,7 @@
 .content :not(pre) code {
   background: var(--color-code);
   padding: 0.05rem 0.3rem;
-  margin: 0.125rem 0.125rem; /** text-autospace: normalは1/8なので */
+  margin: 0 0.125rem; /** text-autospace: normalは1/8なので */
   border-radius: 0.25rem;
   font-family: var(--font-code);
   font-size: var(--font-size-code);
