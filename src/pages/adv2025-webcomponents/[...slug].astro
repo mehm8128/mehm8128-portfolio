@@ -15,6 +15,6 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} description="Web Components a11y 1人 Advent Calendar">
   <Content />
 </BlogPost>

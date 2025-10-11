@@ -20,7 +20,6 @@ const adv2025 = defineCollection({
   schema: () =>
     z.object({
       title: z.string(),
-      description: z.string(),
       publishedDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
     }),

@@ -6,7 +6,6 @@ import {
   type Post,
 } from "../functions/calendar";
 import Layout from "./Layout.astro";
-import { posts } from "../pages/adv2024-reactaria/posts";
 
 export interface Props {
   title: string;
@@ -15,7 +14,7 @@ export interface Props {
   endDate?: number;
 }
 
-const { year, title, endDate } = Astro.props;
+const { year, title, endDate, posts } = Astro.props;
 
 const yearString = year.toString();
 const calendarWeeks = generateAdventCalendar(posts, year, endDate);
