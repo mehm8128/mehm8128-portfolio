@@ -1,4 +1,7 @@
-/* Blog list styles */
+.content ul ul,
+.content ol ol {
+  margin: 0;
+}
 
 .content ul,
 .content ol {
