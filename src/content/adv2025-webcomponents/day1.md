@@ -1,5 +1,5 @@
 ---
-title: `is`の課題 - カスタム組み込み要素
+title: isの課題と代替案 - カスタム組み込み要素
 publishedDate: "2025-12-01"
 ---
 
@@ -57,43 +57,57 @@ https://github.com/WebKit/standards-positions/issues/97
 https://github.com/w3c/tpac2023-breakouts/issues/44
 https://bugs.webkit.org/show_bug.cgi
 
-これらを踏まえて、様々な代替案が検討されてきました。いくつか紹介します。
+これらを踏まえて、様々な代替案が検討されてきました。今回は1つ紹介します。
 
-### custom attributes
+### Custom Attributes
 
-https://github.com/w3c/tpac2023-breakouts/issues/44
-で代替案として提案された
+[Custom Property + 0 or more Custom Attributes => Custom Enhancement · Issue #1000 · WICG/webcomponents](https://github.com/WICG/webcomponents/issues/1000)や[lume/custom-attributes: Define custom attributes that provide mixins for HTML elements](https://github.com/lume/custom-attributes)、[lume/element-behaviors: An entity-component system for HTML elements.](https://github.com/lume/element-behaviors)を基にして[TPAC2023のbreakouts](https://github.com/w3c/tpac2023-breakouts/issues/44)で議論された代替案です。その後、以下のissueでさらに話し合われました。
 
-1000 番を基にして ↑ で話し合われ、1029 が誕生
-
-https://eisenbergeffect.medium.com/2023-state-of-web-components-c8feb21d4f16#a31c
-https://github.com/WICG/webcomponents/issues/1000
 https://github.com/WICG/webcomponents/issues/1029
 
-https://github.com/lume/custom-attributes
+Custom Attributesとは、カスタム要素と同じようにカスタマイズされたHTML属性をclassを用いて作成する機能です。これをHTML要素やカスタム要素に適用し、独自の動作を当てることができるようになるというものです。
+例えば以下の例だと、`Attribute`classを拡張して`ListAttribute`というカスタム属性を作成し、`<input>`要素で利用できるようにしています。
 
-カスタム要素みたいな感じでカスタム属性を作って、それを HTML 要素やカスタム要素に適用することで好きな動作を当てることができる
-現状まだ要素に対して属性を当てる方法がないので、popovertarget とか commandfor とかもその属性を当てられるようにする（MyInput.attributeRegistry.define()みたいに？）
+```js
+class ListAttribute extends Attribute {
+  ownerElement; // element this is attached to
+  value; // current value
 
-`HTMLElement.attributeRegistry.define("sc-list", ListAttribute)`みたいに custom attributes を追加するため、`HTMLElement`自体に追加してどの要素でも使えるようにすることもできるし、特定の HTML 要素や、カスタム要素に限定して使えるようにすることもできる
+  connectedCallback() {
+    /* ... */
+  }
 
-[element-behaviors](https://github.com/lume/element-behaviors) では has に behavior の id を渡せるようにしていたけど、カスタム属性ではそれぞれ属性として渡せるようになっている
+  disconnectedCallback() {
+    /* ... */
+  }
+
+  // Called whenever the attribute's value changes
+  changedCallback() {
+    /* ... */
+  }
+
+  static dataType = AttributeType.IDREF;
+
+  // Optional default value
+  static defaultValue = null;
+}
+
+HTMLInputElement.attributeRegistry.define("ac-list", ListAttribute);
+```
+
+今までの`is`ではHTML要素を拡張してカスタム要素を作成し、カスタム要素に対して動作を割り当て、それを`is`属性に与えてしました。しかしそうではなく、HTML要素の`attributeRegistry`にカスタム属性を追加し、カスタム属性を通して動作を割り当てることができるようにするという提案です。
 
 ユースケースとして
 
-- Popover API や Invokers 機能をつける
-  - 上で書いてるように、用意してある custom attributes を登録する感じ？
-- `<time>`に`format`属性をつけてそのフォーマットで表示されるように
-- `<p loading-placeholder="3 sentences">`のスケルトン表示
-- `<audio start-at="0:05">`の開始時刻指定
-
-#### custom enhancement
-
-`customEnhancement.define()`で定義して、HTML 要素につけると enhance した機能が付与される
-`allowedCSSMatches`などでつけられる要素を制限可能
-
-https://github.com/WICG/webcomponents/issues/1000
+- Popover APIやInvoker Commandsのエミュレート
+- `<time>`に`format`属性をつけ、指定したフォーマットで表示されるようにする
+- `<p loading-placeholder="3 sentences">`のようなスケルトン表示
+- `<audio start-at="0:05">`のような再生開始時刻の指定
 
 ## まとめ
 
-次回はこれらを踏まえて有力な代替案の1つとなっていた、ElementInternals.typeについて紹介します。
+次回はこのような案を踏まえて有力な代替案の1つとなっていた、ElementInternals.typeについて紹介します。
+
+## 追加の参考文献　
+
+- https://eisenbergeffect.medium.com/2023-state-of-web-components-c8feb21d4f16#a31c
