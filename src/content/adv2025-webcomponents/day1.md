@@ -89,12 +89,6 @@ https://gist.github.com/nolanlawson/4fe8b5d672cda3bcc4daf58079145202
 
 他にexportidsやCross-root ARIA delegation/reflection、Cross-root ARIA Reference Targetなど様々な提案がされています。明日以降、これらを紹介していきます。
 
-多くの提案がある中、主に以下の3つは共通の必須条件として考えられているように思います。
-
-- Shadow DOMが持つカプセル性を保持する
-- 宣言的に利用可能
-- closedとopenの両方のShadow DOMで機能する
-
 ## デザインシステムでの実装
 
 Web Componentsを利用したデザインシステムはいくつか公開されています。その1つであるSpectrum Web Componentsで、このようなShadow DOMを跨いだ参照の問題が現状どのように解決されているのかを見てみます。
