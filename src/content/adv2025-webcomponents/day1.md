@@ -20,7 +20,7 @@ https://github.com/leobalter/cross-root-aria-delegation/blob/main/explainer.md
 これは前回紹介した図で分かりやすく3パターン紹介されていました。
 Cross-root ARIA Delegationでは特に1を解決し、2は次に紹介するCross-root ARIA Reflection、3はこの2つの組み合わせでおそらく解決できるとしています。
 
-先日紹介した`delegatesFocus`と同様に、属性をdelegateすることができるようにするものです。
+ Cross-root ARIA Delegationは先日紹介した`delegatesFocus`と同様に、属性をdelegateすることができるようにするものです。
 例えばDeclarative Shadow DOMの場合、以下のサンプルコードのように、カスタム属性に`aria-label`と`aria-describedby`を渡し、`<template>`に`shadowrootdelegatesariaattributes="aria-label aria-describedby"`としてdelegateすることを示します。そしてその内部の`<input>`で`delegatedariaattributes="aria-label aria-describedby"`のようにしてdelegateさせたい属性を指定することで、`<input>`に`aria-label`と`aria-describedby`の値を与えることができるという仕組みです。
 
 ```html
@@ -37,7 +37,7 @@ Cross-root ARIA Delegationでは特に1を解決し、2は次に紹介するCros
 ```
 
 この提案では、複数の要素に同じ名前で別の値を持つ属性をつけたい場合に対応できません。例えば以下のような場合です。
-この場合に、`label1`と`input1`、`label2`と`input2`をそれぞれ紐づけるということができないのです。
+この場合に、`label1`と`input1`、`label2`と`input2`をそれぞれ紐づけるということができないのです。これをボトルネック効果と呼びます。
 
 ```html
 <span id="label1">Label one</span>
@@ -167,14 +167,6 @@ Cross-root ARIA Delegate/Reflectと同様に、先ほどの`exportid`と組み�
 
 また、Shadow DOMのカプセル化を維持したいという文脈で`getElementById`や`querySelector`を使ったときの動作についても記載されています。
 `null`を返すか、もしくは`getElementById`の場合はretargetアルゴリズムを使用して、ターゲット要素のShadow hostを返すという案も挙げられています。
-
-## 問題点
-
-感じた問題点：内部実装（どの id があるか）を知る必要がある。既存の属性の仕様を変更する必要がある（`inner-id: outer-idref`みたいなのをサポートする必要があるので）
-
-reject された理由
-複雑＆Reference Target が出てきたのでいらなくなった
-https://groups.google.com/a/chromium.org/g/blink-dev/c/CEdbbQXPIRk
 
 ## まとめ
 
