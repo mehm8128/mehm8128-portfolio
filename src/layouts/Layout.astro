@@ -6,12 +6,12 @@ import Footer from "../components/layout/Footer.astro";
 
 export interface Props {
   title: string;
-  description: string;
+  description?: string;
   image: string;
   maxWidth?: number;
 }
 
-const { title, description, image, maxWidth = 840 } = Astro.props;
+const { title, description = "", image, maxWidth = 840 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
