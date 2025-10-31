@@ -1,0 +1,15 @@
+<script>
+  customElements.define(
+    "fancy-checkbox",
+    class FancyCheckbox extends HTMLElement {}
+  );
+</script>
+
+<div>
+  <label for="checkbox">label for checkbox</label>
+  <fancy-checkbox id="checkbox">
+    <template shadowrootmode="open" shadowrootreferencetarget="inner-checkbox">
+      <input type="checkbox" id="inner-checkbox" />
+    </template>
+  </fancy-checkbox>
+</div>
