@@ -15,8 +15,8 @@ https://github.com/WICG/webcomponents/issues/1091
 値としてIDREFを持つ属性を全て対応するのが単純明快だし、後から追加するとなると互換性の問題が発生する可能性があります。しかし、今回スコープとするのが難しそうな属性がいくつか挙げられ、このissueでスコープを明確にしようとされています。
 
 1. itemref
-TODO: 簡単な説明
-https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Global_attributes/itemref
+   TODO: 簡単な説明
+   https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Global_attributes/itemref
 
 explainerには記載がないのですが、おそらく上手く動くはずとのことです。
 しかし、この属性の機能自体をサポートしているブラウザがまだないため、技術的にはサポートできるけど機能することを確認はできないという状態になりそうです。
@@ -54,18 +54,11 @@ Toggleイベントにsourceプロパティを追加し、これを用いてShado
 
 https://github.com/WICG/webcomponents/issues/1111
 
-Phase2のshadowrootreferencetaregetmapを本当に実装する必要があるのかどうか、既にexplainerに記載のあるaria-activedescendantと、複数の要素からaria-lablledbyを構成する例以外のユースケースを募集しているissueです。
+Phase2の`shadowrootreferencetaregetmap`を本当に実装する必要があるのかどうか、既にexplainerに記載のある`aria-activedescendant`と、複数の要素から`aria-lablledby`や`aria-describedby`を構成する例以外のユースケースを募集しているissueです。
 
-explainerでは3つの案が書かれているように、Phase2のより細かいハンドリングを行えるようにするという目標に対する手段は、shadowRootReferenceTargetMapで確定ではなく、まだ検討する余地があるようです。
+explainerでは3つの案が書かれているように、Phase2のより細かいハンドリングを行えるようにするという目標に対する手段は、`shadowrootreferencetaregetmap`で確定ではなく、まだ検討する余地があるようです。
 
 コメント欄では郵便番号フォームや、開始日・終了日が1つのコンポーネントになってるdate pickerなどが挙げられているが、これはどちらかというとボトルネック効果のようです。issueの作成者であるAliceによって、それらの場合の代替案が提示されています。
-
-explainerの代替案2つ
-
-- 代替案１：「個々のユースケースを個別に扱う」
-  https://github.com/WICG/webcomponents/blob/gh-pages/proposals/reference-target-explainer.md#addressing-individual-use-cases-separately
-- 代替案２：exportid
-  - ボトルネック効果の影響を受けない。issueの一番下でも微妙に違うけど同じようなpartを使う案が出ている
 
 ## まとめ
 
