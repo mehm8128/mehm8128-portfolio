@@ -5,25 +5,39 @@ publishedDate: "2025-12-01"
 
 ## 現状の課題
 
+Reference Targetについて、現在議論されているものの中から主なものを3つ紹介します。
+
 ### スコープとする属性
 
 https://alice.pages.igalia.com/2025-hackfest-reference-target/#/8
 https://github.com/WICG/webcomponents/issues/1091
 
-IDREFを全部対応してるとした方が説明も簡単だし、後から追加するとbreaking changeになってしまう可能性がある
+値としてIDREFを持つ属性を全て対応するのが単純明快だし、後から追加するとなると互換性の問題が発生する可能性があります。しかし、今回スコープとするのが難しそうな属性がいくつか挙げられ、このissueでスコープを明確にしようとされています。
 
-よって、このissueで範囲を明確にしたい
+1. itemref
+TODO: 簡単な説明
+https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Global_attributes/itemref
 
-- itemref
-  - explainerに載ってないけど多分うまくいく
-  - そもそもこの機能を実装しているブラウザがないため、技術的にはサポートしてるけど機能することを確認はできないという感じ
-  - 実装しているブラウザがないのはwptにないから？
-- headers on td & tr
-  - explainerにあるけどwptがない
-  - 単純に忘れてるだけ、と思いきや、現状ax nameに反映されないため、wptが書けないらしい
-- aria-owns
-  - 一番実装が複雑で、現状もかなり重厚にwptが書かれているらしい
-  - ユースケースに作業量が見合わないという懸念がある
+explainerには記載がないのですが、おそらく上手く動くはずとのことです。
+しかし、この属性の機能自体をサポートしているブラウザがまだないため、技術的にはサポートできるけど機能することを確認はできないという状態になりそうです。
+ちなみに、実装しているブラウザがないのはwptが存在していないことから分かります？TODO: 確認
+
+2. td と tr の headers
+
+https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/td#headers
+
+explainerには記載があるのですが、wptがないとのことです。
+
+accessible nameやroleに反映されないため、wptを書くことができないとのことでした。
+よって、itemrefと同じく、技術的にはサポートできるけど確認ができないという状態になりそうです。
+
+3. aria-owns
+
+https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns
+
+explainerには記載があるのですが、コメント欄にて追加で懸念点として挙げられている属性です。
+aria-owns自体の実装がとても複雑で、現状もかなり重厚にwptが書かれている状態らしいです。
+ユースケースに作業量が見合わない懸念があり、今回Reference Targetでサポートするかどうか議論されています。
 
 ### event
 
@@ -40,13 +54,11 @@ Toggleイベントにsourceプロパティを追加し、これを用いてShado
 
 https://github.com/WICG/webcomponents/issues/1111
 
-Phase2を本当に実装する必要があるのかどうか、ユースケースを募集しているissueです．
+Phase2のshadowrootreferencetaregetmapを本当に実装する必要があるのかどうか、既にexplainerに記載のあるaria-activedescendantと、複数の要素からaria-lablledbyを構成する例以外のユースケースを募集しているissueです。
 
-aria-activedescendantと、複数の要素からaria-lablledbyを作るやつ以外になにかないか
+explainerでは3つの案が書かれているように、Phase2のより細かいハンドリングを行えるようにするという目標に対する手段は、shadowRootReferenceTargetMapで確定ではなく、まだ検討する余地があるようです。
 
-explainerでは3つの案が書かれているように、shadowRootReferenceTargetMapで確定ではなくまだ検討中っぽい
-
-郵便番号フォームや開始日・終了日が一緒になってるdate pickerなどが挙げられているが、これはどちらかというとボトルネック効果。代替案が出されている
+コメント欄では郵便番号フォームや、開始日・終了日が1つのコンポーネントになってるdate pickerなどが挙げられているが、これはどちらかというとボトルネック効果のようです。issueの作成者であるAliceによって、それらの場合の代替案が提示されています。
 
 explainerの代替案2つ
 
@@ -57,4 +69,4 @@ explainerの代替案2つ
 
 ## まとめ
 
-Web Componentsが市民権を得るための重要なピースのうちの1つなので、今後に期待です
+Web Componentsが市民権を得るための重要なピースのうちの1つなので、今後に期待したいです。
