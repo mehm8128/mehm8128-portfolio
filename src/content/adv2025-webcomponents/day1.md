@@ -22,9 +22,19 @@ https://web.dev/articles/more-capable-form-controls?hl=ja#defining_a_form-associ
 
 https://developer.mozilla.org/ja/docs/Web/API/ElementInternals#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89
 
-TODO: light domでも中にあるinputはバリデーションされない？
+`ElementInternals`に生えているメソッドである`setFormValue()`で値を設定したり、`setValidity()`、`checkValidity()`及び`reportValidity()`でバリデーションを行うことができます。
 
-ARIAのやつと同様に、カスタム要素を1つのHTML要素として見るときの話かも
+```js
+onUpdateValue() {
+  if (!this.matches(':disabled') && this.hasAttribute('required') &&
+      this.value_ < 0) {
+    this.internals_.setValidity({customError: true}, 'Value cannot be negative.');
+  } else {
+    this.internals_.setValidity({});
+  }
+  this.internals.setFormValue(this.value_);
+}
+```
 
 ### state
 
