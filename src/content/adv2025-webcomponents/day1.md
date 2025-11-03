@@ -29,20 +29,46 @@ https://daverupert.com/2025/10/quiet-ui/
 
 https://quietui.org/docs/components/comparison
 
-### Joystick
+ChromaticなどVRTの差分表示で見るようなUIです。
+ドラッグ可能なバーを左右に移動させることで、左右の画像の表示割合を操作することができます。
+
+コードはここです
+https://github.com/quietui/quiet/blob/next/src/components/comparison/comparison.ts
+
+ドキュメントの最下部にAPIが書かれています。
+`start`と`end`のslotに、左右に表示するDOMを入れるようになっていたり、`dragging`などのcustom stateが定義されていたり、`divider`や`handle`などのCSS partsが提供されていてスタイルを当てられるようになっていたりします。
+
+スライダーなので、APGの[Slider Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/slider/)に従って`role="slider"`の要素に`aria-valuenow`や`aria-valuemin`、`aria-orientation`などがつけられていたり、矢印キーによる操作ができるようになっています。
+
+### Joystick, Slide Activator, Flip Card
+
+面白い動きシリーズです。
 
 https://quietui.org/docs/components/joystick
 
-### Slide Activator
-
 https://quietui.org/docs/components/slide-activator
-
-### Flip Card
 
 https://quietui.org/docs/components/flip-card
 
-https://www.tpgi.com/creating-a-truly-accessible-flip-card/
+### Dropdown
 
-他に、新しい機能使ってるコンポーネントをソースコードごと紹介
+https://quietui.org/docs/components/dropdown
+
+https://github.com/quietui/quiet/blob/next/src/components/dropdown/dropdown.ts
+
+Popover APIを使っている例です。`role="menu"`の要素に`popover="manual"`をつけて、`showMenu`関数内で`showPopover()`しています。
+Baseline: Limited availabilityであるAnchor Positioningはまだ利用していないようです。
+
+### Passcode
+
+https://quietui.org/docs/components/passcode
+
+`ElementInternals.setValidity`を用いてバリデーションをしている例です。
+
+https://github.com/quietui/quiet/blob/next/src/components/passcode/passcode.ts#L330
+
+少し上の方を見ると、`requestSubmit`や`setFormValue`なども使われています。
+
+ARIA系のElementInternalsはQuiet UI内のどこでも利用されていないようで、Litの`firstUpdated`関数内で`setAttribute`することでShadow hostに属性を設定しているようです。
 
 ## まとめ
