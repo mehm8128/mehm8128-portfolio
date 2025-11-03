@@ -22,7 +22,8 @@
   ],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 6am on monday"]
+    "schedule": ["before 6am on monday"],
+    "automerge": true
   },
   "vulnerabilityAlerts": {
     "enabled": true
