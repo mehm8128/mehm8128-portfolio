@@ -1,0 +1,2 @@
+minimumReleaseAgeExclude:
+  - "@mehm8128/rehype-toc"
