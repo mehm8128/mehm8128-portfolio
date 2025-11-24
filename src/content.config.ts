@@ -14,7 +14,7 @@ const blog = defineCollection({
 
 const adv2025 = defineCollection({
   loader: glob({
-    base: "./src/content/adv2025-webcomponents",
+    base: "./src/content/adv2025",
     pattern: "**/*.md",
   }),
   schema: () =>
