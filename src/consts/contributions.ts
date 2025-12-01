@@ -5,23 +5,8 @@ interface Contribution {
 
 export const contributions = [
   {
-    title:
-      "feat(biome_js_analyze): implement noExcessiveLinesPerFunction #6166 · biomejs/biome",
-    link: "https://github.com/biomejs/biome/pull/6166",
-  },
-  {
-    title: "feat(lint): implement useUniqueElementIds #6082 · biomejs/biome",
-    link: "https://github.com/biomejs/biome/pull/6082",
-  },
-  {
-    title:
-      "feat(linter): show dependency variable name by useExhaustiveDependencies #1551 · biomejs/biome",
-    link: "https://github.com/biomejs/biome/pull/1551",
-  },
-  {
-    title:
-      "fix(css_semantic): semantic event for css supports at-rule #4810 · biomejs/biome",
-    link: "https://github.com/biomejs/biome/pull/4810",
+    title: "biomejs/biomeへのPull Request",
+    link: "https://github.com/biomejs/biome/pulls?q=is%3Apr+author%3Amehm8128+is%3Aclosed",
   },
   {
     title: "Fix the way to calculate processedProps #283 · kuma-ui/kuma-ui",
