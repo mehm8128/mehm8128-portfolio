@@ -12,6 +12,11 @@ publishedDate: "Dec 1 2025"
 [jsx-eslint/eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)があり、それがRustに移植されて[Oxlint](https://oxc.rs/docs/guide/usage/linter/rules.html)や[Biome](https://biomejs.dev/linter/javascript/rules/#a11y)に入っています。その他[YozhikM/stylelint-a11y](https://github.com/YozhikM/stylelint-a11y)というのもあったりします。[Markuplint](https://markuplint.dev/ja/docs/rules#accessibility)にもいくつかアクセシビリティのルールがあります（アクセシビリティのところにないルールもアクセシビリティ関係あったりする）。
 
 こういったルールはプロジェクトで最初から入れておくことで、アクセシビリティに詳しくない人たちがいるチームでも強制的に一定のアクセシビリティを保つことができたり、正しいマークアップをすることができたりします。
+
+以下の記事もおすすめです。
+
+https://note.com/ebaryo43/n/nc3b75af818a4
+
 今回のadvでは、これらのルールの中からいくつかピックアップして深ぼっていきます。
 
 ただし、これを思いついたのが12/1ということで、進捗が0文字なので、しばらく更新がないと思ったら急に放出されたりするかもしれません。
