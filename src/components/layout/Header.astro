@@ -5,7 +5,6 @@ const currentPath = Astro.url.pathname;
 const isHomePage = currentPath === "/";
 const isBlogPage = currentPath.startsWith("/blog");
 const isAdv2024Page = currentPath.startsWith("/adv2024-reactaria");
-const isAdv2025Page = currentPath.startsWith("/adv2025");
 ---
 
 <header class="site-header">
@@ -31,13 +30,6 @@ const isAdv2025Page = currentPath.startsWith("/adv2025");
         aria-current={isAdv2024Page ? "page" : undefined}
       >
         Adv 2024
-      </a>
-      <a
-        href="/adv2025-biome-a11y"
-        class:list={["nav-link", "nav-link-adv2025"]}
-        aria-current={isAdv2025Page ? "page" : undefined}
-      >
-        Adv 2025
       </a>
     </div>
     <a
