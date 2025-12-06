@@ -1,20 +1,29 @@
 ---
-import { getCollection } from "astro:content";
-import AdvCalendar from "../../layouts/AdvCalendar.astro";
-
-const posts = (await getCollection("adv2025")).toSorted(
-  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
-);
-
-const internalPosts = posts.map((post) => ({
-  title: post.data.title,
-  publishedDate: post.data.publishedDate,
-  url: `/adv2025-biome-a11y/${post.id}/`,
-}));
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_IMG } from "../../consts/consts";
+import Layout from "../../layouts/Layout.astro";
 ---
 
-<AdvCalendar
-  year={2025}
-  title="Biomeのlintルールから見るアクセシビリティ"
-  posts={internalPosts}
-/>
+<Layout
+  title={`Advent Calendar 2025 - ${SITE_TITLE}`}
+  description={SITE_DESCRIPTION}
+  image={SITE_IMG}
+  maxWidth={1200}
+>
+  <div>
+    <p>
+      諸々の事情により、Advent Calendar 2025は中止になりました。<br />
+      なお、GitHub上には残っていますので、どうしても見たい方はそちらをご覧ください。
+    </p>
+    <ul>
+      <li>
+        <a
+          href="https://github.com/mehm8128/mehm8128-portfolio/pulls?q=sort%3Aupdated-desc+is%3Apr+is%3Aclosed+is%3Anot-merged+is%3Aunmerged+"
+          >当初予定していたWeb Componentsアドベントカレンダー12記事</a
+        >
+      </li>
+      <li>
+        <a href="">Biomeアドベントカレンダー5記事</a>
+      </li>
+    </ul>
+  </div>
+</Layout>
