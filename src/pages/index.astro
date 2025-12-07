@@ -74,9 +74,13 @@ const id = getRandomId();
     border: 3px solid var(--color-accent);
     animation: spin 2s ease-out;
   }
+  .hero-avatar:hover {
+    animation: spin 2s linear infinite;
+  }
 
   @media (prefers-reduced-motion: reduce) {
-    .hero-avatar {
+    .hero-avatar,
+    .hero-avatar:hover {
       animation: none;
     }
   }
