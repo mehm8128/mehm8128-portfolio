@@ -26,6 +26,10 @@ export const blogs = [
     link: "https://blog.cybozu.io/entry/2025/08/19/113000",
   },
   {
+    title: "Referencing HTML elements inside Shadow DOM",
+    link: "https://htmhell.dev/adventcalendar/2025/4/",
+  },
+  {
     title: "2024年のa11y活動報告",
     link: "https://sizu.me/mehm8128/posts/vahz9skimne4",
   },
