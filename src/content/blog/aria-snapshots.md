@@ -21,14 +21,13 @@ Aria Snapshotsには、普段testing-libraryやplaywrightで`expect()`などを�
 
 testing-libraryでテストしたい場合は、例えばReact Ariaでは、[去年の記事](https://zenn.dev/mehm8128/articles/adv2024-react-aria-test)で書いたように、「このロールがついている」「tabIndexが0である」「aria-disabledがついている」というようなテストを1つ1つ書いていく必要があります。また、「aria-labelledbyにちゃんとこのIDが指定されている」のようなテストもありました。
 しかし、Aria Snapshotsでは、テスト対象のコンポーネントに対してax treeという形でスナップショットを撮り、前回分と比較するだけで済むようになります。
+アサーションテストとスナップショットテストの比較については、もう少し詳細に前述の公式ドキュメントに記載があるので、読んでみてください。
 
 2. 抽象化されることで余計な差分が検出されない
 
 DOMのスナップショットテストだと、例えばちょっとDOM構造を変えたとか、CSSの修正・リファクタのためにclassNameを変えたとかでもすぐに差分が検出されてしまいます。また、`<a>`要素のリンクを変えた、というだけでも差分が検出されてしまいます。
 しかし、ax treeというレベルまで抽象化され、roleとaccessible nameとARIA state（とその他いくつかの情報）だけになることで、ユーザーの体験に直接影響しない余計な差分が検出されずに済みます。
 さらに、その分スナップショットの文字数も減るので、差分が検出されたときの確認も楽になります。
-
-1つ目についてはもう少し詳細に前述の公式ドキュメントに記載があるので、読んでみてください。
 
 ただ、今回はメリットを確認するのはそこまで重要ではありません。写真の撮り方を見ていきます。
 
@@ -64,20 +63,34 @@ ax treeのオブジェクトを内部では`AriaNode`という型で扱ってい
 これは、yaml to `AriaNode`を行うファイルです。
 `toMatchAriaSnapshot()`に渡された文字列や、ファイルから読み込んだyamlを比較用に`AriaNode`に変換します。
 
-### ariasnapshot.ts / generateAriaTree()
+パーサーでひたすらパースするだけなので、特に言うことはありません。
+
+### `ariasnapshot.ts` / `generateAriaTree()`
 
 `ariasnapshot.ts`は、DOMを`AriaNode`に変換し、それをさらにyamlに変換する処理が一通り書かれたファイルです。
 `generateAriaTree()`では、DOM to `AriaNode`の部分を行います。
 
-### ariasnapshot.ts / renderAriaTree()
+主に`visit()`を用いてDOMを走査し、順番に`AriaNode`に変換していきます。`toAriaNode()`という関数で、`Element`型のノードから様々な情報を抽出し、`AriaNode`に変換します。その後、それを`processElement()`という関数でさらに疑似要素やslotからテキストを抽出したり、URLやplaceholderなどを抽出して`AriaNode`に情報を追加したりします。
+
+`toAriaNode()`をもう少し見ていきます。
+この関数では、主にaccessible nameやrole、ARIA statesなどの計算・取得をしていて、それらの情報を`AriaNode`としてオブジェクトに詰め込んだものをreturnします。
+これらの計算処理は、[過去に書いた記事](https://zenn.dev/mehm8128/articles/query-by-role)で軽く紹介している`getByRole`などで行われている計算処理と同じ関数が用いられています。
+Testing Libraryだとここらへんの処理は、記事で紹介している[aria-query](https://github.com/A11yance/aria-query)や[dom-accessibility-api](https://github.com/eps1lon/dom-accessibility-api)のような外部ライブラリを用いて実行しているのですが、Playwrightでは全部自前実装しています。ただ、W3Cの仕様書へのリンクがたくさん貼られているので、だいぶ読みやすいです。
+
+### `ariasnapshot.ts` / `renderAriaTree()`
 
 `renderAriaTree()`は、`AriaNode`をyamlに変換する関数です。
 
-### `matchesExpectAriaTemplate`
+ひたすら文字列にしていきます。
+
+### `matchesExpectAriaTemplate()`
 
 `AriaNode`を比較する関数です。
-内部で`generateAriaTree`で対象のDOMをAriaTreeに変換し、それと渡されたyamlを`AriaNode`に変換したものを、`matchesNodeDeep`関数で比較します（ただし、コード見れば分かるように、後者の型は`AriaNode`とは微妙に違う`AriaTemplateNode`という型のようです）。
+内部で`generateAriaTree()`で対象のDOMをAriaTreeに変換し、それと渡されたyamlとを`AriaNode`に変換したものを、`matchesNodeDeep()`関数で比較します（ただし、コード見れば分かるように、後者の型は`AriaNode`とは微妙に違う`AriaTemplateNode`という型のようです）。
+メインの処理は`matchesNode()`にあります。
+
+このようにして
 
 ## まとめ
 
-Playwrightだけでなく、testing-libraryなどでもできるようにしてほしいです。
+Playwrightでだけ実現できるようなものでもない気がしているので、Playwrightだけでなくてtesting-libraryなどでもできるようにしてほしいです。
