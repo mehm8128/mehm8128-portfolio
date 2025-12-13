@@ -106,3 +106,7 @@ https://github.com/microsoft/playwright/blob/1513578204d1e8ff283883d568ba9551b58
 ## まとめ
 
 そんなに深堀りせずに概要をざっくり見てきました。気になる人はもう少しコードを読んでみたり、自分で実装してみたりしてください。Playwrightでだけ実現できるようなものでもない気がしているので、Playwrightだけでなく、testing-libraryなどでもできるようになってほしいです。
+
+また、ax treeについてもっと知りたい方は、最近以下のブログで何記事か公開されている関連記事を読むといいかもしれません。
+
+https://www.maxdesign.com.au/articles/axtree.html
