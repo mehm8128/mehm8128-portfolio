@@ -35,12 +35,12 @@
   content: "ℹ️";
 }
 
-.content div[data-callout-type="warning"] {
+.content div[data-callout-type="warn"] {
   border-left-color: var(--color-warning);
   background-color: var(--color-warning-bg);
 }
 
-.content div[data-callout-type="warning"] div[data-callout-title]::before {
+.content div[data-callout-type="warn"] div[data-callout-title]::before {
   content: "⚠️";
 }
 
