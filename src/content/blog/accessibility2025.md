@@ -1,6 +1,6 @@
 ---
 title: "アクセシビリティに取り組む意味"
-publishedDate: "Dec 24 2025"
+publishedDate: "Dec 17 2025"
 ---
 
 > [!note]
