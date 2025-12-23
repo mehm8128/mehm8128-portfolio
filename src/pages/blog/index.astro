@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { SITE_DESCRIPTION, SITE_IMG, SITE_TITLE } from "../../consts/consts";
+import { SITE_TITLE } from "../../consts/consts";
 import Layout from "../../layouts/Layout.astro";
 import { formatDate } from "../../functions/date";
 
@@ -9,18 +9,13 @@ const posts = (await getCollection("blog")).toSorted(
 );
 
 const internalPosts = posts.map((post) => ({
-  title: post.data.title,
-  description: post.data.description,
-  publishedDate: post.data.publishedDate,
+  ...post.data,
+  id: post.id,
   url: `/blog/${post.id}/`,
 }));
 ---
 
-<Layout
-  title={`Blog - ${SITE_TITLE}`}
-  description={SITE_DESCRIPTION}
-  image={SITE_IMG}
->
+<Layout title={`Blog - ${SITE_TITLE}`}>
   <div class="blog-header">
     <h1>Blog</h1>
   </div>
@@ -30,19 +25,28 @@ const internalPosts = posts.map((post) => ({
       internalPosts.map((post) => (
         <li class="post-item">
           <a href={post.url} class="post-link">
-            <div class="post-content">
-              <p class="post-title">{post.title}</p>
-              {post.description && (
-                <p class="post-description">{post.description}</p>
-              )}
-            </div>
-            <div class="post-meta">
-              <time
-                class="post-date"
-                datetime={post.publishedDate.toISOString()}
-              >
-                {formatDate(post.publishedDate)}
-              </time>
+            <img
+              src={post.thumbnail.src}
+              alt={post.thumbnailAlt}
+              height={100}
+              width={100}
+              class="post-thumbnail"
+            />
+            <div class="post-details">
+              <div class="post-content">
+                <p class="post-title">{post.title}</p>
+                {post.description && (
+                  <p class="post-description">{post.description}</p>
+                )}
+              </div>
+              <div class="post-meta">
+                <time
+                  class="post-date"
+                  datetime={post.publishedDate.toISOString()}
+                >
+                  {formatDate(post.publishedDate)}
+                </time>
+              </div>
             </div>
           </a>
         </li>
@@ -84,12 +88,27 @@ const internalPosts = posts.map((post) => ({
 
   .post-link {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     padding: 0.75rem 1rem;
     text-decoration: none;
     height: 100%;
     transition: var(--transition-fast);
     min-height: 140px;
+  }
+
+  .post-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+  }
+
+  .post-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .post-content {

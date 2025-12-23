@@ -1,5 +1,7 @@
 ---
 title: "アクセシビリティに取り組む意味"
+thumbnail: "./images/accessibility2025/thumbnail.png"
+thumbnailAlt: "手書きの地球のイラスト"
 publishedDate: "Dec 17 2025"
 ---
 

@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { formatDate } from "../functions/date";
-import { SITE_IMG, SITE_TITLE } from "../consts/consts";
+import { SITE_TITLE } from "../consts/consts";
 import Layout from "./Layout.astro";
 
 import "../styles/blog/blog-headings.css";
@@ -15,7 +15,14 @@ import { getRandomId } from "../functions/getRandomId";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, publishedDate, updatedDate } = Astro.props;
+const {
+  title,
+  description,
+  thumbnail,
+  thumbnailAlt,
+  publishedDate,
+  updatedDate,
+} = Astro.props;
 
 const id = getRandomId();
 ---
@@ -23,7 +30,8 @@ const id = getRandomId();
 <Layout
   title={`${title} - ${SITE_TITLE}`}
   description={description}
-  image={SITE_IMG}
+  image={thumbnail.src}
+  imageAlt={thumbnailAlt}
 >
   <article aria-labelledby={id}>
     <div class="title">

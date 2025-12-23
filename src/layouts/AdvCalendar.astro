@@ -1,5 +1,5 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_IMG } from "../consts/consts";
+import { SITE_TITLE } from "../consts/consts";
 import {
   generateAdventCalendar,
   weekdayNames,
@@ -22,8 +22,6 @@ const calendarWeeks = generateAdventCalendar(posts, year, endDate);
 
 <Layout
   title={`Advent Calendar ${yearString} - ${title} - ${SITE_TITLE}`}
-  description={SITE_DESCRIPTION}
-  image={SITE_IMG}
   maxWidth={1200}
 >
   <div class="blog-header">

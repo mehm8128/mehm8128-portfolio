@@ -6,18 +6,13 @@ import Certification from "../components/index/Certification.astro";
 import Contribution from "../components/index/Contribution.astro";
 import SocialLinks from "../components/index/SocialLinks.astro";
 import Blog from "../components/index/Blog.astro";
-import {
-  ICON_DESCRIPTION,
-  SITE_DESCRIPTION,
-  SITE_IMG,
-  SITE_TITLE,
-} from "../consts/consts";
+import { ICON_DESCRIPTION, SITE_IMG, SITE_TITLE } from "../consts/consts";
 import { getRandomId } from "../functions/getRandomId";
 
 const id = getRandomId();
 ---
 
-<Layout title={SITE_TITLE} description={SITE_DESCRIPTION} image={SITE_IMG}>
+<Layout title={SITE_TITLE}>
   <section class="hero" aria-labelledby={id}>
     <div class="hero-header">
       <Image

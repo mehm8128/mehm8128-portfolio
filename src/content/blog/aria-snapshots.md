@@ -1,5 +1,7 @@
 ---
 title: "アクセシビリティツリーの写真の撮り方"
+thumbnail: "./images/aria-snapshots/thumbnail.png"
+thumbnailAlt: "手書きの木のイラスト"
 publishedDate: "Dec 19 2025"
 ---
 
