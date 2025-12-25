@@ -9,21 +9,17 @@ export const blogs = [
     link: "https://portfolio.hm8128.me/adv2024-reactaria/",
   },
   {
-    title: "Biomeのlintルールから見るアクセシビリティ Advent Calendar 2025",
-    link: "https://portfolio.hm8128.me/adv2025-biome-a11y/",
-  },
-  {
     title: "Rustでmini-gitを作った話",
     link: "https://trap.jp/post/2036/",
-  },
-  {
-    title: "25新卒エンジニア5人の内定者アルバイト体験記",
-    link: "https://blog.cybozu.io/entry/2025/02/26/112000",
   },
   {
     title:
       "サイボウズのフロントエンドエンジニアの探究活動について全てをお話します",
     link: "https://blog.cybozu.io/entry/2025/08/19/113000",
+  },
+  {
+    title: "25新卒エンジニア5人の内定者アルバイト体験記",
+    link: "https://blog.cybozu.io/entry/2025/02/26/112000",
   },
   {
     title: "Referencing HTML elements inside Shadow DOM",
