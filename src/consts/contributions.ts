@@ -9,6 +9,10 @@ export const contributions = [
     link: "https://github.com/biomejs/biome/pulls?q=is%3Apr+author%3Amehm8128+is%3Aclosed",
   },
   {
+    title: "feat(linter): implement aria/proptypes #17253 · oxc-project/oxc",
+    link: "https://github.com/oxc-project/oxc/pull/17253",
+  },
+  {
     title: "Fix the way to calculate processedProps #283 · kuma-ui/kuma-ui",
     link: "https://github.com/kuma-ui/kuma-ui/pull/283",
   },
