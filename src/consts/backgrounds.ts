@@ -3,6 +3,9 @@ interface Background {
 }
 
 export const backgrounds: Background[] = [
+  {
+    text: "2025年12月～ ウェブアクセシビリティ基盤委員会（WAIC）作業部会2 作業協力者",
+  },
   { text: "2025年4月～ サイボウズ株式会社" },
   { text: "2024年10月～2025年2月 サイボウズ株式会社 内定者アルバイト" },
   { text: "2024年8～9月 株式会社CoeFont 業務委託" },
