@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import Layout from "../layouts/Layout.astro";
+import Layout from "../components/layouts/Layout.astro";
 import Background from "../components/index/Background.astro";
 import Certification from "../components/index/Certification.astro";
 import Contribution from "../components/index/Contribution.astro";
 import SocialLinks from "../components/index/SocialLinks.astro";
 import Blog from "../components/index/Blog.astro";
-import { ICON_DESCRIPTION, SITE_IMG, SITE_TITLE } from "../consts/consts";
+import { ICON_DESCRIPTION, SITE_IMG, SITE_TITLE } from "../consts";
 import { getRandomId } from "../functions/getRandomId";
 
 const id = getRandomId();
