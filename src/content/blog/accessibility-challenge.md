@@ -1,7 +1,5 @@
 ---
 title: "人類の挑戦として捉えるアクセシビリティ"
-thumbnail: "./images/accessibility-challenge/thumbnail.png"
-thumbnailAlt: "手書きの「Challenge!」という文字"
 publishedDate: "Dec 25 2025"
 ---
 

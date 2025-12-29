@@ -8,11 +8,12 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkCallout from "@r4ai/remark-callout";
 import remarkLinkCard from "remark-link-card-plus";
 import { rehypeCollapsibleToc } from "@mehm8128/rehype-toc";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://portfolio.hm8128.me",
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), react()],
   markdown: {
     remarkPlugins: [
       remarkCallout,

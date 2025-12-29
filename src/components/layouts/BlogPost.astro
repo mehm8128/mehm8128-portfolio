@@ -12,16 +12,11 @@ import { SITE_TITLE } from "../../consts";
 import { formatDate } from "../../functions/date";
 import { getRandomId } from "../../functions/getRandomId";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"blog">["data"] & {
+  blogId: string;
+};
 
-const {
-  title,
-  description,
-  thumbnail,
-  thumbnailAlt,
-  publishedDate,
-  updatedDate,
-} = Astro.props;
+const { title, description, publishedDate, updatedDate } = Astro.props;
 
 const id = getRandomId();
 ---
@@ -29,8 +24,7 @@ const id = getRandomId();
 <Layout
   title={`${title} - ${SITE_TITLE}`}
   description={description}
-  image={thumbnail?.src}
-  imageAlt={thumbnailAlt}
+  ogImage="ogp.png"
 >
   <article aria-labelledby={id}>
     <div class="title">

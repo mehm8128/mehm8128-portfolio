@@ -6,7 +6,7 @@ import Certification from "../components/index/Certification.astro";
 import Contribution from "../components/index/Contribution.astro";
 import SocialLinks from "../components/index/SocialLinks.astro";
 import Blog from "../components/index/Blog.astro";
-import { ICON_DESCRIPTION, SITE_IMG, SITE_TITLE } from "../consts";
+import { ICON_DESCRIPTION, SITE_TITLE } from "../consts";
 import { getRandomId } from "../functions/getRandomId";
 
 const id = getRandomId();
@@ -16,7 +16,7 @@ const id = getRandomId();
   <section class="hero" aria-labelledby={id}>
     <div class="hero-header">
       <Image
-        src={SITE_IMG}
+        src="/single_color_circle.png"
         alt={ICON_DESCRIPTION}
         class="hero-avatar"
         width={80}

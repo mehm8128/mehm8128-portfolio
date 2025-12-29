@@ -25,15 +25,6 @@ const internalPosts = posts.map((post) => ({
       internalPosts.map((post) => (
         <li class="post-item">
           <a href={post.url} class="post-link">
-            {post.thumbnail && (
-              <img
-                src={post.thumbnail.src}
-                alt={post.thumbnailAlt}
-                height={100}
-                width={100}
-                class="post-thumbnail"
-              />
-            )}
             <div class="post-details">
               <div class="post-content">
                 <p class="post-title">{post.title}</p>
@@ -97,14 +88,6 @@ const internalPosts = posts.map((post) => ({
     height: 100%;
     transition: var(--transition-fast);
     min-height: 140px;
-  }
-
-  .post-thumbnail {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: var(--radius-sm);
-    flex-shrink: 0;
   }
 
   .post-details {
