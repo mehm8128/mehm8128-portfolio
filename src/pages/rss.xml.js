@@ -11,6 +11,11 @@ export async function GET(context) {
     items: posts.map((post) => ({
       ...post.data,
       link: `/blog/${post.id}/`,
+      enclosure: {
+        url: `/blog/${post.id}/ogp.png`,
+        type: "image/png",
+        length: 0,
+      },
     })),
   });
 }
