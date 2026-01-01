@@ -27,7 +27,7 @@ export const generateOgImage = (title: string) => {
           top: "40px",
           left: "40px",
           color: "#111827", // --color-text
-          fontSize: "24px",
+          fontSize: "32px",
         }}
       >
         mehm8128のWeblog
@@ -76,7 +76,7 @@ export const generateOgImage = (title: string) => {
         <div
           style={{
             color: "#111827", // --color-text
-            fontSize: "28px",
+            fontSize: "32px",
           }}
         >
           mehm8128
