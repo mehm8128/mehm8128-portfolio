@@ -9,7 +9,6 @@ import remarkCallout from "@r4ai/remark-callout";
 import remarkLinkCard from "remark-link-card-plus";
 import { rehypeCollapsibleToc } from "@mehm8128/rehype-toc";
 import react from "@astrojs/react";
-import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
