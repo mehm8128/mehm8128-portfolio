@@ -16,23 +16,26 @@ importers:
         specifier: ^12.6.12
         version: 12.6.12(@types/node@25.0.3)(astro@5.16.6(@types/node@25.0.3)(rollup@4.54.0)(typescript@5.9.3)(yaml@2.8.2))(yaml@2.8.2)
       '@astrojs/markdown-remark':
-        specifier: ^6.3.6
+        specifier: ^6.3.10
         version: 6.3.10
       '@astrojs/mdx':
-        specifier: ^4.3.5
+        specifier: ^4.3.13
         version: 4.3.13(astro@5.16.6(@types/node@25.0.3)(rollup@4.54.0)(typescript@5.9.3)(yaml@2.8.2))
       '@astrojs/react':
         specifier: ^4.4.2
         version: 4.4.2(@types/node@25.0.3)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(yaml@2.8.2)
       '@astrojs/rss':
-        specifier: ^4.0.12
+        specifier: ^4.0.14
         version: 4.0.14
       '@astrojs/sitemap':
-        specifier: ^3.5.1
+        specifier: ^3.6.0
         version: 3.6.0
+      '@cloudflare/pages-plugin-vercel-og':
+        specifier: ^0.1.2
+        version: 0.1.2
       '@mehm8128/rehype-toc':
-        specifier: ^1.3.0
-        version: 1.3.0
+        specifier: ^1.4.1
+        version: 1.4.1
       '@r4ai/remark-callout':
         specifier: ^0.6.2
         version: 0.6.2
@@ -40,10 +43,10 @@ importers:
         specifier: ^0.8.6
         version: 0.8.6
       astro:
-        specifier: ^5.13.7
+        specifier: ^5.16.6
         version: 5.16.6(@types/node@25.0.3)(rollup@4.54.0)(typescript@5.9.3)(yaml@2.8.2)
       kiso.css:
-        specifier: ^1.2.2
+        specifier: ^1.2.3
         version: 1.2.3
       react:
         specifier: ^19.2.3
@@ -55,20 +58,17 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       remark-link-card-plus:
-        specifier: ^0.7.0
+        specifier: ^0.7.2
         version: 0.7.2
       sharp:
-        specifier: ^0.34.3
+        specifier: ^0.34.5
         version: 0.34.5
-      wrangler:
-        specifier: ^4.54.0
-        version: 4.54.0(@cloudflare/workers-types@4.20260101.0)
     devDependencies:
       '@astrojs/check':
-        specifier: ^0.9.4
+        specifier: ^0.9.6
         version: 0.9.6(prettier@3.7.4)(typescript@5.9.3)
       '@markuplint/astro-parser':
-        specifier: ^4.6.21
+        specifier: ^4.6.22
         version: 4.6.22
       '@types/react':
         specifier: ^19.2.7
@@ -77,20 +77,23 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.7)
       markuplint:
-        specifier: ^4.13.1
+        specifier: ^4.14.0
         version: 4.14.0(typescript@5.9.3)
       prettier:
-        specifier: ^3.6.2
+        specifier: ^3.7.4
         version: 3.7.4
       textlint:
-        specifier: ^15.2.2
+        specifier: ^15.5.0
         version: 15.5.0(hono@4.11.3)
       textlint-rule-preset-ja-technical-writing:
         specifier: ^12.0.2
         version: 12.0.2
       typescript:
-        specifier: ^5.9.2
+        specifier: ^5.9.3
         version: 5.9.3
+      wrangler:
+        specifier: ^4.54.0
+        version: 4.54.0(@cloudflare/workers-types@4.20260101.0)
 
 packages:
 
@@ -270,6 +273,9 @@ packages:
   '@cloudflare/kv-asset-handler@0.4.1':
     resolution: {integrity: sha512-Nu8ahitGFFJztxUml9oD/DLb7Z28C8cd8F46IVQ7y5Btz575pvMY8AqZsXkX7Gds29eCKdMgIHjIvzskHgPSFg==}
     engines: {node: '>=18.0.0'}
+
+  '@cloudflare/pages-plugin-vercel-og@0.1.2':
+    resolution: {integrity: sha512-aWA2pHu1R2UbOJIcSASCuViyYVEhYkZ3tWTrTnr+yLosBfksOzjecHQkCkPv/jy75hGPrn1BbtsQR+oWVFkp1g==}
 
   '@cloudflare/unenv-preset@2.7.11':
     resolution: {integrity: sha512-se23f1D4PxKrMKOq+Stz+Yn7AJ9ITHcEecXo2Yjb+UgbUDCEBch1FXQC6hx6uT5fNA3kmX3mfzeZiUmpK1W9IQ==}
@@ -1224,8 +1230,8 @@ packages:
   '@mdx-js/mdx@3.1.1':
     resolution: {integrity: sha512-f6ZO2ifpwAQIpzGWaBQT2TXxPv6z3RBzQKpVftEWN78Vl/YweF1uwussDx8ECAXVtr3Rs89fKyG9YlzUs9DyGQ==}
 
-  '@mehm8128/rehype-toc@1.3.0':
-    resolution: {integrity: sha512-2XtftvzQerU5sQmEL2naIk50t3MyFnIJLzUJo0L0fbZU2H88gNTx8wrFr6c+7i/Mbl+6ELF74sC85ywOjPFFNA==}
+  '@mehm8128/rehype-toc@1.4.1':
+    resolution: {integrity: sha512-pGi25VoiEImj5TWFL9hA9yQVrrxD3MshQ+nvQP2VKOLVKp7W0kvPGBiFnMz/FNWH0CGFeiec4tiIO3g9TtBEdA==}
 
   '@modelcontextprotocol/sdk@1.25.1':
     resolution: {integrity: sha512-yO28oVFFC7EBoiKdAn+VqRm+plcfv4v0xp6osG/VsCB0NlPZWi87ajbCZZ8f/RvOFLEu7//rSRmuZZ7lMoe3gQ==}
@@ -5256,6 +5262,8 @@ snapshots:
     dependencies:
       mime: 3.0.0
 
+  '@cloudflare/pages-plugin-vercel-og@0.1.2': {}
+
   '@cloudflare/unenv-preset@2.7.11(unenv@2.0.0-rc.24)(workerd@1.20251118.0)':
     dependencies:
       unenv: 2.0.0-rc.24
@@ -5997,7 +6005,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mehm8128/rehype-toc@1.3.0':
+  '@mehm8128/rehype-toc@1.4.1':
     dependencies:
       unist-util-visit: 5.0.0
 

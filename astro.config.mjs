@@ -57,5 +57,4 @@ export default defineConfig({
       rehypeCollapsibleToc,
     ],
   },
-  adapter: cloudflare(),
 });

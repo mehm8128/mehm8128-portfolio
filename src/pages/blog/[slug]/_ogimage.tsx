@@ -2,8 +2,8 @@ import { ImageResponse } from "@vercel/og";
 import fs from "node:fs";
 
 export const generateOgImage = (title: string) => {
-  const fontNormal = fs.readFileSync("src/assets/font/NotoSansJP-Medium.ttf");
-  const fontBold = fs.readFileSync("src/assets/font/NotoSansJP-Bold.ttf");
+  const fontNormal = fs.readFileSync("public/font/NotoSansJP-Medium.ttf");
+  const fontBold = fs.readFileSync("public/font/NotoSansJP-Bold.ttf");
   const iconSvg = fs.readFileSync("public/single_color_circle.svg");
   const iconBase64 = `data:image/svg+xml;base64,${iconSvg.toString("base64")}`;
 
