@@ -2,5 +2,6 @@ minimumReleaseAgeExclude:
   - '@mehm8128/rehype-toc'
 
 overrides:
+  '@modelcontextprotocol/sdk@<1.25.2': '>=1.25.2'
   glob@>=11.0.0 <11.1.0: '>=11.1.0'
   qs@<6.14.1: '>=6.14.1'
