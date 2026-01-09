@@ -1,6 +1,6 @@
 ---
 title: "Web Almanacから見る2025年のWebアクセシビリティ"
-publishedDate: "Dec 31 2025"
+publishedDate: "Jan 15 2026"
 ---
 
 https://almanac.httparchive.org/ja/2025/accessibility
@@ -18,11 +18,6 @@ https://almanac.httparchive.org/ja/2025/accessibility
 
 contrast-color
 APCAどうなる？
-
-## フォントサイズの単位
-
-emはちょっと増えたけどremは増えてない
-自分は文字が見づらいことが結構あるので、ちゃんと拡大できるようになってほしい
 
 ## prefers-系
 
@@ -101,3 +96,5 @@ TLD別で日本の色が出てなくてバグってる。数値的には80.76ら
 ## まとめ
 
 https://vale.rocks/posts/accessibility-importance
+
+どこかにAIのセクション追記する
