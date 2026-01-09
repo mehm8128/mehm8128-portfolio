@@ -3,6 +3,9 @@ title: "ComboBoxについて"
 publishedDate: "Dec 20 2024"
 ---
 
+> [!warn]
+> この記事は他サイトから移行したものです。
+
 > [!note]
 > この記事は [React Aria の実装読むぞ - Qiita Advent Calendar 2024](https://qiita.com/advent-calendar/2024/react-aria) の 20 日目の記事です。
 
