@@ -5,10 +5,6 @@ interface Blog {
 
 export const blogs = [
   {
-    title: "React Ariaの実装読むぞ Advent Calendar 2024",
-    link: "https://portfolio.hm8128.me/adv2024-reactaria/",
-  },
-  {
     title: "Rustでmini-gitを作った話",
     link: "https://trap.jp/post/2036/",
   },
@@ -32,10 +28,6 @@ export const blogs = [
   {
     title: "a11y 上の理由で Deprecated になった HTML と ARIA まとめ",
     link: "https://zenn.dev/cybozu_frontend/articles/deprecated-html-and-aria",
-  },
-  {
-    title: "BiomeのPluginについて",
-    link: "https://zenn.dev/mehm8128/articles/biome-plugin",
   },
   {
     title: "技術書典16 traP TechBook執筆",

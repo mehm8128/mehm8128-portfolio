@@ -13,6 +13,11 @@ export const contributions = [
     link: "https://github.com/oxc-project/oxc/pull/17253",
   },
   {
+    title:
+      "Add tests for interactive element labels named by svg title elements #56902 · web-platform-tests/wpt",
+    link: "https://github.com/web-platform-tests/wpt/pull/56902",
+  },
+  {
     title: "Fix the way to calculate processedProps #283 · kuma-ui/kuma-ui",
     link: "https://github.com/kuma-ui/kuma-ui/pull/283",
   },
