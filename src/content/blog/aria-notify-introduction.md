@@ -34,7 +34,7 @@ https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regi
 - `aria-live` の `assertive` と `polite` の挙動が明確に定義されておらず、スクリーンリーダーによって動作が異なっていた
 - ライブリージョンには「視覚的な変化を通知する」という前提があるので DOM に結びついていなければならないが、DOM と結びつかない命令的な通知をしたい場合に、ハック的な実装が行われてしまうことがある
   - これは視覚的な役割を果たさないため、機能実装の修正時に追従が忘れられたり、いつの間にか壊れたりしがちとのこと
-  - 例えば、[Button について - React Aria の実装読むぞ](https://zenn.dev/mehm8128/articles/adv2024-react-aria-button#ispending%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6) で紹介したような、[React Aria の LiveAnnouncer](https://github.com/adobe/react-spectrum/blob/main/packages/%40react-aria/live-announcer/src/LiveAnnouncer.tsx) のような実装のことを表しているのだと思います
+  - 例えば、[Button について - React Aria の実装読むぞ](https://portfolio.hm8128.me/adv2024-reactaria/day2#ispending%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6) で紹介したような、[React Aria の LiveAnnouncer](https://github.com/adobe/react-spectrum/blob/main/packages/%40react-aria/live-announcer/src/LiveAnnouncer.tsx) のような実装のことを表しているのだと思います
 
 ## 用例
 

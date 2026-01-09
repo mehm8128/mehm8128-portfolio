@@ -19,7 +19,7 @@ publishedDate: "Jul 21 2025"
 author、contents、prohibited の 3 種類があり、例えば button role であれば author と contents を持っているので、aria-label など明示的なマークアップによって指定されていればそれを accessible name として採用し、それらがなければ子要素のテキストから計算されて採用されます。
 詳しくは過去の記事や accname-1.2 などを参照してください。
 
-https://zenn.dev/mehm8128/articles/accessible-name-and-description-computation-1-2#add-name-from-prohibited
+https://portfolio.hm8128.me/blog/accessible-name-and-description-computation-1-2#add-name-from-prohibited
 https://www.w3.org/TR/accname-1.2/#mapping_additional_nd
 
 ### `nameFrom: heading` とは

@@ -95,14 +95,14 @@ https://react-spectrum.adobe.com/blog/building-a-combobox.html
 
 ### React portals
 
-[前回と前々回解説した Focus Management API の RFC](https://zenn.dev/mehm8128/articles/adv2024-react-aria-focus-management-api#react-portals) でも述べられていたようなフォーカス順の話です。
+[前回と前々回解説した Focus Management API の RFC](https://portfolio.hm8128.me/adv2024-reactaria/day17#react-portals) でも述べられていたようなフォーカス順の話です。
 ComboBox が開いている間はこのコンポーネント以外のところにスクリーンリーダーがアクセスできないように（≒ フォーカスできないように）、残りの全ての要素に`aria-hidden`をつけています。また、その間に新しい DOM が生成されたときも`MutationObserver`で監視して、新たに`aria-hidden`をつけるようにしているらしいです。
 
 ちなみに、これだと重いので`startTransition`を用いてパフォーマンス改善をするというテクニックがあるらしいです。
 https://x.com/javascripter/status/1867513567156805906
 
 Dialog についての記事で説明したように、Dialog の場合は Safari のバグが直れば代わりに`aria-modal="true"`をつけられるらしいのですが、今回の場合は`dialog`role を使っているわけではないので置き換えられなさそうです。
-https://zenn.dev/mehm8128/articles/adv2024-react-aria-popover-and-dialog#%E3%83%A2%E3%83%BC%E3%83%80%E3%83%AB%E5%8C%96
+https://portfolio.hm8128.me/adv2024-reactaria/day8#%E3%83%A2%E3%83%BC%E3%83%80%E3%83%AB%E5%8C%96
 
 > `aria-modal` プロパティを `role="dialog"` の要素に適用すると、ダイアログ外のコンテンツが不活性であることを支援技術に知らせるために、背景で aria-hidden を使用する技術に置き換わります。
 
@@ -126,7 +126,7 @@ NVDA と Voice Over における読み上げの問題があったので、その
 例えば`group`role 内のオプションラベルや利用可能なオプションの数の読み上げ、選択中のオプションにフォーカスしたときに現在選択中という情報などが読み上げられていなかったらしいです。
 `LiveAnnouncer`については 2 日目の記事で解説したので、そちらをご覧ください。
 
-https://zenn.dev/mehm8128/articles/adv2024-react-aria-button#ispending%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
+https://portfolio.hm8128.me/adv2024-reactaria/day2#ispending%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
 
 ちなみに、読み上げメッセージについては簡潔になるように配慮されているらしいです。
 
@@ -136,7 +136,7 @@ https://github.com/adobe/react-spectrum/blob/326f48154e301edab425c8198c5c3af7242
 ### キーボード操作
 
 前に`useListBox`や`useComboBox`を用いたときのメニューでのフォーカス移動の挙動と、`useMenu`を用いたときの挙動が異なっていて気になって調査したことがあるので、紹介しておきます。
-https://zenn.dev/mehm8128/articles/react-aria-combobox
+https://portfolio.hm8128.me/blog/react-aria-combobox
 
 ### Customizable Select Element
 

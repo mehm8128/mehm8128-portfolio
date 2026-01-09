@@ -16,29 +16,29 @@ publishedDate: "Dec 25 2024"
 ### スクリーンリーダーの読み上げ対応
 
 a11y 対応と言って最初にこれが思い浮かぶ人は多かったのではないでしょうか。
-HTML タグを正しく使って構造化するとか、accessible name をつけるという基本的なところから、`aria-selected`などの`aria-`属性を使って要素の状態を表現したり、`aria-live="polite"`のようなライブリージョンを用いてアナウンスさせたり、ブラウザ側でサポートされていないようなタイミングで読み上げたい場合に独自の[`LiveAnnouncer`オブジェクト](https://zenn.dev/mehm8128/articles/adv2024-react-aria-button#ispending%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)を用いてアナウンスさせたりと、様々な方法で Web ページの状態をスクリーンリーダーによって読み上げさせていました。
+HTML タグを正しく使って構造化するとか、accessible name をつけるという基本的なところから、`aria-selected`などの`aria-`属性を使って要素の状態を表現したり、`aria-live="polite"`のようなライブリージョンを用いてアナウンスさせたり、ブラウザ側でサポートされていないようなタイミングで読み上げたい場合に独自の[`LiveAnnouncer`オブジェクト](https://portfolio.hm8128.me/adv2024-reactaria/day2#ispending%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)を用いてアナウンスさせたりと、様々な方法で Web ページの状態をスクリーンリーダーによって読み上げさせていました。
 これによってスクリーンリーダー利用者は Web サービスを利用できるようになります。しかし、このような対応はスクリーンリーダー利用者以外にもメリットをもたらします。HTML の正しい構造化や適切なラベル付けによって accessible name が正しく付与されることで、音声コントロールの利用者が音声によってスムーズに Web サービスを操作できるようになります。適切にラベル付けされたフォーム UI は、支援技術を必要としないユーザーにとっても入力するものが分かりやすく、ユーザー体験を向上させることに繋がります。また開発者目線だと、Testing Library などでコンポーネントのテストを書くときに`getByRole`のような関数で対象の要素を取得しやすくなります。
 
 ### キーボード操作
 
-キーボード操作についても様々な対応がされていました。React Aria は基本的に APG に沿った実装を行っているので、キーボード操作についても APG に書かれている通りに実装されていると思います。Tab キーによる適切なフォーカス制御だけでなく、矢印キーによるナビゲーションや、[Dialog](https://zenn.dev/mehm8128/articles/adv2024-react-aria-popover-and-dialog) を閉じる際の ESC キーなどもサポートされていました。また、フォーカス制御については[番外編の Focus Management API](https://zenn.dev/mehm8128/articles/adv2024-react-aria-focus-management-api) でも出てきました。
+キーボード操作についても様々な対応がされていました。React Aria は基本的に APG に沿った実装を行っているので、キーボード操作についても APG に書かれている通りに実装されていると思います。Tab キーによる適切なフォーカス制御だけでなく、矢印キーによるナビゲーションや、[Dialog](https://portfolio.hm8128.me/adv2024-reactaria/day8) を閉じる際の ESC キーなどもサポートされていました。また、フォーカス制御については[番外編の Focus Management API](https://portfolio.hm8128.me/adv2024-reactaria/day17) でも出てきました。
 キーボード操作のサポートは、視覚障害者の方やマウスを正確に操作することが難しいユーザーにとって使いやすくなるのはもちろん、普段キーボードを好んで操作をしている人にとってもサービスの利用が便利になります。
 
 ### モバイル端末での操作
 
 a11y 対応は支援技術を必要とするユーザーのためだけのものではありません。モバイル端末からも Web サービスを利用できるというのも、a11y の一種です。
 モバイル端末で快適に操作できるように様々な工夫がされていました。
-見てきた中で一番重い実装だったのは[`usePress`](https://zenn.dev/mehm8128/articles/adv2024-react-aria-button)でしょう。また、[`useNumberField`](https://zenn.dev/mehm8128/articles/adv2024-react-aria-number-field#inputmode)ではモバイルでの仮想キーボードの種類を制御する`inputMode`が指定されていました。
+見てきた中で一番重い実装だったのは[`usePress`](https://portfolio.hm8128.me/adv2024-reactaria/day2)でしょう。また、[`useNumberField`](https://portfolio.hm8128.me/adv2024-reactaria/day5#inputmode)ではモバイルでの仮想キーボードの種類を制御する`inputMode`が指定されていました。
 
 ### i18n
 
 海外のユーザーでもサービスを利用できるというのも a11y の一種です。
-[番外編](https://zenn.dev/mehm8128/articles/adv2024-react-aria-i18n)でしたが、React Aria で対応されている i18n について一通り見ました。
+[番外編](https://portfolio.hm8128.me/adv2024-reactaria/day21)でしたが、React Aria で対応されている i18n について一通り見ました。
 
 ### デバイス・ブラウザ・スクリーンリーダーごとの差異への対応
 
 これまで見てきたスクリーンリーダー対応やキーボード対応、モバイル対応はデバイス・ブラウザ・スクリーンリーダー間でサポート状況が微妙に異なり、同じ対応方法をしても環境によって動かないことがあります。React Aria ではできるだけ様々な環境で動くように条件分岐などを駆使して実装が行われています。実装を読んで分かったと思うのですが、そういった箇所にはソースコード上に丁寧にコメントでメモが書かれていました。
-また、色々な環境で動くことを確認するために、ドキュメントに書かれているような環境でテストされていることも[番外編](https://zenn.dev/mehm8128/articles/adv2024-react-aria-test)で見てきました。
+また、色々な環境で動くことを確認するために、ドキュメントに書かれているような環境でテストされていることも[番外編](https://portfolio.hm8128.me/adv2024-reactaria/day14)で見てきました。
 
 ### デザイン上の対応
 

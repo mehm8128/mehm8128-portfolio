@@ -26,7 +26,7 @@ https://zenn.dev/sajikix/articles/intl-advent-calendar-24-01
 ### 文字列の翻訳
 
 `useLocalizedStringFormatter`を用いて現在の locale に基づいて翻訳されたテキストを取得できます。ここでは Intl は使われていません多分。
-例えば[`useNumberField`](https://zenn.dev/mehm8128/articles/adv2024-react-aria-number-field)だと、+/-ボタンに振られているラベルが翻訳されています。
+例えば[`useNumberField`](https://portfolio.hm8128.me/adv2024-reactaria/day5)だと、+/-ボタンに振られているラベルが翻訳されています。
 
 https://github.com/adobe/react-spectrum/blob/50c7ada5d1880a174b6b6d3f43e8d90ee9bd4ad8/packages/%40react-aria/numberfield/src/useNumberField.ts#L93
 https://github.com/adobe/react-spectrum/blob/50c7ada5d1880a174b6b6d3f43e8d90ee9bd4ad8/packages/%40react-aria/numberfield/src/useNumberField.ts#L285
@@ -39,7 +39,7 @@ https://github.com/adobe/react-spectrum/blob/50c7ada5d1880a174b6b6d3f43e8d90ee9b
 https://github.com/adobe/react-spectrum/blob/50c7ada5d1880a174b6b6d3f43e8d90ee9bd4ad8/packages/%40react-aria/i18n/src/useLocalizedStringFormatter.ts#L40-L44
 
 `useColorPicker`でも、同じく翻訳用のパッケージが利用されていました。
-https://zenn.dev/mehm8128/articles/adv2024-react-aria-color-picker
+https://portfolio.hm8128.me/adv2024-reactaria/day15
 
 ### 数値のフォーマット
 
@@ -62,7 +62,7 @@ https://zenn.dev/sajikix/articles/intl-advent-calendar-24-15
 `useLocale`から`direction`という`ltr | rtl`の union 型の値を取得し、その値に応じてインタラクションの方向を変化させます。
 https://github.com/adobe/react-spectrum/blob/50c7ada5d1880a174b6b6d3f43e8d90ee9bd4ad8/packages/%40react-aria/i18n/src/context.tsx#L54-L58
 
-例えば[`useTabList`](https://zenn.dev/mehm8128/articles/adv2024-react-aria-tab)の場合、`direction`を`TabsKeyboardDelegate`というオブジェクトのコンストラクタに渡しています。
+例えば[`useTabList`](https://portfolio.hm8128.me/adv2024-reactaria/day16)の場合、`direction`を`TabsKeyboardDelegate`というオブジェクトのコンストラクタに渡しています。
 
 https://github.com/adobe/react-spectrum/blob/50c7ada5d1880a174b6b6d3f43e8d90ee9bd4ad8/packages/%40react-aria/tabs/src/useTabList.ts#L44-L49
 
@@ -74,8 +74,8 @@ https://github.com/adobe/react-spectrum/blob/50c7ada5d1880a174b6b6d3f43e8d90ee9b
 
 ### Typeahead
 
-[`useListBox`](https://zenn.dev/mehm8128/articles/adv2024-react-aria-listbox)や[`useGridList`](https://zenn.dev/mehm8128/articles/adv2024-react-aria-gridlist)、[`useMenu`](https://zenn.dev/mehm8128/articles/adv2024-react-aria-menu)では Typeahead が実装されています。
-[`useListBox`](https://zenn.dev/mehm8128/articles/adv2024-react-aria-listbox#typeahead)の記事で軽く言及していました。が、Typeahead についての説明が抜けていたので説明すると、リストにフォーカスしているときに頭文字を入力するとその文字から始まるリストアイテムにフォーカスを移動できるというものです。
+[`useListBox`](https://portfolio.hm8128.me/adv2024-reactaria/day9)や[`useGridList`](https://portfolio.hm8128.me/adv2024-reactaria/day10)、[`useMenu`](https://portfolio.hm8128.me/adv2024-reactaria/day12)では Typeahead が実装されています。
+[`useListBox`](https://portfolio.hm8128.me/adv2024-reactaria/day9#typeahead)の記事で軽く言及していました。が、Typeahead についての説明が抜けていたので説明すると、リストにフォーカスしているときに頭文字を入力するとその文字から始まるリストアイテムにフォーカスを移動できるというものです。
 
 これは`useCollator`を用いて実装されていて、内部で`Intl.Collator`を使っています。
 

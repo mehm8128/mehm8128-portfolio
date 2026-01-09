@@ -25,7 +25,7 @@ https://github.com/adobe/react-spectrum/blob/326f48154e301edab425c8198c5c3af7242
 ### useFocusContainment
 
 focus containment を実現する hook です。
-`onKeyDown`関数で Tab キーによるフォーカス移動を`e.preventDefault()`した上で、 TreeWalker API（参考: [Radio と Checkbox について - React Aria の実装読むぞ](https://zenn.dev/mehm8128/articles/adv2024-react-aria-radio-and-checkbox#treewalker-api)）などを用いて、最後の tabbable な要素から最初の tabbable な要素にフォーカスを移動する処理などが実装されています。
+`onKeyDown`関数で Tab キーによるフォーカス移動を`e.preventDefault()`した上で、 TreeWalker API（参考: [Radio と Checkbox について - React Aria の実装読むぞ](https://portfolio.hm8128.me/adv2024-reactaria/day6#treewalker-api)）などを用いて、最後の tabbable な要素から最初の tabbable な要素にフォーカスを移動する処理などが実装されています。
 
 https://github.com/adobe/react-spectrum/blob/326f48154e301edab425c8198c5c3af72422462b/packages/%40react-aria/focus/src/FocusScope.tsx#L330-L357
 
@@ -35,7 +35,7 @@ https://github.com/adobe/react-spectrum/blob/326f48154e301edab425c8198c5c3af7242
 mount 時に`nodeToRestoreRef`に[`document.activeElement`](https://developer.mozilla.org/ja/docs/Web/API/Document/activeElement)で取得した現在フォーカスされている（この`FocusScope`外で最後にフォーカスされた）要素を入れておき、記憶しておきます。
 つまり、RFC に書かれていたように「`FocusScope`内で最後にフォーカスを持っていた要素をその`FocusScope`が記憶しておく」のではなく、「現在アクティブな（内側にフォーカスされている要素を持っている）`FocusScope`が、その外で最後にフォーカスを持っていた要素を記憶しておく」ような実装になっているのだと理解しました。
 例えばダイアログとそのトリガーボタンだと、トリガーボタンが押されてフォーカスがダイアログ内に移動したときに、トリガーボタンに最後にフォーカスがあったということをダイアログとトリガーボタンを囲っている`FocusScope`が記憶しているのではなく、ダイアログだけを囲っている`FocusScope`が新しく記憶し、その`FocusScope`が unmount されたタイミングでその記憶している要素にフォーカスを戻すようになっているということです。
-こっそり追記しておいたのですが、[Toast について - React Aria の実装読むぞ](https://zenn.dev/mehm8128/articles/adv2024-react-aria-toast#%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AB%E3%82%B9%E6%93%8D%E4%BD%9C)の記事で言及していた疑問もこれで解消されました。
+こっそり追記しておいたのですが、[Toast について - React Aria の実装読むぞ](https://portfolio.hm8128.me/adv2024-reactaria/day11#%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AB%E3%82%B9%E6%93%8D%E4%BD%9C)の記事で言及していた疑問もこれで解消されました。
 
 フォーカスの復元処理はここらへんで`restoreFocusToElement`関数で行っているようです。
 

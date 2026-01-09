@@ -26,10 +26,6 @@ export const blogs = [
     link: "https://sizu.me/mehm8128/posts/vahz9skimne4",
   },
   {
-    title: "a11y 上の理由で Deprecated になった HTML と ARIA まとめ",
-    link: "https://zenn.dev/cybozu_frontend/articles/deprecated-html-and-aria",
-  },
-  {
     title: "技術書典16 traP TechBook執筆",
     link: "https://sizu.me/mehm8128/posts/mb6nidhor1v3",
   },

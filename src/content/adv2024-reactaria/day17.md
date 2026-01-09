@@ -39,10 +39,10 @@ ref を使う場面の例として、例えばダイアログやその他ポッ�
 
 現状フォーカスを移動するとき、前にどの要素がフォーカスを持っていたかを記憶しておくには上記の ref などを用いて手動で管理しておくしかありません。前にフォーカスしていた要素を記憶していたい場面の例を 2 つ紹介します。
 
-リストとかグリッドといった UI パターン（参考: [GridList について - React Aria の実装読むぞ](https://zenn.dev/mehm8128/articles/adv2024-react-aria-gridlist#%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89)）では、一度 Tab キーでフォーカスしたらその後の、その UI の中でのフォーカス移動は矢印キーで移動したいです。なぜなら、見たいわけではないグリッドにフォーカスしたときに、そこから抜け出して次のコンテンツに進むために何回も Tab キーを押さなければならないからです。
+リストとかグリッドといった UI パターン（参考: [GridList について - React Aria の実装読むぞ](https://portfolio.hm8128.me/adv2024-reactaria/day10#%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89)）では、一度 Tab キーでフォーカスしたらその後の、その UI の中でのフォーカス移動は矢印キーで移動したいです。なぜなら、見たいわけではないグリッドにフォーカスしたときに、そこから抜け出して次のコンテンツに進むために何回も Tab キーを押さなければならないからです。
 そのために [Roving tab index パターン](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_roving_tabindex)が上記の動作を実現する 1 つの手段ではありますが、一度フォーカスが外れてまた戻ってきたときに、前にフォーカスされていた要素にフォーカスを復元するにはそれを記憶しておかないといけません。
 
-また、ダイアログが閉じたときに、ダイアログを開く前にフォーカスしていた要素（ダイアログのトリガーボタンなど）にフォーカスを戻したいこともあります（参考: [Popover と Dialog について - React Aria の実装読むぞ](https://zenn.dev/mehm8128/articles/adv2024-react-aria-popover-and-dialog#%E9%96%89%E3%81%98%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AB%E3%82%B9%E3%81%99%E3%82%8B%E8%A6%81%E7%B4%A0)）。
+また、ダイアログが閉じたときに、ダイアログを開く前にフォーカスしていた要素（ダイアログのトリガーボタンなど）にフォーカスを戻したいこともあります（参考: [Popover と Dialog について - React Aria の実装読むぞ](hhttps://portfolio.hm8128.me/adv2024-reactaria/day8#%E9%96%89%E3%81%98%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AB%E3%82%B9%E3%81%99%E3%82%8B%E8%A6%81%E7%B4%A0)）。
 
 このように、前にフォーカスしていた要素に再度フォーカスを復元したいような場合に、ある領域の中で最後にフォーカスしていた要素を記憶しておく必要があります。
 
@@ -74,7 +74,7 @@ function App() {
 
 ### 言葉の定義
 
-Definitions のセクションで用語の定義がされています。[Radio と Checkbox について - React Aria の実装読むぞ](https://zenn.dev/mehm8128/articles/adv2024-react-aria-radio-and-checkbox#treewalker-api)でも出てきましたが一応確認します。
+Definitions のセクションで用語の定義がされています。[Radio と Checkbox について - React Aria の実装読むぞ](https://portfolio.hm8128.me/adv2024-reactaria/day6#treewalker-api)でも出てきましたが一応確認します。
 
 focusable: デフォルトでフォーカス可能な`input`や`button`要素に加えて、`tabindex`属性がついている要素
 tabbable: デフォルトでフォーカス可能な`input`や`button`要素に加えて、値が 0 以上の`tabindex`属性がついている要素（つまり、Tab キーでフォーカスできないマイナスの`tabindex`を持つ要素は含まない）

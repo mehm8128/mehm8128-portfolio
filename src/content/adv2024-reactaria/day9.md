@@ -139,7 +139,7 @@ https://github.com/adobe/react-spectrum/blob/5ed06068ee2742f32e066ffa8eb55fd93a0
 ### shouldSelectOnPressUp
 
 props として`allowsDifferentPressOrigin`と`shouldSelectOnPressUp`を`true`で渡すと、「メニューのトリガーボタン上で pointer down し、そのままメニュー内のボタンにカーソルを移動して pointer up する」というような、一回のクリックでメニューを開いてそのままメニュー内のボタンを発火させる操作ができるようになっています。以下のコードだと、271 行目の`onSelect`が発火します。
-[2 日目の記事で説明した Pointer Events API](https://zenn.dev/mehm8128/articles/adv2024-react-aria-button#usepress%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)が役に立っています。
+[2 日目の記事で説明した Pointer Events API](https://portfolio.hm8128.me/adv2024-reactaria/day2#usepress%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)が役に立っています。
 
 https://github.com/adobe/react-spectrum/blob/8228e4efd9be99973058a1f90fc7f7377e673f78/packages/%40react-aria/selection/src/useSelectableItem.ts#L237-L298
 

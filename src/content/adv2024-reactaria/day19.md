@@ -91,7 +91,7 @@ https://blog.cybozu.io/entry/2023/12/01/080000#Poca11y-%E3%83%81%E3%83%BC%E3%83%
 
 progressbar は、実は 2 日目の記事でも登場していました。
 
-https://zenn.dev/mehm8128/articles/adv2024-react-aria-button#ispending%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
+https://portfolio.hm8128.me/adv2024-reactaria/day2#ispending%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
 
 ## まとめ
 
