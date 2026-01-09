@@ -12,9 +12,11 @@ import { SITE_TITLE } from "../../consts";
 import { formatDate } from "../../functions/date";
 import { getRandomId } from "../../functions/getRandomId";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"blog">["data"] & {
+  ogImageDefault?: boolean;
+};
 
-const { title, description, publishedDate } = Astro.props;
+const { title, description, publishedDate, ogImageDefault } = Astro.props;
 
 const id = getRandomId();
 ---
@@ -22,7 +24,7 @@ const id = getRandomId();
 <Layout
   title={`${title} - ${SITE_TITLE}`}
   description={description}
-  ogImage="ogp.png"
+  ogImage={!ogImageDefault ? "ogp.png" : undefined}
 >
   <article aria-labelledby={id}>
     <div class="title">
