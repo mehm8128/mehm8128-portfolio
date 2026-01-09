@@ -1,11 +1,15 @@
 ---
+import { getCollection } from "astro:content";
 import AdvCalendar from "../../components/layouts/AdvCalendar.astro";
-import { posts } from "./_posts";
+
+const posts = (await getCollection("adv2024")).toSorted(
+  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+);
 
 const internalPosts = posts.map((post) => ({
-  title: post.title,
-  publishedDate: post.publishedDate,
-  url: post.url,
+  title: post.data.title,
+  publishedDate: post.data.publishedDate,
+  url: `/adv2024-reactaria/${post.id}/`,
 }));
 ---
 

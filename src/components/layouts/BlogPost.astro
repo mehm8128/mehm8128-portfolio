@@ -12,11 +12,9 @@ import { SITE_TITLE } from "../../consts";
 import { formatDate } from "../../functions/date";
 import { getRandomId } from "../../functions/getRandomId";
 
-type Props = CollectionEntry<"blog">["data"] & {
-  blogId: string;
-};
+type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, publishedDate, updatedDate } = Astro.props;
+const { title, description, publishedDate } = Astro.props;
 
 const id = getRandomId();
 ---
@@ -32,13 +30,6 @@ const id = getRandomId();
         <time datetime={publishedDate.toISOString()}>
           {formatDate(publishedDate)}
         </time>
-        {
-          updatedDate && (
-            <div class="last-updated-on">
-              Last updated on {formatDate(updatedDate)}
-            </div>
-          )
-        }
       </div>
       <h1 id={id}>{title}</h1>
       <p>{description}</p>
