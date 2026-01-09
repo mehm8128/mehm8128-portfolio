@@ -73,4 +73,4 @@ https://zenn.dev/cybozu_frontend/articles/react-aria-component-design
 
 ## まとめ
 
-明日の担当は [@mehm8128](https://zenn.dev/mehm8128) さんで、 Button についての記事です。お楽しみにー
+明日の担当は [@mehm8128](https://x.com/mehm8128) さんで、 Button についての記事です。お楽しみにー

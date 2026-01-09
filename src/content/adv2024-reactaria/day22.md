@@ -127,4 +127,4 @@ https://github.com/adobe/react-spectrum/blob/50c7ada5d1880a174b6b6d3f43e8d90ee9b
 
 ## まとめ
 
-明日の担当は [@mehm8128](https://zenn.dev/mehm8128) さんで、 Calendar についての記事です。お楽しみにー
+明日の担当は [@mehm8128](https://x.com/mehm8128) さんで、 Calendar についての記事です。お楽しみにー

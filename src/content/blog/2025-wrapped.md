@@ -37,11 +37,11 @@ https://speakerdeck.com/k1tikurisu/implementing-ai-in-large-scale-products
 
 技術的なところだとここらへんです。その他sizu.meやこのブログでいくつか書いています。
 
-- [DHS Trusted Tester Certification 取ってみた（Web a11y）](https://zenn.dev/mehm8128/articles/trusted-tester)
-- [aria-label、ボタン/リンクに付けるか？アイコンに付けるか？](https://zenn.dev/mehm8128/articles/aria-label-target)
+- [DHS Trusted Tester Certification 取ってみた（Web a11y）](https://portfolio.hm8128.me/blog/trusted-tester)
+- [aria-label、ボタン/リンクに付けるか？アイコンに付けるか？](https://portfolio.hm8128.me/blog/aria-label-target)
 - [a11y 上の理由で Deprecated になった HTML と ARIA まとめ](https://zenn.dev/cybozu_frontend/articles/deprecated-html-and-aria)
-- [`nameFrom: heading`とsectionheader/sectionfooterについて](https://zenn.dev/mehm8128/articles/namefrom-heading)
-- [命令的な ARIA ライブリージョン：ARIA Notifyの紹介](https://zenn.dev/mehm8128/articles/aria-notify-introduction)
+- [`nameFrom: heading`とsectionheader/sectionfooterについて](https://portfolio.hm8128.me/blog/namefrom-heading)
+- [命令的な ARIA ライブリージョン：ARIA Notifyの紹介](https://portfolio.hm8128.me/blog/aria-notify-introduction)
 - [アクセシビリティツリーの写真の撮り方 - mehm8128のWeblog](https://portfolio.hm8128.me/blog/aria-snapshots/)
 
 ### OSS

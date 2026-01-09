@@ -6,7 +6,7 @@ interface Certification {
 export const certifications = [
   {
     name: "DHS Trusted Tester Certification",
-    url: "https://zenn.dev/mehm8128/articles/trusted-tester",
+    url: "https://portfolio.hm8128.me/blog/trusted-tester",
   },
   {
     name: "kintone認定アソシエイト",

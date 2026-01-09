@@ -72,4 +72,4 @@ https://azukiazusa.dev/blog/focusgroup-arrow-key-focus-navigation/
 
 ## まとめ
 
-明日の担当は [@mehm8128](https://zenn.dev/mehm8128) さんで、 ProgressBar についての記事です。お楽しみにー
+明日の担当は [@mehm8128](https://x.com/mehm8128) さんで、 ProgressBar についての記事です。お楽しみにー

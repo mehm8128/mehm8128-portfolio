@@ -107,4 +107,4 @@ https://zenn.dev/sajikix/articles/intl-advent-calendar-24-09
 
 ## まとめ
 
-明日の担当は [@mehm8128](https://zenn.dev/mehm8128) さんで、DateField についての記事です。お楽しみにー
+明日の担当は [@mehm8128](https://x.com/mehm8128) さんで、DateField についての記事です。お楽しみにー

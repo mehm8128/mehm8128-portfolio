@@ -95,4 +95,4 @@ https://zenn.dev/mehm8128/articles/adv2024-react-aria-button#ispending%E3%81%AB%
 
 ## まとめ
 
-明日の担当は [@mehm8128](https://zenn.dev/mehm8128) さんで、Combobox についての記事です。お楽しみにー
+明日の担当は [@mehm8128](https://x.com/mehm8128) さんで、Combobox についての記事です。お楽しみにー

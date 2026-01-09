@@ -137,4 +137,4 @@ https://github.com/adobe/react-spectrum/blob/b0f15697245de74ebc99ab3d687f5eb3733
 
 ## まとめ
 
-明日の担当は [@mehm8128](https://zenn.dev/mehm8128) さんで、 Menu についての記事です。お楽しみにー
+明日の担当は [@mehm8128](https://x.com/mehm8128) さんで、 Menu についての記事です。お楽しみにー

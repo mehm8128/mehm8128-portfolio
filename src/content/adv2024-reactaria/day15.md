@@ -102,4 +102,4 @@ https://github.com/adobe/react-spectrum/blob/993de98adad65e48bcebad8ac835f5c9e0c
 
 ## まとめ
 
-明日の担当は [@mehm8128](https://zenn.dev/mehm8128) さんで、Tab についての記事です。お楽しみにー
+明日の担当は [@mehm8128](https://x.com/mehm8128) さんで、Tab についての記事です。お楽しみにー
