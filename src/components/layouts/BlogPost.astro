@@ -34,7 +34,7 @@ const id = getRandomId();
         </time>
       </div>
       <h1 id={id}>{title}</h1>
-      <p>{description}</p>
+      {description && <p>{description}</p>}
       <hr />
     </div>
     <div class="content">
