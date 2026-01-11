@@ -3,98 +3,137 @@ title: "Web Almanacから見る2025年のWebアクセシビリティ"
 publishedDate: "Jan 15 2026"
 ---
 
+## Web Almanacとは
+
+HTTP ArchiveによるWeb Almanacの2025年版が公開されました。
+これはHTTP Archiveが毎月約1700万のサイトをクロールして収集しているデータです。HTML要素やCSSプロパティの使用状況はもちろん、Lighthouseの実行結果などもデータに含まれており、これを基に、BigQueryによる解析をしたレポートが公開されています。
+
 https://almanac.httparchive.org/ja/2025/accessibility
 
-## 簡単な説明
+様々な領域のレポートが公開されていますが、この記事では特にアクセシビリティの章にフォーカスして見ていきます。
 
-数値はどこまで信じられる？
-全部のデータへのリンク
+収集方法についての詳細はこちらをご覧ください。
+
+https://almanac.httparchive.org/en/2025/methodology
+
+また去年のアクセシビリティの章について、ミツエーリンクスから公開されています。併せてご覧ください。
+
+https://accessibility-2025-dot-webalmanac.uk.r.appspot.com/en/2025/methodology
 
 ## コントラスト比
 
-変化なしで低い
-頑張りましょう
-デザインとか場合によってはブランディングデザインの再検討から始めないとなので、シフトレフトが必要だし、かなり大変そう？
+数値としては29%から30%になっていて、去年からほとんど変化なしのようです。
 
-contrast-color
-APCAどうなる？
+小さなサイトの場合は比較的すぐに変更を入れやすいですが、大きなサイトの場合はサイト全体のブランドカラーから考え直したりする手間がかかる場合があるので、なかなかすぐに改善するのは難しい部分なのかもしれません。
 
-## prefers-系
+ただ、どこかで基準値を決めて満たしているor満たしていないの2値で測っているので、例えば4.45:1でギリギリAAを満たしていないけどそこまで問題ない場合などを考えると、許容値を少し緩めたら結果が大きく変わる可能性はあるかもしれません。
 
-reduced-motionは変化なし
-CSSカルーセル
+[APCA](https://lydesign.jp/n/ndc6de5db7178#52cc9538-f7ab-4b9e-81cb-92cb145f50d6)についてはWCAG3の文脈で検討・議論されているはずですが、なかなか進んでいないイメージです。
 
-forced-colorsは増えてるけど、使うことが必ずしもいいとは言えないのでなんとも
+また、2025年にはFirefox及びSafariで[`contrast-color()`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color)が利用可能になりました。基準を満たすコントラスト比の文字色・背景色の組をサイト制作者側で決めなければならない部分が少しだけ減ることが期待されます。
 
-https://www.mitsue.co.jp/knowledge/blog/frontend/202405/17_1401.html
-https://zenn.dev/schktjm/articles/c4239989992d1a
+https://webkit.org/blog/16929/contrast-color/
+
+## prefers-系のメディアクエリ
+
+`prefers-reduced-motion`は49%から51%になっていて、去年からほとんど変化なしのようです。
+
+注意するべきは、おそらくこれは「メディアクエリが使われているかどうか」の2値で数値が決まっているという点で、「51%のサイトで適切に`prefers-reduced-motion`が使われている」ということではないということです。つまり、1箇所でも使われていれば使われている判定になるので、全ての動くコンテンツで使われていない可能性があるということです。
+逆に、自動で動くコンテンツは必ずしも`prefers-reduced-motion`だけで対応しないといけないものではなくて、近くに一時停止ボタンを置いておくことで対応可能なケースもあります。またカルーセルなどは特に、そもそも自動再生の仕組みを組み込まないのがアクセシブルなサイトに繋がります（例：[デジタル庁のカルーセル](https://design.digital.go.jp/dads/components/carousel/)）。
+
+また、強制カラーモードに対応するための`prefers-forced-colors`の割合が増えているのは、`-ms-high-contrast`からの移行が反映されていると分析されています。ただ、`prefers-forced-colors`がどうしても細かい調整を行わなければならない場合にのみ最小限の使用をするのが望ましいため、注意が必要です。
+
+[MDN](https://developer.mozilla.org/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors)にも記載があります。
+
+> 一般的に、ウェブ制作者は forced-colors メディア特性を使用して、この機能が有効になっているユーザー向けに個別のデザインを作成することはすべきではありません。この機能は、既定の強制カラーの適用ではページの一部がうまく機能しない場合に、使いやすさや読みやすさを向上させるための細かい調整を行うことを目的としています。
 
 ## フォーカスインジケーター
 
-outline: 0の利用が増えて、focus-visibleの利用も増えてる
-2024年も同じような感じだった
-reset CSSが普及している？reset CSSによってはoutline: 0にするものがあるので
-focus-visibleでちゃんと制御できるのであれば問題ないが、漏れがないように気をつける必要はある
+`:focus outline: 0`の使用率が増えて、`:focus`及び`:focus-visible`の割合が増えています。本文にもあるように、これは独自のフォーカススタイルを適用しているサイトが増えていることを示していると考えられます。
+しかし、例えばライトモードとダークモードの両方に対応していない場合や、対応が漏れている要素がある場合などが発生することを考えると、ブラウザデフォルトのスタイルを使用するのが無難でしょう。
 
-## HTML要素
+また、リセットCSSを使う場合も注意が必要です。例えば[elad2412/the-new-css-reset](https://github.com/elad2412/the-new-css-reset)のようなリセットCSSではフォーカスインジケーターも含めてリセットしてしまうので、個別に`:focus`を設定する必要があります。READMEにも記載がありますが、見落としがちだと思います。
+ちなみにこのサイトでは、kiso.cssを使ってみています。このリセットCSSではフォーカスインジケーターまでは削除していないので、ブラウザデフォルトのスタイルが適用されています。
 
-main要素の合計使用率が低いのはなんで？
-見出しはoutline algorithmが削除されたので、ちょっとは改善される可能性がありそう
+https://www.tak-dcxi.com/article/introduce-kiso-css/
 
-https://sakupi01.github.io/slides/ja/2025_04_28_the_outline_algorithm_utopia/
-https://blog.w0s.jp/entry/732
+## 画像の代替テキスト
 
-## alt
+代替テキストの8.5%が、拡張子で終わっている、つまり画像のファイル名そのままになってしまっているとのことです。これはSNSなどのUGCの画像やCMSなどで発生することが多いです。
+また、全体の50%は10文字未満及び空の代替テキストとのことです。もちろんそれが適切な場合もありますが、10文字未満だと「Alt text」や「画像」、前述のファイル名などになっていたり、その他簡潔すぎるテキストになっているケースが多くあると考えられます。実際、今年1年を通して話題をよく目にしたXの代替テキストも、何も設定していないと「Image」という代替テキストが付与されます。
 
-Xの話
-NVDA2026.1でAIによる説明が搭載されるけど、画像で伝えたいことを一番分かっているのは画像を載せる人なので～的な話
-ただ、AIによる提案とかはアリかも
+また、NVDA 2026.1でAIによる画像説明機能が搭載されます。
 
-AIについては後ろの方に書いてあるので読んでください
+https://groups.google.com/a/nvaccess.org/g/nvda-users/c/Th41cGvjsPI
+
+以前アルファ版を試したときは英語のみ対応＆説明が抽象的すぎてまだあまり使える状態ではなかったのですが、どの程度精度が上がっているか期待です。
+
+ただし、画像の意図を最も正確に伝えられるのはその画像を選んだ人間自身なので、本当は人間がちゃんと代替テキストをつけられるのがベストです。
+
+AIについてはレポート本文の後半に記載があるので、興味のある人は読んでみるといいかもしれません。
 
 ## ARIA
 
-全体的に増えてる
-UIライブラリの普及によって全体的に増えてる説？
-複雑なUIを使うサイトが増えている？
-書いてあるとおり、ARIAの第一のルールを意識しながら気を付けて使う必要はある
+ARIAの利用がロール、プロパティともに全体的に増えているようです。
+サイト制作者の意識が高まっているということもあると思いますが、個人的にはUIライブラリの普及や、UIライブラリ自体のアクセシビリティが改善されていることが影響しているのではないかと考えています。特に最近はAIの影響でshadcn/uiの利用が増えているらしいと聞くので、こういったUIライブラリをベースとして最初からアクセシブルなコンポーネントを利用してサイト制作ができていることにより、ARIAの利用が増えているのではないかと考えています。
 
-BaseUI, WebAwesome, Angular Aria
+他にも、最近[Angular Aria](https://angular.dev/guide/aria/overview)が登場したり、[Base UI](https://base-ui.com/)のメジャーバージョンがリリースされたりしました。特にBase UIについては[shadcn/uiの内部で利用するライブラリとしてRadix UIの代わりに選択できるようになった](https://x.com/shadcn/status/1999530411181875667?s=20)こともあり、前述の通りAIとの協調が期待できます。
 
-role="button"は、前述のtabindexがついていない割合とかも見たかった
+ただし本文にもあるように、ARIAの第一のルールに沿って、ネイティブ要素やネイティブの属性で対応できるものはARIAではなくてそちらを利用することが望ましいので、こちらも最低限の使用を意識する必要があります。ESLintのeslint-plugin-jsx-a11yプラグインや、そのルールをportしたBiomeやOxlintなどの利用によって開発中に気づくことが可能になるので、導入を検討するのがいいかもしれません。
 
-live region->aria notifyに注目していく
+ライブリージョンやvisually hiddenについては、[ARIA Notify](https://developer.mozilla.org/en-US/docs/Web/API/Document/ariaNotify)との関係やその動向に注目していきたいです。
 
-## オーバーレイ
+https://portfolio.hm8128.me/blog/aria-notify-introduction
 
-増えてる
-A11yEdge CGに期待？
+## アクセシビリティオーバーレイ
 
-> Data shows about 2% of desktop sites use such accessibility apps. Rates are even lower rates among the highest-traffic sites, at 0.2% among the top 1,000. This pattern shows that overlays are mostly adopted by lower-traffic sites and remain a controversial and imperfect solution.
+ほんの少しですが、使用率が増えたようです。
 
-大きい企業がちゃんと対応する余裕があってオーバーレイを使わない選択をする知識もある、というのもあるけど、アクセシブルではないのでユーザーが増えていない、というのもあるはず
+アクセス数が少ないサイトで、アクセシビリティオーバーレイが多く採用されているとのことです。
+これは、大きなサイトを作る制作者がアクセシビリティオーバーレイを使わないという選択をできるというのが主な要因だとは考えられますが、逆に、アクセシビリティオーバーレイを使った不完全対応がアクセシブルでないサイトを生み出している影響で、そのサイトの再アクセス率が低く、アクセス数が少なくなっているということも考えられると思います。
 
-> 6.  User Preferences Will Matter More Than Page-Level Settings
+[User preferenceのセクション](https://almanac.httparchive.org/ja/2025/accessibility#user-preference)や、
+[WebAIM: 2026 Predictions: The Next Big Shifts in Web Accessibility](https://webaim.org/blog/2026-predictions/)の
 
-https://webaim.org/blog/2026-predictions/
+> User Preferences Will Matter More Than Page-Level Settings
 
-## 国ごとのやつ
+という記述、[Accessibility at the Edge Community Groupの動き](https://portfolio.hm8128.me/blog/tpac2025/#dynamic-accessibility-remediation-a-report-from-the-accessibility-at-the-edge-community-group)からも、今後個人の特性に合わせてWebサイトの表示方法を調整できるようにする動きがより拡大していくと考えられますが、適切な方法でパーソナライゼーションを進めることが求められます。
 
-欧州アクセシビリティ法の影響はまだあまりない。今後少しずつ増えていくと考えられる
-日本も前回から順位的にはあんまり変わってないけど、去年障害者差別解消法が改正されたこともあり、今後どのくらい増えていくか期待できそう？
-TLD別で日本の色が出てなくてバグってる。数値的には80.76らしい
-政府のはちょっと濃くなった。デジタル庁の影響？
+## 国ごとの統計
 
-いくつか法改正の影響が出ている地域がある？ちゃんと読む
+2025年は、6/28に欧州アクセシビリティ法は完全施行されました。
 
-## CMS
+https://www.mitsue.co.jp/knowledge/column/20250708.html
 
-色のコントラスト、リンクの命名、見出しの構造、画像の説明
+しかし、まだ半年しか経っていないのでこの影響がそのまま反映されるということはあまりなく、来年の結果に期待することになりそうです。
 
-上位のCMSは、テンプレート化などを使ってユーザーが指定する部分を制限し、アクセシビリティを保証できるようにしている。らしい
+関連して、9月にはISO/IEC 40500がWCAG2.2を採用する形で改定される動きもありました。
+
+https://www.iso.org/standard/91029.html
+
+法律で言うと日本では2024年の4/1から改正障害者差別解消法が施行されました。[Webアクセシビリティについては「合理的配慮」ではなくて「環境の整備」の面が強い](https://note.com/ymrl/n/n6f3670b369a9)ことから直接的な影響はないですが、アクセシビリティ全般への関心が高まっていく中で少しずつ改善されることが期待されます。
+
+そして「Map of the accessibility of global government websites.」の地図では[去年](https://almanac.httparchive.org/ja/2024/accessibility#%E6%94%BF%E5%BA%9C)と比べて微妙に色が濃くなっています。数値としては85%から87%に上がっています（地図右上の「View data」からスプレッドシートに飛んで確認できます）。
+これはデジタル庁の影響が大きいのではないかと考えています。
+ウェブアクセシビリティ導入ガイドブックが継続的に更新されていたり、デザインシステムも更新が続けられています。ちなみに、前述のカルーセルコンポーネントは2025年12月に公開されたものです。
+
+https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook
+
+https://www.digital.go.jp/policies/servicedesign/designsystem
+
+また、その他関連文書も含め、10月に[デジタル社会推進標準ガイドライン](https://www.digital.go.jp/resources/standard_guidelines)に追加されたようです。
+
+https://waic.jp/news/ciaj-column-26/
+
+この流れで、デジタル庁のサイトに限らず他の公的機関のWebサイトも、アクセシブルになってほしいと思います。
 
 ## まとめ
 
-https://vale.rocks/posts/accessibility-importance
+2025年はやはりAIの話題が多かったのが印象的な年でした。
+デザイン面や実装面ではもちろん、アクセシビリティチェックの面でもAI活用の話題がありました。
 
-どこかにAIのセクション追記する
+一例として伊原さんのイベントを載せておきます。
+
+https://cssnite.doorkeeper.jp/events/182232
+
+TODO: なんかいい感じのまとめ
