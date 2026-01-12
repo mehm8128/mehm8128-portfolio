@@ -112,6 +112,8 @@ https://portfolio.hm8128.me/blog/aria-notify-introduction
 
 ## 国ごとの統計
 
+[レポート本文へジャンプ](https://almanac.httparchive.org/en/2025/accessibility#sectors-and-accessibility)
+
 6/28に欧州アクセシビリティ法が完全施行されました。
 
 https://www.mitsue.co.jp/knowledge/column/20250708.html
