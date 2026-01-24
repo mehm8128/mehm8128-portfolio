@@ -1,11 +1,23 @@
 import { ImageResponse } from "@vercel/og";
-import fs from "node:fs";
 
-export const generateOgImage = (title: string) => {
-  const fontNormal = fs.readFileSync("public/font/NotoSansJP-Medium.ttf");
-  const fontBold = fs.readFileSync("public/font/NotoSansJP-Bold.ttf");
-  const iconSvg = fs.readFileSync("public/single_color_circle.svg");
-  const iconBase64 = `data:image/svg+xml;base64,${iconSvg.toString("base64")}`;
+export const generateOgImage = async (title: string) => {
+  const baseUrl = import.meta.env.SITE;
+  const fontNormalUrl = `${baseUrl}/font/NotoSansJP-Medium.ttf`;
+  const fontBoldUrl = `${baseUrl}/font/NotoSansJP-Bold.ttf`;
+  const iconUrl = `${baseUrl}/single_color_circle.svg`;
+
+  // フォントファイルをfetchで取得
+  const [fontNormalResponse, fontBoldResponse, iconResponse] =
+    await Promise.all([
+      fetch(fontNormalUrl),
+      fetch(fontBoldUrl),
+      fetch(iconUrl),
+    ]);
+
+  const fontNormal = await fontNormalResponse.arrayBuffer();
+  const fontBold = await fontBoldResponse.arrayBuffer();
+  const iconSvg = await iconResponse.text();
+  const iconBase64 = `data:image/svg+xml;base64,${Buffer.from(iconSvg).toString("base64")}`;
 
   return new ImageResponse(
     <div
@@ -100,6 +112,6 @@ export const generateOgImage = (title: string) => {
           style: "normal",
         },
       ],
-    }
+    },
   );
 };
