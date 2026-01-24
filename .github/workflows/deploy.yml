@@ -14,12 +14,15 @@ jobs:
       deployments: write
     name: Deploy to Cloudflare Pages
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Build
-        run: pnpm install && pnpm build
-      - name: Deploy
-        uses: cloudflare/wrangler-action@v3
+      - uses: actions/checkout@v6
+      - uses: jdx/mise-action@v3
+        with:
+          mise_toml: |
+            [tools]
+            pnpm = "latest"
+      - run: pnpm install
+      - run: pnpm build
+      - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
