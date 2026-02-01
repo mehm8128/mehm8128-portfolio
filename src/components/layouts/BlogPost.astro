@@ -8,6 +8,7 @@ import "../../styles/blog/blog-list.css";
 import "../../styles/blog/blog-callout.css";
 import "../../styles/blog/blog-linkcard.css";
 import "../../styles/blog/blog-misc.css";
+import "../../styles/blog/blog-toc.css";
 import { SITE_TITLE } from "../../consts";
 import { formatDate } from "../../functions/date";
 import { getRandomId } from "../../functions/getRandomId";
@@ -54,11 +55,6 @@ const id = getRandomId();
   .date {
     color: var(--color-muted);
     font-family: var(--font-code);
-    font-size: var(--font-size-code);
-  }
-
-  .last-updated-on {
-    font-style: italic;
     font-size: var(--font-size-code);
   }
 
