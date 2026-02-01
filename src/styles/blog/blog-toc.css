@@ -1,20 +1,3 @@
-.rehype-toc-details {
-  /* メインコンテンツがmax-width: 840px、目次が最低320px程度ほしい */
-  @media (width > 1160px) {
-    position: fixed;
-    right: 8px;
-    top: 64px;
-  }
-}
-
 .rehype-toc-summary {
   padding-bottom: 0.25rem;
-}
-
-.rehype-toc-ol {
-  scroll-target-group: auto;
-}
-
-.rehype-toc-a:target-current {
-  font-weight: bold;
 }
