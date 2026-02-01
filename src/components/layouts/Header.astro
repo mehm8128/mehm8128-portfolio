@@ -7,7 +7,7 @@ const isBlogPage = currentPath.startsWith("/blog");
 const isAdv2024Page = currentPath.startsWith("/adv2024-reactaria");
 ---
 
-<header class="site-header">
+<header class="header">
   <nav class="nav">
     <div class="nav-links">
       <a
@@ -39,9 +39,15 @@ const isAdv2024Page = currentPath.startsWith("/adv2024-reactaria");
 </header>
 
 <style>
-  .site-header {
+  .header {
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-index-header);
   }
 
   .nav {
