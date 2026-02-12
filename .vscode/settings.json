@@ -2,5 +2,6 @@
   "github.copilot.enable": {
     "*": true,
     "markdown": false
-  }
+  },
+  "typescript.experimental.useTsgo": true
 }
