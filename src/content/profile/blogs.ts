@@ -9,6 +9,10 @@ export const blogs = [
     link: "https://trap.jp/post/2036/",
   },
   {
+    title: "Web 標準動向",
+    link: "https://zenn.dev/cybozu_frontend/articles/web_standards_monthly_202509",
+  },
+  {
     title:
       "サイボウズのフロントエンドエンジニアの探究活動について全てをお話します",
     link: "https://blog.cybozu.io/entry/2025/08/19/113000",
