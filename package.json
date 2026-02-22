@@ -34,7 +34,7 @@
     "@markuplint/astro-parser": "^4.6.22",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "@typescript/native-preview": "7.0.0-dev.20260211.1",
+    "@typescript/native-preview": "7.0.0-dev.20260222.1",
     "markuplint": "^4.14.0",
     "prettier": "^3.7.4",
     "textlint": "^15.5.0",
