@@ -11,7 +11,7 @@
 
 .content li {
   margin: 0.5rem 0;
-  line-height: var(--line-height-loose);
+  line-height: var(--line-height-relaxed);
 }
 
 .content ul li {

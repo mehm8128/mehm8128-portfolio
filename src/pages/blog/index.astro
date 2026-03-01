@@ -51,7 +51,7 @@ const internalPosts = posts.map((post) => ({
 <style>
   .blog-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   .blog-header h1 {
@@ -118,7 +118,7 @@ const internalPosts = posts.map((post) => ({
   .post-description {
     color: var(--color-muted);
     margin: 0;
-    line-height: var(--line-height-loose);
+    line-height: var(--line-height-relaxed);
   }
 
   .post-meta {
@@ -134,20 +134,5 @@ const internalPosts = posts.map((post) => ({
     color: var(--color-muted);
     font-family: var(--font-code);
     font-size: var(--font-size-sm);
-  }
-
-  @container (width < 600px) {
-    .blog-header {
-      margin-bottom: 2rem;
-    }
-
-    .posts-list {
-      gap: 0.5rem;
-    }
-
-    .post-link {
-      padding: 1rem;
-      min-height: 120px;
-    }
   }
 </style>

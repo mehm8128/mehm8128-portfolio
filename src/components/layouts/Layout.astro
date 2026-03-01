@@ -1,7 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import "../../styles/global.css";
 import { SITE_DESCRIPTION, SITE_IMG, SITE_TITLE } from "../../consts";
+import "../../styles/global.css";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
 
@@ -103,16 +103,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   .container {
     padding: 2rem 1rem;
     container-type: inline-size;
-  }
-
-  @media (width < 768px) {
-    .site-container {
-      padding: 0 1rem;
-      padding-top: 70px;
-    }
-    .container {
-      padding: 1rem 0.5rem;
-    }
   }
 
   @keyframes fadeIn {
