@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import Layout from "../components/layouts/Layout.astro";
 import Background from "../components/index/Background.astro";
+import Blog from "../components/index/Blog.astro";
 import Certification from "../components/index/Certification.astro";
 import Contribution from "../components/index/Contribution.astro";
 import SocialLinks from "../components/index/SocialLinks.astro";
-import Blog from "../components/index/Blog.astro";
+import Layout from "../components/layouts/Layout.astro";
 import { ICON_DESCRIPTION, SITE_TITLE } from "../consts";
 import { getRandomId } from "../functions/getRandomId";
 
@@ -82,14 +82,14 @@ const id = getRandomId();
   }
 
   .hero-title {
-    font-size: var(--text-4xl);
+    font-size: var(--font-size-4xl);
     color: var(--color-accent);
   }
 
   .hero-description {
     text-align: center;
     color: var(--color-muted);
-    font-size: var(--text-base);
+    font-size: var(--font-size-base);
     line-height: var(--line-height-tight);
   }
 
@@ -118,14 +118,6 @@ const id = getRandomId();
     .hero-avatar {
       width: 60px;
       height: 60px;
-    }
-
-    .hero-title {
-      font-size: var(--text-h1);
-    }
-
-    .hero-description {
-      font-size: var(--text-normal);
     }
 
     .sections {

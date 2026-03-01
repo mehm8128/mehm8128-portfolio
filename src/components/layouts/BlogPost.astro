@@ -1,17 +1,17 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import Layout from "./Layout.astro";
-import "../../styles/blog/blog-headings.css";
-import "../../styles/blog/blog-table.css";
-import "../../styles/blog/blog-details.css";
-import "../../styles/blog/blog-list.css";
-import "../../styles/blog/blog-callout.css";
-import "../../styles/blog/blog-linkcard.css";
-import "../../styles/blog/blog-misc.css";
-import "../../styles/blog/blog-toc.css";
 import { SITE_TITLE } from "../../consts";
 import { formatDate } from "../../functions/date";
 import { getRandomId } from "../../functions/getRandomId";
+import "../../styles/blog/blog-callout.css";
+import "../../styles/blog/blog-details.css";
+import "../../styles/blog/blog-headings.css";
+import "../../styles/blog/blog-linkcard.css";
+import "../../styles/blog/blog-list.css";
+import "../../styles/blog/blog-misc.css";
+import "../../styles/blog/blog-table.css";
+import "../../styles/blog/blog-toc.css";
+import Layout from "./Layout.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
   ogImageDefault?: boolean;
@@ -55,7 +55,6 @@ const id = getRandomId();
   .date {
     color: var(--color-muted);
     font-family: var(--font-code);
-    font-size: var(--font-size-code);
   }
 
   .title p {
@@ -72,17 +71,5 @@ const id = getRandomId();
       transparent
     );
     width: 80%;
-  }
-
-  @container (width < 600px) {
-    .title h1 {
-      font-size: var(--text-2xl);
-    }
-  }
-
-  @container (width < 600px) {
-    .content {
-      font-size: var(--text-normal);
-    }
   }
 </style>

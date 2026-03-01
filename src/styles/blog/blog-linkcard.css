@@ -35,7 +35,7 @@
 }
 
 .content .remark-link-card-plus__title {
-  font-size: var(--text-base);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text);
   line-height: var(--line-height-relaxed);
@@ -47,7 +47,7 @@
 }
 
 .content .remark-link-card-plus__description {
-  font-size: var(--text-sm);
+  font-size: var(--font-size-sm);
   color: var(--color-muted);
   line-height: var(--line-height-relaxed);
   display: -webkit-box;
@@ -70,7 +70,7 @@
 }
 
 .content .remark-link-card-plus__url {
-  font-size: var(--text-xs);
+  font-size: var(--font-size-xs);
   color: var(--color-muted);
   font-family: var(--font-code);
   overflow: hidden;
@@ -109,13 +109,5 @@
 
   .content .remark-link-card-plus__main {
     padding: 0.875rem;
-  }
-
-  .content .remark-link-card-plus__title {
-    font-size: var(--text-sm);
-  }
-
-  .content .remark-link-card-plus__description {
-    font-size: var(--text-xs);
   }
 }

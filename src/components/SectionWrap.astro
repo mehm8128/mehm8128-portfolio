@@ -3,19 +3,17 @@ import { getRandomId } from "../functions/getRandomId";
 
 export interface Props {
   headingText: string;
-  level?: number;
 }
 
-const { headingText, level = 2 } = Astro.props;
+const { headingText } = Astro.props;
 const id = getRandomId();
-const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 ---
 
 <section class="section-wrap" aria-labelledby={id}>
   <div class="section-header">
-    <HeadingTag class="section-heading" id={id}>
+    <h2 class="section-heading" id={id}>
       {headingText}
-    </HeadingTag>
+    </h2>
   </div>
   <div>
     <slot />
@@ -37,23 +35,8 @@ const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
     font-family: var(--font-heading);
     color: var(--color-text);
     position: relative;
-    display: inline-block;
-    margin: 0;
-  }
-
-  h2.section-heading {
-    font-size: var(--text-h1);
+    font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
-  }
-
-  h3.section-heading {
-    font-size: var(--text-2xl);
-    font-weight: var(--font-weight-semibold);
-  }
-
-  h4.section-heading {
-    font-size: var(--text-h3);
-    font-weight: var(--font-weight-semibold);
   }
 
   .section-heading::after {
@@ -62,7 +45,7 @@ const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
     bottom: -0.5rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 3rem;
+    width: 3em;
     height: 3px;
     background: linear-gradient(
       90deg,
@@ -80,28 +63,6 @@ const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
     to {
       opacity: 1;
       transform: translateY(0);
-    }
-  }
-
-  @container (width < 600px) {
-    .section-header {
-      margin-bottom: 2rem;
-    }
-
-    h2.section-heading {
-      font-size: var(--text-2xl);
-    }
-
-    h3.section-heading {
-      font-size: var(--text-h2);
-    }
-
-    h4.section-heading {
-      font-size: var(--text-base);
-    }
-
-    .section-heading::after {
-      width: 2rem;
     }
   }
 </style>

@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: var(--text-normal);
+  font-size: var(--font-size-sm);
 }
 
 .content div[data-callout-body] > p:first-child {

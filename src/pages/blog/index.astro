@@ -1,11 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import { SITE_TITLE } from "../../consts";
 import Layout from "../../components/layouts/Layout.astro";
+import { SITE_TITLE } from "../../consts";
 import { formatDate } from "../../functions/date";
 
 const posts = (await getCollection("blog")).toSorted(
-  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf(),
 );
 
 const internalPosts = posts.map((post) => ({
@@ -55,7 +55,7 @@ const internalPosts = posts.map((post) => ({
   }
 
   .blog-header h1 {
-    font-size: var(--text-4xl);
+    font-size: var(--font-size-4xl);
     color: var(--color-accent);
   }
 
@@ -104,7 +104,7 @@ const internalPosts = posts.map((post) => ({
   .post-title {
     color: var(--color-text);
     margin: 0;
-    font-size: var(--text-h3);
+    font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-tight);
     transition: var(--transition-fast);
@@ -133,25 +133,12 @@ const internalPosts = posts.map((post) => ({
   .post-date {
     color: var(--color-muted);
     font-family: var(--font-code);
-    font-size: var(--text-sm);
-  }
-
-  .post-site {
-    color: var(--color-accent);
-    font-family: var(--font-code);
-    font-size: var(--text-xs);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--color-border);
+    font-size: var(--font-size-sm);
   }
 
   @container (width < 600px) {
     .blog-header {
       margin-bottom: 2rem;
-    }
-
-    .blog-header h1 {
-      font-size: var(--text-h1);
     }
 
     .posts-list {
@@ -161,10 +148,6 @@ const internalPosts = posts.map((post) => ({
     .post-link {
       padding: 1rem;
       min-height: 120px;
-    }
-
-    .post-title {
-      font-size: var(--text-base);
     }
   }
 </style>
