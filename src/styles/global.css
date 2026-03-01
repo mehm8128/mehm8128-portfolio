@@ -24,14 +24,17 @@
   --font-body: "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-code: "JetBrains Mono", Monaco, "Courier New", monospace;
 
-  --font-size-xs: max(0.875rem, calc(1rem - 100vw * 0.0025));
-  --font-size-sm: 1rem;
-  --font-size-base: calc(1rem + 100vw * 0.0025);
-  --font-size-lg: calc(1rem + 100vw * 0.005);
-  --font-size-xl: calc(1rem + 100vw * 0.0075);
-  --font-size-2xl: calc(1rem + 100vw * 0.01);
-  --font-size-3xl: calc(1rem + 100vw * 0.0125);
-  --font-size-4xl: calc(1rem + 100vw * 0.015);
+  /* https://min-max-calculator.9elements.com/
+   * 375px ~ 1280px viewport width
+   */
+  --font-size-xs: clamp(0.75rem, 0.698rem + 0.22vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.823rem + 0.22vw, 1rem);
+  --font-size-base: clamp(1rem, 0.896rem + 0.44vw, 1.25rem);
+  --font-size-lg: clamp(1.25rem, 1.146rem + 0.44vw, 1.5rem);
+  --font-size-xl: clamp(1.5rem, 1.396rem + 0.44vw, 1.75rem);
+  --font-size-2xl: clamp(1.75rem, 1.646rem + 0.44vw, 2rem);
+  --font-size-3xl: clamp(2rem, 1.896rem + 0.44vw, 2.25rem);
+  --font-size-4xl: clamp(2.25rem, 2.146rem + 0.44vw, 2.5rem);
 
   --line-height-tight: 1.5;
   --line-height-base: 1.75;
