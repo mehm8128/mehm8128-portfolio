@@ -1,0 +1,47 @@
+1. 通常
+<button type="button">
+  <svg role="img" width="24" height="24" viewBox="0 0 24 24">
+    <title>閉じる</title>
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M6 6l12 12M6 18L18 6" stroke="#000" stroke-width="2" />
+  </svg>
+</button>
+
+2. aria-labelledby
+<button type="button">
+  <svg
+    role="img"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    aria-labelledby="button-close-title"
+  >
+    <title id="button-close-title">閉じる</title>
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M6 6l12 12M6 18L18 6" stroke="#000" stroke-width="2" />
+  </svg>
+</button>
+
+3. 通常
+<a href="https://example.com">
+  <svg role="img" width="24" height="24" viewBox="0 0 24 24">
+    <title>閉じる</title>
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M6 6l12 12M6 18L18 6" stroke="#000" stroke-width="2" />
+  </svg>
+</a>
+
+4. aria-labelledby
+<a href="https://example.com">
+  <svg
+    role="img"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    aria-labelledby="link-close-title"
+  >
+    <title id="link-close-title">閉じる</title>
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M6 6l12 12M6 18L18 6" stroke="#000" stroke-width="2" />
+  </svg>
+</a>
