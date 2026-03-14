@@ -13,15 +13,15 @@
     "pages:deploy": "wrangler pages deploy dist"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^6.3.10",
-    "@astrojs/mdx": "^4.3.13",
-    "@astrojs/react": "^4.4.2",
-    "@astrojs/rss": "^4.0.14",
-    "@astrojs/sitemap": "^3.6.0",
+    "@astrojs/markdown-remark": "^7.0.0",
+    "@astrojs/mdx": "^5.0.0",
+    "@astrojs/react": "^5.0.0",
+    "@astrojs/rss": "^4.0.17",
+    "@astrojs/sitemap": "^3.7.1",
     "@mehm8128/rehype-toc": "^1.4.6",
     "@r4ai/remark-callout": "^0.6.2",
     "@vercel/og": "^0.8.6",
-    "astro": "^5.16.6",
+    "astro": "^6.0.4",
     "kiso.css": "^1.2.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
@@ -30,7 +30,7 @@
     "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.6",
+    "@astrojs/check": "^0.9.7",
     "@markuplint/astro-parser": "^4.6.22",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
