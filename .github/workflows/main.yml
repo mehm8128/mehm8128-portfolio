@@ -16,6 +16,7 @@ jobs:
           mise_toml: |
             [tools]
             pnpm = "latest"
+            node = "lts"
       - run: pnpm install
       - run: pnpm run typecheck
       - run: pnpm run build
@@ -28,5 +29,6 @@ jobs:
           mise_toml: |
             [tools]
             pnpm = "latest"
+            node = "lts"
       - run: pnpm install
       - run: pnpm run lint:markup

@@ -20,6 +20,7 @@ jobs:
           mise_toml: |
             [tools]
             pnpm = "latest"
+            node = "lts"
       - run: pnpm install
       - run: pnpm build
       - uses: cloudflare/wrangler-action@v3
