@@ -14,6 +14,11 @@ export const blogs = [
   },
   {
     title:
+      "サイボウズにフロントエンドエンジニアとして新卒入社して1年が経ちました",
+    link: "https://blog.cybozu.io/entry/2026/04/01/113000",
+  },
+  {
+    title:
       "サイボウズのフロントエンドエンジニアの探究活動について全てをお話します",
     link: "https://blog.cybozu.io/entry/2025/08/19/113000",
   },
