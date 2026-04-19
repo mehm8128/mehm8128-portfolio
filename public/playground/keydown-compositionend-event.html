@@ -1,0 +1,13 @@
+<textarea></textarea>
+
+<script>
+  function handleKeyDown(event) {
+    console.log("keydown", event);
+  }
+  function handleCompositionEnd(event) {
+    console.log("compositionend", event);
+  }
+  const textarea = document.querySelector("textarea");
+  textarea.addEventListener("compositionend", handleCompositionEnd);
+  textarea.addEventListener("keydown", handleKeyDown);
+</script>
