@@ -22,8 +22,9 @@ export const contributions = [
     link: "https://github.com/kuma-ui/kuma-ui/pull/283",
   },
   {
-    title: "fix: useButton href condition #7239 · adobe/react-spectrum",
-    link: "https://github.com/adobe/react-spectrum/pull/7239",
+    title:
+      "New lint rule: require IME-safe keyboard event handling · biomejs/biome · Discussion #10041",
+    link: "https://github.com/biomejs/biome/discussions/10041",
   },
   {
     title: "doc: Fix date inputs on Chrome #704 · 47ng/nuqs",
