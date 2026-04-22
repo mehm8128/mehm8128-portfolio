@@ -1,3 +1,16 @@
 {
-  "extends": ["markuplint:recommended"]
+  "extends": ["markuplint:recommended"],
+  "parser": {
+    ".astro$": "@markuplint/astro-parser"
+  },
+  "nodeRules": [
+    {
+      "regexSelector": {
+        "nodeName": "/^[A-Z]/"
+      },
+      "rules": {
+        "permitted-contents": false
+      }
+    }
+  ]
 }

@@ -8,7 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "typecheck": "astro check",
-    "lint:markup": "markuplint \"**/*.astro\"",
+    "lint:markup": "markuplint \"**/*.astro\" -p",
     "pages:dev": "wrangler pages dev dist --local",
     "pages:deploy": "wrangler pages deploy dist"
   },
