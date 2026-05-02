@@ -19,6 +19,11 @@ export const blogs = [
   },
   {
     title:
+      "ウェブアクセシビリティ基盤委員会（WAIC）にてサイボウズメンバーはこんな活動をしています",
+    link: "https://blog.cybozu.io/entry/2026/04/28/170000",
+  },
+  {
+    title:
       "サイボウズのフロントエンドエンジニアの探究活動について全てをお話します",
     link: "https://blog.cybozu.io/entry/2025/08/19/113000",
   },
