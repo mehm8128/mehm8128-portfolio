@@ -5,12 +5,16 @@ interface Contribution {
 
 export const contributions = [
   {
-    title: "biomejs/biomeへのPull Request",
+    title: "Pull Request to biomejs/biome",
     link: "https://github.com/biomejs/biome/pulls?q=is%3Apr+author%3Amehm8128+is%3Aclosed",
   },
   {
-    title: "feat(linter): implement aria/proptypes #17253 · oxc-project/oxc",
-    link: "https://github.com/oxc-project/oxc/pull/17253",
+    title: "Pull Request to oxc-project/oxc",
+    link: "https://github.com/oxc-project/oxc/pulls?q=sort%3Aupdated-desc+is%3Apr+author%3Amehm8128+is%3Amerged",
+  },
+  {
+    title: "Pull Request to mdn/translated-content",
+    link: "https://github.com/mdn/translated-content/pulls?q=sort%3Aupdated-desc+is%3Apr+author%3Amehm8128+",
   },
   {
     title:
@@ -20,23 +24,5 @@ export const contributions = [
   {
     title: "Fix the way to calculate processedProps #283 · kuma-ui/kuma-ui",
     link: "https://github.com/kuma-ui/kuma-ui/pull/283",
-  },
-  {
-    title:
-      "New lint rule: require IME-safe keyboard event handling · biomejs/biome · Discussion #10041",
-    link: "https://github.com/biomejs/biome/discussions/10041",
-  },
-  {
-    title: "doc: Fix date inputs on Chrome #704 · 47ng/nuqs",
-    link: "https://github.com/47ng/nuqs/pull/704#event-14844194210",
-  },
-  {
-    title:
-      "fix: customizing the starting line number even if globally set #2941 · vuejs/vitepress",
-    link: "https://github.com/vuejs/vitepress/pull/2941",
-  },
-  {
-    title: "mdn/translated-content への Pull Request",
-    link: "https://github.com/mdn/translated-content/pulls?q=sort%3Aupdated-desc+is%3Apr+author%3Amehm8128+",
   },
 ] as const satisfies Contribution[];
