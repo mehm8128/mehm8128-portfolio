@@ -1,0 +1,20 @@
+---
+import { sponsoringList } from "../../content/profile/sponsoring";
+import ExternalLink from "../ExternalLink.astro";
+import ListItem from "../ListItem.astro";
+import SectionWrap from "../SectionWrap.astro";
+import UList from "../UList.astro";
+---
+
+<SectionWrap headingText="Sponsoring">
+  <UList>
+    {
+      sponsoringList.map((sponsoring) => (
+        <ListItem>
+          <ExternalLink href={sponsoring.url}>{sponsoring.text}</ExternalLink> -{" "}
+          {sponsoring.amount}
+        </ListItem>
+      ))
+    }
+  </UList>
+</SectionWrap>

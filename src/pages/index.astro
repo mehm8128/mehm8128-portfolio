@@ -6,6 +6,7 @@ import Certification from "../components/index/Certification.astro";
 import Contribution from "../components/index/Contribution.astro";
 import SocialLinks from "../components/index/SocialLinks.astro";
 import Layout from "../components/layouts/Layout.astro";
+import Sponsoring from "../components/layouts/Sponsoring.astro";
 import { ICON_DESCRIPTION, SITE_TITLE } from "../consts";
 import { getRandomId } from "../functions/getRandomId";
 
@@ -37,6 +38,7 @@ const id = getRandomId();
     <Blog />
     <Background />
     <Contribution />
+    <Sponsoring />
     <Certification />
   </div>
 </Layout>
