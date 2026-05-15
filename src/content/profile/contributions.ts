@@ -13,6 +13,10 @@ export const contributions = [
     link: "https://github.com/oxc-project/oxc/pulls?q=sort%3Aupdated-desc+is%3Apr+author%3Amehm8128+is%3Amerged",
   },
   {
+    title: "Pull Request to dequelabs/axe-core",
+    link: "https://github.com/dequelabs/axe-core/pulls?q=sort%3Aupdated-desc+is%3Apr+author%3Amehm8128+is%3Aclosed",
+  },
+  {
     title: "Pull Request to mdn/translated-content",
     link: "https://github.com/mdn/translated-content/pulls?q=sort%3Aupdated-desc+is%3Apr+author%3Amehm8128+",
   },
