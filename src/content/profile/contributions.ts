@@ -22,6 +22,11 @@ export const contributions = [
   },
   {
     title:
+      'fix: announce all content inside `role="alert"` #20056 · nvaccess/nvda',
+    link: "https://github.com/nvaccess/nvda/pull/20056",
+  },
+  {
+    title:
       "Add tests for interactive element labels named by svg title elements #56902 · web-platform-tests/wpt",
     link: "https://github.com/web-platform-tests/wpt/pull/56902",
   },
