@@ -1,3 +1,8 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true
+
 minimumReleaseAgeExclude:
   - '@mehm8128/rehype-toc'
 

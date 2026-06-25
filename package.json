@@ -41,5 +41,11 @@
     "textlint-rule-preset-ja-technical-writing": "^12.0.2",
     "wrangler": "^4.60.0"
   },
-  "packageManager": "pnpm@10.28.2"
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.8.0",
+      "onFail": "error"
+    }
+  }
 }
