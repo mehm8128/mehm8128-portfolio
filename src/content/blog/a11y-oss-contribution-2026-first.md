@@ -13,16 +13,12 @@ publishedDate: "July 8 2026"
 2. アクセシビリティにあまり詳しくない人が、AIを使ってアクセシブルでないコードを書く
 3. それによってアクセシブルでないコードを学習したAIが、さらにアクセシブルでないコードを書くようになっていく
 
-関連した話が、先日のCA11Y #4でも話されていました。
+関連する話題が、先日の[CA11Y #4](https://ca11y.connpass.com/event/393281/)でも話されていました。
 [AI はアクセシビリティを向上させられるのだろうか? (2026-06-20 @ ca11y) | PPTX](https://www.slideshare.net/slideshow/ai-2026-06-20-ca11y/288153806)
 
-これを改善するための1つの手段として、僕はBiome、Oxlintのようなlinterや、axe-coreのようなアクセシビリティチェッカーへのcontributionを行っています。
+これを改善するための1つの手段として、僕はBiome、Oxlintのようなlinterや、axe-coreのようなアクセシビリティチェックツールへのcontributionを行っています。
 
 このようなツールで分析できる観点は限られていますが、アクセシビリティにあまり詳しくない人は考慮できていなかったポイントを知って改善でき、詳しい人でも見逃しを防ぐことができます。
-
-関連して以下の記事もご覧ください。
-
-https://note.com/ebaryo43/n/nc3b75af818a4
 
 それぞれのツールへのcontributionの詳細を紹介していきます。
 
@@ -138,9 +134,9 @@ https://github.com/storybookjs/storybook/pull/34501
 
 最初はこのまま進みそうだったのですが、より細かく`lang`属性を制御したいという話になり、僕のPRを参考にしてメンテナーの方に別でPRを作ってもらう方針になりました。
 
-https://github.com/storybookjs/storybook/pull/35207
+https://github.com/storybookjs/storybook/pull/35321
 
-まだ進行中ですが、利用可能になったらStorybookがよりアクセシブルになります。
+v10.15.0から利用可能になる予定です。ぜひ利用してみてください。
 
 ## まとめ
 
