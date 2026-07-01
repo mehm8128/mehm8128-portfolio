@@ -136,7 +136,7 @@ https://github.com/storybookjs/storybook/pull/34501
 
 https://github.com/storybookjs/storybook/pull/35321
 
-v10.15.0から利用可能になる予定です。ぜひ利用してみてください。
+v10.5.0から利用可能になる予定です。ぜひ利用してみてください。
 
 ## まとめ
 
