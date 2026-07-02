@@ -10,7 +10,7 @@ export const blogs = [
   },
   {
     title: "Web 標準動向",
-    link: "https://zenn.dev/cybozu_frontend/articles/web_standards_monthly_202509",
+    link: "https://zenn.dev/topics/cybozuwebstandards",
   },
   {
     title:
