@@ -19,7 +19,7 @@ jobs:
         with:
           mise_toml: |
             [tools]
-            pnpm = "latest"
+            pnpm = "11.9.0"
             node = "lts"
       - run: pnpm install
       - run: pnpm build
