@@ -3,7 +3,7 @@ allowBuilds:
   sharp: true
   workerd: true
 
-minimumReleaseAge: "3 days"
+minimumReleaseAge: 4320
 minimumReleaseAgeExclude:
   - "@mehm8128/rehype-toc"
 
