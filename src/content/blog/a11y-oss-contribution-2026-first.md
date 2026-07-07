@@ -117,6 +117,8 @@ Windows向けスクリーンリーダーであるNVDAにも、1つバグ修正PR
 https://github.com/nvaccess/nvda/pull/20056
 
 普段動作確認などで使っているスクリーンリーダーなので、仕組みを知っておきたくてやってみました。
+今までは`role="alert"`の要素が表示されたときに、accessible name/descriptionもしくは、その要素に含まれているインタラクティブな要素しか読み上げませんでした。しかし、見出し要素やリスト要素、`<p>`要素といったインタラクティブでない要素も読み上げてほしいという要望があり、それを実現しました。
+
 以前[`nameFrom: heading`とsectionheader/sectionfooterについて](https://portfolio.hm8128.me/blog/namefrom-heading/#sectionheader-role-%E3%81%A8-sectionfooter-role)や[Accessibility APIでブラウザから情報を取得してみる](https://portfolio.hm8128.me/blog/ia2/#nvda%E3%81%AE%E3%82%A2%E3%83%89%E3%82%AA%E3%83%B3%E7%B5%8C%E7%94%B1%E3%81%A7%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B7%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B)で内部実装を少し読んでいたため、修正が必要な箇所を見つけるのにはそこまで時間がかかりませんでした。
 
 [ウェブアクセシビリティ基盤委員会（WAIC）にてサイボウズメンバーはこんな活動をしています - Cybozu Inside Out](https://blog.cybozu.io/entry/2026/04/28/170000)で書いたように、スクリーンリーダーのWeb技術に対するサポート状況を改善するために、NVDAに直接貢献するという方法は有効だと思うので、今後も少しずつ貢献していきたいです。
