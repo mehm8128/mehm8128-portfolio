@@ -275,8 +275,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       remark-link-card-plus:
-        specifier: ^0.7.2
-        version: 0.7.4
+        specifier: ^0.8.0
+        version: 0.8.0
       sharp:
         specifier: ^0.35.0
         version: 0.35.3(@types/node@24.13.3)
@@ -4311,9 +4311,9 @@ packages:
   remark-gfm@4.0.1:
     resolution: {integrity: sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg==}
 
-  remark-link-card-plus@0.7.4:
-    resolution: {integrity: sha512-3+DReRQBsNmM0oGWa5Baktf5eKkJvjVFcR8c4bHsK8cDP2BrtFjgSKl8Q1kyDRxTi176xzj8EKvid//02qM0jA==}
-    engines: {node: '>=20'}
+  remark-link-card-plus@0.8.0:
+    resolution: {integrity: sha512-ugr3guxBxgzx6mtt0cvRf0fmnXlRWfd0wKg4mLvwCq8klf2f5+9MGJRP4SpkRU+hAsIqtTkXm3lvwcJf5Vnvkg==}
+    engines: {node: '>=22.13.0'}
 
   remark-mdx@3.1.1:
     resolution: {integrity: sha512-Pjj2IYlUY3+D8x00UJsIOg5BEvfMyeI+2uLPn9VO9Wg4MEtN/VTIq2NEJQfde9PnX15KgtHyl9S0BcTnWrIuWg==}
@@ -10116,8 +10116,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  remark-link-card-plus@0.7.4:
+  remark-link-card-plus@0.8.0:
     dependencies:
+      '@types/mdast': 4.0.4
       file-type: 22.0.1
       open-graph-scraper: 6.12.0
       sanitize-html: 2.17.6
@@ -10303,7 +10304,7 @@ snapshots:
       is-plain-object: 5.0.0
       launder: 1.7.1
       parse-srcset: 1.0.2
-      postcss: 8.5.25
+      postcss: 8.5.26
 
   satori@0.25.0:
     dependencies:
