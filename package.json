@@ -26,7 +26,7 @@
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "rehype-autolink-headings": "^7.1.0",
-    "remark-link-card-plus": "^0.7.2",
+    "remark-link-card-plus": "^0.8.0",
     "sharp": "^0.35.0"
   },
   "devDependencies": {
