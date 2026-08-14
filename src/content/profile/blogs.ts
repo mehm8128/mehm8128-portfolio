@@ -28,6 +28,10 @@ export const blogs = [
     link: "https://blog.cybozu.io/entry/2025/08/19/113000",
   },
   {
+    title: "横にスクロールできるテーブルの見出し固定",
+    link: "https://blog.cybozu.io/entry/2026/07/29/130254",
+  },
+  {
     title: "25新卒エンジニア5人の内定者アルバイト体験記",
     link: "https://blog.cybozu.io/entry/2025/02/26/112000",
   },
