@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import AdvCalendar from "../../components/layouts/AdvCalendar.astro";
+
+const posts = (await getCollection("adv2026")).toSorted(
+  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf(),
+);
+
+const internalPosts = posts.map((post) => ({
+  title: post.data.title,
+  publishedDate: post.data.publishedDate,
+  url: `/adv2026-as/${post.id}/`,
+}));
+---
+
+<AdvCalendar
+  year={2026}
+  title="Accessibility Supported"
+  posts={internalPosts}
+  endDate={24}
+/>
