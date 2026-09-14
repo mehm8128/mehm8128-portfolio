@@ -24,4 +24,16 @@ const adv2024 = defineCollection({
     }),
 });
 
-export const collections = { blog, adv2024 };
+const adv2025 = defineCollection({
+  loader: glob({
+    base: "./src/content/adv2025-wc",
+    pattern: "**/*.md",
+  }),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      publishedDate: z.coerce.date(),
+    }),
+});
+
+export const collections = { blog, adv2024, adv2025 };
