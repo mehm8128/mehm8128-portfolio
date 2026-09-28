@@ -10,12 +10,12 @@ draft: true
 
 ## WCAG3を改めて軽くおさらい
 
-スケジュール感とか、WCAG2からの大きい変更点とか
+TODO: スケジュール感とか、WCAG2からの大きい変更点とか
 誰かの記事引用したりする
 
 ## Accessibility Support Sets
 
-WCAG2ではどう扱われているかの復習から（前の記事で書いてたら引用でOK）
+TODO: WCAG2ではどう扱われているかの復習から
 
 WCAG3が"silver"という呼称で検討されていた時代に、Accessibility supported Subgroupというものがありました。そこで今回紹介するAccessibility Support Setsに繋がるような検討が行われており、今の議論に発展しています。
 日本人からは、現在もWCAG3の策定に関わっている植木真さんがファシリテーターとして参加していたようです。
@@ -26,6 +26,8 @@ https://github.com/w3c/silver/wiki/Accessibility-supported-Subgroup
 
 ### Accessibility supported Subgroup_23rd Aug 2022
 
+TODO: 2023年3月のスライド以降の内容にも小見出し（###）を追加して構造を分ける
+
 https://docs.google.com/presentation/d/1Oo7A6B44guvYaBkaFSBVaeSW1qCAglReaYqxSSsksNw/edit
 
 これは2022年のTPACで用いられたスライドです。
@@ -34,9 +36,11 @@ WCAG2までのASのユースケースを整理して、WCAG3でそもそもASと
 
 植木さんが参加されていたこともあり、ユースケースの1つ目として日本の事例が挙げられています。
 日本では80%程度のスクリーンリーダーユーザーがPC Talkerを用いており、これは日本固有のスクリーンリーダーです。
+
 TODO: 注釈: スライドでは80%以上となっているが、1日目に見たように最新のデータでは74%程度になっている
 
 そしてPC Talkerは、JAWSやNVDAといった海外のスクリーンリーダーと比べてHTMLやARIAのサポート状況がよくありません。そのため、WAICで作成しているAS情報などを参照してPC Talkerのサポート状況を確認し、WCAG（JIS）に適合しているかどうかを確認する必要があります。
+
 TODO: 「適合」でいいのか確認。準拠？
 
 他のユースケースも含めて、以下のGoogle Docsに詳細が記載されています。
@@ -53,9 +57,11 @@ https://docs.google.com/document/d/1XxzwsgWZSDh2EDqTag-nYfrqAT3b6Glpu8DGbVpTd9M/
 - [w3c/wai-axsdb-services: Accessibility Support Database](https://github.com/w3c/wai-axsdb-services)
 - [w3c/wai-axsdb-web: Web Component of the Accessibility Support Database](https://github.com/w3c/wai-axsdb-web)
 
-このスライドでは、メリットとデメリットを提示して、今後採れる方針についていくつか案が挙げられて終了していました。
+このスライドでは、ASという概念を残すことのメリットとデメリットを提示して、今後採れる方針についていくつか案が挙げられて終了していました。
 
 この日のminutes: [AGWG Teleconference -- 23 Aug 2022](https://www.w3.org/2022/08/23-ag-minutes.html#item02)
+
+TODO: AGWG（Accessibility Guidelines Working Group）の正式名称を初出箇所に付与する
 
 次に、その半年後のスライドを見ていきます。
 
@@ -76,29 +82,27 @@ WAICとは「PC Talkerを無視できるかどうか」というやり取りが�
   - Web技術に対する公式のサンプルコードがない
   - Web技術をどのようにサポートするべきかという情報がない
 
-そこで、「AGWGがASテストスイートを提供すればいいのではないか」という解決策が提案されました。
-AGWGから公式のASテストスイートが提供されれば、上記の問題を解決できると考えられています。
+そこで、「AGWGがASテストスイートを提供すればいいのではないか」という解決策が提案されました。AGWGから公式のASテストスイートが提供されれば、上記の問題を解決できると考えられています。
 
 この日のminutes: [AGWG Teleconference -- 07 Mar 2023](https://www.w3.org/2023/03/07-ag-minutes.html#item04)
 
 そして後日、テストスイートの件とは別で、Accessibility Support Setsの話が上がっていました。
-これは、「この環境（UAやATの組み合わせ）では、ASであることを保証する」という環境の集合（Set）を定義する概念です。
-例えばaxe-coreでは[axe-core/doc/accessibility-supported.md](https://github.com/dequelabs/axe-core/blob/develop/doc/accessibility-supported.md)で、axe-coreに含まれるルールの内容がASである環境を定義しています。
-イメージとしては、プロダクトのサポートブラウザという概念を、ブラウザだけでなくATにも拡大したような概念となっています。
-
-そのようなSetを定義しておけば、WCAGのテクニックを作るときにそのSetの範囲で動くことを動作確認できていれば、「このAccessibility Support Setsの中ではWCAGのテクニックは全てASです」と言うことができるようになります。
-そのようなSetを、"**Default** Accessibility Support Sets"と呼んでおり、現在どう定義するか議論中となっています。
-
-"Default"のSetができたところで、PC Talkerのような国に固有のスクリーンリーダーはおそらく含まれません。そこで、それぞれの国が先ほど紹介したテストスイートを用いて追加でテストすることで、"Default"を拡張した国独自のAccessibility Support Setsを作ることができます。
-これにより、"Default Accessibility Support Sets"に含まれる環境はAGWGがテストし、国に固有の環境はAGWGが提供するテストスイートを使ってテストするという体制になり、メンテナンスの問題が軽減され、PC Talkerのようなスクリーンリーダーも、より公式な方法でテストすることができるようになります。
-
-関連したDiscussion
 
 - [Accessibility Supported · w3c/wcag3 · Discussion #53](https://github.com/w3c/wcag3/discussions/53)
 - [Default accessibility support set · w3c/wcag3 · Discussion #277](https://github.com/w3c/wcag3/discussions/277)
 - [Defining Accessibility Support Sets · w3c/wcag3 · Discussion #621](https://github.com/w3c/wcag3/discussions/621)
 
-議論の経過とともに、大きく方向性が変わっているので、もしかしたら僕の理解が少し古い知識かもしれません。興味のある人は、改めて一次ソースを確認してみてください。
+これは、「**この環境（UAやATの組み合わせ）では、ASであることを保証する**」という環境の集合（Set）を定義する概念です。
+例えばaxe-coreでは、[axe-core/doc/accessibility-supported.md](https://github.com/dequelabs/axe-core/blob/develop/doc/accessibility-supported.md)でaxe-coreに含まれるルールの内容がASであることを保証している環境を定義しています。
+イメージとしては、プロダクトのサポートブラウザという概念を、ブラウザだけでなくATにも拡大したような概念となっています。
+
+そのようなSetを定義しておき、WCAGのテクニックを作るときにそのSetの範囲で動くことを動作確認できていれば、「このAccessibility Support Setsの中ではWCAGのテクニックは全てASです」と言うことができるようになります。
+そのようなSetを、"**Default** Accessibility Support Sets"と呼んでおり、どう定義するかが現在議論中となっています。
+
+"Default"のSetができたところで、PC Talkerのような国に固有のスクリーンリーダーはおそらく含まれません。そこで、それぞれの国が先ほど紹介したテストスイートを用いて追加でテストすることで、"Default"を拡張した国独自のAccessibility Support Setsを作ることができます。
+これにより、"Default Accessibility Support Sets"に含まれる環境はAGWGがテストし、国に固有の環境はAGWGが提供するテストスイートを使ってテストするという体制になり、メンテナンスの問題が軽減され、PC Talkerのようなスクリーンリーダーも、より公式な方法でテストすることができるようになります。
+
+議論の経過とともに大きく方向性が変わっているので、もしかしたら僕の理解が少し古い知識かもしれません。興味のある人は、改めて一次ソースを確認してみてください。
 
 ### これらの動向を踏まえたWAICの今後
 

@@ -58,10 +58,10 @@ https://qiita.com/shamokit/items/7620c361aa39aad41fc3
 React AriaはAdobeが公開しているライブラリです。React Ariaには様々なUIコンポーネントを作るためのhooksが含まれており、それを使って独自のUIを組み立てることもできるし、React Ariaを使って構築されたReact Aria ComponentsやReact SpectrumなどのUIライブラリを使うこともできます。
 
 React Ariaには、ブラウザやスクリーンリーダーの組み合わせによっては上手く動かないときがある問題に対処するための様々なworkaroundが組み込まれています。
-例えば前のセクションで紹介していたダイアログのUIだと、`useDialog`というダイアログを作るためのhooksがあり、そのの中にいくつかworkaroundが含まれています。
+例えば前のセクションで紹介していたダイアログのUIだと、`useDialog`というダイアログを作るためのhooksがあり、その中にいくつかworkaroundが含まれています。
 
-https://github.com/adobe/react-spectrum/blob/f1cee837470dbb95fa8d7fcd931f32ff69ebdfbf/packages/react-aria/src/dialog/useDialog.ts#L69-L82
-https://github.com/adobe/react-spectrum/blob/f1cee837470dbb95fa8d7fcd931f32ff69ebdfbf/packages/react-aria/src/dialog/useDialog.ts#L116-L120
+- https://github.com/adobe/react-spectrum/blob/f1cee837470dbb95fa8d7fcd931f32ff69ebdfbf/packages/react-aria/src/dialog/useDialog.ts#L69-L82
+- https://github.com/adobe/react-spectrum/blob/f1cee837470dbb95fa8d7fcd931f32ff69ebdfbf/packages/react-aria/src/dialog/useDialog.ts#L116-L120
 
 今回の記事で紹介されていたような問題へのworkaroundは含まれていないようですが、同じようにフォーカス制御周りの問題に対処していることがコード内のコメントから分かります。
 
@@ -69,7 +69,7 @@ https://github.com/adobe/react-spectrum/blob/f1cee837470dbb95fa8d7fcd931f32ff69e
 
 - `aria-errormessage`が一部のスクリーンリーダーでサポートされていないので、代わりに`aria-describedby`を利用
   - https://github.com/adobe/react-spectrum/blob/f1cee837470dbb95fa8d7fcd931f32ff69ebdfbf/packages/react-aria/src/label/useField.ts#L55-L56
-- `aria-sort`がTalkbackでサポートされていないので、代わりに`ari-describedby`を利用
+- `aria-sort`がTalkbackでサポートされていないので、代わりに`aria-describedby`を利用
   - https://github.com/adobe/react-spectrum/blob/f1cee837470dbb95fa8d7fcd931f32ff69ebdfbf/packages/react-aria/src/table/useTableColumnHeader.ts#L101
 - VoiceOverが`aria-activedescendant`の値の変更を適切に読み上げない
   - https://github.com/adobe/react-spectrum/blob/f1cee837470dbb95fa8d7fcd931f32ff69ebdfbf/packages/react-aria/src/combobox/useComboBox.ts#L394-L397
@@ -77,7 +77,7 @@ https://github.com/adobe/react-spectrum/blob/f1cee837470dbb95fa8d7fcd931f32ff69e
 このようにReact Ariaでは、ライブラリの内部でブラウザやスクリーンリーダー間の互換性の問題を吸収しようとしています。もちろん十分に対応できていない部分もありますが、WebKitなどのブラウザエンジンと比べるとコントリビューションも行いやすくなっています。
 また、ブラウザエンジン側で修正するのと比べると、修正がリリースされて取り込めばすぐに、ユーザーが使っているブラウザのバージョンに関係なく、全ユーザーに届けられるというメリットがあります。そして、自分のプロダクト側でworkaroundを入れるのと比べると、ライブラリを使っている開発者全員にworkaroundを届けることができるので、より多くの開発者にメリットがあります。
 
-もちろんブラウザエンジン側にも素早く修正が入るのがベストです。しかし、それが全ユーザーに届くまでのタイムラグやコントリビューションの難易度などを考えると、こういったライブラリ側で環境間の差異を吸収してくれているようなライブラリにコントリビュートするというのも、アクセシビリティに貢献する一つの手だと考えています。
+もちろんブラウザエンジン側にも素早く修正が入るのがベストです。しかし、それが全ユーザーに届くまでのタイムラグやコントリビューションの難易度などを考えると、こういったライブラリ側で環境間の差異を吸収してくれているようなライブラリにコントリビュートするというのも、アクセシビリティに貢献する1つの手だと考えています。
 
 ## まとめ
 

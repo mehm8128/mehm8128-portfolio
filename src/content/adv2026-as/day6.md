@@ -26,6 +26,8 @@ https://github.com/web-platform-tests/interop-accessibility/wiki/Accessibility-I
 
 ## Support for testing additional accessibility properties beyond name and role
 
+TODO: 2つのプロジェクト紹介の構造を揃える（###で「現状」「課題」などのサブ見出しを追加）
+
 WPTにおいて今までアクセシビリティのテストは、主にroleとaccessible name、accessible descriptionという主要なプロパティしか確認することができていませんでした。
 例えば4日目に紹介した僕が作成したテストケースは、accessible nameをテストするものでした: [Add tests for interactive element labels named by svg title elements by mehm8128 · Pull Request #56902 · web-platform-tests/wpt](https://github.com/web-platform-tests/wpt/pull/56902)
 
@@ -38,11 +40,16 @@ WPTにおいて今までアクセシビリティのテストは、主にroleとa
 
 ## Create new test type for accessibility API testing (Acacia)
 
-こちらはWPTで、Accessibility APIをテストできるようにするプロジェクトです。Acaciaという名前がつけられており、[2025年のTPACでも進捗の共有がありました](https://notes.igalia.com/p/ggryaQuLq#/)。
+こちらはWPTで、Accessibility APIをテストできるようにするプロジェクトです。"Acacia"という名前がつけられており、[2025年のTPACでも進捗の共有がありました](https://notes.igalia.com/p/ggryaQuLq#/)。
 
-Accessibility APIについては5日目の図を見てもらえれば分かるのですが、ブラウザなどのUAからスクリーンリーダーなどのATに対して情報を渡すときのインターフェースです。
+Accessibility APIについては何度か出てきている以下の図を見てもらえれば分かるのですが、ブラウザなどのUAからスクリーンリーダーなどのATに対して情報を渡すときのインターフェースです。
+
+TODO: 図貼る
+
 前のセクションで紹介したようなテストは、ブラウザがHTMLを解析して「この要素はこういう属性を持つ」ということを**理解しているかどうか**をテストするものでしたが、Acaciaでテストするのは「この要素はこういう属性を持つ」ということを**Accessibility APIとして露出しているかどうか**をテストするものです。
 これはレイヤーが異なっているので、どちらも必要なテストになっています。そして、HTML要素・属性とAccessibility APIのマッピングは[core-aam](https://w3c.github.io/core-aam/)や[html-aam](https://www.w3.org/TR/html-aam-1.0/)で確認できます。
+
+TODO: exposeとか露出とか表記揺れしているかも
 
 WPT側の実装自体は[Create new test type `aamtest` for accessibility API testing by spectranaut · Pull Request #57696 · web-platform-tests/wpt](https://github.com/web-platform-tests/wpt/pull/57696)にて完了しているのですが、こちらもどうやら他にやることがいくつか残っているようです。
 

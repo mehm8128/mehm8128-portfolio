@@ -20,20 +20,19 @@ draft: true
 
 ## Accessibility Compat Data (ACD) Project
 
-ACD Projectは、既存の[Browser Compat Data](https://github.com/mdn/browser-compat-data)のアクセシビリティバージョンです。
+ACD Projectは、既存の[Browser Compat Data](https://github.com/mdn/browser-compat-data)のアクセシビリティバージョンのようなものです。
 
 https://github.com/lolaslab/accessibility-compat-data
 
 Browser Compat Dataは、Web技術のブラウザごとの相互運用性データとなっており、MDNのBaseline表示などに用いられています。しかしこれは支援技術や、ブラウザからAccessibility APIを通じて適切にexposeされているかどうかというのは考慮されていません。
 
-TODO: 図
-TPACのときの図とか？
+TODO: 図載せる
 
 そこでACD Projectで、WPTで取得しているブラウザごとのアクセシビリティ関連の相互運用性データや、ARIA-ATで取得された支援技術からユーザーに伝わる情報のデータを収集し、MDNなどに組み込もうという試みが行われています。
 
 このデータを利用可能になれば、このデータを用いてlinterのルールを作成することで、プロダクトがサポートしたい環境においてある技術がASであるかどうかが分かります。
 
-資金援助が必要とのことで、僕も少ないながら毎月支援をしています。
+資金援助が必要とのことで、僕は少ないながらこのプロジェクトに毎月支援をしています。
 
 https://opencollective.com/lolas-lab/projects/acd
 
@@ -43,6 +42,8 @@ https://opencollective.com/lolas-lab/projects/acd
 最近はもっと小さいatomicな単位でテストケースを作成することもあります。
 
 [AT Interop Reports | ARIA-AT](https://aria-at.w3.org/reports)でARIA FeaturesやHTML Featuresのタブを開くと、ARIA属性やHTML要素といった単位でテストケースを確認できます。
+
+TODO: 画像載せる
 
 ACD Projectのオーナーであるlolaも最近、ARIA-ATに対してPRを作成し、自らテストケースを増やす動きをしています。
 [HTML-AAM/Button by lolaodelola · Pull Request #1400 · w3c-cg/aria-at](https://github.com/w3c-cg/aria-at/pull/1400)
@@ -70,6 +71,11 @@ WCAGのテクニックであれば、ある環境においてあるテクニッ�
 
 これらの挙動が全部保証されていないと使えないのか、それとも最低限accessible nameとしてユーザーに伝わればいいのかが状況によって違う中で、自動テストのテストケースをどこまで用意するかは難しいところです。
 ひとまずHTML-AAMとARIA-ATからデータを収集するということだったので、そこの既存のルールに従うことになりそうですが、今後議論の余地がありそうな部分だと、個人的には思っています。
+
+TODO: 追記
+
+- https://bsky.app/profile/lolaodelola.bsky.social/post/3mwbb33oybk2n
+- https://github.com/w3c/aria/issues/2916
 
 ## まとめ
 

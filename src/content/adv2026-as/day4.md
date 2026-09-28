@@ -15,22 +15,9 @@ draft: true
 これが最も直接的な方法です。
 ブラウザ側の問題であればブラウザエンジンに、スクリーンリーダー側の問題であればスクリーンリーダーに不具合報告を行ったり、OSSであれば修正PRを作成したりすることで直接解決することができます。
 
-具体的に窓口を紹介します。
+具体的な窓口は、MDNの以下のページに記載されています。
 
-### ブラウザエンジン
-
-- Chromium
-  -
-- WebKit
-  -
-- Gecko
-  -
-
-### スクリーンリーダー
-
-- NVDA
-- VoiceOver
-- PC Talker
+https://developer.mozilla.org/ja/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 
 注意点として、ASの問題は、UAの問題なのかATの問題なのかの切り分けが難しいことがあります。
 UAの役割は、HTMLを正しく解釈し、Accessibility APIとして情報を公開するところまでです。
@@ -73,11 +60,15 @@ WPTの中でも、主にアクセシビリティに関係あるのは以下の�
 a11ysupport.ioはテスト結果とテストケースの作成のどちらも募集しています。WAICのAS情報は、現状テスト結果のみ募集しています。
 ARIA-ATについては、ARIA-AT CGのメンバーにならなければ直接の貢献は難しいようです（[Running a Test Plan · w3c-cg/aria-at Wiki](https://github.com/w3c-cg/aria-at/wiki/Running-a-Test-Plan)）。ただし、CGなのでW3C会員でなくとも参加は可能になっています。
 
+TODO: CG（Community Group）の正式名称を初出箇所に付与する
+
 a11ysupport.ioについては[Contributing | Accessibility Support](https://a11ysupport.io/contribute)を参照、WAICのAS情報については[アクセシビリティ サポーテッド（AS）情報 | ウェブアクセシビリティ基盤委員会（WAIC）](https://waic.jp/guideline/as/)の「検証作業に対するご協力のお願い」のセクションを参照していただくか、定期的に開催している[アクセシビリティ サポーテッド（AS）テスト体験会](https://waic.connpass.com/)にご参加ください。
 
 ## 実際にやってみた
 
 以前、実際にいくつか貢献をしたことがあるので紹介します。
+
+TODO: 以下2つの事例をissue作成→PR→報告→修正のタイムライン形式で表示する
 
 ### AX: Interactive elements containing the `<svg>` element which is named by `<title>` element doesn't have accessible name
 
@@ -86,7 +77,7 @@ ASの問題に対して、WPTにテストケースを作成してPRを提出し�
 今回問題となっていたのは、インタラクティブ要素内の`<svg>`要素が`<title>`要素を持つ場合に、WebKitにおいて`<title>`要素の中身がインタラクティブ要素のaccessible nameとして考慮されないという不具合でした。
 これは、[アイコンボタンのアクセシブルな名前はボタンが持つべきかアイコンが持つべきか](https://zenn.dev/moneyforward/articles/20231120-icon-button-accessible-name#3.-%3Csvg%3E%E8%A6%81%E7%B4%A0%E3%81%ABrole%3D%22img%22%E3%82%92%E4%BB%98%E4%B8%8E%E3%81%97%E3%80%81%3Csvg%3E%E8%A6%81%E7%B4%A0%E5%86%85%E3%81%AB%3Ctitle%3E%E8%A6%81%E7%B4%A0%E3%82%92%E5%85%A5%E3%82%8C%E3%81%A6%E4%BB%A3%E6%9B%BF%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B) の記事にて挙げられている問題です。
 
-また、[<svg>ではaltが使えないからaria-labelはロジックをすっ飛ばしている - 水底の血](https://momdo.hatenablog.jp/entry/20250510/1746858580)にも同様の話が書かれています。
+また、[`<svg>`ではaltが使えないからaria-labelはロジックをすっ飛ばしている - 水底の血](https://momdo.hatenablog.jp/entry/20250510/1746858580)にも同様の話が書かれています。
 この話の基となった記事を執筆した[yuheiyさん](https://x.com/_yuheiy)が、WPTに対して[[html-aam] Tests needed for `svg > title` when placed inside interactive elements · Issue #52459 · web-platform-tests/wpt](https://github.com/web-platform-tests/wpt/issues/52459)というissueを作成していました。
 このissueに対して、僕が[Add tests for interactive element labels named by svg title elements by mehm8128 · Pull Request #56902 · web-platform-tests/wpt](https://github.com/web-platform-tests/wpt/pull/56902)というPRを作成したという流れになっています。
 
@@ -96,7 +87,7 @@ ASの問題に対して、WPTにテストケースを作成してPRを提出し�
 
 これによってaccessible nameが付与されない問題は解決される一方で、[インラインSVGの代替テキストはどうするべきか – TAKLOG](https://www.tak-dcxi.com/article/how-to-handle-alt-text-for-inline-svg/)で解説されているように、`<title>`要素にホバーした際にツールチップが表示されたり、`<title>`要素の中身が機械翻訳されない問題などは残っています。そのため、必要に応じて`aria-label`や`aria-labelledby`を使うことも検討できるでしょう。
 
-この問題は以前から度々話題になることがあって認識していたのですが、「title要素でSVGにaccessible nameをつける方法はASでないので、別の方法を使う」というHACKが広まって本来どうあるべきかということが知られていないのは良くないと思い、今回の件をきっかけとしてWPTのテストケース作成やWebKitへのBug報告を進めていきました。
+今回の問題は以前から度々話題になることがあって認識していたのですが、「title要素でSVGにaccessible nameをつける方法はASでないので、別の方法を使う」というHACKが広まって本来どうあるべきかということが知られていないのは良くないと思い、今回の件をきっかけとしてWPTのテストケース作成やWebKitへのBug報告を進めていきました。
 
 ### fix: announce all content inside `role="alert"`
 
