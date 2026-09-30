@@ -14,12 +14,10 @@ import "../../styles/blog/blog-toc.css";
 import Layout from "./Layout.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
-  ogImageDefault?: boolean;
   seriesTitle?: string;
 };
 
-const { title, description, publishedDate, ogImageDefault, seriesTitle } =
-  Astro.props;
+const { title, description, publishedDate, seriesTitle } = Astro.props;
 
 const id = getRandomId();
 
@@ -28,11 +26,7 @@ const pageTitle = seriesTitle
   : `${title} - ${SITE_TITLE}`;
 ---
 
-<Layout
-  title={pageTitle}
-  description={description}
-  ogImage={!ogImageDefault ? "ogp.png" : undefined}
->
+<Layout title={pageTitle} description={description} ogImage="ogp.png">
   <article aria-labelledby={id}>
     <div class="title">
       <div class="date">
