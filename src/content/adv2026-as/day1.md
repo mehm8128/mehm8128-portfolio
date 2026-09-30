@@ -15,7 +15,7 @@ Accessibility Supported (AS) とは、あるWeb技術が、ユーザーエージ
 
 HTMLがユーザーエージェントによってパースされ、Accessibility APIを通じて支援技術に届く、という構造になっているため、開発者が書いたHTMLはユーザーエージェントと支援技術の両方によって正しく解釈され、ユーザーに伝わる必要があります。また、ユーザーエージェントは一般にブラウザを指しますが、必ずしもブラウザに限らないことから「ユーザーエージェント」という表記になっています。支援技術についても、スクリーンリーダーを前提に議論されることが多いですが必ずしもそれだけとは限らず、点字ディスプレイなどその他の支援技術を含みます。
 
-![Web制作者からWeb API、ブラウザエンジン、ユーザーへのWeb Stackの図。ブラウザエンジンからは別の矢印でAccessibility API経由で支援技術へも進み、ユーザーへつながっている。](web-stack.png)
+![Web制作者からWeb API、ブラウザエンジン、ユーザーへのWeb Stackの図。ブラウザエンジンからは別の矢印でAccessibility API経由で支援技術へも進み、ユーザーへつながっている。](images/web-stack.png)
 
 ソース: https://github.com/w3c/aria/blob/main/documentation/tests.md
 
@@ -41,7 +41,7 @@ Web技術があるユーザーエージェントや支援技術でサポート�
 - Screen Reader / Browser Combinations
 - Operating System
 
-![Primary Desktop/Laptop Screen Readerのグラフと表。JAWSが40.5%、NVDAが37.7%を占め、Voice OverやSuperNovaが続いている。](webaim-screen-reader.png)
+![Primary Desktop/Laptop Screen Readerのグラフと表。JAWSが40.5%、NVDAが37.7%を占め、Voice OverやSuperNovaが続いている。](images/webaim-screen-reader.png)
 
 普段の開発では、WindowsはNVDA、MacはVoiceOverで動作確認をすることが多いと思いますが、実際の利用割合としては、JAWSとNVDAがほぼ同じくらいの利用率でトップ、それに次いでVoiceOverなどが入ってきています。しかも、VoiceOverをPrimaryなスクリーンリーダーとして使っている人は1割ほどです。これは"Operating System"の項目で分かるように、障害のある回答者はそもそもMacよりもWindowsを使う傾向にあるということに由来します。
 また、"Browsers"ではChromeが半分を占めているものの、EdgeやFirefox、Safariについては同じくらいの割合となっています。
@@ -56,7 +56,7 @@ Web技術があるユーザーエージェントや支援技術でサポート�
 - パソコンで主に利用している支援技術
 - パソコンで利用しているWebブラウザー
 
-![パソコンで主に利用している支援技術のグラフと表。PC-Talkerが60.29%、NVDAが25.36%を占め、JAWS for Windowsなどが続いている。](japan-at-survey.png)
+![パソコンで主に利用している支援技術のグラフと表。PC-Talkerが60.29%、NVDAが25.36%を占め、JAWS for Windowsなどが続いている。](images/japan-at-survey.png)
 
 こちらの結果でもほとんどのユーザーがWindowsを使っているという結果になっています。
 しかし、先ほどの調査結果と大きく異なるのは、「主に利用している支援技術」です。「使うことがある支援技術」ではNVDAやナレーターがPC-Talkerより少し低いくらいの数値に留まっていますが、「主に利用している支援技術」では圧倒的にPC-Talkerが多くなっています。PC-Talkerは日本独自のスクリーンリーダーであり、先ほどの国外の調査結果では現れていなかったものです。

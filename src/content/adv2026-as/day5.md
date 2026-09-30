@@ -28,7 +28,7 @@ Browser Compat Dataは、Web技術のブラウザごとの相互運用性デー�
 
 1日目にも出てきた以下の図の右下にある、ブラウザエンジンからAccessibility API、支援技術、ユーザーに繋がる矢印の部分がテストできていないことになります。
 
-![Web制作者からWeb API、ブラウザエンジン、ユーザーへのWeb Stackの図。ブラウザエンジンからは別の矢印でAccessibility API経由で支援技術へも進み、ユーザーへつながっている。](web-stack.png)
+![Web制作者からWeb API、ブラウザエンジン、ユーザーへのWeb Stackの図。ブラウザエンジンからは別の矢印でAccessibility API経由で支援技術へも進み、ユーザーへつながっている。](images/web-stack.png)
 
 ソース: https://github.com/w3c/aria/blob/main/documentation/tests.md
 
@@ -47,7 +47,7 @@ https://opencollective.com/lolas-lab/projects/acd
 
 [AT Interop Reports | ARIA-AT](https://aria-at.w3.org/reports)でARIA FeaturesやHTML Featuresのタブを開くと、ARIA属性やHTML要素といった単位でテストケースを確認できます。
 
-![ARIA-ATのJAWSとChromeにおけるaria-errormessaageの自動テスト結果レポート。一部のテストが失敗していることが報告されている。](aria-at-aria.png)
+![ARIA-ATのJAWSとChromeにおけるaria-errormessaageの自動テスト結果レポート。一部のテストが失敗していることが報告されている。](images/aria-at-aria.png)
 
 ソース: [JAWS and Chrome Support for aria-errormessage ARIA Specification | ARIA-AT Reports](https://aria-at.w3.org/aria-html-feature/1/2/aria-errormessage/aria)
 

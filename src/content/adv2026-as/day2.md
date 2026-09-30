@@ -16,7 +16,7 @@ a11ysupport.ioとは、Web技術をユーザーエージェント・支援技術
 
 [`aria-sort`](https://a11ysupport.io/tech/aria/aria-sort_attribute)を例にして見ていきます（ref: [aria-sort - ARIA | MDN](https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort)）。
 
-![aria-sortの挙動がスクリーンリーダーとブラウザでサポートされているかどうかを示した表。](aria-sort.png)
+![aria-sortの挙動がスクリーンリーダーとブラウザでサポートされているかどうかを示した表。](images/aria-sort.png)
 
 例えば1行目は`aria-sort="ascending"`を指定しているときに「昇順」であることをスクリーンリーダーが読み上げるかどうかという挙動で、FirefoxにおけるOrcaとChromeにおけるTalkBackが読み上げないという結果になっています。
 表の下にはそれぞれの挙動について詳細な解説が記載されています。
@@ -38,7 +38,7 @@ https://blog.cybozu.io/entry/2026/04/28/170000
 AS情報は[アクセシビリティ サポーテッド（AS）情報](https://waic.github.io/as_info/)で公開されています。こちらは多くのテストケースがWCAGの達成基準に含まれるテクニックに紐づけて作成されています。というのも、1日目にも紹介したようにASはWCAGで定義されている概念なので、WAICのAS情報構築はWCAGのテクニックに基づいています。ただ、今後WCAGに紐づかない独自のテストケースによってAS情報を増やしていく可能性もあります。
 テクニックに紐づいているので、WCAGの達成基準を満たそうとしたときに「このテクニックは、この環境（OS、ユーザーエージェント、支援技術）ではASであるので、達成基準を満たすために利用して問題ない」という判別ができるようになっています。
 
-![AS情報のテスト結果のテーブル。2行目のテスト実施者がmehm8128で、判断を◯としている。](waic-as-info.png)
+![AS情報のテスト結果のテーブル。2行目のテスト実施者がmehm8128で、判断を◯としている。](images/waic-as-info.png)
 
 ソース: [テスト0050-01](https://waic.github.io/as_info/results/0050-01.html)
 
@@ -57,7 +57,7 @@ https://aria-at.w3.org/
 現在は特にAPGのパターンごとにテストケースを作成しており、APGのパターンを様々な環境でテストし、結果をまとめています。
 自動テストと手動テストの両方を行っており、スクリーンリーダーの自動操縦によるテスト結果も含まれています。
 
-![ARIA-ATの自動テスト結果レポート。JAWSで「Navigate forwards to an expanded accordion header」のテストをしたときの各挙動に対してPassedかどうかが記載されている。](aria-at-apg.png)
+![ARIA-ATの自動テスト結果レポート。JAWSで「Navigate forwards to an expanded accordion header」のテストをしたときの各挙動に対してPassedかどうかが記載されている。](images/aria-at-apg.png)
 
 ソース: [JAWS 2025.2508.120 and Chrome for Accordion | ARIA-AT Reports](https://aria-at.w3.org/report/163649/targets/494#result-NmNlOeyIxMiI6MTA3OX0TBiYm)
 
