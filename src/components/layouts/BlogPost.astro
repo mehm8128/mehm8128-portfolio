@@ -15,15 +15,21 @@ import Layout from "./Layout.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
   ogImageDefault?: boolean;
+  seriesTitle?: string;
 };
 
-const { title, description, publishedDate, ogImageDefault } = Astro.props;
+const { title, description, publishedDate, ogImageDefault, seriesTitle } =
+  Astro.props;
 
 const id = getRandomId();
+
+const pageTitle = seriesTitle
+  ? `${title} - ${seriesTitle} - ${SITE_TITLE}`
+  : `${title} - ${SITE_TITLE}`;
 ---
 
 <Layout
-  title={`${title} - ${SITE_TITLE}`}
+  title={pageTitle}
   description={description}
   ogImage={!ogImageDefault ? "ogp.png" : undefined}
 >

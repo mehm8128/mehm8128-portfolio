@@ -15,6 +15,11 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPost {...post.data} description="React Ariaの実装読むぞ" ogImageDefault>
+<BlogPost
+  {...post.data}
+  description="React Ariaの実装読むぞ"
+  seriesTitle="Adv2024 React Aria"
+  ogImageDefault
+>
   <Content />
 </BlogPost>
