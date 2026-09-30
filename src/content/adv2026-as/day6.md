@@ -42,10 +42,6 @@ WPTにおいて今までアクセシビリティのテストは、主にroleとa
 
 こちらはWPTで、Accessibility APIをテストできるようにするプロジェクトです。"Acacia"という名前がつけられており、[2025年のTPACでも進捗の共有がありました](https://notes.igalia.com/p/ggryaQuLq#/)。
 
-Accessibility APIについては何度か出てきている以下の図を見てもらえれば分かるのですが、ブラウザなどのUAからスクリーンリーダーなどのATに対して情報を渡すときのインターフェースです。
-
-TODO: 図貼る
-
 前のセクションで紹介したようなテストは、ブラウザがHTMLを解析して「この要素はこういう属性を持つ」ということを**理解しているかどうか**をテストするものでしたが、Acaciaでテストするのは「この要素はこういう属性を持つ」ということを**Accessibility APIとして露出しているかどうか**をテストするものです。
 これはレイヤーが異なっているので、どちらも必要なテストになっています。そして、HTML要素・属性とAccessibility APIのマッピングは[core-aam](https://w3c.github.io/core-aam/)や[html-aam](https://www.w3.org/TR/html-aam-1.0/)で確認できます。
 

@@ -24,13 +24,17 @@ ACD Projectは、既存の[Browser Compat Data](https://github.com/mdn/browser-c
 
 https://github.com/lolaslab/accessibility-compat-data
 
-Browser Compat Dataは、Web技術のブラウザごとの相互運用性データとなっており、MDNのBaseline表示などに用いられています。しかしこれは支援技術や、ブラウザからAccessibility APIを通じて適切にexposeされているかどうかというのは考慮されていません。
+Browser Compat Dataは、Web技術のブラウザごとの相互運用性データとなっており、MDNのBaseline表示などに用いられています。しかしこれはブラウザからAccessibility APIを通じて適切にexposeされているかどうかや、適切にexportされていてもそれを支援技術が一貫性を持って読み上げているかどうかというのは考慮されていません。
 
-TODO: 図載せる
+1日目にも出てきた以下の図の右下にある、ブラウザエンジンからAccessibility API、支援技術、ユーザーに繋がる矢印の部分がテストできていないことになります。
+
+![Web制作者からWeb API、ブラウザエンジン、ユーザーへのWeb Stackの図。ブラウザエンジンからは別の矢印でAccessibility API経由で支援技術へも進み、ユーザーへつながっている。](web-stack.png)
+
+ソース: https://github.com/w3c/aria/blob/main/documentation/tests.md
 
 そこでACD Projectで、WPTで取得しているブラウザごとのアクセシビリティ関連の相互運用性データや、ARIA-ATで取得された支援技術からユーザーに伝わる情報のデータを収集し、MDNなどに組み込もうという試みが行われています。
 
-このデータを利用可能になれば、このデータを用いてlinterのルールを作成することで、プロダクトがサポートしたい環境においてある技術がASであるかどうかが分かります。
+このデータを利用可能になれば、このデータを用いてlinterのルールを作成することで、プロダクトがサポートしたい環境において、ある技術がASであるかどうかが分かります。
 
 資金援助が必要とのことで、僕は少ないながらこのプロジェクトに毎月支援をしています。
 
@@ -43,7 +47,7 @@ https://opencollective.com/lolas-lab/projects/acd
 
 [AT Interop Reports | ARIA-AT](https://aria-at.w3.org/reports)でARIA FeaturesやHTML Featuresのタブを開くと、ARIA属性やHTML要素といった単位でテストケースを確認できます。
 
-TODO: 画像載せる
+![ARIA-ATのJAWSとChromeにおけるaria-errormessaageの自動テスト結果レポート。一部のテストが失敗していることが報告されている。](aria-at-aria.png)
 
 ACD Projectのオーナーであるlolaも最近、ARIA-ATに対してPRを作成し、自らテストケースを増やす動きをしています。
 [HTML-AAM/Button by lolaodelola · Pull Request #1400 · w3c-cg/aria-at](https://github.com/w3c-cg/aria-at/pull/1400)

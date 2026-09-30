@@ -61,8 +61,6 @@ https://docs.google.com/document/d/1XxzwsgWZSDh2EDqTag-nYfrqAT3b6Glpu8DGbVpTd9M/
 
 この日のminutes: [AGWG Teleconference -- 23 Aug 2022](https://www.w3.org/2022/08/23-ag-minutes.html#item02)
 
-TODO: AGWG（Accessibility Guidelines Working Group）の正式名称を初出箇所に付与する
-
 次に、その半年後のスライドを見ていきます。
 
 https://docs.google.com/presentation/d/1VBat4Vg8hmCzXrUnyRvZv4CQexouGUcyqEocF3Ynv_Q/edit
