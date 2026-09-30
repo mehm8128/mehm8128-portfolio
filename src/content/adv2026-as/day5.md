@@ -49,6 +49,8 @@ https://opencollective.com/lolas-lab/projects/acd
 
 ![ARIA-ATのJAWSとChromeにおけるaria-errormessaageの自動テスト結果レポート。一部のテストが失敗していることが報告されている。](aria-at-aria.png)
 
+ソース: [JAWS and Chrome Support for aria-errormessage ARIA Specification | ARIA-AT Reports](https://aria-at.w3.org/aria-html-feature/1/2/aria-errormessage/aria)
+
 ACD Projectのオーナーであるlolaも最近、ARIA-ATに対してPRを作成し、自らテストケースを増やす動きをしています。
 [HTML-AAM/Button by lolaodelola · Pull Request #1400 · w3c-cg/aria-at](https://github.com/w3c-cg/aria-at/pull/1400)
 

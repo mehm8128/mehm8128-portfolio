@@ -90,9 +90,9 @@ WAICとは「PC Talkerを無視できるかどうか」というやり取りが�
 - [Default accessibility support set · w3c/wcag3 · Discussion #277](https://github.com/w3c/wcag3/discussions/277)
 - [Defining Accessibility Support Sets · w3c/wcag3 · Discussion #621](https://github.com/w3c/wcag3/discussions/621)
 
-これは、「**この環境（UAやATの組み合わせ）では、ASであることを保証する**」という環境の集合（Set）を定義する概念です。
+これは、「**この環境（ユーザーエージェントや支援技術の組み合わせ）では、ASであることを保証する**」という環境の集合（Set）を定義する概念です。
 例えばaxe-coreでは、[axe-core/doc/accessibility-supported.md](https://github.com/dequelabs/axe-core/blob/develop/doc/accessibility-supported.md)でaxe-coreに含まれるルールの内容がASであることを保証している環境を定義しています。
-イメージとしては、プロダクトのサポートブラウザという概念を、ブラウザだけでなくATにも拡大したような概念となっています。
+イメージとしては、プロダクトのサポートブラウザという概念を、ブラウザだけでなく支援技術にも拡大したような概念となっています。
 
 そのようなSetを定義しておき、WCAGのテクニックを作るときにそのSetの範囲で動くことを動作確認できていれば、「このAccessibility Support Setsの中ではWCAGのテクニックは全てASです」と言うことができるようになります。
 そのようなSetを、"**Default** Accessibility Support Sets"と呼んでおり、どう定義するかが現在議論中となっています。

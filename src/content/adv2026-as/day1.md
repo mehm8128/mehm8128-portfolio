@@ -4,8 +4,6 @@ publishedDate: "2026-10-01"
 draft: true
 ---
 
-TODO: title要素に「Adv2026 Accessibility Supported」的なのを入れる
-
 こんにちは、mehm8128です。
 
 本シリーズでは、この1年間アクセシビリティの中でも特に意識してコントリビュート・情報収集してきた「Accessibility Supported」の分野（以後「AS」と略）で8日間書いていきます。
