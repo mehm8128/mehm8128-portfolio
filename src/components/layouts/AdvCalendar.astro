@@ -12,12 +12,13 @@ export interface Props {
   year: number;
   posts: Post[];
   endDate?: number;
+  month?: number; // 0-indexed（デフォルトは12月）
 }
 
-const { year, title, endDate, posts } = Astro.props;
+const { year, title, endDate, posts, month } = Astro.props;
 
 const yearString = year.toString();
-const calendarWeeks = generateAdventCalendar(posts, year, endDate);
+const calendarWeeks = generateAdventCalendar(posts, year, endDate, month);
 ---
 
 <Layout

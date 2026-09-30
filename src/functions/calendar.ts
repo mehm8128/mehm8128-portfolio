@@ -19,19 +19,20 @@ export interface CalendarWeek {
 export const generateAdventCalendar = (
   posts: Post[],
   year: number,
-  endDate = 24 // 25の場合があるので指定できるようにしている
+  endDate = 24, // 25の場合があるので指定できるようにしている
+  month = 11 // 0-indexed（デフォルトは12月）
 ): CalendarWeek[] => {
   const calendarDays: CalendarDay[] = [];
 
   // その月の1日と最終日を取得
-  const firstDay = new Date(year, 11, 1);
-  const lastDay = new Date(year, 12, 0);
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
   const daysInMonth = lastDay.getDate();
 
   const firstDayOfWeek = firstDay.getDay();
 
   // 前月の最終日を取得
-  const prevMonth = new Date(year, 10, 0);
+  const prevMonth = new Date(year, month, 0);
   const daysInPrevMonth = prevMonth.getDate();
 
   // 前月の日々を追加
@@ -47,7 +48,7 @@ export const generateAdventCalendar = (
     const post = posts.find(
       (p) =>
         p.publishedDate.getFullYear() === year &&
-        p.publishedDate.getMonth() === 11 &&
+        p.publishedDate.getMonth() === month &&
         p.publishedDate.getDate() === day
     );
 
