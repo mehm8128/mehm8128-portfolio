@@ -50,7 +50,8 @@ https://opencollective.com/lolas-lab/projects/acd
 
 ソース: [JAWS and Chrome Support for aria-errormessage ARIA Specification | ARIA-AT Reports](https://aria-at.w3.org/aria-html-feature/1/2/aria-errormessage/aria)
 
-ACD Projectのオーナーであるlolaも最近、ARIA-ATに対してPRを作成し、自らテストケースを増やす動きをしています。
+ACD Projectの1つの情報源としてARIA-ATのテスト結果を用いるため、そのようなatomicな単位のテスト結果を自動テストで収集できることが望ましいです。
+そのため、ACD Projectのオーナーであるlolaも最近ARIA-ATに対してPRを作成し、自らテストケースを増やす動きをしています。
 [HTML-AAM/Button · w3c-cg/aria-at](https://github.com/w3c-cg/aria-at/pull/1400)
 
 それを基にして、テストケースを作成する方法に関するドキュメントを改善し、より多くの人がテストケース作成に携われるようにしていく方針のようです。

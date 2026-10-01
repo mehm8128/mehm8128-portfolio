@@ -68,7 +68,7 @@ https://aria-at.w3.org/
 
 https://scrapbox.io/mehm8128/ARIA-AT%E3%81%AENVDA%E6%93%8D%E4%BD%9C%E8%87%AA%E5%8B%95%E5%8C%96%E8%AA%BF%E6%9F%BB%E3%83%A1%E3%83%A2
 
-今後WAICにおけるAS情報の作成に似たような仕組みを利用したいと検討している一方、PC Talkerは別の方法の検討が必要そうなので、作業部会内で議論中です。
+今後WAICにおけるAS情報の作成に似たような仕組みを利用したいと検討している一方、PC TalkerはARIA-ATに前例がない上にNVDAなどとは仕組みが大きく異なるため、作業部会内で別の方法を検討中です。
 
 ## まとめ
 
