@@ -66,20 +66,19 @@ a11ysupport.ioについては[Contributing | Accessibility Support](https://a11y
 
 以前、実際にいくつか貢献をしたことがあるので紹介します。
 
-TODO: 以下2つの事例をissue作成→PR→報告→修正のタイムライン形式で表示する
-
 ### AX: Interactive elements containing the `<svg>` element which is named by `<title>` element doesn't have accessible name
 
-ASの問題に対して、WPTにテストケースを作成してPRを提出し、マージされた後にそれを根拠としてWebKitにBugを提出したところ、WebKitの中の人がPRを作成してくれて修正されたという例です。順を追って説明します。
+ASの問題に対して、WPTにテストケースを作成してPRを提出し、マージされた後にそれを根拠としてWebKitにBugを提出したところ、WebKitの中の人がPRを作成してくれて修正されたという例です。
 
 今回問題となっていたのは、インタラクティブ要素内の`<svg>`要素が`<title>`要素を持つ場合に、WebKitにおいて`<title>`要素の中身がインタラクティブ要素のaccessible nameとして考慮されないという不具合でした。
 これは、[アイコンボタンのアクセシブルな名前はボタンが持つべきかアイコンが持つべきか](https://zenn.dev/moneyforward/articles/20231120-icon-button-accessible-name#3.-%3Csvg%3E%E8%A6%81%E7%B4%A0%E3%81%ABrole%3D%22img%22%E3%82%92%E4%BB%98%E4%B8%8E%E3%81%97%E3%80%81%3Csvg%3E%E8%A6%81%E7%B4%A0%E5%86%85%E3%81%AB%3Ctitle%3E%E8%A6%81%E7%B4%A0%E3%82%92%E5%85%A5%E3%82%8C%E3%81%A6%E4%BB%A3%E6%9B%BF%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B) の記事にて挙げられている問題です。
 
-また、[`<svg>`ではaltが使えないからaria-labelはロジックをすっ飛ばしている - 水底の血](https://momdo.hatenablog.jp/entry/20250510/1746858580)にも同様の話が書かれています。
-この話の基となった記事を執筆した[yuheiyさん](https://x.com/_yuheiy)が、WPTに対して[[html-aam] Tests needed for `svg > title` when placed inside interactive elements · Issue #52459 · web-platform-tests/wpt](https://github.com/web-platform-tests/wpt/issues/52459)というissueを作成していました。
-このissueに対して、僕が[Add tests for interactive element labels named by svg title elements by mehm8128 · Pull Request #56902 · web-platform-tests/wpt](https://github.com/web-platform-tests/wpt/pull/56902)というPRを作成したという流れになっています。
+また、[`<svg>`ではaltが使えないからaria-labelはロジックをすっ飛ばしている - 水底の血](https://momdo.hatenablog.jp/entry/20250510/1746858580)にも同様の話が書かれており、これをきっかけとして以下の流れで進みました。
 
-その後、さらに僕がそのテストケースを参照しながら、[309958 – AX: Interactive elements containing the `<svg>` element which is named by `<title>` element doesn't have accessible name](https://bugs.webkit.org/show_bug.cgi?id=309958)というBugを報告したところ、[AX: Interactive elements containing the `<svg>` element which is named by `<title>` element doesn't have accessible name by Ahmad-S792 · Pull Request #64593 · WebKit/WebKit](https://github.com/WebKit/WebKit/pull/64593)にてAppleのエンジニアが修正してくれました。
+1. **issue作成**：上記のsvg要素の話の基となった記事を執筆した[yuheiyさん](https://x.com/_yuheiy)が、WPTに対して[[html-aam] Tests needed for `svg > title` when placed inside interactive elements · web-platform-tests/wpt](https://github.com/web-platform-tests/wpt/issues/52459)というissueを作成
+2. **PR作成**：このissueに対して、僕が[Add tests for interactive element labels named by svg title elements · web-platform-tests/wpt](https://github.com/web-platform-tests/wpt/pull/56902)というPRを作成し、マージ
+3. **Bug報告**：マージされたテストケースを根拠として、僕が[AX: Interactive elements containing the `<svg>` element which is named by `<title>` element doesn't have accessible name](https://bugs.webkit.org/show_bug.cgi?id=309958)というBugをWebKitに報告
+4. **修正**：[AX: Interactive elements containing the `<svg>` element which is named by `<title>` element doesn't have accessible name · WebKit/WebKit](https://github.com/WebKit/WebKit/pull/64593)にてAppleのエンジニアが修正
 
 この修正は、[Release Notes for Safari Technology Preview 244 | WebKit](https://webkit.org/blog/17962/release-notes-for-safari-technology-preview-244/)に記載されています。
 
@@ -91,11 +90,11 @@ ASの問題に対して、WPTにテストケースを作成してPRを提出し�
 
 こちらはNVDAにPRを送った件です。
 
-以前[Accessibility APIでブラウザから情報を取得してみる - mehm8128のWeblog](https://portfolio.hm8128.me/blog/ia2/#nvda%E3%81%AE%E3%82%A2%E3%83%89%E3%82%AA%E3%83%B3%E7%B5%8C%E7%94%B1%E3%81%A7%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B7%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B)などでNVDAの中身自体は読んだことがあったものの、実際にコードを書いたり貢献したりするところまではできていなかったので、何かASに関連するissueがないかと漁っていました。そこで[NVDA does not announce contents of div with role="alert" containing a list · Issue #14990 · nvaccess/nvda](https://github.com/nvaccess/nvda/issues/14990)というissueを見つけ、比較的簡単に修正できそうだったのでやってみました。
+以前[Accessibility APIでブラウザから情報を取得してみる - mehm8128のWeblog](https://portfolio.hm8128.me/blog/ia2/#nvda%E3%81%AE%E3%82%A2%E3%83%89%E3%82%AA%E3%83%B3%E7%B5%8C%E7%94%B1%E3%81%A7%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B7%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B)などでNVDAの中身自体は読んだことがあったものの、実際にコードを書いたり貢献したりするところまではできていなかったので、何かASに関連するissueがないかと漁っていました。そこで[NVDA does not announce contents of div with role="alert" containing a list · nvaccess/nvda](https://github.com/nvaccess/nvda/issues/14990)というissueを見つけ、比較的簡単に修正できそうだったのでやってみました。
 
 このissueは、`role="alert"`をつけた要素が表示されたときに、今まではボタンなど`FOCUSABLE`な要素しか読み上げられていなかったのですが、リスト関連のroleや見出し、paragraph roleなども読み上げるようにしてほしいという内容でした（よって、タイトルは"**all** content"になっているけど、実は"all"ではありません）。
 
-[fix: announce all content inside `role="alert"` by mehm8128 · Pull Request #20056 · nvaccess/nvda](https://github.com/nvaccess/nvda/pull/20056)というPRを作成し、無事マージされました。
+[fix: announce all content inside `role="alert"` · nvaccess/nvda](https://github.com/nvaccess/nvda/pull/20056)というPRを作成し、無事マージされました。
 
 思っていたよりも経緯や実装が複雑そうで、結局完全には理解できないままなんとかマージまで持っていったのですが、「`role="alert"`なのだから表示されたら中身が読み上げられるはずなのに、読み上げられないものがある」という問題を部分的に改善できました。2026.3で入る予定らしいので、リリースまではもう少しかかりそうです。
 
