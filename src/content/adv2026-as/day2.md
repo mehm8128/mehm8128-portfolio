@@ -1,7 +1,7 @@
 ---
 title: "ASに関するデータベース"
 publishedDate: "2026-10-02"
-draft: true
+draft: false
 ---
 
 こんにちは、mehm8128です。
