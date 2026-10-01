@@ -9,6 +9,7 @@ import remarkCallout from "@r4ai/remark-callout";
 import remarkLinkCard from "remark-link-card-plus";
 import { rehypeCollapsibleToc } from "@mehm8128/rehype-toc";
 import react from "@astrojs/react";
+import { rehypeRemoveFootnoteLabel } from "./src/functions/rehypeRemoveFootnoteLabel.ts";
 
 // https://astro.build/config
 export default defineConfig({
@@ -34,6 +35,7 @@ export default defineConfig({
       ],
     ],
     rehypePlugins: [
+      rehypeRemoveFootnoteLabel,
       // Astroの自動id付与はrehypeが走った後なので、先にidを付与してからautolinkを使う必要がある
       rehypeHeadingIds,
       [
