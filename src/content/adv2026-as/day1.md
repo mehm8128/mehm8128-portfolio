@@ -36,7 +36,7 @@ Web技術があるユーザーエージェントや支援技術でサポート�
 今回主に着目してほしいのは以下の項目です。
 
 - Primary Desktop/Laptop Screen Reader
-- Screen Readers Commonly Used　
+- Screen Readers Commonly Used
 - Browsers
 - Screen Reader / Browser Combinations
 - Operating System
@@ -58,7 +58,7 @@ Web技術があるユーザーエージェントや支援技術でサポート�
 
 ![パソコンで主に利用している支援技術のグラフと表。PC-Talkerが60.29%、NVDAが25.36%を占め、JAWS for Windowsなどが続いている。](images/japan-at-survey.png)
 
-こちらの結果でもほとんどのユーザーがWindowsを使っているという結果になっています。
+こちらの結果でもほとんどのユーザーがWindowsを使っていることが分かります。
 しかし、先ほどの調査結果と大きく異なるのは、「主に利用している支援技術」です。「使うことがある支援技術」ではNVDAやナレーターがPC-Talkerより少し低いくらいの数値に留まっていますが、「主に利用している支援技術」では圧倒的にPC-Talkerが多くなっています。PC-Talkerは日本独自のスクリーンリーダーであり、先ほどの国外の調査結果では現れていなかったものです。
 同様に、「利用しているWebブラウザー」はEdgeやChromeと並んで[NetReader](https://www.aok-net.com/products/netreaderneo.php)が一定の割合を占めています。これはPC-Talkerに付属する音声読み上げブラウザで、PC-Talkerと同じく日本独自のものです。
 

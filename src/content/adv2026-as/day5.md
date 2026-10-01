@@ -16,7 +16,7 @@ draft: true
 しかし、これまで見てきたように、linterでエラーになっていないからといって、必ずしも問題ないわけではありません。`aria-sort`を許可されたHTML要素で許可された値で使っているからといって、どの環境でも意図通りにユーザーに伝わるとは限りません。特定の状況下では、img要素のalt属性がユーザーに伝わらないケースもあるかもしれません。
 そのようなケースは、linterでは現状判断できません。
 
-そこで、2日目に紹介したようなデータベースを改めて構築し、MDNなど既存のリソース・開発者ツールに組み込むようなプロジェクトが進んでいます。それが、ACD Projectです。
+そこで、2日目に紹介したようなASに関するデータベースを改めて構築し、MDNなど既存のリソース・開発者ツールに組み込むことを目指すプロジェクトが進んでいます。それが、ACD Projectです。
 
 ## Accessibility Compat Data (ACD) Project
 
@@ -24,17 +24,17 @@ ACD Projectは、既存の[Browser Compat Data](https://github.com/mdn/browser-c
 
 https://github.com/lolaslab/accessibility-compat-data
 
-Browser Compat Dataは、Web技術のブラウザごとの相互運用性データとなっており、MDNのBaseline表示などに用いられています。しかしこれはブラウザからAccessibility APIを通じて適切にexposeされているかどうかや、適切にexportされていてもそれを支援技術が一貫性を持って読み上げているかどうかというのは考慮されていません。
+Browser Compat Dataは、Web技術のブラウザごとの相互運用性データとなっており、MDNのBaseline表示などに用いられています。しかしこれはブラウザからAccessibility APIを通じて情報が適切に公開されているかどうかや、適切に公開されていてもそれを支援技術が一貫性を持ってユーザーに伝えているかどうかというのは考慮されていません。
 
-1日目にも出てきた以下の図の右下にある、ブラウザエンジンからAccessibility API、支援技術、ユーザーに繋がる矢印の部分がテストできていないことになります。
+1日目にも出てきた以下の図の右下にある、ブラウザエンジンからAccessibility API、支援技術、ユーザーに繋がる矢印の部分の情報がないということになります。
 
 ![Web制作者からWeb API、ブラウザエンジン、ユーザーへのWeb Stackの図。ブラウザエンジンからは別の矢印でAccessibility API経由で支援技術へも進み、ユーザーへつながっている。](images/web-stack.png)
 
 ソース: https://github.com/w3c/aria/blob/main/documentation/tests.md
 
-そこでACD Projectで、WPTで取得しているブラウザごとのアクセシビリティ関連の相互運用性データや、ARIA-ATで取得された支援技術からユーザーに伝わる情報のデータを収集し、MDNなどに組み込もうという試みが行われています。
+そこでACD Projectでは、WPTで取得しているブラウザごとのアクセシビリティ関連の相互運用性データや、ARIA-ATで取得された、支援技術からユーザーに伝わる情報のデータを収集し、MDNなどに組み込もうという試みが行われています。
 
-このデータを利用可能になれば、このデータを用いてlinterのルールを作成することで、プロダクトがサポートしたい環境において、ある技術がASであるかどうかが分かります。
+このデータが利用可能になれば、これを用いてlinterのルールを作成することで、プロダクトがサポートしたい環境において、ある技術がASであるかどうかが分かります。
 
 資金援助が必要とのことで、僕は少ないながらこのプロジェクトに毎月支援をしています。
 
@@ -42,8 +42,7 @@ https://opencollective.com/lolas-lab/projects/acd
 
 ## ARIA-ATとの関係
 
-2日目の記事では、ARIA-ATは基本的にAPGのパターンをテストケース化していると書いたのですが、実はそれだけではありません。
-最近はもっと小さいatomicな単位でテストケースを作成することもあります。
+2日目の記事では、ARIA-ATは基本的にAPGのパターンをテストケース化していると書いたのですが、実はそれだけではありません。最近はもっと小さいatomicな単位でテストケースを作成されています。
 
 [AT Interop Reports | ARIA-AT](https://aria-at.w3.org/reports)でARIA FeaturesやHTML Featuresのタブを開くと、ARIA属性やHTML要素といった単位でテストケースを確認できます。
 
@@ -61,11 +60,11 @@ ACD Projectのオーナーであるlolaも最近、ARIA-ATに対してPRを作�
 - [ARIA and Assistive Technologies Community Group – 12 August 2026](https://www.w3.org/2026/08/12-aria-at-minutes.html)
 - [ARIA and Assistive Technologies Community Group – 26 August 2026](https://www.w3.org/2026/08/26-aria-at-minutes.html)
 
-ミーティングで話されていたような、TPACでのハッカソンや同期的なやり取りはハードルが高いですが、ドキュメントが整備されてテストケースを新規参入者が追加しやすくなっていそうなタイミングで、僕も貢献してみたいなと考えています。
+ミーティングで話されていたようなTPACでのハッカソンや同期的なやり取りはハードルが高いですが、ドキュメントが整備されてテストケースを新規参入者が追加しやすくなっていそうなタイミングで、僕も貢献してみたいなと考えています。
 
 ## 本当にこれでいけるのか？
 
-WCAGのテクニックであれば、ある環境においてあるテクニックがASかどうかは比較的容易に判断できます。しかし実際のプロダクトにおいては、WCAGのテクニックだけが全てではありません。あるWeb技術がどこまでの挙動をしてほしいかというのはプロダクトにおいて違います。
+WCAGのテクニックであれば、ある環境においてあるテクニックがASかどうかは比較的容易に判断できます。しかし実際のプロダクトにおいては、WCAGのテクニックだけが全てではありません。あるWeb技術に対してどこまでの挙動を保証したいかというのはプロダクトにおいて違います。
 例えばimg要素の`alt`属性1つとっても、以下のような挙動を想定できます。
 
 - 値が画像のaccessible nameとしてユーザーに伝わる
@@ -78,10 +77,14 @@ WCAGのテクニックであれば、ある環境においてあるテクニッ�
 これらの挙動が全部保証されていないと使えないのか、それとも最低限accessible nameとしてユーザーに伝わればいいのかが状況によって違う中で、自動テストのテストケースをどこまで用意するかは難しいところです。
 ひとまずHTML-AAMとARIA-ATからデータを収集するということだったので、そこの既存のルールに従うことになりそうですが、今後議論の余地がありそうな部分だと、個人的には思っています。
 
-TODO: 追記
+と思っていたところ、ちょうど似たような話をlolaが進めていることが分かりました。
 
-- https://bsky.app/profile/lolaodelola.bsky.social/post/3mwbb33oybk2n
-- https://github.com/w3c/aria/issues/2916
+https://bsky.app/profile/lolaodelola.bsky.social/post/3mwbb33oybk2n
+
+https://github.com/w3c/aria/issues/2916
+
+テストケースを作成する段階の話というよりは、既にあるWPTやARIA-ATの結果をどう組み合わせて、どの程度テストを通過していたら「ASである」と定義できるのかという話題を提示しています。
+これはTPACのARIA WGやbreakoutsで議論される予定のようです。
 
 ## まとめ
 
