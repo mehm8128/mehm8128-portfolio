@@ -1,5 +1,5 @@
 ---
-title: "ElementtInternals"
+title: "ElementInternals"
 publishedDate: "2025-12-02"
 ---
 
