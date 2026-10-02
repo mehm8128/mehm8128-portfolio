@@ -44,17 +44,6 @@ export const generateOgImage = async (title: string, seriesTitle?: string) => {
           padding: "80px 100px",
         }}
       >
-        <div
-          style={{
-            color: "#111827", // --color-text
-            fontSize: "56px",
-            fontWeight: 700,
-            lineHeight: 1.5, // --line-height-relaxed
-            textAlign: "center",
-          }}
-        >
-          {title}
-        </div>
         {seriesTitle && (
           <div
             style={{
@@ -67,6 +56,17 @@ export const generateOgImage = async (title: string, seriesTitle?: string) => {
             {seriesTitle}
           </div>
         )}
+        <div
+          style={{
+            color: "#111827", // --color-text
+            fontSize: "56px",
+            fontWeight: 700,
+            lineHeight: 1.5, // --line-height-relaxed
+            textAlign: "center",
+          }}
+        >
+          {title}
+        </div>
       </div>
 
       <div
@@ -76,7 +76,7 @@ export const generateOgImage = async (title: string, seriesTitle?: string) => {
           right: "40px",
           display: "flex",
           alignItems: "center",
-          gap: "16px",
+          gap: "4px",
         }}
       >
         <img
