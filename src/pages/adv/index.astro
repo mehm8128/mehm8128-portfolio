@@ -10,17 +10,18 @@ const advCalendars = [
 ---
 
 <Layout title={`Advent Calendar - ${SITE_TITLE}`}>
-  <div class="adv-header">
+  <!-- adv-のprefixだと、広告ブロッカーにadvertisementだと思われてdisplay: noneにされてしまう  -->
+  <div class="calendar-header">
     <h1>Advent Calendar</h1>
   </div>
 
-  <ul class="adv-list">
+  <ul class="calendar-list">
     {
       advCalendars.map(({ year, title, path }) => (
-        <li class="adv-item">
-          <a href={path} class="adv-link">
-            <span class="adv-year">{year}</span>
-            <span class="adv-title">{title}</span>
+        <li class="calendar-item">
+          <a href={path} class="calendar-link">
+            <span class="calendar-year">{year}</span>
+            <span class="calendar-title">{title}</span>
           </a>
         </li>
       ))
@@ -29,24 +30,24 @@ const advCalendars = [
 </Layout>
 
 <style>
-  .adv-header {
+  .calendar-header {
     text-align: center;
     margin-bottom: 2rem;
   }
 
-  .adv-header h1 {
+  .calendar-header h1 {
     font-size: var(--font-size-4xl);
     color: var(--color-accent);
   }
 
-  .adv-list {
+  .calendar-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     list-style: none;
   }
 
-  .adv-item {
+  .calendar-item {
     position: relative;
     transition: var(--transition-fast);
     border-radius: var(--radius-md);
@@ -54,12 +55,12 @@ const advCalendars = [
     border: 1px solid var(--color-border);
   }
 
-  .adv-item:hover,
-  .adv-item:focus-within {
+  .calendar-item:hover,
+  .calendar-item:focus-within {
     transform: translateY(-2px);
   }
 
-  .adv-link {
+  .calendar-link {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -67,22 +68,22 @@ const advCalendars = [
     text-decoration: none;
   }
 
-  .adv-year {
+  .calendar-year {
     font-family: var(--font-code);
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-bold);
     color: var(--color-accent);
   }
 
-  .adv-title {
+  .calendar-title {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semibold);
     color: var(--color-text);
     transition: var(--transition-fast);
   }
 
-  .adv-link:hover .adv-title,
-  .adv-link:focus .adv-title {
+  .calendar-link:hover .calendar-title,
+  .calendar-link:focus .calendar-title {
     color: var(--color-accent);
   }
 </style>
