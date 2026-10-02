@@ -1,0 +1,88 @@
+---
+import Layout from "../../components/layouts/Layout.astro";
+import { SITE_TITLE } from "../../consts";
+
+const advCalendars = [
+  { year: 2026, title: "Accessibility Supported", path: "/adv2026-as" },
+  { year: 2025, title: "Web Components", path: "/adv2025-wc" },
+  { year: 2024, title: "React Aria", path: "/adv2024-reactaria" },
+].toSorted((a, b) => b.year - a.year);
+---
+
+<Layout title={`Advent Calendar - ${SITE_TITLE}`}>
+  <div class="adv-header">
+    <h1>Advent Calendar</h1>
+  </div>
+
+  <ul class="adv-list">
+    {
+      advCalendars.map(({ year, title, path }) => (
+        <li class="adv-item">
+          <a href={path} class="adv-link">
+            <span class="adv-year">{year}</span>
+            <span class="adv-title">{title}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
+
+<style>
+  .adv-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .adv-header h1 {
+    font-size: var(--font-size-4xl);
+    color: var(--color-accent);
+  }
+
+  .adv-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  .adv-item {
+    position: relative;
+    transition: var(--transition-fast);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+  }
+
+  .adv-item:hover,
+  .adv-item:focus-within {
+    transform: translateY(-2px);
+  }
+
+  .adv-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+  }
+
+  .adv-year {
+    font-family: var(--font-code);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent);
+  }
+
+  .adv-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    transition: var(--transition-fast);
+  }
+
+  .adv-link:hover .adv-title,
+  .adv-link:focus .adv-title {
+    color: var(--color-accent);
+  }
+</style>
