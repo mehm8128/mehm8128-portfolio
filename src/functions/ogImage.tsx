@@ -35,48 +35,38 @@ export const generateOgImage = async (title: string, seriesTitle?: string) => {
     >
       <div
         style={{
-          position: "absolute",
-          top: "40px",
-          left: "40px",
-          color: "#111827", // --color-text
-          fontSize: "32px",
-        }}
-      >
-        mehm8128のWeblog
-      </div>
-
-      <div
-        style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: "24px",
+          gap: "16px",
+          maxWidth: "1000px",
           padding: "80px 100px",
         }}
       >
+        <div
+          style={{
+            color: "#111827", // --color-text
+            fontSize: "56px",
+            fontWeight: 700,
+            lineHeight: 1.5, // --line-height-relaxed
+            textAlign: "center",
+          }}
+        >
+          {title}
+        </div>
         {seriesTitle && (
           <div
             style={{
               color: "#6b7280",
-              fontSize: "32px",
-              fontWeight: 700,
+              fontSize: "28px",
+              fontWeight: 500,
+              paddingLeft: "32px",
             }}
           >
             {seriesTitle}
           </div>
         )}
-        <div
-          style={{
-            color: "#111827", // --color-text
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: 1.5, // --line-height-relaxed
-            maxWidth: "1000px",
-          }}
-        >
-          {title}
-        </div>
       </div>
 
       <div
@@ -86,7 +76,7 @@ export const generateOgImage = async (title: string, seriesTitle?: string) => {
           right: "40px",
           display: "flex",
           alignItems: "center",
-          gap: "8px",
+          gap: "16px",
         }}
       >
         <img
@@ -104,7 +94,7 @@ export const generateOgImage = async (title: string, seriesTitle?: string) => {
             fontSize: "32px",
           }}
         >
-          mehm8128
+          mehm8128のWeblog
         </div>
       </div>
     </div>,
