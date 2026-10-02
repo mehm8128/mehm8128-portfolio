@@ -1,7 +1,7 @@
 ---
 title: "ASでないWeb技術の例"
 publishedDate: "2026-10-03"
-draft: true
+draft: false
 ---
 
 こんにちは、mehm8128です。
@@ -24,7 +24,7 @@ ymrlさんのスライドを見ても分かるように、実際にスクリー�
 
 ちなみに、スクリーンリーダー実装者の参考になるように、MDNには[ARIA Screen Reader Implementors Guide - ARIA | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors)というページがあるようです。
 
-そして、この問題を少しでも解決するために最近導入されたのが、ARIA Notifyです。
+そして、この問題を少しでも解決するために最近導入されたのが、[ARIA Notify](https://developer.mozilla.org/en-US/docs/Web/API/Document/ariaNotify)です。
 
 - [命令的な ARIA ライブリージョン：ARIA Notifyの紹介 - mehm8128のWeblog](https://portfolio.hm8128.me/blog/aria-notify-introduction/)
 - [ARIA Notifyについて - Speaker Deck](https://speakerdeck.com/ryokatsuse/aria-notifynituite)
