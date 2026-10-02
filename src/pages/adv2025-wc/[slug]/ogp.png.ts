@@ -5,7 +5,7 @@ import { generateOgImage } from "../../../functions/ogImage";
 type Props = CollectionEntry<"adv2025">;
 
 export const GET: APIRoute<Props> = async ({ props }) => {
-  return generateOgImage(props.data.title);
+  return generateOgImage(props.data.title, "Adv2025 Web Components");
 };
 
 export async function getStaticPaths() {

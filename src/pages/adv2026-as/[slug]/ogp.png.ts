@@ -5,7 +5,10 @@ import { generateOgImage } from "../../../functions/ogImage";
 type Props = CollectionEntry<"adv2026">;
 
 export const GET: APIRoute<Props> = async ({ props }) => {
-  return generateOgImage(props.data.title);
+  return generateOgImage(
+    props.data.title,
+    "Adv2026 Accessibility Supported",
+  );
 };
 
 export async function getStaticPaths() {

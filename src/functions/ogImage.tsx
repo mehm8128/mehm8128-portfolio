@@ -1,6 +1,6 @@
 import { ImageResponse } from "@vercel/og";
 
-export const generateOgImage = async (title: string) => {
+export const generateOgImage = async (title: string, seriesTitle?: string) => {
   const baseUrl = import.meta.env.SITE;
   const fontNormalUrl = `${baseUrl}/font/NotoSansJP-Medium.ttf`;
   const fontBoldUrl = `${baseUrl}/font/NotoSansJP-Bold.ttf`;
@@ -48,11 +48,24 @@ export const generateOgImage = async (title: string) => {
       <div
         style={{
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          gap: "24px",
           padding: "80px 100px",
         }}
       >
+        {seriesTitle && (
+          <div
+            style={{
+              color: "#6b7280",
+              fontSize: "32px",
+              fontWeight: 700,
+            }}
+          >
+            {seriesTitle}
+          </div>
+        )}
         <div
           style={{
             color: "#111827", // --color-text
