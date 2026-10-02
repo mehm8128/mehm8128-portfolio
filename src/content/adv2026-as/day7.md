@@ -10,12 +10,20 @@ draft: true
 
 ## WCAG3を改めて軽くおさらい
 
-TODO: スケジュール感とか、WCAG2からの大きい変更点とか
-誰かの記事引用したりする
+WCAG3は、WCAG2の次のバージョンとして検討・策定が進められているWCAGのバージョンです。
+WCAG2から構成や概念が大きく変わる予定で、一通り完成するまでまだ数年かかる見込みとなっています。
+詳細は以下のリンクを参照してください。
+
+[WCAG 3 Introduction | Web Accessibility Initiative (WAI) | W3C](https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/)
 
 ## Accessibility Support Sets
 
-TODO: WCAG2ではどう扱われているかの復習から
+WCAG2において、"Accessibility Supported"は1日目に見たように[適合を理解する | WAI | W3C](https://waic.jp/translations/WCAG22/Understanding/conformance#accessibility-support)で定義されています。
+しかし以下のような記述があるように、厳密な定義については各地域や組織に委ねられています。
+
+> WCAG ワーキンググループ及び W3C は、ウェブ技術がアクセシビリティ サポーテッドであるとみなすために、どれだけ多くの、あるいはどの支援技術がそのウェブ技術をサポートしていなければならないということについては特に定めない。
+
+そこでWCAG3の策定に当たり、ASの概念についてWCAG2から再検討されています。
 
 WCAG3が"silver"という呼称で検討されていた時代に、Accessibility supported Subgroupというものがありました。そのSubgroupで今回紹介するAccessibility Support Setsに繋がるような検討が行われており、今の議論に発展しています。
 日本人からは、現在もWCAG3の策定に関わっている[植木真さん](https://x.com/makoto_ueki)がファシリテーターとして参加していたようです。
