@@ -1,7 +1,7 @@
 ---
 title: "ASのためにできること"
 publishedDate: "2026-10-04"
-draft: true
+draft: false
 ---
 
 こんにちは、mehm8128です。
