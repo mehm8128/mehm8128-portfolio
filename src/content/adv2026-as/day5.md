@@ -73,7 +73,7 @@ WCAGのテクニックであれば、ある環境においてあるテクニッ�
 - ページ内検索でヒットする
 - 画像の要素をコピーしたときに、一緒にコピーされる
 
-似たような話で、SVGのtitle要素についても[インラインSVGの代替テキストはどうするべきか – TAKLOG](https://www.tak-dcxi.com/article/how-to-handle-alt-text-for-inline-svg/)で言及がありました。
+4日目に紹介したように、これと似たような話がSVGのtitle要素についても[インラインSVGの代替テキストはどうするべきか – TAKLOG](https://www.tak-dcxi.com/article/how-to-handle-alt-text-for-inline-svg/)で言及がありました。
 
 これらの挙動が全部保証されていないと使えないのか、それとも最低限accessible nameとしてユーザーに伝わればいいのかが状況によって違う中で、自動テストのテストケースをどこまで用意するかは難しいところです。
 ひとまずHTML-AAMとARIA-ATからデータを収集するということだったので、そこの既存のルールに従うことになりそうですが、今後議論の余地がありそうな部分だと、個人的には思っています。

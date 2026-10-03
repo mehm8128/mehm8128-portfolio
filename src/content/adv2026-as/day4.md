@@ -8,7 +8,7 @@ draft: true
 
 今回は、ASのために私たちができることを紹介します。
 
-これまでに紹介してきたような、ユーザーエージェント・支援技術間での互換性の問題に遭遇した場合、もしくは遭遇していなくてもなんらかの形でそのような問題の解決に貢献したいと考えている場合、これから紹介するような方法で貢献することができます。
+これまでに紹介してきたようなユーザーエージェント・支援技術間での互換性の問題に遭遇した場合、もしくは遭遇していなくてもなんらかの形でそのような問題の解決に貢献したいと考えている場合、これから紹介するような方法で貢献することができます。
 
 ## ユーザーエージェント・支援技術のベンダーに不具合報告・修正PRを作成
 
@@ -20,7 +20,7 @@ draft: true
 https://developer.mozilla.org/ja/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 
 注意点として、ASの問題は、ユーザーエージェントの問題なのか支援技術の問題なのかの切り分けが難しいことがあります。
-ユーザーエージェントの役割は、HTMLを正しく解釈し、Accessibility APIとして情報を公開するところまでです。
+ユーザーエージェントの役割は、HTMLを解釈し、Accessibility APIとして情報を公開するところまでです。
 支援技術の役割は、Accessibility APIで公開された情報を受け取り、ユーザーが理解可能な形で示すところです。
 
 そもそもHTMLを解釈できていなかったり、解釈していてもAccessibility APIとして情報を公開していなければユーザーエージェントの問題ということになります。例えば、ARIA属性が付与されている要素をブラウザのdevtoolsで確認したときに、そのARIA属性の情報がAccessibilityのタブに表示されていなければ、適切にHTMLを解釈できていないのでブラウザ側の問題である可能性が高くなります。また、同じスクリーンリーダーで確認したときに、あるブラウザでは正常に情報を読み取れるけど他のブラウザでは上手く読み取れないという場合は、ブラウザがスクリーンリーダーに対して情報を正しく公開できていない可能性が高く、これもブラウザ側の問題と考えられます。
@@ -29,7 +29,7 @@ https://developer.mozilla.org/ja/docs/Learn_web_development/Howto/Web_mechanics/
 また、一見不具合のように感じても、実はそういう挙動になっている背景がある意図的な挙動である場合もあります。
 例えば、Safariにおいて`list-style: none`が付与された`<ul>`や`<ol>`が`list` roleになっていないのは、不具合ではなくてWebKit側の意図している挙動です。
 
-ref: ["Fixing" Lists | scottohara.me](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)
+https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
 
 このような仕様化されていないブラウザのヒューリスティックは本当はあまり良くないのですが、このようになっている経緯があるので、不具合として報告しても直されることはないということに注意が必要です（ただし、この場合は`<nav>`要素というコンテキストにおける例外のように、適切な例外を追加したい、という要望であれば通る可能性はあります）。
 
@@ -82,6 +82,8 @@ ASの問題に対して、WPTにテストケースを作成してPRを提出し�
 
 この修正は、[Release Notes for Safari Technology Preview 244 | WebKit](https://webkit.org/blog/17962/release-notes-for-safari-technology-preview-244/)に記載されています。
 
+> Fixed an issue where interactive elements containing an `<svg>` named by a child `<title>` element did not expose an accessible name. ([312953@main](https://commits.webkit.org/312953@main)) (172559238)
+
 これによってaccessible nameが付与されない問題は解決される一方で、[インラインSVGの代替テキストはどうするべきか – TAKLOG](https://www.tak-dcxi.com/article/how-to-handle-alt-text-for-inline-svg/)で解説されているように、`<title>`要素にホバーした際にツールチップが表示されたり、`<title>`要素の中身が機械翻訳されない問題などは残っています。そのため、必要に応じて`aria-label`や`aria-labelledby`を使うことも検討できるでしょう。
 
 今回の問題は以前から度々話題になることがあって認識していたのですが、「title要素でSVGにaccessible nameをつける方法はASでないので、別の方法を使う」というhackが広まって本来どうあるべきかということが知られていないのは良くないと思い、今回の件をきっかけとしてWPTのテストケース作成やWebKitへのBug報告を進めていきました。
@@ -92,9 +94,9 @@ ASの問題に対して、WPTにテストケースを作成してPRを提出し�
 
 以前[Accessibility APIでブラウザから情報を取得してみる - mehm8128のWeblog](https://portfolio.hm8128.me/blog/ia2/#nvda%E3%81%AE%E3%82%A2%E3%83%89%E3%82%AA%E3%83%B3%E7%B5%8C%E7%94%B1%E3%81%A7%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B7%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B)などでNVDAの中身自体は読んだことがあったものの、実際にコードを書いたり貢献したりするところまではできていなかったので、何かASに関連するissueがないかと漁っていました。そこで[NVDA does not announce contents of div with role="alert" containing a list · nvaccess/nvda](https://github.com/nvaccess/nvda/issues/14990)というissueを見つけ、比較的簡単に修正できそうだったのでやってみました。
 
-このissueは、`role="alert"`をつけた要素が表示されたときに、今まではボタンなど`FOCUSABLE`な要素しか読み上げられていなかったのですが、リスト関連のroleや見出し、paragraph roleなども読み上げるようにしてほしいという内容でした（よって、タイトルは"**all** content"になっているけど、実は"all"ではありません）。
+このissueは、`role="alert"`をつけた要素が表示されたときに、今まではボタンなど`FOCUSABLE`な要素しか読み上げられていなかったのですが、リスト関連のroleや見出し、paragraph roleなども読み上げるようにしてほしいという内容でした。
 
-[fix: announce all content inside `role="alert"` · nvaccess/nvda](https://github.com/nvaccess/nvda/pull/20056)というPRを作成し、無事マージされました。
+[fix: announce all content inside `role="alert"` · nvaccess/nvda](https://github.com/nvaccess/nvda/pull/20056)というPRを作成し、無事マージされました（タイトルは"**all** content"になっていますが、途中で一部のroleに限定したので実は"all"ではありません）。
 
 思っていたよりも経緯や実装が複雑そうで、結局完全には理解できないままなんとかマージまで持っていったのですが、「`role="alert"`なのだから表示されたら中身が読み上げられるはずなのに、読み上げられないものがある」という問題を部分的に改善できました。2026.3で入る予定らしいので、リリースまではもう少しかかりそうです。
 
@@ -103,6 +105,6 @@ ASの問題に対して、WPTにテストケースを作成してPRを提出し�
 ASに関する問題は、暫定的なhackyな対応で解決できても、他に同じ状況で困る人がいるかもしれません。例えば記事などでその知見を公開していたとしても、その記事までたどり着ける人はほんの一握りかもしれないし、そもそも問題が発生していることに気づかない開発者も多いはずです。
 
 Webアクセシビリティをやっている人たちは「自分たちのプロダクトがアクセシブルであれば良い」ではなくて、「社会全体をアクセシブルにしたい」というところまで気持ちのある人が多いと思っています。
-それを実現するためには、より根本的なところから対処していく必要があります。そのために、今回紹介したようなブラウザやスクリーンリーダーなどに直接貢献していくような方法を採れる人が増えれば良いなと考えています。
+それを実現するためには、より根本的なところから対処していく必要があります。そのために、今回紹介したようなブラウザやスクリーンリーダーなどに直接貢献していくような方法を採れる人が増えれば良いなと思うし、自分ももっとその領域まで貢献していきたいと考えています。
 
 それではまた明日。
