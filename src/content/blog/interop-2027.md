@@ -67,7 +67,7 @@ https://developer.mozilla.org/ja/docs/Web/API/Popover_API/Using_interest_invoker
 
 「横にスクロールできるテーブルの見出しを固定したい」ときに役立ちます。
 
-以下のように記述することで、x軸とy軸のスクロール挙動を別々に定義できるようになりました。
+以下のように記述することで、x軸とy軸のスクロールコンテナの挙動を別々に定義できるようになりました。
 
 ```css
 .table-wrapper {
