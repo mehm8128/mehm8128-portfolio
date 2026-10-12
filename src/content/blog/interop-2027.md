@@ -145,7 +145,7 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Te
 
 https://developer.chrome.com/blog/a-customizable-select?hl=en
 
-（日本語ページは表示が壊れてます）
+https://blog.sakupi01.com/dev/articles/2024-openui-advent-3
 
 ### CSS reading-⁠flow and reading-⁠order properties
 
