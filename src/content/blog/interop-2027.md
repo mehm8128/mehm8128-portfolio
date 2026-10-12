@@ -183,7 +183,7 @@ https://speakerdeck.com/ryokatsuse/aria-notifynituite
 
 [Computed Heading Level](https://github.com/web-platform-tests/interop/issues/1412)
 
-見出し要素のレベルを調整できるHTML属性及び、CSS疑似クラスです。
+見出し要素のレベルを調整できるHTML属性及び、それによって発生しうる問題を解決するCSS疑似クラスです。
 
 ```html
 <section headingoffset="2">
