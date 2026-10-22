@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.0.0",
-    "@astrojs/mdx": "^7.0.0",
-    "@astrojs/react": "^6.0.0",
+    "@astrojs/mdx": "^8.0.0",
+    "@astrojs/react": "^7.0.0",
     "@astrojs/rss": "^4.0.17",
     "@astrojs/sitemap": "^3.7.1",
     "@mehm8128/rehype-toc": "^1.4.6",
