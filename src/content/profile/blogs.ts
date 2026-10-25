@@ -13,6 +13,10 @@ export const blogs = [
     link: "https://zenn.dev/topics/cybozuwebstandards",
   },
   {
+    title: "Web Sustainability Guidelinesを読む会",
+    link: "https://zenn.dev/topics/cybozuwebstandards",
+  },
+  {
     title:
       "サイボウズにフロントエンドエンジニアとして新卒入社して1年が経ちました",
     link: "https://blog.cybozu.io/entry/2026/04/01/113000",
