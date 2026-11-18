@@ -1,5 +1,7 @@
 {
-  "extends": ["markuplint:recommended"],
+  "extends": [
+    "markuplint:recommended"
+  ],
   "parser": {
     ".astro$": "@markuplint/astro-parser"
   },
@@ -8,6 +10,13 @@
       "regexSelector": {
         "nodeName": "/^[A-Z]/"
       },
+      "rules": {
+        "permitted-contents": false,
+        "no-unclosed-element-at-eof": false
+      }
+    },
+    {
+      "selector": "ul:has(> slot)",
       "rules": {
         "permitted-contents": false
       }
